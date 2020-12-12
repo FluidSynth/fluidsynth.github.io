@@ -970,8 +970,9 @@ form div {
 .post-meta {
 	clear: both;
 	margin-bottom: 10px;
-	color: #9f9f9f;
+	color: #999;
 	font-size: 12px;
+    padding-top: 0.5em;
 }
 
 .post-edit {
@@ -1715,7 +1716,7 @@ ul.menu > li:hover {
 
 .navigation a {
 	padding: 4px 10px;
-	color: #aaa;
+	color: #888;
 }
 
 .navigation a:hover {
