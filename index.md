@@ -27,17 +27,14 @@ href="https://github.com/FluidSynth/fluidsynth/wiki/FluidFeatures">in the
 wiki</a>.
 
 ### Current Development Team
-- Tom Moebert &#8211; tom [d0t] mbrt [at] gmail [d0t] com
-
-*Please do **not** send private support requests or "HowTo" questions! They
-will be ignored! Use our mailing list <a
-href="https://lists.nongnu.org/mailman/listinfo/fluid-dev">fluid-dev (Contact
-&gt; Mailing List)</a> for public discussions instead.*
+- **[Tom Moebert](https://github.com/derselbst) (Maintainer)**
+- [Jean-Jacques Ceresa](https://github.com/jjceresa)
+- [Marcus Weseloh](https://github.com/mawe42)
 
 ### Former Development Team
-- David Henningsson &#8211; fluidsynth [dot] web [at] epost [dot] diwic [dot] se
-- Element Green &#8211; element [at] elementsofsound [dot] org
-- Pedro Lopez-Cabanillas &#8211; plcl [at] users [dot] sf [dot] net
+- David Henningsson
+- Element Green
+- Pedro Lopez-Cabanillas
 
 Refer to the <a href="https://github.com/FluidSynth/fluidsynth/blob/master/AUTHORS">AUTHORS</a>
 file, distributed with the source code, for a list of the many other
