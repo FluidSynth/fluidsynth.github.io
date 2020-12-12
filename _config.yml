@@ -7,7 +7,7 @@ permalink: /news/:year/:month/:day/:title/
 
 main_navigation:
 - title: Home
-  href: /index.html
+  href: /
 
 - title: News
   href: /news/
