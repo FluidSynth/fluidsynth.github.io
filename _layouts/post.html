@@ -1,0 +1,50 @@
+{% include head.html %}
+
+<body>
+    <div id="container">
+        <div id="header">
+            <div id="logo">
+                <a href="http://www.fluidsynth.org/"><img src="{% link /assets/img/FluidSynthWebHeader.png %}" width="960" height="180" alt="FluidSynth"/></a>
+            </div>
+            {% include nav.html %}
+        </div>
+
+        <div id="wrapper" class="clearfix">
+            <div class="grid col-700">
+                <h1>Latest News</h1>
+
+                <div class="type-post">
+                    <h1 class="post-title">{{ page.title }}</h1>
+
+                    <div class="post-meta">
+                        <span>Posted on</span>
+                        <a>{{ page.date | date_to_long_string }}</a>
+                        <span class="byline"> by </span>
+                        <a>{{ page.author }}</a>
+                    </div>
+
+                    <div class="post-entry">
+                        {{ content }}
+                    </div>
+
+                    <div class="navigation">
+                        <div class="previous">{% if page.previous.url %}&#8249; <a href="{{ page.previous.url }}" rel="prev">{{ page.previous.title }}</a>{% endif %}</div>
+                        <div class="next">{% if page.next.url %}<a href="{{ page.next.url }}" rel="prev">{{ page.next.title }}</a> &#8250;{% endif %}</div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="widgets" class="grid col-220 fit">
+                {% include recent_posts.html %}
+            </div>
+        </div>
+    </div>
+
+    {% include footer.html %}
+
+    <script type='text/javascript' src='{{ "/assets/js/responsive-scripts.min.js" | relative_url }}' id='responsive-scripts-js'></script>
+    <script type='text/javascript' src='{{ "/assets/js/jquery.placeholder.min.js" | relative_url }}' id='jquery-placeholder-js'></script>
+    <script type='text/javascript' src='{{ "/assets/js/wp-embed.min.js" | relative_url }}' id='wp-embed-js'></script>
+</body>
+</html>
+

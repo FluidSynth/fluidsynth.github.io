@@ -1,0 +1,124 @@
+url: "https://fluidsynth.org"
+baseurl: "/"
+title: "FluidSynth"
+paginate: 5
+paginate_path: "/news/page:num/"
+permalink: /news/:year/:month/:day/:title/
+
+main_navigation:
+- title: Home
+  href: /index.html
+
+- title: News
+  href: /news/
+
+- title: Screenshots
+  href: /screenshots/
+
+- title: Applications
+  href: https://github.com/FluidSynth/fluidsynth/wiki/Applications
+
+- title: Creations
+  href: https://github.com/FluidSynth/fluidsynth/wiki/MadeWithFluidSynth
+
+- title: Documentation
+  href: https://github.com/FluidSynth/fluidsynth/wiki/Documentation
+  links:
+  - title: Wiki Home
+    href: https://github.com/FluidSynth/fluidsynth/wiki
+  - title: Getting Started
+    href: https://github.com/FluidSynth/fluidsynth/wiki/GettingStarted
+  - title: User Manual
+    href: https://github.com/FluidSynth/fluidsynth/wiki/UserManual
+  - title: FluidSynth Settings
+    href: https://github.com/FluidSynth/fluidsynth/wiki/FluidSettings
+  - title: About SoundFont2
+    href: https://github.com/FluidSynth/fluidsynth/wiki/SoundFont
+  - title: FluidSynth API
+    href: http://www.fluidsynth.org/api/
+  - title: FluidSynth API (legacy)
+    href: http://www.fluidsynth.org/api-1.x/
+
+- title: Download
+  href: https://github.com/FluidSynth/fluidsynth/releases
+
+- title: Installing
+  href: https://github.com/FluidSynth/fluidsynth/wiki/BuildingWithCMake
+  links:
+  - title: Building Source Code
+    href: https://github.com/FluidSynth/fluidsynth/wiki/BuildingWithCMake
+
+- title: Development
+  href: http://www.fluidsynth.org/api/
+  links:
+  - title: Bugs and Feature Requests
+    href: https://github.com/FluidSynth/fluidsynth/issues
+  - title: Git Source Code Browser
+    href: https://github.com/FluidSynth/fluidsynth
+
+- title: Contact
+  href: /contact/
+  links:
+  - title: Mailing List
+    href: http://lists.nongnu.org/mailman/listinfo/fluid-dev
+  - title: Mailing List Archives
+    href: http://lists.nongnu.org/archive/html/fluid-dev/
+  - title: Webmaster
+    href: /contact/
+
+
+screenshots:
+- img: FluidSynth-Screenshot.png
+  title: FluidSynth Shell
+  description: FluidSynth shell running in GnomeTerminal on Linux.
+  href: http://www.fluidsynth.org
+
+- href: http://www.swamiproject.org
+  img: Swami-2_0-screenshot1.png
+  title: Swami Instrument Editor
+  description: A MIDI instrument editor
+  
+- href: http://lmms.sourceforge.net
+  img: LMMS-Screenshot.png
+  title: LMMS
+  description: Linux MultiMedia Studio
+  
+- href: http://www.virtualorgan.com
+  img: Miditzer-Screenshot.jpg
+  title: Miditzer
+  description: Miditzer virtual theatre organ
+  
+- href: http://www.muse-sequencer.org/
+  img: MusE-Screenshot.png
+  title: MusE Sequencer
+  description: A MIDI/Audio sequencer with recording and editing capabilities
+  
+- href: http://qsynth.sourceforge.net
+  img: QSynth-Screenshot.png
+  title: QSynth
+  description: Nice GUI frontend to FluidSynth
+  
+- href: http://jorgan.sourceforge.net
+  img: JOrgan-Screenshot.png
+  title: JOrgan
+  description: Java virtual organ utilizing FluidSynth for pipe sound generation
+  
+- href: http://midieditor.sourceforge.net
+  img: MidiEditor-Screenshot.png
+  title: MidiEditor
+  description: A MIDI editor for Linux
+  
+- href: http://www.denemo.org
+  img: Denemo-Screenshot.png
+  title: Denemo
+  description: A frontend for LilyPond music typesetter
+  
+- href: http://musescore.org
+  img: MuseScore-Screenshot.png
+  title: MuseScore
+  description: Free music composition &amp; notation software
+  
+- href: http://www.mindmatter.it/scoredate
+  img: ScoreDate-Screenshot.png
+  title: ScoreDate
+  description: Java software that helps musicians learn music reading and ear training

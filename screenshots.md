@@ -1,0 +1,20 @@
+---
+layout: gallery
+---
+
+# Application Screenshots
+
+FluidSynth does not have a graphical user interface, however many other programs that utilize it do, some of which are shown here.
+
+<div id="gallery-1" class="gallery galleryid-24 gallery-columns-3 gallery-size-responsive-200">
+    {% for item in site.screenshots %}
+    {% assign remainder = forloop.index | modulo: 3 %}
+    <dl class="gallery-item">
+        <dt class="gallery-icon landscape">
+		    <a href="{{ "/assets/img/" | append: item.img | relative_url }}"><img width="200" height="136" src="{{ "/assets/img/" | append: item.img | relative_url }}" class="attachment-responsive-200 size-responsive-200 colorbox-24 " alt="" loading="lazy"/></a>
+        </dt>
+        <dd class="wp-caption-text gallery-caption">{{ item.title }}</dd>
+    </dl>
+    {% if remainder == 0 %}<br style="clear: both">{% endif %}
+    {% endfor %}
+</div>

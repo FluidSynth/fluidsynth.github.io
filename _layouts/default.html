@@ -1,0 +1,29 @@
+{% include head.html %}
+
+<body>
+    <div id="container">
+        <div id="header">
+            <div id="logo">
+                <a href="http://www.fluidsynth.org/"><img src="{% link /assets/img/FluidSynthWebHeader.png %}" width="960" height="180" alt="FluidSynth"/></a>
+            </div>
+            {% include nav.html %}
+        </div>
+
+        <div id="wrapper" class="clearfix">
+            <div id="home-blog" class="grid col-700">
+                {{ content }}
+            </div>
+
+            <div id="widgets" class="grid col-220 fit">
+                {% include recent_posts.html %}
+            </div>
+        </div>
+    </div>
+
+    {% include footer.html %}
+
+    <script type='text/javascript' src='{{ "/assets/js/responsive-scripts.min.js" | relative_url }}' id='responsive-scripts-js'></script>
+    <script type='text/javascript' src='{{ "/assets/js/jquery.placeholder.min.js" | relative_url }}' id='jquery-placeholder-js'></script>
+    <script type='text/javascript' src='{{ "/assets/js/wp-embed.min.js" | relative_url }}' id='wp-embed-js'></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<div class="main-nav">
+    <ul id="menu-main" class="menu">
+        {% for item in site.main_navigation %}
+        <li class="menu-item {% if item.href == page.url %}current-menu-item{% endif %}">
+            <a href="{{ item.href }}">{{ item.title }}</a>
+            {% if item.links %}
+            <ul class="sub-menu">
+            {% for link in item.links %}
+                <li class="menu-item {% if item.href == page.url %}current-menu-item{% endif %}"><a href="{{ link.href }}">{{ link.title }}</a></li>
+            {% endfor %}
+            </ul>
+            {% endif %}
+        </li>
+        {% endfor %}
+    </ul>
+</div>

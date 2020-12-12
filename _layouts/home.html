@@ -1,0 +1,68 @@
+{% include head.html %}
+
+<body>
+    <div id="container">
+        <div id="header">
+            <div id="logo">
+                <a href="http://www.fluidsynth.org/"><img src="{% link /assets/img/FluidSynthWebHeader.png %}" width="960" height="180" alt="FluidSynth"/></a>
+            </div>
+            {% include nav.html %}
+        </div>
+
+        <div id="wrapper" class="clearfix">
+            <div class="grid col-460 fit">
+                {{ content }}
+            </div>
+
+            <div id="home-slideshow" class="grid col-380 fit">
+                {% include slideshow.html %}
+                <div style="margin-top: 4em">
+                    {% include recent_posts.html %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% include footer.html %}
+
+    <link rel='stylesheet' id='slideshow-jquery-image-gallery-stylesheet_functional-css'  href='{{ "/assets/css/functional.css" | relative_url }}' type='text/css' media='all' />
+    <link rel='stylesheet' id='slideshow-jquery-image-gallery-ajax-stylesheet_slideshow-jquery-image-gallery-custom-styles_1-css'  href='{{ "/assets/css/admin-ajax.css" | relative_url }}' type='text/css' media='all' />
+    <script type='text/javascript' src='{{ "/assets/js/responsive-scripts.min.js" | relative_url }}' id='responsive-scripts-js'></script>
+    <script type='text/javascript' src='{{ "/assets/js/jquery.placeholder.min.js" | relative_url }}' id='jquery-placeholder-js'></script>
+    <script type='text/javascript' src='{{ "/assets/js/wp-embed.min.js" | relative_url }}' id='wp-embed-js'></script>
+    <script type='text/javascript' id='slideshow-jquery-image-gallery-script-js-extra'>
+        var SlideshowPluginSettings_12 = {
+            "animation":"fade",
+            "slideSpeed":"1",
+            "descriptionSpeed":"0.4",
+            "intervalSpeed":"5",
+            "slidesPerView":"1",
+            "maxWidth":"0",
+            "aspectRatio":"4:3",
+            "height":"200",
+            "imageBehaviour":"natural",
+            "showDescription":"true",
+            "hideDescription":"true",
+            "preserveSlideshowDimensions":"true",
+            "enableResponsiveness":"true",
+            "play":"true",
+            "loop":"true",
+            "pauseOnHover":"true",
+            "controllable":"true",
+            "hideNavigationButtons":"true",
+            "showPagination":"true",
+            "hidePagination":"true",
+            "controlPanel":"false",
+            "hideControlPanel":"true",
+            "waitUntilLoaded":"true",
+            "showLoadingIcon":"true",
+            "random":"false",
+            "avoidFilter":"true",
+            "dimensionWidth":"4",
+            "dimensionHeight":"3"
+        };
+    </script>
+    <script type='text/javascript' src='{{ "/assets/js/all.frontend.min.js" | relative_url }}' id='slideshow-jquery-image-gallery-script-js'></script>
+</body>
+</html>
+

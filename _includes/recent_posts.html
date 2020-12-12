@@ -1,0 +1,11 @@
+<div class="widget-wrapper widget_recent_entries">
+    <div class="widget-title" style="font-weight: bold; font-size: 110%">Recent News</div>
+    <ul>
+        {% for post in site.posts limit:5 %}
+        <li>
+            <a href="{{ post.url }}">{{ post.title }}</a>
+            <div class="post-date">{{ post.date | date_to_long_string }}</div>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
