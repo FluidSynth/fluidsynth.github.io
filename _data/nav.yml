@@ -51,9 +51,9 @@
 - title: Contact
   href: /contact/
   links:
+  - title: Discussion Forum
+    href: https://github.com/FluidSynth/fluidsynth/discussions
   - title: Mailing List
     href: http://lists.nongnu.org/mailman/listinfo/fluid-dev
   - title: Mailing List Archives
     href: http://lists.nongnu.org/archive/html/fluid-dev/
-  - title: Webmaster
-    href: /contact/
