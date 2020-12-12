@@ -12,7 +12,6 @@ applications utilize it and it has even found its way onto embedded systems and
 is used in some mobile apps.
 
 ## Features
-
 - Cross platform support (Linux, macOS and Windows to name a few)
 - SoundFont 2 support
 - SoundFont 3 support (vorbis-compressed SF2)
