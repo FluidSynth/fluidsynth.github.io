@@ -1,0 +1,55 @@
+- img: FluidSynth-Screenshot.png
+  title: FluidSynth Shell
+  description: FluidSynth shell running in GnomeTerminal on Linux.
+  href: http://www.fluidsynth.org
+
+- href: http://www.swamiproject.org
+  img: Swami-2_0-screenshot1.png
+  title: Swami Instrument Editor
+  description: A MIDI instrument editor
+
+- href: http://lmms.sourceforge.net
+  img: LMMS-Screenshot.png
+  title: LMMS
+  description: Linux MultiMedia Studio
+
+- href: http://www.virtualorgan.com
+  img: Miditzer-Screenshot.jpg
+  title: Miditzer
+  description: Miditzer virtual theatre organ
+
+- href: http://www.muse-sequencer.org/
+  img: MusE-Screenshot.png
+  title: MusE Sequencer
+  description: A MIDI/Audio sequencer with recording and editing capabilities
+
+- href: http://qsynth.sourceforge.net
+  img: QSynth-Screenshot.png
+  title: QSynth
+  description: Nice GUI frontend to FluidSynth
+
+- href: http://jorgan.sourceforge.net
+  img: JOrgan-Screenshot.png
+  title: JOrgan
+  description: Java virtual organ utilizing FluidSynth for pipe sound generation
+
+- href: http://midieditor.sourceforge.net
+  img: MidiEditor-Screenshot.png
+  title: MidiEditor
+  description: A MIDI editor for Linux
+
+- href: http://www.denemo.org
+  img: Denemo-Screenshot.png
+  title: Denemo
+  description: A frontend for LilyPond music typesetter
+
+- href: http://musescore.org
+  img: MuseScore-Screenshot.png
+  title: MuseScore
+  description: Free music composition &amp; notation software
+
+- href: http://www.mindmatter.it/scoredate
+  img: ScoreDate-Screenshot.png
+  title: ScoreDate
+  description: Java software that helps musicians learn music reading and ear training
+

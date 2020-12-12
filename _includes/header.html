@@ -5,7 +5,7 @@
     <div class="main-nav">
         <span class="custom-mobile-menu-title" style="display: none">{{ page.title }}</span>
         <ul id="menu-main" class="menu">
-            {% for item in site.main_navigation %}
+            {% for item in site.data.nav %}
             <li class="menu-item {% if item.href == page.url %}current-menu-item{% endif %}">
             <a href="{{ item.href }}">{{ item.title }}</a>
             {% if item.links %}

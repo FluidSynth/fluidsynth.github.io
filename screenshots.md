@@ -7,7 +7,7 @@ layout: gallery
 FluidSynth does not have a graphical user interface, however many other programs that utilize it do, some of which are shown here.
 
 <div id="gallery-1" class="gallery galleryid-24 gallery-columns-3 gallery-size-responsive-200">
-    {% for item in site.screenshots %}
+    {% for item in site.data.screenshots %}
     {% assign remainder = forloop.index | modulo: 3 %}
     <dl class="gallery-item">
         <dt class="gallery-icon landscape">

@@ -1,7 +1,7 @@
 <div class="slideshow_container slideshow_container_slideshow-jquery-image-gallery-custom-styles_1" style=" " data-slideshow-id="12" data-style-name="slideshow-jquery-image-gallery-custom-styles_1" data-style-version="1381389350">
     <div class="slideshow_loading_icon"></div>
     <div class="slideshow_content" style="display: none;">
-        {% for item in site.screenshots %}
+        {% for item in site.data.screenshots %}
         <div class="slideshow_view">
             <div class="slideshow_slide slideshow_slide_image">
                 <img src="{{ "/assets/img/" | append: item.img | relative_url }}" alt="{{ item.title }}" />
