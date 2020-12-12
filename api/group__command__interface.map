@@ -1,0 +1,5 @@
+<map id="Command Interface" name="Command Interface">
+<area shape="rect" id="node1" href="$group__command__shell.html" title="Interactive shell to control and configure a synthesizer instance. " alt="" coords="195,5,309,32"/>
+<area shape="rect" id="node2" href="$group__command__handler.html" title="Handles text commands and reading of configuration files. " alt="" coords="188,56,316,83"/>
+<area shape="rect" id="node4" href="$group__command__server.html" title="TCP socket server for a command handler. " alt="" coords="191,107,313,133"/>
+</map>

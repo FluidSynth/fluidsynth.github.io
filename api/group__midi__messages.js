@@ -1,0 +1,27 @@
+var group__midi__messages =
+[
+    [ "fluid_synth_all_notes_off", "group__midi__messages.html#ga1699012f35fde248893f52305901cb3f", null ],
+    [ "fluid_synth_all_sounds_off", "group__midi__messages.html#gaed72c629ae186c7f149ba6f9edfefc66", null ],
+    [ "fluid_synth_bank_select", "group__midi__messages.html#ga7707713c120a938d399b37c00855e2fa", null ],
+    [ "fluid_synth_cc", "group__midi__messages.html#ga070f05518dd8157bfd4361c9b0795659", null ],
+    [ "fluid_synth_channel_pressure", "group__midi__messages.html#ga3fda0f875e943e3ec100e4990fddaaf8", null ],
+    [ "fluid_synth_get_cc", "group__midi__messages.html#ga655c35b0d2de69725a6c8d542596b1de", null ],
+    [ "fluid_synth_get_gen", "group__midi__messages.html#gabcce59fedc32a2c5e27429b437678426", null ],
+    [ "fluid_synth_get_pitch_bend", "group__midi__messages.html#ga1e42c7d61f0ce3e942997d6edc7c0166", null ],
+    [ "fluid_synth_get_pitch_wheel_sens", "group__midi__messages.html#gaff1f36cc27698e99978a39538f0ddf62", null ],
+    [ "fluid_synth_get_program", "group__midi__messages.html#ga028ea45ffb73805b20be7270a840252c", null ],
+    [ "fluid_synth_key_pressure", "group__midi__messages.html#gaa6c83174dc095d271faa95b97e151541", null ],
+    [ "fluid_synth_noteoff", "group__midi__messages.html#gae68ad5cca7a2c47be2f4b1c703ea9d46", null ],
+    [ "fluid_synth_noteon", "group__midi__messages.html#ga038a0f309e8004f39cb5491514bfac54", null ],
+    [ "fluid_synth_pitch_bend", "group__midi__messages.html#ga5e515bb98e8d68ffa4fe86a08eff3826", null ],
+    [ "fluid_synth_pitch_wheel_sens", "group__midi__messages.html#gab4a849f9daa42ddd6919771524542182", null ],
+    [ "fluid_synth_program_change", "group__midi__messages.html#gafd3174fbb81a818afc715dbd5c26f903", null ],
+    [ "fluid_synth_program_reset", "group__midi__messages.html#ga8a0e442b5013876affc685b88a6e3f49", null ],
+    [ "fluid_synth_program_select", "group__midi__messages.html#ga0c2f5db7b19f80f25c1e4263cf78b0d0", null ],
+    [ "fluid_synth_program_select_by_sfont_name", "group__midi__messages.html#gada0aaf667a14a3118cd920926b344533", null ],
+    [ "fluid_synth_set_gen", "group__midi__messages.html#gae5eab3fd9a506e46e33dd95ba6aa2df7", null ],
+    [ "fluid_synth_sfont_select", "group__midi__messages.html#ga3fb14bdfae163fb398f482f91331e3d8", null ],
+    [ "fluid_synth_sysex", "group__midi__messages.html#ga71563628977d61746f567f350182ab12", null ],
+    [ "fluid_synth_system_reset", "group__midi__messages.html#ga2b22116537580796c95c8ef2bc9a1e0a", null ],
+    [ "fluid_synth_unset_program", "group__midi__messages.html#ga832211b9b471b7ac140b934bd549b4cb", null ]
+];

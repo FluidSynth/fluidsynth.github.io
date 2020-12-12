@@ -1,0 +1,6 @@
+<map id="MIDI Input" name="MIDI Input">
+<area shape="rect" id="node1" href="$group__midi__driver.html" title="Functions for managing MIDI drivers. " alt="" coords="138,5,225,32"/>
+<area shape="rect" id="node2" href="$group__midi__player.html" title="Parse standard MIDI files and emit MIDI events. " alt="" coords="137,56,226,83"/>
+<area shape="rect" id="node4" href="$group__midi__events.html" title="Functions to create, modify, query and delete MIDI events. " alt="" coords="136,107,227,133"/>
+<area shape="rect" id="node5" href="$group__midi__router.html" title="Rule based tranformation and filtering of MIDI events. " alt="" coords="136,157,227,184"/>
+</map>

@@ -1,0 +1,38 @@
+var group__Settings =
+[
+    [ "FLUID_HINT_BOUNDED_ABOVE", "group__Settings.html#ga8f09ee7b4dd3f700e571b8b6f44c2adb", null ],
+    [ "FLUID_HINT_BOUNDED_BELOW", "group__Settings.html#ga164b85b99eb8a6d13c3e7554f7d88bae", null ],
+    [ "FLUID_HINT_OPTIONLIST", "group__Settings.html#gae386fb0005b1896194458f15c27e3dc8", null ],
+    [ "FLUID_HINT_TOGGLED", "group__Settings.html#ga3a8898f5a93139fbc35f5dfe39ed9f5a", null ],
+    [ "fluid_settings_foreach_option_t", "group__Settings.html#ga56719cd428f9c0b56b38409357f9ac5a", null ],
+    [ "fluid_settings_foreach_t", "group__Settings.html#ga8be1761be41f9f2b14b9e32ce9a1e9df", null ],
+    [ "fluid_types_enum", "group__Settings.html#ga3f81ecae0f6b147ca8a7f3be4f24a07a", [
+      [ "FLUID_NO_TYPE", "group__Settings.html#gga3f81ecae0f6b147ca8a7f3be4f24a07aa7afc1bed56f3d4269b22e58a47e59136", null ],
+      [ "FLUID_NUM_TYPE", "group__Settings.html#gga3f81ecae0f6b147ca8a7f3be4f24a07aa5fd6d4d56917aa1225b0c713ab17a088", null ],
+      [ "FLUID_INT_TYPE", "group__Settings.html#gga3f81ecae0f6b147ca8a7f3be4f24a07aaac101015b18e0600245d930c16619659", null ],
+      [ "FLUID_STR_TYPE", "group__Settings.html#gga3f81ecae0f6b147ca8a7f3be4f24a07aa5fb9826b74428753caccfe01091d1000", null ],
+      [ "FLUID_SET_TYPE", "group__Settings.html#gga3f81ecae0f6b147ca8a7f3be4f24a07aa50b8a4a854bda93a6f59b425e8f4acad", null ]
+    ] ],
+    [ "delete_fluid_settings", "group__Settings.html#gabd13a1e869bfaaaebfc58a72af5a66ac", null ],
+    [ "fluid_settings_copystr", "group__Settings.html#ga60fa4a2b4bee8309aad21db2cd67fc0c", null ],
+    [ "fluid_settings_dupstr", "group__Settings.html#gaadc72acd38fe2a98a1a7696027ca9120", null ],
+    [ "fluid_settings_foreach", "group__Settings.html#ga845352833cdbd525412416d6588697d8", null ],
+    [ "fluid_settings_foreach_option", "group__Settings.html#ga27b468f705be56657281b07fbe4e0398", null ],
+    [ "fluid_settings_get_hints", "group__Settings.html#ga8a8931c61426f89985bb1b92de9291fd", null ],
+    [ "fluid_settings_get_type", "group__Settings.html#gadbbfb9a80b6bf7eff6df83945d33a872", null ],
+    [ "fluid_settings_getint", "group__Settings.html#gaab27c7ececd6d51f9c9d84cacacf3919", null ],
+    [ "fluid_settings_getint_default", "group__Settings.html#ga630e8c965de8648b7727cd0329dd52db", null ],
+    [ "fluid_settings_getint_range", "group__Settings.html#gafad0e6dd24372a662d257a2ed478029f", null ],
+    [ "fluid_settings_getnum", "group__Settings.html#gad5ad20cf3e9aab85b1d2c60929512e24", null ],
+    [ "fluid_settings_getnum_default", "group__Settings.html#ga4dfa003d8037c1e131622a7edf987ce4", null ],
+    [ "fluid_settings_getnum_range", "group__Settings.html#ga34dc4a347227041d3d3b99fc78059d2f", null ],
+    [ "fluid_settings_getstr_default", "group__Settings.html#ga5acb5b788aae89b556dd69f2f6d667eb", null ],
+    [ "fluid_settings_is_realtime", "group__Settings.html#ga129fa2bad2b90d4cbcb989eb4d4d1619", null ],
+    [ "fluid_settings_option_concat", "group__Settings.html#ga1e6eb7e8701e1548484383ac10b958ca", null ],
+    [ "fluid_settings_option_count", "group__Settings.html#ga5e74eadb3d303e3cb855235ca4ff08ea", null ],
+    [ "fluid_settings_setint", "group__Settings.html#gaec566c035617c2e12de85b82297ac90b", null ],
+    [ "fluid_settings_setnum", "group__Settings.html#ga25fc9badbe6d2f036af206ca2de1680d", null ],
+    [ "fluid_settings_setstr", "group__Settings.html#ga58cbabbb8990c2934b3eeea925e01804", null ],
+    [ "fluid_settings_str_equal", "group__Settings.html#gabdf64528c5cff3ffc31f50a3dd6dbc75", null ],
+    [ "new_fluid_settings", "group__Settings.html#ga7623af35fb3d1abace21ef7d5b4f4781", null ]
+];

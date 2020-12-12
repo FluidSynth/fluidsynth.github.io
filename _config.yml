@@ -1,6 +1,9 @@
 url: "https://fluidsynth.org"
 baseurl: "/"
 title: "FluidSynth"
+keep_files:
+- api
+- api-1.x
 paginate: 5
 paginate_path: "/news/page:num/"
 permalink: /news/:year/:month/:day/:title/
@@ -35,9 +38,9 @@ main_navigation:
   - title: About SoundFont2
     href: https://github.com/FluidSynth/fluidsynth/wiki/SoundFont
   - title: FluidSynth API
-    href: http://www.fluidsynth.org/api/
+    href: /api/
   - title: FluidSynth API (legacy)
-    href: http://www.fluidsynth.org/api-1.x/
+    href: /api-1.x/
 
 - title: Download
   href: https://github.com/FluidSynth/fluidsynth/releases

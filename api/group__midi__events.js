@@ -1,0 +1,26 @@
+var group__midi__events =
+[
+    [ "delete_fluid_midi_event", "group__midi__events.html#ga8d7bb4a62f006210bd8ab2581b62393d", null ],
+    [ "fluid_midi_event_get_channel", "group__midi__events.html#gad40d950407906451336caf08a4e596a1", null ],
+    [ "fluid_midi_event_get_control", "group__midi__events.html#gaadc883cb8fcca219ebfc3ed0b72f80a2", null ],
+    [ "fluid_midi_event_get_key", "group__midi__events.html#ga92ea05dd00e9078c2086510718d8284e", null ],
+    [ "fluid_midi_event_get_lyrics", "group__midi__events.html#ga0192ed5d2158003b40573aa47a473f21", null ],
+    [ "fluid_midi_event_get_pitch", "group__midi__events.html#gaa4f56545ca7e346acbde91cfc2bc6df7", null ],
+    [ "fluid_midi_event_get_program", "group__midi__events.html#gaf83d3578174a3adcbb8a4e4cd9659ae0", null ],
+    [ "fluid_midi_event_get_text", "group__midi__events.html#ga650f90ef05dcb96e736de7c7a7b4d68f", null ],
+    [ "fluid_midi_event_get_type", "group__midi__events.html#gafa0d2d4409e43272d86bc5063440cfaa", null ],
+    [ "fluid_midi_event_get_value", "group__midi__events.html#gab0795b8606843e05b93dd0cf31c276ab", null ],
+    [ "fluid_midi_event_get_velocity", "group__midi__events.html#gaceb3a91ea6cd62c58408f54a9f3bbfe8", null ],
+    [ "fluid_midi_event_set_channel", "group__midi__events.html#ga675ee6ad747cb83194a0202fb53d65a6", null ],
+    [ "fluid_midi_event_set_control", "group__midi__events.html#ga676ac55e01610e7efa78bbd24fc6fe35", null ],
+    [ "fluid_midi_event_set_key", "group__midi__events.html#ga15d2c324b6afa562815432afcc21a0cc", null ],
+    [ "fluid_midi_event_set_lyrics", "group__midi__events.html#gac2521936c5bae0d35a8bf0b321fd223b", null ],
+    [ "fluid_midi_event_set_pitch", "group__midi__events.html#ga8f9ee097ff1546628c8c5630920e3a8b", null ],
+    [ "fluid_midi_event_set_program", "group__midi__events.html#ga153fc8bdfa134b8265bdee7d576edfcc", null ],
+    [ "fluid_midi_event_set_sysex", "group__midi__events.html#ga4482d4f8fa62ab197f3f308949e667ae", null ],
+    [ "fluid_midi_event_set_text", "group__midi__events.html#ga338f9abb467d3c6a28623315922f8e79", null ],
+    [ "fluid_midi_event_set_type", "group__midi__events.html#gab80f31a73182ec472f8a3a41de4bc76a", null ],
+    [ "fluid_midi_event_set_value", "group__midi__events.html#ga99bdfd3d4b861737a51a46da97d1c8c7", null ],
+    [ "fluid_midi_event_set_velocity", "group__midi__events.html#ga5d27aad8c3e7b36e55d2d681de2dd8dc", null ],
+    [ "new_fluid_midi_event", "group__midi__events.html#ga0996e20da72c60432dbc9c992672464f", null ]
+];
