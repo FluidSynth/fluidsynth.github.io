@@ -6,6 +6,7 @@ exclude:
 - Gemfile
 - Gemfile.lock
 - vendor/
+- README.md
 keep_files:
 - api
 - api-1.x
