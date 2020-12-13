@@ -1,6 +1,11 @@
 url: "https://fluidsynth.org"
 baseurl: "/"
 title: "FluidSynth"
+encoding: utf-8
+exclude:
+- Gemfile
+- Gemfile.lock
+- vendor/
 keep_files:
 - api
 - api-1.x
