@@ -1,56 +1,26 @@
 - title: Home
   href: /
 
-- title: News
+- title: Latest News
   href: /news/
 
-- title: Screenshots
-  href: /screenshots/
-
-- title: Applications
-  href: https://github.com/FluidSynth/fluidsynth/wiki/Applications
-
-- title: Creations
-  href: https://github.com/FluidSynth/fluidsynth/wiki/MadeWithFluidSynth
+- title: Showcase
+  href: /showcase/
 
 - title: Documentation
-  href: https://github.com/FluidSynth/fluidsynth/wiki/Documentation
-  links:
-  - title: Wiki Home
-    href: https://github.com/FluidSynth/fluidsynth/wiki
-  - title: Getting Started
-    href: https://github.com/FluidSynth/fluidsynth/wiki/GettingStarted
-  - title: User Manual
-    href: https://github.com/FluidSynth/fluidsynth/wiki/UserManual
-  - title: FluidSynth Settings
-    href: https://github.com/FluidSynth/fluidsynth/wiki/FluidSettings
-  - title: About SoundFont2
-    href: https://github.com/FluidSynth/fluidsynth/wiki/SoundFont
-  - title: FluidSynth API
-    href: /api/
-  - title: FluidSynth API (legacy)
-    href: /api-1.x/
+  href: /documentation/
 
-- title: Download
-  href: https://github.com/FluidSynth/fluidsynth/releases
-
-- title: Installing
-  href: https://github.com/FluidSynth/fluidsynth/wiki/BuildingWithCMake
-  links:
-  - title: Building Source Code
-    href: https://github.com/FluidSynth/fluidsynth/wiki/BuildingWithCMake
+- title: Getting FluidSynth
+  href: /download/
 
 - title: Development
-  href: https://www.fluidsynth.org/api/
-  links:
-  - title: Bugs and Feature Requests
-    href: https://github.com/FluidSynth/fluidsynth/issues
-  - title: Git Source Code Browser
-    href: https://github.com/FluidSynth/fluidsynth
+  href: /development/
 
 - title: Contact
   href: /contact/
   links:
+  - title: Bug Reports / Feature Requests
+    href: https://github.com/FluidSynth/fluidsynth/issues
   - title: Discussion Forum
     href: https://github.com/FluidSynth/fluidsynth/discussions
   - title: Mailing List
