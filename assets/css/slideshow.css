@@ -24,7 +24,7 @@
 	width: 32px;
 	height: 32px;
 	margin: -16px 0 0 -16px;
-	background: url('http://www.fluidsynth.org/wp-content/plugins/slideshow-jquery-image-gallery/images/SlideshowPlugin/loading-icon-128x128.gif') no-repeat;
+	background: url('/assets/css/images/loading-icon-128x128.gif') no-repeat;
 	background-size: 32px 32px;
 }
 
@@ -44,18 +44,18 @@
 .slideshow_container_slideshow-jquery-image-gallery-custom-styles_1 .slideshow_controlPanel ul li:hover { }
 
 .slideshow_container_slideshow-jquery-image-gallery-custom-styles_1 .slideshow_play {
-	background: url('http://www.fluidsynth.org/wp-content/plugins/slideshow-jquery-image-gallery/images/SlideshowPlugin/dark-controlpanel.png') 0 0 no-repeat;
+	background: url('/assets/css/images/dark-controlpanel.png') 0 0 no-repeat;
 }
 
 .slideshow_container_slideshow-jquery-image-gallery-custom-styles_1 .slideshow_pause {
-	background: url('http://www.fluidsynth.org/wp-content/plugins/slideshow-jquery-image-gallery/images/SlideshowPlugin/dark-controlpanel.png') -20px 0 no-repeat;
+	background: url('/assets/css/images/dark-controlpanel.png') -20px 0 no-repeat;
 }
 
 .slideshow_container_slideshow-jquery-image-gallery-custom-styles_1 .slideshow_button {
 	margin-top: -50px;
 	height: 100px;
 	width: 24px;
-	background: url('http://www.fluidsynth.org/wp-content/plugins/slideshow-jquery-image-gallery/images/SlideshowPlugin/dark-arrows.png') no-repeat;
+	background: url('/assets/css/images/dark-arrows.png') no-repeat;
 }
 
 .slideshow_container_slideshow-jquery-image-gallery-custom-styles_1 .slideshow_previous { }
@@ -79,7 +79,7 @@
 	margin: 0 2px;
 	width: 15px;
 	height: 15px;
-	background: url('http://www.fluidsynth.org/wp-content/plugins/slideshow-jquery-image-gallery/images/SlideshowPlugin/dark-bullet.png') no-repeat;
+	background: url('/assets/css/images/dark-bullet.png') no-repeat;
 }
 .slideshow_container_slideshow-jquery-image-gallery-custom-styles_1 .slideshow_slide_text p,
 .slideshow_container_slideshow-jquery-image-gallery-custom-styles_1 .slideshow_slide_text h1,

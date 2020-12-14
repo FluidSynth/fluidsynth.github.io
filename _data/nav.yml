@@ -41,7 +41,7 @@
     href: https://github.com/FluidSynth/fluidsynth/wiki/BuildingWithCMake
 
 - title: Development
-  href: http://www.fluidsynth.org/api/
+  href: https://www.fluidsynth.org/api/
   links:
   - title: Bugs and Feature Requests
     href: https://github.com/FluidSynth/fluidsynth/issues
