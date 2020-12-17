@@ -1,11 +1,3 @@
----
-layout: gallery
----
-
-# Application Screenshots
-
-FluidSynth does not have a graphical user interface, however many other programs that utilize it do, some of which are shown here.
-
 <div id="gallery-1" class="gallery galleryid-24 gallery-columns-3 gallery-size-responsive-200">
     {% for item in site.data.screenshots %}
     {% assign remainder = forloop.index | modulo: 3 %}
@@ -18,3 +10,4 @@ FluidSynth does not have a graphical user interface, however many other programs
     {% if remainder == 0 %}<br style="clear: both">{% endif %}
     {% endfor %}
 </div>
+<br style="clear: both">
