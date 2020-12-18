@@ -249,7 +249,7 @@ synth.device-id</h1>
 <dl class="section user"><dt>Real-time</dt><dd>This setting can be changed during runtime of the synthesizer.</dd></dl>
 <p> 
 <desc>
-                Device identifier used for SYSEX commands, such as MIDI Tuning Standard commands. Only those SYSEX commands destined for this ID or to all devices will be acted upon.</desc>
+                Device identifier used for SYSEX commands, such as MIDI Tuning Standard commands. Fluidsynth will only process those SYSEX commands destined for this ID. Broadcast commands (with ID=127) will always be processed.</desc>
   
 </div>
 </p>
