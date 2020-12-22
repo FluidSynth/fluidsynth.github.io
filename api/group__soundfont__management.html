@@ -478,7 +478,8 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>SoundFont ID on success, <a class="el" href="group__misc.html#ga90e8bdbc5a507bbfa5c45bac85a63a61" title="Value that indicates failure, used by most libfluidsynth functions. ">FLUID_FAILED</a> on error </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>SoundFont ID on success, <a class="el" href="group__misc.html#ga90e8bdbc5a507bbfa5c45bac85a63a61" title="Value that indicates failure, used by most libfluidsynth functions. ">FLUID_FAILED</a> on error</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Since FluidSynth 2.2.0 <code>filename</code> is treated as an UTF8 encoded string on Windows. FluidSynth will convert it to wide-char internally and then pass it to <code>_wfopen()</code>. Before FluidSynth 2.2.0, <code>filename</code> was treated as ANSI string on Windows. All other platforms directly pass it to <code>fopen()</code> without any conversion (usually, UTF8 is accepted). </dd></dl>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="example_8c-example.html#a3">example.c</a>, <a class="el" href="fluidsynth_arpeggio_8c-example.html#a10">fluidsynth_arpeggio.c</a>, <a class="el" href="fluidsynth_fx_8c-example.html#a5">fluidsynth_fx.c</a>, <a class="el" href="fluidsynth_metronome_8c-example.html#a9">fluidsynth_metronome.c</a>, <a class="el" href="fluidsynth_sfload_mem_8c-example.html#a6">fluidsynth_sfload_mem.c</a>, and <a class="el" href="fluidsynth_simple_8c-example.html#a2">fluidsynth_simple.c</a>.</dd>
 </dl>
 </div>
