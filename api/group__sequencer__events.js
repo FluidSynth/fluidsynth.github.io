@@ -22,7 +22,8 @@ var group__sequencer__events =
       [ "FLUID_SEQ_CHANNELPRESSURE", "group__sequencer__events.html#gga98ada1fab7a3785a41aa4003645640ebabe345ba341506786677eb843d3ad967e", null ],
       [ "FLUID_SEQ_KEYPRESSURE", "group__sequencer__events.html#gga98ada1fab7a3785a41aa4003645640eba26dfc284999662c99ead17ef86b918b8", null ],
       [ "FLUID_SEQ_SYSTEMRESET", "group__sequencer__events.html#gga98ada1fab7a3785a41aa4003645640ebaa6a1f19596ef3e43d1d2c8473511c88a", null ],
-      [ "FLUID_SEQ_UNREGISTERING", "group__sequencer__events.html#gga98ada1fab7a3785a41aa4003645640eba64a1e726e1c8b4f48872ef4a266a78d6", null ]
+      [ "FLUID_SEQ_UNREGISTERING", "group__sequencer__events.html#gga98ada1fab7a3785a41aa4003645640eba64a1e726e1c8b4f48872ef4a266a78d6", null ],
+      [ "FLUID_SEQ_SCALE", "group__sequencer__events.html#gga98ada1fab7a3785a41aa4003645640eba86e14d4632e02873ad4b6aee64ecb51c", null ]
     ] ],
     [ "delete_fluid_event", "group__sequencer__events.html#gae6d14506f08d58b464f24d7b416511b0", null ],
     [ "fluid_event_all_notes_off", "group__sequencer__events.html#ga3b3c8a912be5f84a35eb6b24787b0aa0", null ],
@@ -40,6 +41,7 @@ var group__sequencer__events =
     [ "fluid_event_get_key", "group__sequencer__events.html#gaaf4e734dd3cfde47ad6085b47a7b6dd6", null ],
     [ "fluid_event_get_pitch", "group__sequencer__events.html#gae4386142bb54310739b42457da5070c0", null ],
     [ "fluid_event_get_program", "group__sequencer__events.html#gab35e3facd105b9dfa0467fbd822f41bd", null ],
+    [ "fluid_event_get_scale", "group__sequencer__events.html#ga2d8c76f2b5ae3962c8e776bdb5800338", null ],
     [ "fluid_event_get_sfont_id", "group__sequencer__events.html#ga49e8f04cae451acba9685ab3be7e65b2", null ],
     [ "fluid_event_get_source", "group__sequencer__events.html#ga6d768c3ef212c21cb95dbc8f83496184", null ],
     [ "fluid_event_get_type", "group__sequencer__events.html#ga926dcccf283c8bd0464177d69d29bf8f", null ],
@@ -56,6 +58,7 @@ var group__sequencer__events =
     [ "fluid_event_program_change", "group__sequencer__events.html#ga8080c6274f7c73ae4191ce1bf02f399f", null ],
     [ "fluid_event_program_select", "group__sequencer__events.html#ga79f1c2ed05a503157bc564d0135f03be", null ],
     [ "fluid_event_reverb_send", "group__sequencer__events.html#gaa6c2e2c9a0d155342b0e8c68d2898099", null ],
+    [ "fluid_event_scale", "group__sequencer__events.html#ga87e5cea03b6f90bb6354e8d5ed6abdcc", null ],
     [ "fluid_event_set_dest", "group__sequencer__events.html#ga554261a62cfa890262ec26366b35ce8a", null ],
     [ "fluid_event_set_source", "group__sequencer__events.html#ga07bf6b85ba0bb7c54eeb2fb9df12c191", null ],
     [ "fluid_event_sustain", "group__sequencer__events.html#gae042b78a9a3ebed687cbbd6221cc56e2", null ],

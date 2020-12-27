@@ -91,6 +91,7 @@ var searchData=
   ['fluid_5fseq_5fprogramchange',['FLUID_SEQ_PROGRAMCHANGE',['../group__sequencer__events.html#gga98ada1fab7a3785a41aa4003645640eba7981ce96e3c2feaaecf240e7095b88e8',1,'event.h']]],
   ['fluid_5fseq_5fprogramselect',['FLUID_SEQ_PROGRAMSELECT',['../group__sequencer__events.html#gga98ada1fab7a3785a41aa4003645640eba32692d9a15f57411d8e340ce042a6b95',1,'event.h']]],
   ['fluid_5fseq_5freverbsend',['FLUID_SEQ_REVERBSEND',['../group__sequencer__events.html#gga98ada1fab7a3785a41aa4003645640eba970b2bfee1d58337bbe268475d07784e',1,'event.h']]],
+  ['fluid_5fseq_5fscale',['FLUID_SEQ_SCALE',['../group__sequencer__events.html#gga98ada1fab7a3785a41aa4003645640eba86e14d4632e02873ad4b6aee64ecb51c',1,'event.h']]],
   ['fluid_5fseq_5fsustain',['FLUID_SEQ_SUSTAIN',['../group__sequencer__events.html#gga98ada1fab7a3785a41aa4003645640eba25aa6c9385a294189c6b18544350734d',1,'event.h']]],
   ['fluid_5fseq_5fsystemreset',['FLUID_SEQ_SYSTEMRESET',['../group__sequencer__events.html#gga98ada1fab7a3785a41aa4003645640ebaa6a1f19596ef3e43d1d2c8473511c88a',1,'event.h']]],
   ['fluid_5fseq_5ftimer',['FLUID_SEQ_TIMER',['../group__sequencer__events.html#gga98ada1fab7a3785a41aa4003645640eba98e48d4a9631bb13cd04a79588e6fc0e',1,'event.h']]],

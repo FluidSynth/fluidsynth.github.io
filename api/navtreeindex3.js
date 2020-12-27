@@ -1,5 +1,8 @@
 var NAVTREEINDEX3 =
 {
+"settings_player.html":[5,2],
+"settings_player.html#settings_player_reset-synth":[5,2,0],
+"settings_player.html#settings_player_timing-source":[5,2,1],
 "settings_shell.html":[5,3],
 "settings_shell.html#settings_shell_port":[5,3,1],
 "settings_shell.html#settings_shell_prompt":[5,3,0],

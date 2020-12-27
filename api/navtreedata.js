@@ -31,8 +31,8 @@ var NAVTREEINDEX =
 [
 "Advanced.html",
 "group__ladspa.html#ga921dcbb6c18611ec06a8884fcf30aca8",
-"group__sequencer__events.html#gga98ada1fab7a3785a41aa4003645640eba0c1bce287e2eb79ab4295ca5a6ecf752",
-"settings_shell.html"
+"group__sequencer__events.html#gaed94b6dad11c28792a26b0053da67374",
+"settings_player.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

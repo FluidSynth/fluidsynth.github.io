@@ -1,5 +1,7 @@
 var NAVTREEINDEX2 =
 {
+"group__sequencer__events.html#gaed94b6dad11c28792a26b0053da67374":[6,4,0,11],
+"group__sequencer__events.html#gga98ada1fab7a3785a41aa4003645640eba05e9f160eea1d6aeb43299b7bd45530f":[6,4,0,0,4],
 "group__sequencer__events.html#gga98ada1fab7a3785a41aa4003645640eba0c1bce287e2eb79ab4295ca5a6ecf752":[6,4,0,0,14],
 "group__sequencer__events.html#gga98ada1fab7a3785a41aa4003645640eba25aa6c9385a294189c6b18544350734d":[6,4,0,0,11],
 "group__sequencer__events.html#gga98ada1fab7a3785a41aa4003645640eba26dfc284999662c99ead17ef86b918b8":[6,4,0,0,19],
@@ -12,6 +14,7 @@ var NAVTREEINDEX2 =
 "group__sequencer__events.html#gga98ada1fab7a3785a41aa4003645640eba51375e58f50cda291818b26396df9659":[6,4,0,0,10],
 "group__sequencer__events.html#gga98ada1fab7a3785a41aa4003645640eba64a1e726e1c8b4f48872ef4a266a78d6":[6,4,0,0,21],
 "group__sequencer__events.html#gga98ada1fab7a3785a41aa4003645640eba7981ce96e3c2feaaecf240e7095b88e8":[6,4,0,0,6],
+"group__sequencer__events.html#gga98ada1fab7a3785a41aa4003645640eba86e14d4632e02873ad4b6aee64ecb51c":[6,4,0,0,22],
 "group__sequencer__events.html#gga98ada1fab7a3785a41aa4003645640eba970b2bfee1d58337bbe268475d07784e":[6,4,0,0,15],
 "group__sequencer__events.html#gga98ada1fab7a3785a41aa4003645640eba98e48d4a9631bb13cd04a79588e6fc0e":[6,4,0,0,17],
 "group__sequencer__events.html#gga98ada1fab7a3785a41aa4003645640ebaa6a1f19596ef3e43d1d2c8473511c88a":[6,4,0,0,20],
@@ -246,8 +249,5 @@ var NAVTREEINDEX2 =
 "settings_midi.html#settings_midi_oss_device":[5,1,10],
 "settings_midi.html#settings_midi_portname":[5,1,3],
 "settings_midi.html#settings_midi_realtime-prio":[5,1,2],
-"settings_midi.html#settings_midi_winmidi_device":[5,1,11],
-"settings_player.html":[5,2],
-"settings_player.html#settings_player_reset-synth":[5,2,0],
-"settings_player.html#settings_player_timing-source":[5,2,1]
+"settings_midi.html#settings_midi_winmidi_device":[5,1,11]
 };

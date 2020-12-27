@@ -137,7 +137,9 @@ Enumerations</h2></td></tr>
 <br />
 &#160;&#160;<a class="el" href="group__sequencer__events.html#gga98ada1fab7a3785a41aa4003645640ebaa6a1f19596ef3e43d1d2c8473511c88a">FLUID_SEQ_SYSTEMRESET</a>, 
 <br />
-&#160;&#160;<a class="el" href="group__sequencer__events.html#gga98ada1fab7a3785a41aa4003645640eba64a1e726e1c8b4f48872ef4a266a78d6">FLUID_SEQ_UNREGISTERING</a>
+&#160;&#160;<a class="el" href="group__sequencer__events.html#gga98ada1fab7a3785a41aa4003645640eba64a1e726e1c8b4f48872ef4a266a78d6">FLUID_SEQ_UNREGISTERING</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__sequencer__events.html#gga98ada1fab7a3785a41aa4003645640eba86e14d4632e02873ad4b6aee64ecb51c">FLUID_SEQ_SCALE</a>
 <br />
  }<tr class="memdesc:ga98ada1fab7a3785a41aa4003645640eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sequencer event type enumeration.  <a href="group__sequencer__events.html#ga98ada1fab7a3785a41aa4003645640eb">More...</a><br /></td></tr>
 </td></tr>
@@ -199,6 +201,9 @@ Functions</h2></td></tr>
 <tr class="memitem:gab35e3facd105b9dfa0467fbd822f41bd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sequencer__events.html#gab35e3facd105b9dfa0467fbd822f41bd">fluid_event_get_program</a> (<a class="el" href="group__Types.html#gaca09348be1b6e6ee7fce49dd4734f1ba">fluid_event_t</a> *evt)</td></tr>
 <tr class="memdesc:gab35e3facd105b9dfa0467fbd822f41bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the MIDI program field from a sequencer event structure.  <a href="#gab35e3facd105b9dfa0467fbd822f41bd">More...</a><br /></td></tr>
 <tr class="separator:gab35e3facd105b9dfa0467fbd822f41bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2d8c76f2b5ae3962c8e776bdb5800338"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sequencer__events.html#ga2d8c76f2b5ae3962c8e776bdb5800338">fluid_event_get_scale</a> (<a class="el" href="group__Types.html#gaca09348be1b6e6ee7fce49dd4734f1ba">fluid_event_t</a> *evt)</td></tr>
+<tr class="memdesc:ga2d8c76f2b5ae3962c8e776bdb5800338"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets time scale field from a sequencer event structure.  <a href="#ga2d8c76f2b5ae3962c8e776bdb5800338">More...</a><br /></td></tr>
+<tr class="separator:ga2d8c76f2b5ae3962c8e776bdb5800338"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga49e8f04cae451acba9685ab3be7e65b2"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sequencer__events.html#ga49e8f04cae451acba9685ab3be7e65b2">fluid_event_get_sfont_id</a> (<a class="el" href="group__Types.html#gaca09348be1b6e6ee7fce49dd4734f1ba">fluid_event_t</a> *evt)</td></tr>
 <tr class="memdesc:ga49e8f04cae451acba9685ab3be7e65b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the SoundFont ID field from a sequencer event structure.  <a href="#ga49e8f04cae451acba9685ab3be7e65b2">More...</a><br /></td></tr>
 <tr class="separator:ga49e8f04cae451acba9685ab3be7e65b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -247,6 +252,9 @@ Functions</h2></td></tr>
 <tr class="memitem:gaa6c2e2c9a0d155342b0e8c68d2898099"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sequencer__events.html#gaa6c2e2c9a0d155342b0e8c68d2898099">fluid_event_reverb_send</a> (<a class="el" href="group__Types.html#gaca09348be1b6e6ee7fce49dd4734f1ba">fluid_event_t</a> *evt, int channel, int val)</td></tr>
 <tr class="memdesc:gaa6c2e2c9a0d155342b0e8c68d2898099"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a sequencer event to be a reverb send event.  <a href="#gaa6c2e2c9a0d155342b0e8c68d2898099">More...</a><br /></td></tr>
 <tr class="separator:gaa6c2e2c9a0d155342b0e8c68d2898099"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga87e5cea03b6f90bb6354e8d5ed6abdcc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sequencer__events.html#ga87e5cea03b6f90bb6354e8d5ed6abdcc">fluid_event_scale</a> (<a class="el" href="group__Types.html#gaca09348be1b6e6ee7fce49dd4734f1ba">fluid_event_t</a> *evt, double new_scale)</td></tr>
+<tr class="memdesc:ga87e5cea03b6f90bb6354e8d5ed6abdcc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a sequencer event to be a scale change event.  <a href="#ga87e5cea03b6f90bb6354e8d5ed6abdcc">More...</a><br /></td></tr>
+<tr class="separator:ga87e5cea03b6f90bb6354e8d5ed6abdcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga554261a62cfa890262ec26366b35ce8a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sequencer__events.html#ga554261a62cfa890262ec26366b35ce8a">fluid_event_set_dest</a> (<a class="el" href="group__Types.html#gaca09348be1b6e6ee7fce49dd4734f1ba">fluid_event_t</a> *evt, <a class="el" href="group__Types.html#ga69f729a00307f2b8ec1be0dba2203c12">fluid_seq_id_t</a> dest)</td></tr>
 <tr class="memdesc:ga554261a62cfa890262ec26366b35ce8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set destination of this sequencer event, i.e.  <a href="#ga554261a62cfa890262ec26366b35ce8a">More...</a><br /></td></tr>
 <tr class="separator:ga554261a62cfa890262ec26366b35ce8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -334,6 +342,9 @@ Functions</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="gga98ada1fab7a3785a41aa4003645640eba64a1e726e1c8b4f48872ef4a266a78d6"></a>FLUID_SEQ_UNREGISTERING&#160;</td><td class="fielddoc"><p>Called when a sequencer client is being unregistered. </p>
 <dl class="section since"><dt>Since</dt><dd>1.1.0 </dd></dl>
+</td></tr>
+<tr><td class="fieldname"><a id="gga98ada1fab7a3785a41aa4003645640eba86e14d4632e02873ad4b6aee64ecb51c"></a>FLUID_SEQ_SCALE&#160;</td><td class="fielddoc"><p>Sets a new time scale for the sequencer. </p>
+<dl class="section since"><dt>Since</dt><dd>2.2.0 </dd></dl>
 </td></tr>
 </table>
 
@@ -870,6 +881,34 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>MIDI program number (0-127)</dd></dl>
 <p>Used by the <a class="el" href="group__sequencer__events.html#gga98ada1fab7a3785a41aa4003645640eba7981ce96e3c2feaaecf240e7095b88e8" title="Program change message. ">FLUID_SEQ_PROGRAMCHANGE</a> and <a class="el" href="group__sequencer__events.html#gga98ada1fab7a3785a41aa4003645640eba32692d9a15f57411d8e340ce042a6b95" title="Program select message. ">FLUID_SEQ_PROGRAMSELECT</a> event types. </p>
+
+</div>
+</div>
+<a id="ga2d8c76f2b5ae3962c8e776bdb5800338"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2d8c76f2b5ae3962c8e776bdb5800338">&#9670;&nbsp;</a></span>fluid_event_get_scale()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double fluid_event_get_scale </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__Types.html#gaca09348be1b6e6ee7fce49dd4734f1ba">fluid_event_t</a> *&#160;</td>
+          <td class="paramname"><em>evt</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets time scale field from a sequencer event structure. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">evt</td><td>Sequencer event structure </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>SoundFont identifier value.</dd></dl>
+<p>Used by the <a class="el" href="group__sequencer__events.html#gga98ada1fab7a3785a41aa4003645640eba86e14d4632e02873ad4b6aee64ecb51c" title="Sets a new time scale for the sequencer. ">FLUID_SEQ_SCALE</a> event type. </p>
 
 </div>
 </div>
@@ -1537,6 +1576,44 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="ga87e5cea03b6f90bb6354e8d5ed6abdcc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga87e5cea03b6f90bb6354e8d5ed6abdcc">&#9670;&nbsp;</a></span>fluid_event_scale()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fluid_event_scale </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__Types.html#gaca09348be1b6e6ee7fce49dd4734f1ba">fluid_event_t</a> *&#160;</td>
+          <td class="paramname"><em>evt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>new_scale</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set a sequencer event to be a scale change event. </p>
+<p>Useful for scheduling tempo changes. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">evt</td><td>Sequencer event structure </td></tr>
+    <tr><td class="paramname">new_scale</td><td>The new time scale to apply to the sequencer, see <a class="el" href="group__sequencer.html#ga7f48dab4cde18da6e0fa76458849c19a" title="Set the time scale of a sequencer. ">fluid_sequencer_set_time_scale()</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>2.2.0 </dd></dl>
 
 </div>
 </div>

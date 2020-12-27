@@ -95,6 +95,7 @@ What's new in 2.2.0?</h1>
 <li>The sequencer's queue no longer blocks the synthesizer thread, due to being busy arranging its events internally.</li>
 <li>Events that share the same tick was given a new, documented order, see <a class="el" href="group__sequencer.html#ga83314f4ad773979841afe50cc2efd83f" title="Schedule an event for sending at a later time. ">fluid_sequencer_send_at()</a>.</li>
 <li>The sequencer's scale can now be used for arbitrary tempo changes. Previously, the scale of the sequencer was limited to 1000. The only limitation now is &gt;0.</li>
+<li>There is now a dedicated event type for changing the sequencer's time scale, see <a class="el" href="group__sequencer__events.html#ga87e5cea03b6f90bb6354e8d5ed6abdcc" title="Set a sequencer event to be a scale change event. ">fluid_event_scale()</a>.</li>
 </ul>
 </li>
 <li>The dynamic-sample-loader has learned support to pin samples, see <a class="el" href="group__soundfonts.html#ga18c346f86663cda8bd159fec58670b3d" title="Pins all samples of the given preset. ">fluid_synth_pin_preset()</a> and <a class="el" href="group__soundfonts.html#ga04731fab69f22de2d8bac75bea5b94ee" title="Unpin all samples of the given preset. ">fluid_synth_unpin_preset()</a></li>
