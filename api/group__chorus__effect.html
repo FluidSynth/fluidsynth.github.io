@@ -311,7 +311,7 @@ Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">synth</td><td>FluidSynth instance </td></tr>
     <tr><td class="paramname">fx_group</td><td>Index of the fx group from which lfo depth to fetch. Must be in the range <code>-1 to (<a class="el" href="group__synthesis__params.html#ga2b4731bf062b674937f11db9395360be" title="Get the total number of allocated effects units. ">fluid_synth_count_effects_groups()</a>-1)</code>. If -1 the parameter common to all fx groups is fetched. </td></tr>
-    <tr><td class="paramname">depth</td><td>valid pointer on value to return. </td></tr>
+    <tr><td class="paramname">depth_ms</td><td>valid pointer on value to return. </td></tr>
   </table>
   </dd>
 </dl>
@@ -754,7 +754,8 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">synth</td><td>FluidSynth instance. </td></tr>
-    <tr><td class="paramname">fx_group</td><td>Index of the fx group. Must be in the range <code>-1 to (<a class="el" href="group__synthesis__params.html#ga2b4731bf062b674937f11db9395360be" title="Get the total number of allocated effects units. ">fluid_synth_count_effects_groups()</a>-1)</code>. If -1 the parameter will be applied to all groups. , lfo depth to set. Must be in the range indicated by synth.chorus.depth </td></tr>
+    <tr><td class="paramname">fx_group</td><td>Index of the fx group. Must be in the range <code>-1 to (<a class="el" href="group__synthesis__params.html#ga2b4731bf062b674937f11db9395360be" title="Get the total number of allocated effects units. ">fluid_synth_count_effects_groups()</a>-1)</code>. If -1 the parameter will be applied to all groups. </td></tr>
+    <tr><td class="paramname">depth_ms</td><td>lfo depth to set. Must be in the range indicated by <a class="el" href="settings_synth.html#settings_synth_chorus_depth">synth.chorus.depth</a> </td></tr>
   </table>
   </dd>
 </dl>
@@ -889,7 +890,7 @@ Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">synth</td><td>FluidSynth instance. </td></tr>
     <tr><td class="paramname">fx_group</td><td>Index of the fx group. Must be in the range <code>-1 to (<a class="el" href="group__synthesis__params.html#ga2b4731bf062b674937f11db9395360be" title="Get the total number of allocated effects units. ">fluid_synth_count_effects_groups()</a>-1)</code>. If -1 the parameter will be applied to all groups. </td></tr>
-    <tr><td class="paramname">speed</td><td>Lfo speed to set. Must be in the range indicated by {synth_chorus_speed} </td></tr>
+    <tr><td class="paramname">speed</td><td>Lfo speed to set. Must be in the range indicated by <a class="el" href="settings_synth.html#settings_synth_chorus_speed">synth.chorus.speed</a> </td></tr>
   </table>
   </dd>
 </dl>
