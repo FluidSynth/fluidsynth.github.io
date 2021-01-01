@@ -553,6 +553,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Check if a voice is ON. </p>
+<p>A voice is in ON state as soon as a call to <a class="el" href="group__voice__control.html#ga059afeace88b39329fb48e0da8afa1f3" title="Activate a voice previously allocated with fluid_synth_alloc_voice(). ">fluid_synth_start_voice()</a> has been made (which is typically done in a fluid_preset_t's noteon function). A voice stays ON as long as it has not received a noteoff event.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">voice</td><td>Voice instance </td></tr>
@@ -560,7 +561,6 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>TRUE if on, FALSE otherwise</dd></dl>
-<p>A voice is ON if it has not yet received a noteoff event.</p>
 <dl class="section since"><dt>Since</dt><dd>1.1.7 </dd></dl>
 
 </div>
@@ -582,14 +582,14 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Check if a voice is producing sound. </p>
+<p>Like <a class="el" href="group__voices.html#gacceca9ccadecc12b4a05eed4613a9a2d" title="Check if a voice is ON. ">fluid_voice_is_on()</a> this will return TRUE once a call to <a class="el" href="group__voice__control.html#ga059afeace88b39329fb48e0da8afa1f3" title="Activate a voice previously allocated with fluid_synth_alloc_voice(). ">fluid_synth_start_voice()</a> has been made. Contrary to <a class="el" href="group__voices.html#gacceca9ccadecc12b4a05eed4613a9a2d" title="Check if a voice is ON. ">fluid_voice_is_on()</a>, this might also return TRUE after the voice received a noteoff event, as it may still be playing in release phase, or because it has been sustained or sostenuto'ed.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">voice</td><td>Voice instance </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>TRUE if playing, FALSE otherwise</dd></dl>
-<p>This might also return TRUE after the voice received a noteoff event, as it may still be playing in release phase. </p>
+<dl class="section return"><dt>Returns</dt><dd>TRUE if playing, FALSE otherwise </dd></dl>
 
 </div>
 </div>
