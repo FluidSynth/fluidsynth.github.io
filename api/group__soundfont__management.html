@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">libfluidsynth
-   &#160;<span id="projectnumber">2.1.5</span>
+   &#160;<span id="projectnumber">2.1.6</span>
    </div>
   </td>
  </tr>
@@ -124,7 +124,7 @@ Functions</h2></td></tr>
 <tr class="memdesc:ga9dbd7ccd34205edad767cf34b256c654"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reload a SoundFont.  <a href="#ga9dbd7ccd34205edad767cf34b256c654">More...</a><br /></td></tr>
 <tr class="separator:ga9dbd7ccd34205edad767cf34b256c654"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga586742c9ea4bbee80732881175db3393"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__soundfont__management.html#ga586742c9ea4bbee80732881175db3393">fluid_synth_sfunload</a> (<a class="el" href="group__Types.html#gae265f10ae174a13afe010de50d87e1a4">fluid_synth_t</a> *synth, int id, int reset_presets)</td></tr>
-<tr class="memdesc:ga586742c9ea4bbee80732881175db3393"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unload a SoundFont.  <a href="#ga586742c9ea4bbee80732881175db3393">More...</a><br /></td></tr>
+<tr class="memdesc:ga586742c9ea4bbee80732881175db3393"><td class="mdescLeft">&#160;</td><td class="mdescRight">Schedule a SoundFont for unloading.  <a href="#ga586742c9ea4bbee80732881175db3393">More...</a><br /></td></tr>
 <tr class="separator:ga586742c9ea4bbee80732881175db3393"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -554,7 +554,10 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Unload a SoundFont. </p>
+<p>Schedule a SoundFont for unloading. </p>
+<p>If the SoundFont isn't used anymore by any playing voices, it will be unloaded immediately.</p>
+<p>If any samples of the given SoundFont are still required by active voices, the SoundFont will be unloaded in a lazy manner, once those voices have finished synthesizing. If you call <a class="el" href="group__synth.html#gab42ea6e25476be548deb428c839d7d2b" title="Delete a FluidSynth instance. ">delete_fluid_synth()</a>, all voices will be destroyed and the SoundFont will be unloaded in any case. Once this function returned, <a class="el" href="group__soundfont__management.html#gabe740b75208bb17c765111f8838fbd14" title="Count number of loaded SoundFont files. ">fluid_synth_sfcount()</a> and similar functions will behave as if the SoundFont has already been unloaded, even though the lazy-unloading is still pending.</p>
+<dl class="section note"><dt>Note</dt><dd>This lazy-unloading mechanism was broken between FluidSynth 1.1.4 and 2.1.5 . As a consequence, SoundFonts scheduled for lazy-unloading may be never freed under certain conditions. Calling <a class="el" href="group__synth.html#gab42ea6e25476be548deb428c839d7d2b" title="Delete a FluidSynth instance. ">delete_fluid_synth()</a> does not recover this situation either.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">synth</td><td>FluidSynth instance </td></tr>
@@ -563,7 +566,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="group__misc.html#gae4efb1c3ce0d550c922504adfb0fb886" title="Value that indicates success, used by most libfluidsynth functions. ">FLUID_OK</a> on success, <a class="el" href="group__misc.html#ga90e8bdbc5a507bbfa5c45bac85a63a61" title="Value that indicates failure, used by most libfluidsynth functions. ">FLUID_FAILED</a> on error </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="group__misc.html#gae4efb1c3ce0d550c922504adfb0fb886" title="Value that indicates success, used by most libfluidsynth functions. ">FLUID_OK</a> if the given <code>id</code> was found, <a class="el" href="group__misc.html#ga90e8bdbc5a507bbfa5c45bac85a63a61" title="Value that indicates failure, used by most libfluidsynth functions. ">FLUID_FAILED</a> otherwise. </dd></dl>
 
 </div>
 </div>

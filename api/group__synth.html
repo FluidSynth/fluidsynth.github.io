@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">libfluidsynth
-   &#160;<span id="projectnumber">2.1.5</span>
+   &#160;<span id="projectnumber">2.1.6</span>
    </div>
   </td>
  </tr>
@@ -260,7 +260,8 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>New FluidSynth instance or NULL on error</dd></dl>
-<dl class="section note"><dt>Note</dt><dd>The <code>settings</code> parameter is used directly and should freed after the synth has been deleted. Further note that you may modify FluidSettings of the <code>settings</code> instance. However, only those FluidSettings marked as 'realtime' will affect the synth immediately. See the <a class="el" href="fluidsettings.html">Settings Reference</a> for more details. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The <code>settings</code> parameter is used directly, but the synth does not take ownership of it. Hence, the caller is responsible for freeing it, when no longer needed. Further note that you may modify FluidSettings of the <code>settings</code> instance. However, only those FluidSettings marked as 'realtime' will affect the synth immediately. See the <a class="el" href="fluidsettings.html">Settings Reference</a> for more details.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>The <code>settings</code> object should only be used by a single synth at a time. I.e. creating multiple synth instances with a single <code>settings</code> object causes undefined behavior. Once the "single synth" has been deleted, you may use the <code>settings</code> object again for another synth. </dd></dl>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="example_8c-example.html#a1">example.c</a>, <a class="el" href="fluidsynth_arpeggio_8c-example.html#a9">fluidsynth_arpeggio.c</a>, <a class="el" href="fluidsynth_fx_8c-example.html#a4">fluidsynth_fx.c</a>, <a class="el" href="fluidsynth_metronome_8c-example.html#a8">fluidsynth_metronome.c</a>, <a class="el" href="fluidsynth_register_adriver_8c-example.html#a4">fluidsynth_register_adriver.c</a>, <a class="el" href="fluidsynth_sfload_mem_8c-example.html#a2">fluidsynth_sfload_mem.c</a>, and <a class="el" href="fluidsynth_simple_8c-example.html#a1">fluidsynth_simple.c</a>.</dd>
 </dl>
 </div>
