@@ -1,5 +1,6 @@
 var NAVTREEINDEX2 =
 {
+"group__sequencer__events.html#gad4c310a82b604d81089b98d9640f84b9":[6,4,0,40],
 "group__sequencer__events.html#gae042b78a9a3ebed687cbbd6221cc56e2":[6,4,0,37],
 "group__sequencer__events.html#gae242d727b3a2d27f3ccd3f86b71c0452":[6,4,0,22],
 "group__sequencer__events.html#gae4386142bb54310739b42457da5070c0":[6,4,0,15],
@@ -209,8 +210,8 @@ var NAVTREEINDEX2 =
 "group__voices.html#ggaac296fe3c3d6930261b9ead8afe4db2ba0fe2e3c967922afa7c61990a4a5d01e4":[6,7,3,0,0],
 "group__voices.html#ggaac296fe3c3d6930261b9ead8afe4db2bab6a4717eb5a5f1adc30f89843a0bac4d":[6,7,3,0,2],
 "group__voices.html#ggaac296fe3c3d6930261b9ead8afe4db2baed44612d36459a1254b7ab6f34576a72":[6,7,3,0,1],
-"index.html":[0],
 "index.html":[],
+"index.html":[0],
 "index.html#Abstract":[0,0],
 "index.html#Disclaimer":[0,1],
 "modules.html":[6],
@@ -248,6 +249,5 @@ var NAVTREEINDEX2 =
 "settings_midi.html#settings_midi_alsa_seq_id":[5,1,6],
 "settings_midi.html#settings_midi_autoconnect":[5,1,0],
 "settings_midi.html#settings_midi_coremidi_id":[5,1,7],
-"settings_midi.html#settings_midi_driver":[5,1,1],
-"settings_midi.html#settings_midi_jack_id":[5,1,9]
+"settings_midi.html#settings_midi_driver":[5,1,1]
 };

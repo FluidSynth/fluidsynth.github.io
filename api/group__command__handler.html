@@ -96,6 +96,9 @@ Lifecycle Functions for Command Handler</h2></td></tr>
 <tr class="memitem:ga35b1495f8494d8cb1c1238b312d5bdc3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__Types.html#gae1944df078b25beb347abd07e42b35a4">fluid_cmd_handler_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__command__handler.html#ga35b1495f8494d8cb1c1238b312d5bdc3">new_fluid_cmd_handler</a> (<a class="el" href="group__Types.html#gae265f10ae174a13afe010de50d87e1a4">fluid_synth_t</a> *synth, <a class="el" href="group__Types.html#gaa57b4746220e24506a169f109875e4ad">fluid_midi_router_t</a> *router)</td></tr>
 <tr class="memdesc:ga35b1495f8494d8cb1c1238b312d5bdc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new command handler.  <a href="#ga35b1495f8494d8cb1c1238b312d5bdc3">More...</a><br /></td></tr>
 <tr class="separator:ga35b1495f8494d8cb1c1238b312d5bdc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae4024531e8f018c0296a4b1982461469"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__Types.html#gae1944df078b25beb347abd07e42b35a4">fluid_cmd_handler_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__command__handler.html#gae4024531e8f018c0296a4b1982461469">new_fluid_cmd_handler2</a> (<a class="el" href="group__Types.html#gaa363402d3c77333b0f070ba531d034ba">fluid_settings_t</a> *settings, <a class="el" href="group__Types.html#gae265f10ae174a13afe010de50d87e1a4">fluid_synth_t</a> *synth, <a class="el" href="group__Types.html#gaa57b4746220e24506a169f109875e4ad">fluid_midi_router_t</a> *router)</td></tr>
+<tr class="memdesc:gae4024531e8f018c0296a4b1982461469"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new command handler.  <a href="#gae4024531e8f018c0296a4b1982461469">More...</a><br /></td></tr>
+<tr class="separator:gae4024531e8f018c0296a4b1982461469"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga580bfea73c86c3c222a9337384ebe205"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__command__handler.html#ga580bfea73c86c3c222a9337384ebe205">delete_fluid_cmd_handler</a> (<a class="el" href="group__Types.html#gae1944df078b25beb347abd07e42b35a4">fluid_cmd_handler_t</a> *handler)</td></tr>
 <tr class="memdesc:ga580bfea73c86c3c222a9337384ebe205"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delete a command handler.  <a href="#ga580bfea73c86c3c222a9337384ebe205">More...</a><br /></td></tr>
 <tr class="separator:ga580bfea73c86c3c222a9337384ebe205"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -249,8 +252,46 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Create a new command handler. </p>
+<p>See <a class="el" href="group__command__handler.html#gae4024531e8f018c0296a4b1982461469" title="Create a new command handler. ">new_fluid_cmd_handler2()</a> for more information. </p>
+
+</div>
+</div>
+<a id="gae4024531e8f018c0296a4b1982461469"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae4024531e8f018c0296a4b1982461469">&#9670;&nbsp;</a></span>new_fluid_cmd_handler2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__Types.html#gae1944df078b25beb347abd07e42b35a4">fluid_cmd_handler_t</a>* new_fluid_cmd_handler2 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__Types.html#gaa363402d3c77333b0f070ba531d034ba">fluid_settings_t</a> *&#160;</td>
+          <td class="paramname"><em>settings</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__Types.html#gae265f10ae174a13afe010de50d87e1a4">fluid_synth_t</a> *&#160;</td>
+          <td class="paramname"><em>synth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__Types.html#gaa57b4746220e24506a169f109875e4ad">fluid_midi_router_t</a> *&#160;</td>
+          <td class="paramname"><em>router</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create a new command handler. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramname">settings</td><td>If not NULL, all the settings related commands will be added to the new handler. The <code>settings</code> object must be the same as the one you used for creating the <code>synth</code> and <code>router</code>. Otherwise the behaviour is undefined. </td></tr>
     <tr><td class="paramname">synth</td><td>If not NULL, all the default synthesizer commands will be added to the new handler. </td></tr>
     <tr><td class="paramname">router</td><td>If not NULL, all the default midi_router commands will be added to the new handler. </td></tr>
   </table>
