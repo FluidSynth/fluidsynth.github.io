@@ -1,5 +1,10 @@
 var NAVTREEINDEX2 =
 {
+"group__sequencer__events.html#gae042b78a9a3ebed687cbbd6221cc56e2":[6,4,0,37],
+"group__sequencer__events.html#gae242d727b3a2d27f3ccd3f86b71c0452":[6,4,0,22],
+"group__sequencer__events.html#gae4386142bb54310739b42457da5070c0":[6,4,0,15],
+"group__sequencer__events.html#gae5cfe118c82a5522ac2aecb6dd9242b7":[6,4,0,8],
+"group__sequencer__events.html#gae6d14506f08d58b464f24d7b416511b0":[6,4,0,1],
 "group__sequencer__events.html#gaed94b6dad11c28792a26b0053da67374":[6,4,0,11],
 "group__sequencer__events.html#gga98ada1fab7a3785a41aa4003645640eba05e9f160eea1d6aeb43299b7bd45530f":[6,4,0,0,4],
 "group__sequencer__events.html#gga98ada1fab7a3785a41aa4003645640eba0c1bce287e2eb79ab4295ca5a6ecf752":[6,4,0,0,14],
@@ -244,10 +249,5 @@ var NAVTREEINDEX2 =
 "settings_midi.html#settings_midi_autoconnect":[5,1,0],
 "settings_midi.html#settings_midi_coremidi_id":[5,1,7],
 "settings_midi.html#settings_midi_driver":[5,1,1],
-"settings_midi.html#settings_midi_jack_id":[5,1,9],
-"settings_midi.html#settings_midi_jack_server":[5,1,8],
-"settings_midi.html#settings_midi_oss_device":[5,1,10],
-"settings_midi.html#settings_midi_portname":[5,1,3],
-"settings_midi.html#settings_midi_realtime-prio":[5,1,2],
-"settings_midi.html#settings_midi_winmidi_device":[5,1,11]
+"settings_midi.html#settings_midi_jack_id":[5,1,9]
 };

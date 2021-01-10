@@ -101,7 +101,7 @@ Modules</h2></td></tr>
 <tr class="memitem:group__midi__events"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__midi__events.html">MIDI Events</a></td></tr>
 <tr class="memdesc:group__midi__events"><td class="mdescLeft">&#160;</td><td class="mdescRight">Functions to create, modify, query and delete MIDI events. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:group__midi__player"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__midi__player.html">MIDI Player</a></td></tr>
+<tr class="memitem:group__midi__player"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__midi__player.html">MIDI File Player</a></td></tr>
 <tr class="memdesc:group__midi__player"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse standard MIDI files and emit MIDI events. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:group__midi__router"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__midi__router.html">MIDI Router</a></td></tr>
@@ -147,7 +147,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Should return <a class="el" href="group__misc.html#gae4efb1c3ce0d550c922504adfb0fb886" title="Value that indicates success, used by most libfluidsynth functions. ">FLUID_OK</a> on success, <a class="el" href="group__misc.html#ga90e8bdbc5a507bbfa5c45bac85a63a61" title="Value that indicates failure, used by most libfluidsynth functions. ">FLUID_FAILED</a> otherwise</dd></dl>
 <p>This callback is used to pass MIDI events</p><ul>
-<li>from <a class="el" href="group__midi__player.html">MIDI Player</a>, <a class="el" href="group__midi__router.html">MIDI Router</a> or <a class="el" href="group__midi__driver.html">MIDI Driver</a></li>
+<li>from <a class="el" href="group__midi__player.html">MIDI File Player</a>, <a class="el" href="group__midi__router.html">MIDI Router</a> or <a class="el" href="group__midi__driver.html">MIDI Driver</a></li>
 <li>to <a class="el" href="group__midi__router.html">MIDI Router</a> via <a class="el" href="group__midi__router.html#ga6e80591df5910008c5bca21260b91c9c" title="Handle a MIDI event through a MIDI router instance. ">fluid_midi_router_handle_midi_event()</a></li>
 <li>or to <a class="el" href="group__synth.html">Synthesizer</a> via <a class="el" href="group__midi__input.html#ga2327ed7bf1ff702b0ec4095b59d7d660" title="Handle MIDI event from MIDI router, used as a callback function. ">fluid_synth_handle_midi_event()</a>.</li>
 </ul>

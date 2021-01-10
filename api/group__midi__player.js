@@ -1,5 +1,10 @@
 var group__midi__player =
 [
+    [ "fluid_player_set_tempo_type", "group__midi__player.html#gac792e9405fca53c296f7cef4d5fadfde", [
+      [ "FLUID_PLAYER_TEMPO_INTERNAL", "group__midi__player.html#ggac792e9405fca53c296f7cef4d5fadfdea03b4403e63ca7c99beddd042d58f859d", null ],
+      [ "FLUID_PLAYER_TEMPO_EXTERNAL_BPM", "group__midi__player.html#ggac792e9405fca53c296f7cef4d5fadfdea1e45d7f536835c201cfc1e01f02143fc", null ],
+      [ "FLUID_PLAYER_TEMPO_EXTERNAL_MIDI", "group__midi__player.html#ggac792e9405fca53c296f7cef4d5fadfdeac098aece2b021baccda53a2ba167e51c", null ]
+    ] ],
     [ "fluid_player_status", "group__midi__player.html#ga5ec93766f61465dedbbac9bdb76ced83", [
       [ "FLUID_PLAYER_READY", "group__midi__player.html#gga5ec93766f61465dedbbac9bdb76ced83a7c1ac551f1a28ba42ca3d7abac0120b6", null ],
       [ "FLUID_PLAYER_PLAYING", "group__midi__player.html#gga5ec93766f61465dedbbac9bdb76ced83a98ece3a92210189eaad462edc8545bc5", null ],
@@ -20,6 +25,7 @@ var group__midi__player =
     [ "fluid_player_set_loop", "group__midi__player.html#ga4bba465271ca8b1e428c419b8a96e356", null ],
     [ "fluid_player_set_midi_tempo", "group__midi__player.html#ga776bf3318dce8f938ee77b38aa41ea6e", null ],
     [ "fluid_player_set_playback_callback", "group__midi__player.html#ga615cfa9d81227d9253dddebc49d8edcb", null ],
+    [ "fluid_player_set_tempo", "group__midi__player.html#gab99758ae72fc14dd149a64cb3520700a", null ],
     [ "fluid_player_stop", "group__midi__player.html#gae630aa680bb891be30bffa3d6d5e1b21", null ],
     [ "new_fluid_player", "group__midi__player.html#gaa56e6bd17cc34198296af0f8199062a5", null ]
 ];

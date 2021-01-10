@@ -15,6 +15,7 @@ var searchData=
   ['fluid_5fmidi_5frouter_5frule_5ftype',['fluid_midi_router_rule_type',['../group__midi__router.html#gab798a0a5b95607556c9ecfbeaaab962b',1,'midi.h']]],
   ['fluid_5fmod_5fflags',['fluid_mod_flags',['../group__modulators.html#ga4b2419150b2a167df7807d5020a6e996',1,'mod.h']]],
   ['fluid_5fmod_5fsrc',['fluid_mod_src',['../group__modulators.html#ga801993d69390b21a2d0311d44afb1932',1,'mod.h']]],
+  ['fluid_5fplayer_5fset_5ftempo_5ftype',['fluid_player_set_tempo_type',['../group__midi__player.html#gac792e9405fca53c296f7cef4d5fadfde',1,'midi.h']]],
   ['fluid_5fplayer_5fstatus',['fluid_player_status',['../group__midi__player.html#ga5ec93766f61465dedbbac9bdb76ced83',1,'midi.h']]],
   ['fluid_5fsample_5ftype',['fluid_sample_type',['../group__soundfont__loader.html#ga9ac3f7677aa7628653467bef1078cb43',1,'sfont.h']]],
   ['fluid_5fseq_5fevent_5ftype',['fluid_seq_event_type',['../group__sequencer__events.html#ga98ada1fab7a3785a41aa4003645640eb',1,'event.h']]],

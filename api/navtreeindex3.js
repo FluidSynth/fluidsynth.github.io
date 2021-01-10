@@ -1,5 +1,10 @@
 var NAVTREEINDEX3 =
 {
+"settings_midi.html#settings_midi_jack_server":[5,1,8],
+"settings_midi.html#settings_midi_oss_device":[5,1,10],
+"settings_midi.html#settings_midi_portname":[5,1,3],
+"settings_midi.html#settings_midi_realtime-prio":[5,1,2],
+"settings_midi.html#settings_midi_winmidi_device":[5,1,11],
 "settings_player.html":[5,2],
 "settings_player.html#settings_player_reset-synth":[5,2,0],
 "settings_player.html#settings_player_timing-source":[5,2,1],

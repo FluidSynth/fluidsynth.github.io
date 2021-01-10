@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>libfluidsynth: MIDI Player</title>
+<title>libfluidsynth: MIDI File Player</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -85,7 +85,7 @@ $(document).ready(function(){initNavTree('group__midi__player.html','');});
 <a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">MIDI Player<div class="ingroups"><a class="el" href="group__midi__input.html">MIDI Input</a></div></div>  </div>
+<div class="title">MIDI File Player<div class="ingroups"><a class="el" href="group__midi__input.html">MIDI Input</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -94,6 +94,16 @@ $(document).ready(function(){initNavTree('group__midi__player.html','');});
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
+<tr class="memitem:gac792e9405fca53c296f7cef4d5fadfde"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__midi__player.html#gac792e9405fca53c296f7cef4d5fadfde">fluid_player_set_tempo_type</a> { <br />
+&#160;&#160;<a class="el" href="group__midi__player.html#ggac792e9405fca53c296f7cef4d5fadfdea03b4403e63ca7c99beddd042d58f859d">FLUID_PLAYER_TEMPO_INTERNAL</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__midi__player.html#ggac792e9405fca53c296f7cef4d5fadfdea1e45d7f536835c201cfc1e01f02143fc">FLUID_PLAYER_TEMPO_EXTERNAL_BPM</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__midi__player.html#ggac792e9405fca53c296f7cef4d5fadfdeac098aece2b021baccda53a2ba167e51c">FLUID_PLAYER_TEMPO_EXTERNAL_MIDI</a>
+<br />
+ }<tr class="memdesc:gac792e9405fca53c296f7cef4d5fadfde"><td class="mdescLeft">&#160;</td><td class="mdescRight">MIDI File Player tempo enum.  <a href="group__midi__player.html#gac792e9405fca53c296f7cef4d5fadfde">More...</a><br /></td></tr>
+</td></tr>
+<tr class="separator:gac792e9405fca53c296f7cef4d5fadfde"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga5ec93766f61465dedbbac9bdb76ced83"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__midi__player.html#ga5ec93766f61465dedbbac9bdb76ced83">fluid_player_status</a> { <br />
 &#160;&#160;<a class="el" href="group__midi__player.html#gga5ec93766f61465dedbbac9bdb76ced83a7c1ac551f1a28ba42ca3d7abac0120b6">FLUID_PLAYER_READY</a>, 
 <br />
@@ -101,12 +111,12 @@ Enumerations</h2></td></tr>
 <br />
 &#160;&#160;<a class="el" href="group__midi__player.html#gga5ec93766f61465dedbbac9bdb76ced83a3495ae2441e9ec5f25f085378e9ac7be">FLUID_PLAYER_DONE</a>
 <br />
- }<tr class="memdesc:ga5ec93766f61465dedbbac9bdb76ced83"><td class="mdescLeft">&#160;</td><td class="mdescRight">MIDI player status enum.  <a href="group__midi__player.html#ga5ec93766f61465dedbbac9bdb76ced83">More...</a><br /></td></tr>
+ }<tr class="memdesc:ga5ec93766f61465dedbbac9bdb76ced83"><td class="mdescLeft">&#160;</td><td class="mdescRight">MIDI File Player status enum.  <a href="group__midi__player.html#ga5ec93766f61465dedbbac9bdb76ced83">More...</a><br /></td></tr>
 </td></tr>
 <tr class="separator:ga5ec93766f61465dedbbac9bdb76ced83"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
-Lifecycle Functions for MIDI Player</h2></td></tr>
+Lifecycle Functions for MIDI File Player</h2></td></tr>
 <tr class="memitem:gaa56e6bd17cc34198296af0f8199062a5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__Types.html#gaf6c718e19d8c9c6632cb8ffac6974d80">fluid_player_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__midi__player.html#gaa56e6bd17cc34198296af0f8199062a5">new_fluid_player</a> (<a class="el" href="group__Types.html#gae265f10ae174a13afe010de50d87e1a4">fluid_synth_t</a> *synth)</td></tr>
 <tr class="memdesc:gaa56e6bd17cc34198296af0f8199062a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new MIDI player.  <a href="#gaa56e6bd17cc34198296af0f8199062a5">More...</a><br /></td></tr>
 <tr class="separator:gaa56e6bd17cc34198296af0f8199062a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -123,13 +133,13 @@ Functions</h2></td></tr>
 <tr class="memdesc:ga25d05bfa631e9ff520993a1a59de309a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a MIDI file to a player queue, from a buffer in memory.  <a href="#ga25d05bfa631e9ff520993a1a59de309a">More...</a><br /></td></tr>
 <tr class="separator:ga25d05bfa631e9ff520993a1a59de309a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaf2f0f70165e7693ebc64aff7ad000161"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__midi__player.html#gaf2f0f70165e7693ebc64aff7ad000161">fluid_player_get_bpm</a> (<a class="el" href="group__Types.html#gaf6c718e19d8c9c6632cb8ffac6974d80">fluid_player_t</a> *player)</td></tr>
-<tr class="memdesc:gaf2f0f70165e7693ebc64aff7ad000161"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the tempo of a MIDI player in beats per minute.  <a href="#gaf2f0f70165e7693ebc64aff7ad000161">More...</a><br /></td></tr>
+<tr class="memdesc:gaf2f0f70165e7693ebc64aff7ad000161"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the tempo currently used by a MIDI player.  <a href="#gaf2f0f70165e7693ebc64aff7ad000161">More...</a><br /></td></tr>
 <tr class="separator:gaf2f0f70165e7693ebc64aff7ad000161"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gabc2d114e2a6926f4db800286b2ebb1da"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__midi__player.html#gabc2d114e2a6926f4db800286b2ebb1da">fluid_player_get_current_tick</a> (<a class="el" href="group__Types.html#gaf6c718e19d8c9c6632cb8ffac6974d80">fluid_player_t</a> *player)</td></tr>
 <tr class="memdesc:gabc2d114e2a6926f4db800286b2ebb1da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of tempo ticks passed.  <a href="#gabc2d114e2a6926f4db800286b2ebb1da">More...</a><br /></td></tr>
 <tr class="separator:gabc2d114e2a6926f4db800286b2ebb1da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gac64ed425271261cfccd16c34b1dcfc96"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__midi__player.html#gac64ed425271261cfccd16c34b1dcfc96">fluid_player_get_midi_tempo</a> (<a class="el" href="group__Types.html#gaf6c718e19d8c9c6632cb8ffac6974d80">fluid_player_t</a> *player)</td></tr>
-<tr class="memdesc:gac64ed425271261cfccd16c34b1dcfc96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the tempo of a MIDI player.  <a href="#gac64ed425271261cfccd16c34b1dcfc96">More...</a><br /></td></tr>
+<tr class="memdesc:gac64ed425271261cfccd16c34b1dcfc96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the tempo currently used by a MIDI player.  <a href="#gac64ed425271261cfccd16c34b1dcfc96">More...</a><br /></td></tr>
 <tr class="separator:gac64ed425271261cfccd16c34b1dcfc96"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga621b4fb7de2cea0a88a50e9f5a0e15b8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__midi__player.html#ga621b4fb7de2cea0a88a50e9f5a0e15b8">fluid_player_get_status</a> (<a class="el" href="group__Types.html#gaf6c718e19d8c9c6632cb8ffac6974d80">fluid_player_t</a> *player)</td></tr>
 <tr class="memdesc:ga621b4fb7de2cea0a88a50e9f5a0e15b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get MIDI player status.  <a href="#ga621b4fb7de2cea0a88a50e9f5a0e15b8">More...</a><br /></td></tr>
@@ -158,6 +168,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ga615cfa9d81227d9253dddebc49d8edcb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__midi__player.html#ga615cfa9d81227d9253dddebc49d8edcb">fluid_player_set_playback_callback</a> (<a class="el" href="group__Types.html#gaf6c718e19d8c9c6632cb8ffac6974d80">fluid_player_t</a> *player, <a class="el" href="group__midi__input.html#ga42c3752e3adb54e0af802131c36a1129">handle_midi_event_func_t</a> handler, void *handler_data)</td></tr>
 <tr class="memdesc:ga615cfa9d81227d9253dddebc49d8edcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change the MIDI callback function.  <a href="#ga615cfa9d81227d9253dddebc49d8edcb">More...</a><br /></td></tr>
 <tr class="separator:ga615cfa9d81227d9253dddebc49d8edcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab99758ae72fc14dd149a64cb3520700a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__midi__player.html#gab99758ae72fc14dd149a64cb3520700a">fluid_player_set_tempo</a> (<a class="el" href="group__Types.html#gaf6c718e19d8c9c6632cb8ffac6974d80">fluid_player_t</a> *player, int tempo_type, double tempo)</td></tr>
+<tr class="memdesc:gab99758ae72fc14dd149a64cb3520700a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the tempo of a MIDI player.  <a href="#gab99758ae72fc14dd149a64cb3520700a">More...</a><br /></td></tr>
+<tr class="separator:gab99758ae72fc14dd149a64cb3520700a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gae630aa680bb891be30bffa3d6d5e1b21"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__midi__player.html#gae630aa680bb891be30bffa3d6d5e1b21">fluid_player_stop</a> (<a class="el" href="group__Types.html#gaf6c718e19d8c9c6632cb8ffac6974d80">fluid_player_t</a> *player)</td></tr>
 <tr class="memdesc:gae630aa680bb891be30bffa3d6d5e1b21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pauses the MIDI playback.  <a href="#gae630aa680bb891be30bffa3d6d5e1b21">More...</a><br /></td></tr>
 <tr class="separator:gae630aa680bb891be30bffa3d6d5e1b21"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -165,6 +178,32 @@ Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Parse standard MIDI files and emit MIDI events. </p>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="gac792e9405fca53c296f7cef4d5fadfde"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac792e9405fca53c296f7cef4d5fadfde">&#9670;&nbsp;</a></span>fluid_player_set_tempo_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__midi__player.html#gac792e9405fca53c296f7cef4d5fadfde">fluid_player_set_tempo_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>MIDI File Player tempo enum. </p>
+<dl class="section since"><dt>Since</dt><dd>2.2.0 </dd></dl>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ggac792e9405fca53c296f7cef4d5fadfdea03b4403e63ca7c99beddd042d58f859d"></a>FLUID_PLAYER_TEMPO_INTERNAL&#160;</td><td class="fielddoc"><p>Use midi file tempo set in midi file (120 bpm by default). </p>
+<p>Multiplied by a factor </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggac792e9405fca53c296f7cef4d5fadfdea1e45d7f536835c201cfc1e01f02143fc"></a>FLUID_PLAYER_TEMPO_EXTERNAL_BPM&#160;</td><td class="fielddoc"><p>Set player tempo in bpm, supersede midi file tempo. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggac792e9405fca53c296f7cef4d5fadfdeac098aece2b021baccda53a2ba167e51c"></a>FLUID_PLAYER_TEMPO_EXTERNAL_MIDI&#160;</td><td class="fielddoc"><p>Set player tempo in us per quarter note, supersede midi file tempo. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
 <a id="ga5ec93766f61465dedbbac9bdb76ced83"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga5ec93766f61465dedbbac9bdb76ced83">&#9670;&nbsp;</a></span>fluid_player_status</h2>
 
@@ -177,7 +216,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>MIDI player status enum. </p>
+<p>MIDI File Player status enum. </p>
 <dl class="section since"><dt>Since</dt><dd>1.1.0 </dd></dl>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga5ec93766f61465dedbbac9bdb76ced83a7c1ac551f1a28ba42ca3d7abac0120b6"></a>FLUID_PLAYER_READY&#160;</td><td class="fielddoc"><p>Player is ready. </p>
@@ -317,14 +356,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Get the tempo of a MIDI player in beats per minute. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Get the tempo currently used by a MIDI player. </p>
+<p>The player can be controlled by internal tempo coming from MIDI file tempo change or controlled by external tempo see <a class="el" href="group__midi__player.html#gab99758ae72fc14dd149a64cb3520700a" title="Set the tempo of a MIDI player. ">fluid_player_set_tempo()</a>. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">player</td><td>MIDI player instance </td></tr>
+    <tr><td class="paramname">player</td><td>MIDI player instance. Must be a valid pointer. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>MIDI player tempo in BPM </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>MIDI player tempo in BPM or FLUID_FAILED if error. </dd></dl>
 <dl class="section since"><dt>Since</dt><dd>1.1.7 </dd></dl>
 
 </div>
@@ -373,14 +412,15 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Get the tempo of a MIDI player. </p>
+<p>Get the tempo currently used by a MIDI player. </p>
+<p>The player can be controlled by internal tempo coming from MIDI file tempo change or controlled by external tempo see <a class="el" href="group__midi__player.html#gab99758ae72fc14dd149a64cb3520700a" title="Set the tempo of a MIDI player. ">fluid_player_set_tempo()</a>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">player</td><td>MIDI player instance </td></tr>
+    <tr><td class="paramname">player</td><td>MIDI player instance. Must be a valid pointer. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Tempo of the MIDI player (in microseconds per quarter note, as per MIDI file spec) </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Tempo of the MIDI player (in microseconds per quarter note, as per MIDI file spec) or FLUID_FAILED if error. </dd></dl>
 <dl class="section since"><dt>Since</dt><dd>1.1.7 </dd></dl>
 
 </div>
@@ -408,7 +448,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Player status (<a class="el" href="group__midi__player.html#ga5ec93766f61465dedbbac9bdb76ced83" title="MIDI player status enum. ">fluid_player_status</a>) </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Player status (<a class="el" href="group__midi__player.html#ga5ec93766f61465dedbbac9bdb76ced83" title="MIDI File Player status enum. ">fluid_player_status</a>) </dd></dl>
 <dl class="section since"><dt>Since</dt><dd>1.1.0 </dd></dl>
 
 </div>
@@ -571,6 +611,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Always returns <a class="el" href="group__misc.html#gae4efb1c3ce0d550c922504adfb0fb886" title="Value that indicates success, used by most libfluidsynth functions. ">FLUID_OK</a> </dd></dl>
 <dl class="section note"><dt>Note</dt><dd>Tempo change events contained in the MIDI file can override the specified BPM at any time! </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000002">Deprecated:</a></b></dt><dd>Use <a class="el" href="group__midi__player.html#gab99758ae72fc14dd149a64cb3520700a" title="Set the tempo of a MIDI player. ">fluid_player_set_tempo()</a> instead. </dd></dl>
 
 </div>
 </div>
@@ -650,6 +691,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Always returns <a class="el" href="group__misc.html#gae4efb1c3ce0d550c922504adfb0fb886" title="Value that indicates success, used by most libfluidsynth functions. ">FLUID_OK</a> </dd></dl>
 <dl class="section note"><dt>Note</dt><dd>Tempo change events contained in the MIDI file can override the specified tempo at any time! </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000001">Deprecated:</a></b></dt><dd>Use <a class="el" href="group__midi__player.html#gab99758ae72fc14dd149a64cb3520700a" title="Set the tempo of a MIDI player. ">fluid_player_set_tempo()</a> instead. </dd></dl>
 
 </div>
 </div>
@@ -697,6 +739,57 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>FLUID_OK</dd></dl>
 <p>This is usually set to <a class="el" href="group__midi__input.html#ga2327ed7bf1ff702b0ec4095b59d7d660" title="Handle MIDI event from MIDI router, used as a callback function. ">fluid_synth_handle_midi_event()</a>, but can optionally be changed to a user-defined function instead, for intercepting all MIDI messages sent to the synth. You can also use a midi router as the callback function to modify the MIDI messages before sending them to the synth.</p>
 <dl class="section since"><dt>Since</dt><dd>1.1.4 </dd></dl>
+
+</div>
+</div>
+<a id="gab99758ae72fc14dd149a64cb3520700a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab99758ae72fc14dd149a64cb3520700a">&#9670;&nbsp;</a></span>fluid_player_set_tempo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int fluid_player_set_tempo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__Types.html#gaf6c718e19d8c9c6632cb8ffac6974d80">fluid_player_t</a> *&#160;</td>
+          <td class="paramname"><em>player</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>tempo_type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>tempo</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the tempo of a MIDI player. </p>
+<p>The player can be controlled by internal tempo coming from MIDI file tempo change or controlled by external tempo expressed in BPM or in micro seconds per quarter note.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">player</td><td>MIDI player instance. Must be a valid pointer. </td></tr>
+    <tr><td class="paramname">tempo_type</td><td>Must a be value of <a class="el" href="group__midi__player.html#gac792e9405fca53c296f7cef4d5fadfde" title="MIDI File Player tempo enum. ">fluid_player_set_tempo_type</a> and indicates the meaning of tempo value and how the player will be controlled, see below. </td></tr>
+    <tr><td class="paramname">tempo</td><td>Tempo value or multiplier.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p><a class="el" href="group__midi__player.html#ggac792e9405fca53c296f7cef4d5fadfdea03b4403e63ca7c99beddd042d58f859d" title="Use midi file tempo set in midi file (120 bpm by default). ">FLUID_PLAYER_TEMPO_INTERNAL</a>, the player will be controlled by internal MIDI file tempo changes. If there are no tempo change in the MIDI file a default value of 120 bpm is used. The <code>tempo</code> parameter is used as a multiplier factor that must be in the range (0.001 to 1000). For example, if the current MIDI file tempo is 120 bpm and the multiplier value is 0.5 then this tempo will be slowed down to 60 bpm. At creation, the player is set to be controlled by internal tempo with a multiplier factor set to 1.0.</p>
+<p><a class="el" href="group__midi__player.html#ggac792e9405fca53c296f7cef4d5fadfdea1e45d7f536835c201cfc1e01f02143fc" title="Set player tempo in bpm, supersede midi file tempo. ">FLUID_PLAYER_TEMPO_EXTERNAL_BPM</a>, the player will be controlled by the external tempo value provided by the tempo parameter in bpm (i.e in quarter notes per minute) which must be in the range (1 to 60000000).</p>
+<p><a class="el" href="group__midi__player.html#ggac792e9405fca53c296f7cef4d5fadfdeac098aece2b021baccda53a2ba167e51c" title="Set player tempo in us per quarter note, supersede midi file tempo. ">FLUID_PLAYER_TEMPO_EXTERNAL_MIDI</a>, similar as FLUID_PLAYER_TEMPO_EXTERNAL_BPM, but the tempo parameter value is in micro seconds per quarter note which must be in the range (1 to 60000000). Using micro seconds per quarter note is convenient when the tempo value is derived from MIDI clock realtime messages.</p>
+<dl class="section note"><dt>Note</dt><dd>When the player is controlled by an external tempo (<a class="el" href="group__midi__player.html#ggac792e9405fca53c296f7cef4d5fadfdea1e45d7f536835c201cfc1e01f02143fc" title="Set player tempo in bpm, supersede midi file tempo. ">FLUID_PLAYER_TEMPO_EXTERNAL_BPM</a> or <a class="el" href="group__midi__player.html#ggac792e9405fca53c296f7cef4d5fadfdeac098aece2b021baccda53a2ba167e51c" title="Set player tempo in us per quarter note, supersede midi file tempo. ">FLUID_PLAYER_TEMPO_EXTERNAL_MIDI</a>) it continues to memorize the most recent internal tempo change coming from the MIDI file so that next call to <a class="el" href="group__midi__player.html#gab99758ae72fc14dd149a64cb3520700a" title="Set the tempo of a MIDI player. ">fluid_player_set_tempo()</a> with <a class="el" href="group__midi__player.html#ggac792e9405fca53c296f7cef4d5fadfdea03b4403e63ca7c99beddd042d58f859d" title="Use midi file tempo set in midi file (120 bpm by default). ">FLUID_PLAYER_TEMPO_INTERNAL</a> will set the player to follow this internal tempo.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="group__misc.html#gae4efb1c3ce0d550c922504adfb0fb886" title="Value that indicates success, used by most libfluidsynth functions. ">FLUID_OK</a> if success or <a class="el" href="group__misc.html#ga90e8bdbc5a507bbfa5c45bac85a63a61" title="Value that indicates failure, used by most libfluidsynth functions. ">FLUID_FAILED</a> otherwise (incorrect parameters). </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>2.2.0 </dd></dl>
 
 </div>
 </div>
