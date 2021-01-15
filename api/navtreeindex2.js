@@ -1,5 +1,6 @@
 var NAVTREEINDEX2 =
 {
+"group__sequencer__events.html#gacdeca48545a09c3a4af4a09407794593":[6,4,0,10],
 "group__sequencer__events.html#gad4c310a82b604d81089b98d9640f84b9":[6,4,0,40],
 "group__sequencer__events.html#gae042b78a9a3ebed687cbbd6221cc56e2":[6,4,0,37],
 "group__sequencer__events.html#gae242d727b3a2d27f3ccd3f86b71c0452":[6,4,0,22],
@@ -248,6 +249,5 @@ var NAVTREEINDEX2 =
 "settings_midi.html#settings_midi_alsa_seq_device":[5,1,5],
 "settings_midi.html#settings_midi_alsa_seq_id":[5,1,6],
 "settings_midi.html#settings_midi_autoconnect":[5,1,0],
-"settings_midi.html#settings_midi_coremidi_id":[5,1,7],
-"settings_midi.html#settings_midi_driver":[5,1,1]
+"settings_midi.html#settings_midi_coremidi_id":[5,1,7]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX3 =
 {
+"settings_midi.html#settings_midi_driver":[5,1,1],
 "settings_midi.html#settings_midi_jack_id":[5,1,9],
 "settings_midi.html#settings_midi_jack_server":[5,1,8],
 "settings_midi.html#settings_midi_oss_device":[5,1,10],

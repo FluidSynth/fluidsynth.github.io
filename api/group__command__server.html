@@ -94,6 +94,9 @@ Lifecycle Functions for Command Server</h2></td></tr>
 <tr class="memitem:gae1f29eb341a14941ceb6e278aec6774c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__Types.html#ga314a569c9a9ae8f99831472efda31141">fluid_server_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__command__server.html#gae1f29eb341a14941ceb6e278aec6774c">new_fluid_server</a> (<a class="el" href="group__Types.html#gaa363402d3c77333b0f070ba531d034ba">fluid_settings_t</a> *settings, <a class="el" href="group__Types.html#gae265f10ae174a13afe010de50d87e1a4">fluid_synth_t</a> *synth, <a class="el" href="group__Types.html#gaa57b4746220e24506a169f109875e4ad">fluid_midi_router_t</a> *router)</td></tr>
 <tr class="memdesc:gae1f29eb341a14941ceb6e278aec6774c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new TCP/IP command shell server.  <a href="#gae1f29eb341a14941ceb6e278aec6774c">More...</a><br /></td></tr>
 <tr class="separator:gae1f29eb341a14941ceb6e278aec6774c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga52793af3872cb7e18e7bc71e5ace977a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__Types.html#ga314a569c9a9ae8f99831472efda31141">fluid_server_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__command__server.html#ga52793af3872cb7e18e7bc71e5ace977a">new_fluid_server2</a> (<a class="el" href="group__Types.html#gaa363402d3c77333b0f070ba531d034ba">fluid_settings_t</a> *settings, <a class="el" href="group__Types.html#gae265f10ae174a13afe010de50d87e1a4">fluid_synth_t</a> *synth, <a class="el" href="group__Types.html#gaa57b4746220e24506a169f109875e4ad">fluid_midi_router_t</a> *router, <a class="el" href="group__Types.html#gaf6c718e19d8c9c6632cb8ffac6974d80">fluid_player_t</a> *player)</td></tr>
+<tr class="memdesc:ga52793af3872cb7e18e7bc71e5ace977a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new TCP/IP command shell server.  <a href="#ga52793af3872cb7e18e7bc71e5ace977a">More...</a><br /></td></tr>
+<tr class="separator:ga52793af3872cb7e18e7bc71e5ace977a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga44668377ff241ebd3b38fe67d75dfbc9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__command__server.html#ga44668377ff241ebd3b38fe67d75dfbc9">delete_fluid_server</a> (<a class="el" href="group__Types.html#ga314a569c9a9ae8f99831472efda31141">fluid_server_t</a> *server)</td></tr>
 <tr class="memdesc:ga44668377ff241ebd3b38fe67d75dfbc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delete a TCP/IP shell server.  <a href="#ga44668377ff241ebd3b38fe67d75dfbc9">More...</a><br /></td></tr>
 <tr class="separator:ga44668377ff241ebd3b38fe67d75dfbc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -192,11 +195,55 @@ Lifecycle Functions for Command Server</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Create a new TCP/IP command shell server. </p>
+<p>See <a class="el" href="group__command__server.html#ga52793af3872cb7e18e7bc71e5ace977a" title="Create a new TCP/IP command shell server. ">new_fluid_server2()</a> for more information. </p>
+
+</div>
+</div>
+<a id="ga52793af3872cb7e18e7bc71e5ace977a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga52793af3872cb7e18e7bc71e5ace977a">&#9670;&nbsp;</a></span>new_fluid_server2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__Types.html#ga314a569c9a9ae8f99831472efda31141">fluid_server_t</a>* new_fluid_server2 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__Types.html#gaa363402d3c77333b0f070ba531d034ba">fluid_settings_t</a> *&#160;</td>
+          <td class="paramname"><em>settings</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__Types.html#gae265f10ae174a13afe010de50d87e1a4">fluid_synth_t</a> *&#160;</td>
+          <td class="paramname"><em>synth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__Types.html#gaa57b4746220e24506a169f109875e4ad">fluid_midi_router_t</a> *&#160;</td>
+          <td class="paramname"><em>router</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__Types.html#gaf6c718e19d8c9c6632cb8ffac6974d80">fluid_player_t</a> *&#160;</td>
+          <td class="paramname"><em>player</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create a new TCP/IP command shell server. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">settings</td><td>Settings instance to use for the shell </td></tr>
     <tr><td class="paramname">synth</td><td>If not NULL, the synth instance for the command handler to be used by the client </td></tr>
     <tr><td class="paramname">router</td><td>If not NULL, the midi_router instance for the command handler to be used by the client </td></tr>
+    <tr><td class="paramname">player</td><td>If not NULL, the player instance for the command handler to be used by the client </td></tr>
   </table>
   </dd>
 </dl>
