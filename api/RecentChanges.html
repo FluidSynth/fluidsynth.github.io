@@ -91,14 +91,14 @@ What's new in 2.2.0?</h1>
 <li><a class="el" href="group__Types.html#ga6a223e4b8d83753d95c87e1feed58227" title="Callback struct to perform custom file loading of soundfonts. ">fluid_file_callbacks_t</a> now uses <code>long long</code> as file-offset type (see <a class="el" href="group__Types.html#ga5c188d5b1e95c245ff7f3b49a6b82ad9" title="A typedef for C99&#39;s type long long, which is at least 64-bit wide, as guaranteed by the C99...">fluid_long_long_t</a>). This is a breaking change, which allows to load SoundFonts bigger than 2GiB on Windows. This change required to bump fluidsynth's SOVERSION.</li>
 <li>fluid_event_any_control_change() has been removed</li>
 <li>various fluid_event_*() functions that received a "value" argument of type <code>short</code> now receive an <code>int</code> argument in preparation for MIDI 2.0 support</li>
-<li>The sequencer has received a major revisal. For you that means:<ul>
-<li>The sequencer's queue no longer blocks the synthesizer thread, due to being busy arranging its events internally.</li>
-<li>Events that share the same tick was given a new, documented order, see <a class="el" href="group__sequencer.html#ga83314f4ad773979841afe50cc2efd83f" title="Schedule an event for sending at a later time. ">fluid_sequencer_send_at()</a>.</li>
-<li>The sequencer's scale can now be used for arbitrary tempo changes. Previously, the scale of the sequencer was limited to 1000. The only limitation now is &gt;0.</li>
-<li>There is now a dedicated event type for changing the sequencer's time scale, see <a class="el" href="group__sequencer__events.html#ga87e5cea03b6f90bb6354e8d5ed6abdcc" title="Set a sequencer event to be a scale change event. ">fluid_event_scale()</a>.</li>
+<li>the sequencer has received a major revisal. For you that means:<ul>
+<li>the sequencer's queue no longer blocks the synthesizer thread, due to being busy arranging its events internally.</li>
+<li>events that share the same tick was given a new, documented order, see <a class="el" href="group__sequencer.html#ga83314f4ad773979841afe50cc2efd83f" title="Schedule an event for sending at a later time. ">fluid_sequencer_send_at()</a>.</li>
+<li>the sequencer's scale can now be used for arbitrary tempo changes. Previously, the scale of the sequencer was limited to 1000. The only limitation now is &gt;0.</li>
+<li>there is now a dedicated event type for changing the sequencer's time scale, see <a class="el" href="group__sequencer__events.html#ga87e5cea03b6f90bb6354e8d5ed6abdcc" title="Set a sequencer event to be a scale change event. ">fluid_event_scale()</a>.</li>
 </ul>
 </li>
-<li>The dynamic-sample-loader has learned support to pin samples, see <a class="el" href="group__soundfonts.html#ga18c346f86663cda8bd159fec58670b3d" title="Pins all samples of the given preset. ">fluid_synth_pin_preset()</a> and <a class="el" href="group__soundfonts.html#ga04731fab69f22de2d8bac75bea5b94ee" title="Unpin all samples of the given preset. ">fluid_synth_unpin_preset()</a></li>
+<li>the dynamic-sample-loader has learned support to pin samples, see <a class="el" href="group__soundfonts.html#ga18c346f86663cda8bd159fec58670b3d" title="Pins all samples of the given preset. ">fluid_synth_pin_preset()</a> and <a class="el" href="group__soundfonts.html#ga04731fab69f22de2d8bac75bea5b94ee" title="Unpin all samples of the given preset. ">fluid_synth_unpin_preset()</a></li>
 <li>added getter and setter functions for individual effect groups</li>
 <li>support for UTF-8 filenames under Windows, see <a class="el" href="group__soundfont__management.html#ga0ba0bc9d4a19c789f9969cd22d22bf66" title="Load a SoundFont file (filename is interpreted by SoundFont loaders). ">fluid_synth_sfload()</a></li>
 <li>MIDI Tempo of the fluid_player can now be overridden, see <a class="el" href="group__midi__player.html#gab99758ae72fc14dd149a64cb3520700a" title="Set the tempo of a MIDI player. ">fluid_player_set_tempo()</a></li>
