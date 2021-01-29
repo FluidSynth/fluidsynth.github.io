@@ -33,7 +33,7 @@ var NAVTREEINDEX =
 "Advanced.html",
 "group__ladspa.html#ga7a254bb526ab09afd080d00df7aeb98f",
 "group__sequencer__events.html#gac7de1f3d6c9a5c78945e8619dc652038",
-"settings_midi.html#settings_midi_coremidi_id"
+"settings_midi.html#settings_midi_alsa_device"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

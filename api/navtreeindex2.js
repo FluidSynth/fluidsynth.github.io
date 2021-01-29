@@ -245,9 +245,9 @@ var NAVTREEINDEX2 =
 "settings_audio.html#settings_audio_pulseaudio_server":[5,0,25],
 "settings_audio.html#settings_audio_realtime-prio":[5,0,3],
 "settings_audio.html#settings_audio_sample-format":[5,0,4],
-"settings_midi.html":[5,1],
-"settings_midi.html#settings_midi_alsa_device":[5,1,4],
-"settings_midi.html#settings_midi_alsa_seq_device":[5,1,5],
-"settings_midi.html#settings_midi_alsa_seq_id":[5,1,6],
-"settings_midi.html#settings_midi_autoconnect":[5,1,0]
+"settings_audio.html#settings_audio_sdl2_device":[5,0,26],
+"settings_audio.html#settings_audio_wasapi_device":[5,0,27],
+"settings_audio.html#settings_audio_wasapi_exclusive-mode":[5,0,28],
+"settings_audio.html#settings_audio_waveout_device":[5,0,29],
+"settings_midi.html":[5,1]
 };

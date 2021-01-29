@@ -91,7 +91,7 @@ $(document).ready(function(){initNavTree('settings_audio.html','');});
 <h1><a class="anchor" id="settings_audio_driver"></a>
 audio.driver</h1>
 <dl class="section user"><dt>Type</dt><dd>Selection (str)</dd></dl>
-<dl class="section user"><dt>Options</dt><dd>alsa, coreaudio, dart, dsound, file, jack, oboe, opensles, oss, portaudio, pulseaudio, sdl2, sndman, waveout</dd></dl>
+<dl class="section user"><dt>Options</dt><dd>alsa, coreaudio, dart, dsound, file, jack, oboe, opensles, oss, portaudio, pulseaudio, sdl2, sndman, wasapi, waveout</dd></dl>
 <dl class="section user"><dt>Default</dt><dd> 
 <def>jack (Linux),<br>
                   dsound (Windows),<br>
@@ -533,6 +533,71 @@ audio.pulseaudio.server</h1>
 <p> 
 <desc>
                 Server to use for PulseAudio driver output.
+            </desc>
+  
+</div>
+</p>
+<p> 
+<div class="setting-item">
+ </p>
+<h1><a class="anchor" id="settings_audio_sdl2_device"></a>
+audio.sdl2.device</h1>
+<dl class="section user"><dt>Type</dt><dd>String (str)</dd></dl>
+<dl class="section user"><dt>Default</dt><dd> 
+<def>default</def>
+</dd></dl>
+<p> 
+<desc>
+                Device to use for SDL2 driver output.
+            </desc>
+  
+</div>
+</p>
+<p> 
+<div class="setting-item">
+ </p>
+<h1><a class="anchor" id="settings_audio_wasapi_device"></a>
+audio.wasapi.device</h1>
+<dl class="section user"><dt>Type</dt><dd>String (str)</dd></dl>
+<dl class="section user"><dt>Default</dt><dd> 
+<def>default</def>
+</dd></dl>
+<p> 
+<desc>
+                Device to use for WASAPI driver output.
+            </desc>
+  
+</div>
+</p>
+<p> 
+<div class="setting-item">
+ </p>
+<h1><a class="anchor" id="settings_audio_wasapi_exclusive-mode"></a>
+audio.wasapi.exclusive-mode</h1>
+<dl class="section user"><dt>Type</dt><dd>Boolean (int)</dd></dl>
+<dl class="section user"><dt>Values</dt><dd>0, 1</dd></dl>
+<dl class="section user"><dt>Default</dt><dd> 
+<def>0 (FALSE)</def>
+</dd></dl>
+<p> 
+<desc>
+                By default, WASAPI will operate in shared mode. Set it to 1 (TRUE) to use WASAPI in exclusive mode. In this mode, you'll benefit from direct soundcard access via kernel streaming, which has an extremely low latency. However, you must pay close attention to other settings, such as synth.sample-rate and audio.sample-format as your soundcard may not accept any possible sample configuration.
+            </desc>
+  
+</div>
+</p>
+<p> 
+<div class="setting-item">
+ </p>
+<h1><a class="anchor" id="settings_audio_waveout_device"></a>
+audio.waveout.device</h1>
+<dl class="section user"><dt>Type</dt><dd>String (str)</dd></dl>
+<dl class="section user"><dt>Default</dt><dd> 
+<def>default</def>
+</dd></dl>
+<p> 
+<desc>
+                Device to use for WaveOut driver output.
             </desc>
   
 </div>

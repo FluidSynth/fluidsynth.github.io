@@ -1,5 +1,9 @@
 var NAVTREEINDEX3 =
 {
+"settings_midi.html#settings_midi_alsa_device":[5,1,4],
+"settings_midi.html#settings_midi_alsa_seq_device":[5,1,5],
+"settings_midi.html#settings_midi_alsa_seq_id":[5,1,6],
+"settings_midi.html#settings_midi_autoconnect":[5,1,0],
 "settings_midi.html#settings_midi_coremidi_id":[5,1,7],
 "settings_midi.html#settings_midi_driver":[5,1,1],
 "settings_midi.html#settings_midi_jack_id":[5,1,9],
