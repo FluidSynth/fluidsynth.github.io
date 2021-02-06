@@ -19,6 +19,7 @@ var fluidsettings =
       [ "audio.jack.multi", "settings_audio.html#settings_audio_jack_multi", null ],
       [ "audio.jack.server", "settings_audio.html#settings_audio_jack_server", null ],
       [ "audio.oboe.id", "settings_audio.html#settings_audio_oboe_id", null ],
+      [ "audio.oboe.sample-rate-conversion-quality", "settings_audio.html#settings_audio_oboe_sample-rate-conversion-quality", null ],
       [ "audio.oboe.sharing-mode", "settings_audio.html#settings_audio_oboe_sharing-mode", null ],
       [ "audio.oboe.performance-mode", "settings_audio.html#settings_audio_oboe_performance-mode", null ],
       [ "audio.oss.device", "settings_audio.html#settings_audio_oss_device", null ],

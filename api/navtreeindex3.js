@@ -1,5 +1,6 @@
 var NAVTREEINDEX3 =
 {
+"settings_midi.html":[5,1],
 "settings_midi.html#settings_midi_alsa_device":[5,1,4],
 "settings_midi.html#settings_midi_alsa_seq_device":[5,1,5],
 "settings_midi.html#settings_midi_alsa_seq_id":[5,1,6],
