@@ -113,6 +113,9 @@ Typedefs</h2></td></tr>
 <tr class="memitem:ga42c3752e3adb54e0af802131c36a1129"><td class="memItemLeft" align="right" valign="top">typedef int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__midi__input.html#ga42c3752e3adb54e0af802131c36a1129">handle_midi_event_func_t</a>) (void *data, <a class="el" href="group__Types.html#ga61c72b76e3ee344637994c3071f74d94">fluid_midi_event_t</a> *event)</td></tr>
 <tr class="memdesc:ga42c3752e3adb54e0af802131c36a1129"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generic callback function for MIDI event handler.  <a href="#ga42c3752e3adb54e0af802131c36a1129">More...</a><br /></td></tr>
 <tr class="separator:ga42c3752e3adb54e0af802131c36a1129"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafca24d21bde3c5ae342c3954894217a8"><td class="memItemLeft" align="right" valign="top">typedef int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__midi__input.html#gafca24d21bde3c5ae342c3954894217a8">handle_midi_tick_func_t</a>) (void *data, int tick)</td></tr>
+<tr class="memdesc:gafca24d21bde3c5ae342c3954894217a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generic callback function fired once by MIDI tick change.  <a href="#gafca24d21bde3c5ae342c3954894217a8">More...</a><br /></td></tr>
+<tr class="separator:gafca24d21bde3c5ae342c3954894217a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -153,6 +156,33 @@ Functions</h2></td></tr>
 </ul>
 <p>Additionally, there is a translation layer to pass MIDI events to a <a class="el" href="group__sequencer.html">MIDI Sequencer</a> via <a class="el" href="group__sequencer.html#gaac5a0b2178a6d638d9c3d23b3735f4f2" title="Transforms an incoming MIDI event (from a MIDI driver or MIDI router) to a sequencer event and adds i...">fluid_sequencer_add_midi_event_to_buffer()</a>. </p>
 
+</div>
+</div>
+<a id="gafca24d21bde3c5ae342c3954894217a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafca24d21bde3c5ae342c3954894217a8">&#9670;&nbsp;</a></span>handle_midi_tick_func_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef int(* handle_midi_tick_func_t) (void *data, int tick)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Generic callback function fired once by MIDI tick change. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>User defined data pointer </td></tr>
+    <tr><td class="paramname">tick</td><td>The current (zero-based) tick, which triggered the callback </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Should return <a class="el" href="group__misc.html#gae4efb1c3ce0d550c922504adfb0fb886" title="Value that indicates success, used by most libfluidsynth functions. ">FLUID_OK</a> on success, <a class="el" href="group__misc.html#ga90e8bdbc5a507bbfa5c45bac85a63a61" title="Value that indicates failure, used by most libfluidsynth functions. ">FLUID_FAILED</a> otherwise</dd></dl>
+<p>This callback is fired at a constant rate depending on the current BPM and PPQ. e.g. for PPQ = 192 and BPM = 140 the callback is fired 192 * 140 times per minute (448/sec).</p>
+<p>It can be used to sync external elements with the beat, or stop / loop the song on a given tick. Ticks being BPM-dependent, you can manipulate values such as bars or beats, without having to care about BPM.</p>
+<p>For example, this callback loops the song whenever it reaches the 5th bar :</p>
+<div class="fragment"><div class="line"><span class="keywordtype">int</span> handle_tick(<span class="keywordtype">void</span> *data, <span class="keywordtype">int</span> tick)</div><div class="line">{</div><div class="line">    <a class="code" href="group__Types.html#gaf6c718e19d8c9c6632cb8ffac6974d80">fluid_player_t</a> *player = (<a class="code" href="group__Types.html#gaf6c718e19d8c9c6632cb8ffac6974d80">fluid_player_t</a> *)data;</div><div class="line">    <span class="keywordtype">int</span> ppq = 192; <span class="comment">// From MIDI header</span></div><div class="line">    <span class="keywordtype">int</span> beatsPerBar = 4; <span class="comment">// From the song&#39;s time signature</span></div><div class="line">    <span class="keywordtype">int</span> loopBar = 5;</div><div class="line">    <span class="keywordtype">int</span> loopTick = (loopBar - 1) * ppq * beatsPerBar;</div><div class="line"></div><div class="line">    <span class="keywordflow">if</span> (tick == loopTick)</div><div class="line">    {</div><div class="line">        <span class="keywordflow">return</span> <a class="code" href="group__midi__player.html#gaab5fe5b25ff513919b138d77e079c75a">fluid_player_seek</a>(player, 0);</div><div class="line">    }</div><div class="line"></div><div class="line">    <span class="keywordflow">return</span> <a class="code" href="group__misc.html#gae4efb1c3ce0d550c922504adfb0fb886">FLUID_OK</a>;</div><div class="line">}</div></div><!-- fragment --> 
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>

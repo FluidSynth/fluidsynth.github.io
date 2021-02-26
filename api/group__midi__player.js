@@ -26,6 +26,7 @@ var group__midi__player =
     [ "fluid_player_set_midi_tempo", "group__midi__player.html#ga776bf3318dce8f938ee77b38aa41ea6e", null ],
     [ "fluid_player_set_playback_callback", "group__midi__player.html#ga615cfa9d81227d9253dddebc49d8edcb", null ],
     [ "fluid_player_set_tempo", "group__midi__player.html#gab99758ae72fc14dd149a64cb3520700a", null ],
+    [ "fluid_player_set_tick_callback", "group__midi__player.html#gae21555363638ec6b83ec259d2e22daec", null ],
     [ "fluid_player_stop", "group__midi__player.html#gae630aa680bb891be30bffa3d6d5e1b21", null ],
     [ "new_fluid_player", "group__midi__player.html#gaa56e6bd17cc34198296af0f8199062a5", null ]
 ];
