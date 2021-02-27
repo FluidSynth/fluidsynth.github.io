@@ -1,5 +1,6 @@
 var NAVTREEINDEX3 =
 {
+"settings_audio.html#settings_audio_wasapi_device":[5,0,28],
 "settings_audio.html#settings_audio_wasapi_exclusive-mode":[5,0,29],
 "settings_audio.html#settings_audio_waveout_device":[5,0,30],
 "settings_midi.html":[5,1],

@@ -1,5 +1,6 @@
 var NAVTREEINDEX2 =
 {
+"group__sequencer__events.html#gabee46d49a25cfe87385d7161a102014d":[6,4,0,7],
 "group__sequencer__events.html#gabf6904c7ffb0268b1550851f03662bfe":[6,4,0,26],
 "group__sequencer__events.html#gac6210e6d6e7b5608c18d0fafa8dc8eca":[6,4,0,38],
 "group__sequencer__events.html#gac7de1f3d6c9a5c78945e8619dc652038":[6,4,0,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX2 =
 "settings_audio.html#settings_audio_pulseaudio_server":[5,0,26],
 "settings_audio.html#settings_audio_realtime-prio":[5,0,3],
 "settings_audio.html#settings_audio_sample-format":[5,0,4],
-"settings_audio.html#settings_audio_sdl2_device":[5,0,27],
-"settings_audio.html#settings_audio_wasapi_device":[5,0,28]
+"settings_audio.html#settings_audio_sdl2_device":[5,0,27]
 };

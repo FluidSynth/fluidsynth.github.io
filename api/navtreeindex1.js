@@ -99,7 +99,8 @@ var NAVTREEINDEX1 =
 "group__midi__player.html#gae630aa680bb891be30bffa3d6d5e1b21":[6,3,2,19],
 "group__midi__player.html#gaf17b468585c60d343ee950c412336903":[6,3,2,3],
 "group__midi__player.html#gaf2f0f70165e7693ebc64aff7ad000161":[6,3,2,5],
-"group__midi__player.html#gga5ec93766f61465dedbbac9bdb76ced83a3495ae2441e9ec5f25f085378e9ac7be":[6,3,2,1,2],
+"group__midi__player.html#gga5ec93766f61465dedbbac9bdb76ced83a09a28d634c21048f7bb849e9c86b3f83":[6,3,2,1,2],
+"group__midi__player.html#gga5ec93766f61465dedbbac9bdb76ced83a3495ae2441e9ec5f25f085378e9ac7be":[6,3,2,1,3],
 "group__midi__player.html#gga5ec93766f61465dedbbac9bdb76ced83a7c1ac551f1a28ba42ca3d7abac0120b6":[6,3,2,1,0],
 "group__midi__player.html#gga5ec93766f61465dedbbac9bdb76ced83a98ece3a92210189eaad462edc8545bc5":[6,3,2,1,1],
 "group__midi__player.html#ggac792e9405fca53c296f7cef4d5fadfdea03b4403e63ca7c99beddd042d58f859d":[6,3,2,0,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX1 =
 "group__sequencer__events.html#gaa6c2e2c9a0d155342b0e8c68d2898099":[6,4,0,33],
 "group__sequencer__events.html#gaaf4e734dd3cfde47ad6085b47a7b6dd6":[6,4,0,14],
 "group__sequencer__events.html#gab35e3facd105b9dfa0467fbd822f41bd":[6,4,0,16],
-"group__sequencer__events.html#gabb2b015a895822b7f1889da87effeaaf":[6,4,0,24],
-"group__sequencer__events.html#gabee46d49a25cfe87385d7161a102014d":[6,4,0,7]
+"group__sequencer__events.html#gabb2b015a895822b7f1889da87effeaaf":[6,4,0,24]
 };

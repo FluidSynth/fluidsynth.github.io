@@ -8,6 +8,7 @@ var group__midi__player =
     [ "fluid_player_status", "group__midi__player.html#ga5ec93766f61465dedbbac9bdb76ced83", [
       [ "FLUID_PLAYER_READY", "group__midi__player.html#gga5ec93766f61465dedbbac9bdb76ced83a7c1ac551f1a28ba42ca3d7abac0120b6", null ],
       [ "FLUID_PLAYER_PLAYING", "group__midi__player.html#gga5ec93766f61465dedbbac9bdb76ced83a98ece3a92210189eaad462edc8545bc5", null ],
+      [ "FLUID_PLAYER_STOPPING", "group__midi__player.html#gga5ec93766f61465dedbbac9bdb76ced83a09a28d634c21048f7bb849e9c86b3f83", null ],
       [ "FLUID_PLAYER_DONE", "group__midi__player.html#gga5ec93766f61465dedbbac9bdb76ced83a3495ae2441e9ec5f25f085378e9ac7be", null ]
     ] ],
     [ "delete_fluid_player", "group__midi__player.html#ga9e655b26be62b17c59319a287ef382f3", null ],

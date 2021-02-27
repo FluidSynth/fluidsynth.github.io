@@ -63,6 +63,7 @@ var searchData=
   ['fluid_5fplayer_5fdone',['FLUID_PLAYER_DONE',['../group__midi__player.html#gga5ec93766f61465dedbbac9bdb76ced83a3495ae2441e9ec5f25f085378e9ac7be',1,'midi.h']]],
   ['fluid_5fplayer_5fplaying',['FLUID_PLAYER_PLAYING',['../group__midi__player.html#gga5ec93766f61465dedbbac9bdb76ced83a98ece3a92210189eaad462edc8545bc5',1,'midi.h']]],
   ['fluid_5fplayer_5fready',['FLUID_PLAYER_READY',['../group__midi__player.html#gga5ec93766f61465dedbbac9bdb76ced83a7c1ac551f1a28ba42ca3d7abac0120b6',1,'midi.h']]],
+  ['fluid_5fplayer_5fstopping',['FLUID_PLAYER_STOPPING',['../group__midi__player.html#gga5ec93766f61465dedbbac9bdb76ced83a09a28d634c21048f7bb849e9c86b3f83',1,'midi.h']]],
   ['fluid_5fplayer_5ftempo_5fexternal_5fbpm',['FLUID_PLAYER_TEMPO_EXTERNAL_BPM',['../group__midi__player.html#ggac792e9405fca53c296f7cef4d5fadfdea1e45d7f536835c201cfc1e01f02143fc',1,'midi.h']]],
   ['fluid_5fplayer_5ftempo_5fexternal_5fmidi',['FLUID_PLAYER_TEMPO_EXTERNAL_MIDI',['../group__midi__player.html#ggac792e9405fca53c296f7cef4d5fadfdeac098aece2b021baccda53a2ba167e51c',1,'midi.h']]],
   ['fluid_5fplayer_5ftempo_5finternal',['FLUID_PLAYER_TEMPO_INTERNAL',['../group__midi__player.html#ggac792e9405fca53c296f7cef4d5fadfdea03b4403e63ca7c99beddd042d58f859d',1,'midi.h']]],

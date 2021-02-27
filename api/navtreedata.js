@@ -32,8 +32,8 @@ var NAVTREEINDEX =
 [
 "Advanced.html",
 "group__ladspa.html#ga7a254bb526ab09afd080d00df7aeb98f",
-"group__sequencer__events.html#gabf6904c7ffb0268b1550851f03662bfe",
-"settings_audio.html#settings_audio_wasapi_exclusive-mode"
+"group__sequencer__events.html#gabee46d49a25cfe87385d7161a102014d",
+"settings_audio.html#settings_audio_wasapi_device"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
