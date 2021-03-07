@@ -115,7 +115,7 @@ Functions</h2></td></tr>
 <tr class="memdesc:ga7a254bb526ab09afd080d00df7aeb98f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the effect plugin supports the run_adding and set_run_adding_gain interfaces necessary for output mixing.  <a href="#ga7a254bb526ab09afd080d00df7aeb98f">More...</a><br /></td></tr>
 <tr class="separator:ga7a254bb526ab09afd080d00df7aeb98f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga2d9c7577e1988a605b1e6880b240d2c7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ladspa.html#ga2d9c7577e1988a605b1e6880b240d2c7">fluid_ladspa_effect_link</a> (<a class="el" href="group__Types.html#ga4cb127fbe32ac21781d5252c75661191">fluid_ladspa_fx_t</a> *fx, const char *effect_name, const char *port_name, const char *name)</td></tr>
-<tr class="memdesc:ga2d9c7577e1988a605b1e6880b240d2c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Connect an effect port to a host port or buffer.  <a href="#ga2d9c7577e1988a605b1e6880b240d2c7">More...</a><br /></td></tr>
+<tr class="memdesc:ga2d9c7577e1988a605b1e6880b240d2c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Connect an effect audio port to a host port or buffer.  <a href="#ga2d9c7577e1988a605b1e6880b240d2c7">More...</a><br /></td></tr>
 <tr class="separator:ga2d9c7577e1988a605b1e6880b240d2c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaa1a41c4d36af0ba8cd726bca198887ee"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ladspa.html#gaa1a41c4d36af0ba8cd726bca198887ee">fluid_ladspa_effect_port_exists</a> (<a class="el" href="group__Types.html#ga4cb127fbe32ac21781d5252c75661191">fluid_ladspa_fx_t</a> *fx, const char *effect_name, const char *port_name)</td></tr>
 <tr class="memdesc:gaa1a41c4d36af0ba8cd726bca198887ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the named port exists on an effect.  <a href="#gaa1a41c4d36af0ba8cd726bca198887ee">More...</a><br /></td></tr>
@@ -449,12 +449,12 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Connect an effect port to a host port or buffer. </p>
+<p>Connect an effect audio port to a host port or buffer. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">fx</td><td>LADSPA effects instance </td></tr>
     <tr><td class="paramname">effect_name</td><td>name of the effect </td></tr>
-    <tr><td class="paramname">port_name</td><td>the port name to connect to (case-insensitive prefix match) </td></tr>
+    <tr><td class="paramname">port_name</td><td>the audio port name to connect to (case-insensitive prefix match) </td></tr>
     <tr><td class="paramname">name</td><td>the host port or buffer to connect to (case-insensitive) </td></tr>
   </table>
   </dd>
