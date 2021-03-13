@@ -5,6 +5,9 @@ var group__voices =
       [ "FLUID_VOICE_ADD", "group__voices.html#ggaac296fe3c3d6930261b9ead8afe4db2baed44612d36459a1254b7ab6f34576a72", null ],
       [ "FLUID_VOICE_DEFAULT", "group__voices.html#ggaac296fe3c3d6930261b9ead8afe4db2bab6a4717eb5a5f1adc30f89843a0bac4d", null ]
     ] ],
+    [ "FLUID_VOICE_ADD", "group__voices.html#ggaac296fe3c3d6930261b9ead8afe4db2baed44612d36459a1254b7ab6f34576a72", null ],
+    [ "FLUID_VOICE_DEFAULT", "group__voices.html#ggaac296fe3c3d6930261b9ead8afe4db2bab6a4717eb5a5f1adc30f89843a0bac4d", null ],
+    [ "FLUID_VOICE_OVERWRITE", "group__voices.html#ggaac296fe3c3d6930261b9ead8afe4db2ba0fe2e3c967922afa7c61990a4a5d01e4", null ],
     [ "fluid_voice_add_mod", "group__voices.html#ga5a6cdf732d2679a5c23fc12be6041dc7", null ],
     [ "fluid_voice_gen_get", "group__voices.html#ga3590f1d0dd908164148c21566de04449", null ],
     [ "fluid_voice_gen_incr", "group__voices.html#gad2e7aac92c0a513b2b49e814b5da121a", null ],

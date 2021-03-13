@@ -1,5 +1,6 @@
 var group__chorus__effect =
 [
+    [ "Synthesis Parameters", "group__synthesis__params.html", "group__synthesis__params" ],
     [ "fluid_chorus_mod", "group__chorus__effect.html#ga96a2e0002fb015c8a32ccf287fba9264", [
       [ "FLUID_CHORUS_MOD_SINE", "group__chorus__effect.html#gga96a2e0002fb015c8a32ccf287fba9264a2d4792078c24ca8ed02bfee6c08251f7", null ],
       [ "FLUID_CHORUS_MOD_TRIANGLE", "group__chorus__effect.html#gga96a2e0002fb015c8a32ccf287fba9264a064e550e31bc5cf9e164a790f3306f8e", null ]

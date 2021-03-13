@@ -1,5 +1,6 @@
 var group__midi__events =
 [
+    [ "MIDI Router", "group__midi__router.html", "group__midi__router" ],
     [ "delete_fluid_midi_event", "group__midi__events.html#ga8d7bb4a62f006210bd8ab2581b62393d", null ],
     [ "fluid_midi_event_get_channel", "group__midi__events.html#gad40d950407906451336caf08a4e596a1", null ],
     [ "fluid_midi_event_get_control", "group__midi__events.html#gaadc883cb8fcca219ebfc3ed0b72f80a2", null ],

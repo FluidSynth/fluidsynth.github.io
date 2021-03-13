@@ -1,5 +1,6 @@
 var group__reverb__effect =
 [
+    [ "Effect - Chorus", "group__chorus__effect.html", "group__chorus__effect" ],
     [ "fluid_synth_get_reverb_damp", "group__reverb__effect.html#ga488eb7bcb710cb9d8f0085e2062507ed", null ],
     [ "fluid_synth_get_reverb_group_damp", "group__reverb__effect.html#ga969f53b54106db2dba3420225f2ebcd4", null ],
     [ "fluid_synth_get_reverb_group_level", "group__reverb__effect.html#ga5ad3ff26cee4d0d44ea2e9ded79d1f74", null ],

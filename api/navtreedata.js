@@ -1,3 +1,25 @@
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this file.
+
+Copyright (C) 1997-2019 by Dimitri van Heesch
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of version 2 of the GNU General Public License as published by
+the Free Software Foundation
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along
+with this program; if not, write to the Free Software Foundation, Inc.,
+51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+
+@licend  The above is the entire license notice
+for the JavaScript code in this file
+*/
 var NAVTREE =
 [
   [ "libfluidsynth", "index.html", [
@@ -31,9 +53,9 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "Advanced.html",
-"group__ladspa.html#ga7a254bb526ab09afd080d00df7aeb98f",
-"group__sequencer__events.html#gabee46d49a25cfe87385d7161a102014d",
-"settings_audio.html#settings_audio_wasapi_device"
+"group__generators.html#ggad17a24ae3b25f3b8cc5762f818eef9b4a8d2c25fc136b28599eb551b761a6a24f",
+"group__modulators.html#ga4b74a376180b580534f9eb0c4a99fde3",
+"group__soundfont__loader.html#gaa7dbc4c71cde11e870bc921627146e8f"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
