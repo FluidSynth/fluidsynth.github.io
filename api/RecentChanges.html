@@ -90,9 +90,9 @@ $(document).ready(function(){initNavTree('RecentChanges.html',''); initResizable
 <div class="textblock"><h1><a class="anchor" id="NewIn2_2_0"></a>
 What's new in 2.2.0?</h1>
 <ul>
-<li><a class="el" href="group__Types.html#ga6a223e4b8d83753d95c87e1feed58227" title="Callback struct to perform custom file loading of soundfonts.">fluid_file_callbacks_t</a> now uses <code>long long</code> as file-offset type (see <a class="el" href="group__Types.html#ga5c188d5b1e95c245ff7f3b49a6b82ad9" title="A typedef for C99&#39;s type long long, which is at least 64-bit wide, as guaranteed by the C99.">fluid_long_long_t</a>). This is a breaking change, which allows to load SoundFonts bigger than 2GiB on Windows. This change required to bump fluidsynth's SOVERSION.</li>
+<li><a class="el" href="group__Types.html#ga6a223e4b8d83753d95c87e1feed58227" title="Callback struct to perform custom file loading of soundfonts.">fluid_file_callbacks_t</a> <span style="color:red">now uses <code>long long</code> as file-offset type (see <a class="el" href="group__Types.html#ga5c188d5b1e95c245ff7f3b49a6b82ad9" title="A typedef for C99&#39;s type long long, which is at least 64-bit wide, as guaranteed by the C99.">fluid_long_long_t</a>).</span><span style="color:red;font-weight:bold">This is a breaking change</span>, which allows to load SoundFonts bigger than 2GiB on Windows. This change required to bump fluidsynth's SOVERSION.</li>
+<li><span style="color:red">various fluid_event_*() functions that received a "value" argument of type <code>short</code> now receive an <code>int</code> argument</span> in preparation for MIDI 2.0 support</li>
 <li>fluid_event_any_control_change() has been removed</li>
-<li>various fluid_event_*() functions that received a "value" argument of type <code>short</code> now receive an <code>int</code> argument in preparation for MIDI 2.0 support</li>
 <li>the sequencer has received a major revisal. For you that means:<ul>
 <li>the sequencer's queue no longer blocks the synthesizer thread, due to being busy arranging its events internally.</li>
 <li>events that share the same tick was given a new, documented order, see <a class="el" href="group__sequencer.html#ga83314f4ad773979841afe50cc2efd83f" title="Schedule an event for sending at a later time.">fluid_sequencer_send_at()</a>.</li>
