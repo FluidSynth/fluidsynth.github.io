@@ -1,6 +1,5 @@
 var group__tuning =
 [
-    [ "Audio Rendering", "group__audio__rendering.html", "group__audio__rendering" ],
     [ "fluid_synth_activate_key_tuning", "group__tuning.html#ga50d0a28c3699a8d03cbadfd06f84a2eb", null ],
     [ "fluid_synth_activate_octave_tuning", "group__tuning.html#ga00a6c50115555bda84578d0f994492b1", null ],
     [ "fluid_synth_activate_tuning", "group__tuning.html#ga80367b28166de43d5e3aa0fe699271ea", null ],

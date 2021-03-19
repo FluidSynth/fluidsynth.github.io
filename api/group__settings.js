@@ -13,11 +13,6 @@ var group__settings =
       [ "FLUID_STR_TYPE", "group__settings.html#gga3f81ecae0f6b147ca8a7f3be4f24a07aa5fb9826b74428753caccfe01091d1000", null ],
       [ "FLUID_SET_TYPE", "group__settings.html#gga3f81ecae0f6b147ca8a7f3be4f24a07aa50b8a4a854bda93a6f59b425e8f4acad", null ]
     ] ],
-    [ "FLUID_INT_TYPE", "group__settings.html#gga3f81ecae0f6b147ca8a7f3be4f24a07aaac101015b18e0600245d930c16619659", null ],
-    [ "FLUID_NO_TYPE", "group__settings.html#gga3f81ecae0f6b147ca8a7f3be4f24a07aa7afc1bed56f3d4269b22e58a47e59136", null ],
-    [ "FLUID_NUM_TYPE", "group__settings.html#gga3f81ecae0f6b147ca8a7f3be4f24a07aa5fd6d4d56917aa1225b0c713ab17a088", null ],
-    [ "FLUID_SET_TYPE", "group__settings.html#gga3f81ecae0f6b147ca8a7f3be4f24a07aa50b8a4a854bda93a6f59b425e8f4acad", null ],
-    [ "FLUID_STR_TYPE", "group__settings.html#gga3f81ecae0f6b147ca8a7f3be4f24a07aa5fb9826b74428753caccfe01091d1000", null ],
     [ "delete_fluid_settings", "group__settings.html#gabd13a1e869bfaaaebfc58a72af5a66ac", null ],
     [ "fluid_settings_copystr", "group__settings.html#ga60fa4a2b4bee8309aad21db2cd67fc0c", null ],
     [ "fluid_settings_dupstr", "group__settings.html#gaadc72acd38fe2a98a1a7696027ca9120", null ],

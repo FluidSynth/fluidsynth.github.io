@@ -1,6 +1,5 @@
 var group__iir__filter =
 [
-    [ "MIDI Channel Setup", "group__channel__setup.html", "group__channel__setup" ],
     [ "fluid_iir_filter_flags", "group__iir__filter.html#ga1e682c5d6f22e13947cc07bcd92d7525", [
       [ "FLUID_IIR_Q_LINEAR", "group__iir__filter.html#gga1e682c5d6f22e13947cc07bcd92d7525a7a307ecda3d6856dc4da345df9dea667", null ],
       [ "FLUID_IIR_Q_ZERO_OFF", "group__iir__filter.html#gga1e682c5d6f22e13947cc07bcd92d7525a5aa913329adc2c9663486d8e7ceb1104", null ],

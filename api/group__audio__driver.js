@@ -1,6 +1,5 @@
 var group__audio__driver =
 [
-    [ "File Renderer", "group__file__renderer.html", "group__file__renderer" ],
     [ "fluid_audio_func_t", "group__audio__driver.html#ga4c108916c658973df5242ae77fefa3d0", null ],
     [ "delete_fluid_audio_driver", "group__audio__driver.html#ga9c6f54ffa43a8ca482aca81582316f5a", null ],
     [ "fluid_audio_driver_register", "group__audio__driver.html#gadb6794858c4a18bf3ebe51c60ccb8605", null ],
