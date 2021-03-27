@@ -1,7 +1,7 @@
 var NAVTREE =
 [
   [ "libfluidsynth", "index.html", [
-    [ "FluidSynth 2.1 Developer Documentation", "index.html", [
+    [ "FluidSynth 2.2 Developer Documentation", "index.html", [
       [ "Abstract", "index.html#Abstract", null ],
       [ "Disclaimer", "index.html#Disclaimer", null ]
     ] ],

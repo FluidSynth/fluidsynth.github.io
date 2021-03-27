@@ -530,5 +530,5 @@ var searchData=
   ['fluidsynth_5fversion_5fmajor',['FLUIDSYNTH_VERSION_MAJOR',['../group__misc.html#ga8eaf0d318c2984bc7cc1e01aaab33d80',1,'version.h']]],
   ['fluidsynth_5fversion_5fmicro',['FLUIDSYNTH_VERSION_MICRO',['../group__misc.html#ga398cd8555cf7f5d46784ae05603ac6b9',1,'version.h']]],
   ['fluidsynth_5fversion_5fminor',['FLUIDSYNTH_VERSION_MINOR',['../group__misc.html#gaa2f62ea1ce3bf6cd1ab11772f7536f25',1,'version.h']]],
-  ['fluidsynth_202_2e1_20developer_20documentation',['FluidSynth 2.1 Developer Documentation',['../index.html',1,'']]]
+  ['fluidsynth_202_2e2_20developer_20documentation',['FluidSynth 2.2 Developer Documentation',['../index.html',1,'']]]
 ];
