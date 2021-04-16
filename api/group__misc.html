@@ -116,7 +116,7 @@ Macros</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ga6f11f4e3f8d4eacf38e7e3fe884f3d7b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__misc.html#ga6f11f4e3f8d4eacf38e7e3fe884f3d7b">fluid_free</a> (void *ptr)</td></tr>
-<tr class="memdesc:ga6f11f4e3f8d4eacf38e7e3fe884f3d7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convenience wrapper for free() that satisfies at least C90 requirements.  <a href="#ga6f11f4e3f8d4eacf38e7e3fe884f3d7b">More...</a><br /></td></tr>
+<tr class="memdesc:ga6f11f4e3f8d4eacf38e7e3fe884f3d7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wrapper for free() that satisfies at least C90 requirements.  <a href="#ga6f11f4e3f8d4eacf38e7e3fe884f3d7b">More...</a><br /></td></tr>
 <tr class="separator:ga6f11f4e3f8d4eacf38e7e3fe884f3d7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga7211b701745f57e3cef4007bc3d6da13"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__misc.html#ga7211b701745f57e3cef4007bc3d6da13">fluid_is_midifile</a> (const char *filename)</td></tr>
 <tr class="memdesc:ga7211b701745f57e3cef4007bc3d6da13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a file is a MIDI file.  <a href="#ga7211b701745f57e3cef4007bc3d6da13">More...</a><br /></td></tr>
@@ -253,15 +253,15 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Convenience wrapper for free() that satisfies at least C90 requirements. </p>
+<p>Wrapper for free() that satisfies at least C90 requirements. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ptr</td><td>Pointer to memory region that should be freed</td></tr>
   </table>
   </dd>
 </dl>
-<p>Especially useful when using fluidsynth with programming languages that do not provide malloc() and free().</p>
 <dl class="section note"><dt>Note</dt><dd>Only use this function when the API documentation explicitly says so. Otherwise use adequate <code>delete_fluid_*</code> functions.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Calling ::free() on memory that is advised to be freed with <a class="el" href="group__misc.html#ga6f11f4e3f8d4eacf38e7e3fe884f3d7b" title="Wrapper for free() that satisfies at least C90 requirements. ">fluid_free()</a> results in undefined behaviour! (cf.: "Potential Errors Passing CRT Objects Across DLL Boundaries" found in MS Docs)</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>2.0.7 </dd></dl>
 
 </div>

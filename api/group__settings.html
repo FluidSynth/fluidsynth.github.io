@@ -469,7 +469,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="group__misc.html#gae4efb1c3ce0d550c922504adfb0fb886" title="Value that indicates success, used by most libfluidsynth functions. ">FLUID_OK</a> if the value exists and was successfully duplicated, <a class="el" href="group__misc.html#ga90e8bdbc5a507bbfa5c45bac85a63a61" title="Value that indicates failure, used by most libfluidsynth functions. ">FLUID_FAILED</a> otherwise</dd></dl>
-<p>Like <a class="el" href="group__settings.html#ga60fa4a2b4bee8309aad21db2cd67fc0c" title="Copy the value of a string setting into the provided buffer (thread safe) ">fluid_settings_copystr()</a> but allocates a new copy of the string. Caller owns the string and should free it with <a class="el" href="group__misc.html#ga6f11f4e3f8d4eacf38e7e3fe884f3d7b" title="Convenience wrapper for free() that satisfies at least C90 requirements. ">fluid_free()</a> when done using it.</p>
+<p>Like <a class="el" href="group__settings.html#ga60fa4a2b4bee8309aad21db2cd67fc0c" title="Copy the value of a string setting into the provided buffer (thread safe) ">fluid_settings_copystr()</a> but allocates a new copy of the string. Caller owns the string and should free it with <a class="el" href="group__misc.html#ga6f11f4e3f8d4eacf38e7e3fe884f3d7b" title="Wrapper for free() that satisfies at least C90 requirements. ">fluid_free()</a> when done using it.</p>
 <dl class="section since"><dt>Since</dt><dd>1.1.0 </dd></dl>
 
 </div>
@@ -1064,7 +1064,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Newly allocated string or NULL on error (out of memory, not a valid setting <code>name</code> or not a string setting). Free the string when finished with it by using <a class="el" href="group__misc.html#ga6f11f4e3f8d4eacf38e7e3fe884f3d7b" title="Convenience wrapper for free() that satisfies at least C90 requirements. ">fluid_free()</a>.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Newly allocated string or NULL on error (out of memory, not a valid setting <code>name</code> or not a string setting). Free the string when finished with it by using <a class="el" href="group__misc.html#ga6f11f4e3f8d4eacf38e7e3fe884f3d7b" title="Wrapper for free() that satisfies at least C90 requirements. ">fluid_free()</a>.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>1.1.0 </dd></dl>
 
 </div>
