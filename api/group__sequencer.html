@@ -190,10 +190,11 @@ Functions</h2></td></tr>
     <tr><td class="paramname">time</td><td>Current sequencer tick value (see <a class="el" href="group__sequencer.html#gaf80e738f41f6fc64e5bb8a8e536d1faa" title="Get the current tick of the sequencer scaled by the time scale currently set. ">fluid_sequencer_get_tick()</a>). </td></tr>
     <tr><td class="paramname">event</td><td>The event being received </td></tr>
     <tr><td class="paramname">seq</td><td>The sequencer instance </td></tr>
-    <tr><td class="paramname">data</td><td>User defined data registered with the client </td></tr>
+    <tr><td class="paramname">data</td><td>User defined data registered with the client</td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section note"><dt>Note</dt><dd><code>time</code> may not be of the same tick value as the scheduled event! In fact, depending on the sequencer's scale and the synth's sample-rate, <code>time</code> may a few ticks too late. Although this itself is inaudible, it is important to consider, when you use this callback for enqueuing additional events over and over again with <a class="el" href="group__sequencer.html#ga83314f4ad773979841afe50cc2efd83f" title="Schedule an event for sending at a later time. ">fluid_sequencer_send_at()</a>: If you enqueue new events with a relative tick value you might introduce a timing error, which causes your sequence to sound e.g. slower than it's supposed to be. If this is your use-case, make sure to enqueue events with an absolute tick value. </dd></dl>
 
 </div>
 </div>
@@ -731,9 +732,10 @@ Functions</h2></td></tr>
 <li><a class="el" href="group__sequencer__events.html#gga98ada1fab7a3785a41aa4003645640eba64a1e726e1c8b4f48872ef4a266a78d6" title="Called when a sequencer client is being unregistered. ">FLUID_SEQ_UNREGISTERING</a> events succeed <a class="el" href="group__sequencer__events.html#gga98ada1fab7a3785a41aa4003645640ebaa6a1f19596ef3e43d1d2c8473511c88a" title="System reset event. ">FLUID_SEQ_SYSTEMRESET</a> and precede other event type.</li>
 <li><a class="el" href="group__sequencer__events.html#gga98ada1fab7a3785a41aa4003645640eba4431305a2aaadde363a1b247636de7a7" title="Note on event. ">FLUID_SEQ_NOTEON</a> and <a class="el" href="group__sequencer__events.html#gga98ada1fab7a3785a41aa4003645640eba4c293bd1d1925513766f3a25699a8cbb" title="Note event with duration. ">FLUID_SEQ_NOTE</a> events succeed any other event type.</li>
 <li>Otherwise the order is undefined. <br />
-Or mathematically: <a class="el" href="group__sequencer__events.html#gga98ada1fab7a3785a41aa4003645640ebaa6a1f19596ef3e43d1d2c8473511c88a" title="System reset event. ">FLUID_SEQ_SYSTEMRESET</a> &lt; <a class="el" href="group__sequencer__events.html#gga98ada1fab7a3785a41aa4003645640eba64a1e726e1c8b4f48872ef4a266a78d6" title="Called when a sequencer client is being unregistered. ">FLUID_SEQ_UNREGISTERING</a> &lt; ... &lt; (<a class="el" href="group__sequencer__events.html#gga98ada1fab7a3785a41aa4003645640eba4431305a2aaadde363a1b247636de7a7" title="Note on event. ">FLUID_SEQ_NOTEON</a> &amp;&amp; <a class="el" href="group__sequencer__events.html#gga98ada1fab7a3785a41aa4003645640eba4c293bd1d1925513766f3a25699a8cbb" title="Note event with duration. ">FLUID_SEQ_NOTE</a>) </li>
+Or mathematically: <a class="el" href="group__sequencer__events.html#gga98ada1fab7a3785a41aa4003645640ebaa6a1f19596ef3e43d1d2c8473511c88a" title="System reset event. ">FLUID_SEQ_SYSTEMRESET</a> &lt; <a class="el" href="group__sequencer__events.html#gga98ada1fab7a3785a41aa4003645640eba64a1e726e1c8b4f48872ef4a266a78d6" title="Called when a sequencer client is being unregistered. ">FLUID_SEQ_UNREGISTERING</a> &lt; ... &lt; (<a class="el" href="group__sequencer__events.html#gga98ada1fab7a3785a41aa4003645640eba4431305a2aaadde363a1b247636de7a7" title="Note on event. ">FLUID_SEQ_NOTEON</a> &amp;&amp; <a class="el" href="group__sequencer__events.html#gga98ada1fab7a3785a41aa4003645640eba4c293bd1d1925513766f3a25699a8cbb" title="Note event with duration. ">FLUID_SEQ_NOTE</a>)</li>
 </ul>
 </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Be careful with relative ticks when sending many events! See <a class="el" href="group__sequencer.html#gae6bb99d73ba67f0b7e15883b78bfae85" title="Event callback prototype for destination clients. ">fluid_event_callback_t</a> for details. </dd></dl>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="fluidsynth_arpeggio_8c-example.html#a4">fluidsynth_arpeggio.c</a>, and <a class="el" href="fluidsynth_metronome_8c-example.html#a4">fluidsynth_metronome.c</a>.</dd>
 </dl>
 </div>
