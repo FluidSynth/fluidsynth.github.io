@@ -228,7 +228,7 @@ Functions</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="gga5ec93766f61465dedbbac9bdb76ced83a98ece3a92210189eaad462edc8545bc5"></a>FLUID_PLAYER_PLAYING&#160;</td><td class="fielddoc"><p>Player is currently playing. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="gga5ec93766f61465dedbbac9bdb76ced83a09a28d634c21048f7bb849e9c86b3f83"></a>FLUID_PLAYER_STOPPING&#160;</td><td class="fielddoc"><p>Player is stopping, but hasn't finished yet. </p>
+<tr><td class="fieldname"><a id="gga5ec93766f61465dedbbac9bdb76ced83a09a28d634c21048f7bb849e9c86b3f83"></a>FLUID_PLAYER_STOPPING&#160;</td><td class="fielddoc"><p>Player is stopping, but hasn't finished yet (currently unused) </p>
 </td></tr>
 <tr><td class="fieldname"><a id="gga5ec93766f61465dedbbac9bdb76ced83a3495ae2441e9ec5f25f085378e9ac7be"></a>FLUID_PLAYER_DONE&#160;</td><td class="fielddoc"><p>Player is finished playing. </p>
 </td></tr>
@@ -260,7 +260,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section warning"><dt>Warning</dt><dd>Do not call while the <code>synth</code> renders audio, i.e. an audio driver is running or any other synthesizer thread calls <a class="el" href="group__audio__rendering.html#gaf41e26b153a095dbc4248e9df4f3ad46" title="Synthesize floating point audio to stereo audio channels (implements the default interface fluid_audi...">fluid_synth_process()</a> or <a class="el" href="group__audio__rendering.html#ga9528a3e544c0e26e80f316414d954040" title="Synthesize a block of floating point audio to separate audio buffers (multi-channel rendering)...">fluid_synth_nwrite_float()</a> or fluid_synth_write_*() ! </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Do not call when the synthesizer associated to this <code>player</code> renders audio, i.e. an audio driver is running or any other synthesizer thread concurrently calls <a class="el" href="group__audio__rendering.html#gaf41e26b153a095dbc4248e9df4f3ad46" title="Synthesize floating point audio to stereo audio channels (implements the default interface fluid_audi...">fluid_synth_process()</a> or <a class="el" href="group__audio__rendering.html#ga9528a3e544c0e26e80f316414d954040" title="Synthesize a block of floating point audio to separate audio buffers (multi-channel rendering)...">fluid_synth_nwrite_float()</a> or fluid_synth_write_*() ! </dd></dl>
 
 </div>
 </div>
@@ -511,7 +511,8 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Always <a class="el" href="group__misc.html#gae4efb1c3ce0d550c922504adfb0fb886" title="Value that indicates success, used by most libfluidsynth functions. ">FLUID_OK</a> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Always <a class="el" href="group__misc.html#gae4efb1c3ce0d550c922504adfb0fb886" title="Value that indicates success, used by most libfluidsynth functions. ">FLUID_OK</a></dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>The player may still be used by a concurrently running synth context. Hence it is not safe to immediately delete the player afterwards. Also refer to <a class="el" href="group__midi__player.html#ga9e655b26be62b17c59319a287ef382f3" title="Delete a MIDI player instance. ">delete_fluid_player()</a>. </dd></dl>
 
 </div>
 </div>
