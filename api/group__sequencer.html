@@ -194,7 +194,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section note"><dt>Note</dt><dd><code>time</code> may not be of the same tick value as the scheduled event! In fact, depending on the sequencer's scale and the synth's sample-rate, <code>time</code> may a few ticks too late. Although this itself is inaudible, it is important to consider, when you use this callback for enqueuing additional events over and over again with <a class="el" href="group__sequencer.html#ga83314f4ad773979841afe50cc2efd83f" title="Schedule an event for sending at a later time. ">fluid_sequencer_send_at()</a>: If you enqueue new events with a relative tick value you might introduce a timing error, which causes your sequence to sound e.g. slower than it's supposed to be. If this is your use-case, make sure to enqueue events with an absolute tick value. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd><code>time</code> may not be of the same tick value as the scheduled event! In fact, depending on the sequencer's scale and the synth's sample-rate, <code>time</code> may be a few ticks too late. Although this itself is inaudible, it is important to consider, when you use this callback for enqueuing additional events over and over again with <a class="el" href="group__sequencer.html#ga83314f4ad773979841afe50cc2efd83f" title="Schedule an event for sending at a later time. ">fluid_sequencer_send_at()</a>: If you enqueue new events with a relative tick value you might introduce a timing error, which causes your sequence to sound e.g. slower than it's supposed to be. If this is your use-case, make sure to enqueue events with an absolute tick value. </dd></dl>
 
 </div>
 </div>

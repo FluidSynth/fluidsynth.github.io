@@ -1195,12 +1195,13 @@ Functions</h2></td></tr>
     <tr><td class="paramname">evt</td><td>Sequencer event structure </td></tr>
     <tr><td class="paramname">channel</td><td>MIDI channel number </td></tr>
     <tr><td class="paramname">key</td><td>MIDI note number (0-127) </td></tr>
-    <tr><td class="paramname">vel</td><td>MIDI velocity value (0-127) </td></tr>
-    <tr><td class="paramname">duration</td><td>Duration of note in the time scale used by the sequencer (by default milliseconds)</td></tr>
+    <tr><td class="paramname">vel</td><td>MIDI velocity value (1-127) </td></tr>
+    <tr><td class="paramname">duration</td><td>Duration of note in the time scale used by the sequencer</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>The application should decide whether to use only Notes with duration, or separate NoteOn and NoteOff events. </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Calling this function with <code>vel</code> or <code>duration</code> being zero results in undefined behavior! </dd></dl>
 
 </div>
 </div>
@@ -1297,6 +1298,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section note"><dt>Note</dt><dd>Since fluidsynth 2.2.2, this function will give you a <a class="el" href="group__sequencer__events.html#gga98ada1fab7a3785a41aa4003645640eba45e4e32b1c0aefaa6533c732b8f120a1" title="Note off event. ">FLUID_SEQ_NOTEOFF</a> when called with <code>vel</code> being zero. </dd></dl>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="fluidsynth_arpeggio_8c-example.html#a3">fluidsynth_arpeggio.c</a>, and <a class="el" href="fluidsynth_metronome_8c-example.html#a3">fluidsynth_metronome.c</a>.</dd>
 </dl>
 </div>
