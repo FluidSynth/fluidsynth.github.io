@@ -22,6 +22,7 @@ var fluidsettings =
       [ "audio.oboe.sample-rate-conversion-quality", "settings_audio.html#settings_audio_oboe_sample-rate-conversion-quality", null ],
       [ "audio.oboe.sharing-mode", "settings_audio.html#settings_audio_oboe_sharing-mode", null ],
       [ "audio.oboe.performance-mode", "settings_audio.html#settings_audio_oboe_performance-mode", null ],
+      [ "audio.oboe.error-recovery-mode", "settings_audio.html#settings_audio_oboe_error-recovery-mode", null ],
       [ "audio.oss.device", "settings_audio.html#settings_audio_oss_device", null ],
       [ "audio.portaudio.device", "settings_audio.html#settings_audio_portaudio_device", null ],
       [ "audio.pulseaudio.adjust-latency", "settings_audio.html#settings_audio_pulseaudio_adjust-latency", null ],
