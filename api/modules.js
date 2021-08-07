@@ -7,7 +7,7 @@ var modules =
     [ "MIDI Sequencer", "group__sequencer.html", "group__sequencer" ],
     [ "Miscellaneous", "group__misc.html", "group__misc" ],
     [ "Settings", "group__settings.html", "group__settings" ],
-    [ "SountFonts", "group__soundfonts.html", "group__soundfonts" ],
+    [ "SoundFonts", "group__soundfonts.html", "group__soundfonts" ],
     [ "Synthesizer", "group__synth.html", "group__synth" ],
     [ "Types", "group__Types.html", "group__Types" ]
 ];
