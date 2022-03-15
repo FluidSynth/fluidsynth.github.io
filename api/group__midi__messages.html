@@ -333,6 +333,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Send a MIDI controller event on a MIDI channel. </p>
+<p>Most CCs are 7-bits wide in FluidSynth. There are a few exceptions which may be 14-bits wide as are documented here: <a href="https://github.com/FluidSynth/fluidsynth/wiki/FluidFeatures#midi-control-change-implementation-chart">https://github.com/FluidSynth/fluidsynth/wiki/FluidFeatures#midi-control-change-implementation-chart</a></p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">synth</td><td>FluidSynth instance </td></tr>
@@ -348,6 +349,7 @@ Functions</h2></td></tr>
 <li>Let a basic channel 0 in mode 3. If MIDI channel 15 is disabled it could be used as CC global for all channels belonging to basic channel 0. </li>
 </ul>
 </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Contrary to the MIDI Standard, this function does not clear LSB controllers, when MSB controllers are received. </dd></dl>
 
 </div>
 </div>
