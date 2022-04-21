@@ -1,12 +1,13 @@
 var NAVTREEINDEX3 =
 {
-"settings_audio.html#settings_audio_pulseaudio_server":[5,0,30],
+"settings_audio.html#settings_audio_pulseaudio_media-role":[5,0,30],
+"settings_audio.html#settings_audio_pulseaudio_server":[5,0,31],
 "settings_audio.html#settings_audio_realtime-prio":[5,0,3],
 "settings_audio.html#settings_audio_sample-format":[5,0,4],
-"settings_audio.html#settings_audio_sdl2_device":[5,0,31],
-"settings_audio.html#settings_audio_wasapi_device":[5,0,32],
-"settings_audio.html#settings_audio_wasapi_exclusive-mode":[5,0,33],
-"settings_audio.html#settings_audio_waveout_device":[5,0,34],
+"settings_audio.html#settings_audio_sdl2_device":[5,0,32],
+"settings_audio.html#settings_audio_wasapi_device":[5,0,33],
+"settings_audio.html#settings_audio_wasapi_exclusive-mode":[5,0,34],
+"settings_audio.html#settings_audio_waveout_device":[5,0,35],
 "settings_midi.html":[5,1],
 "settings_midi.html#settings_midi_alsa_device":[5,1,4],
 "settings_midi.html#settings_midi_alsa_seq_device":[5,1,5],

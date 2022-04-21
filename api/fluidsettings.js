@@ -8,6 +8,7 @@ var fluidsettings =
       [ "audio.sample-format", "settings_audio.html#settings_audio_sample-format", null ],
       [ "audio.alsa.device", "settings_audio.html#settings_audio_alsa_device", null ],
       [ "audio.coreaudio.device", "settings_audio.html#settings_audio_coreaudio_device", null ],
+      [ "audio.coreaudio.channel-map", "settings_audio.html#settings_audio_coreaudio_channel-map", null ],
       [ "audio.dart.device", "settings_audio.html#settings_audio_dart_device", null ],
       [ "audio.dsound.device", "settings_audio.html#settings_audio_dsound_device", null ],
       [ "audio.file.endian", "settings_audio.html#settings_audio_file_endian", null ],
