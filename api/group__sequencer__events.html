@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">libfluidsynth
-   &#160;<span id="projectnumber">2.2.5</span>
+   &#160;<span id="projectnumber">2.2.6</span>
    </div>
   </td>
  </tr>
@@ -174,6 +174,9 @@ Functions</h2></td></tr>
 <tr class="memitem:gabee46d49a25cfe87385d7161a102014d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sequencer__events.html#gabee46d49a25cfe87385d7161a102014d">fluid_event_control_change</a> (<a class="el" href="group__Types.html#gaca09348be1b6e6ee7fce49dd4734f1ba">fluid_event_t</a> *evt, int channel, short control, int val)</td></tr>
 <tr class="memdesc:gabee46d49a25cfe87385d7161a102014d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a sequencer event to be a MIDI control change event.  <a href="#gabee46d49a25cfe87385d7161a102014d">More...</a><br /></td></tr>
 <tr class="separator:gabee46d49a25cfe87385d7161a102014d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0802471833a4847c5e0467e658a904a4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sequencer__events.html#ga0802471833a4847c5e0467e658a904a4">fluid_event_from_midi_event</a> (<a class="el" href="group__Types.html#gaca09348be1b6e6ee7fce49dd4734f1ba">fluid_event_t</a> *, const <a class="el" href="group__Types.html#ga61c72b76e3ee344637994c3071f74d94">fluid_midi_event_t</a> *)</td></tr>
+<tr class="memdesc:ga0802471833a4847c5e0467e658a904a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transforms an incoming MIDI event (from a MIDI driver or MIDI router) to a sequencer event.  <a href="#ga0802471833a4847c5e0467e658a904a4">More...</a><br /></td></tr>
+<tr class="separator:ga0802471833a4847c5e0467e658a904a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gae5cfe118c82a5522ac2aecb6dd9242b7"><td class="memItemLeft" align="right" valign="top">short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sequencer__events.html#gae5cfe118c82a5522ac2aecb6dd9242b7">fluid_event_get_bank</a> (<a class="el" href="group__Types.html#gaca09348be1b6e6ee7fce49dd4734f1ba">fluid_event_t</a> *evt)</td></tr>
 <tr class="memdesc:gae5cfe118c82a5522ac2aecb6dd9242b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the MIDI bank field from a sequencer event structure.  <a href="#gae5cfe118c82a5522ac2aecb6dd9242b7">More...</a><br /></td></tr>
 <tr class="separator:gae5cfe118c82a5522ac2aecb6dd9242b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -633,6 +636,46 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="ga0802471833a4847c5e0467e658a904a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0802471833a4847c5e0467e658a904a4">&#9670;&nbsp;</a></span>fluid_event_from_midi_event()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int fluid_event_from_midi_event </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__Types.html#gaca09348be1b6e6ee7fce49dd4734f1ba">fluid_event_t</a> *&#160;</td>
+          <td class="paramname"><em>evt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__Types.html#ga61c72b76e3ee344637994c3071f74d94">fluid_midi_event_t</a> *&#160;</td>
+          <td class="paramname"><em>event</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Transforms an incoming MIDI event (from a MIDI driver or MIDI router) to a sequencer event. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">evt</td><td>Sequencer event structure </td></tr>
+    <tr><td class="paramname">event</td><td>MIDI event </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="group__misc.html#gae4efb1c3ce0d550c922504adfb0fb886" title="Value that indicates success, used by most libfluidsynth functions. ">FLUID_OK</a> or <a class="el" href="group__misc.html#ga90e8bdbc5a507bbfa5c45bac85a63a61" title="Value that indicates failure, used by most libfluidsynth functions. ">FLUID_FAILED</a></dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This function copies the fields of the MIDI event into the provided sequencer event. Calling applications must create the sequencer event and set additional fields such as the source and destination of the sequencer event.</dd></dl>
+<div class="fragment"><div class="line"><span class="comment">// ... get MIDI event, e.g. using player_callback()</span></div><div class="line"></div><div class="line"><span class="comment">// Send MIDI event to sequencer to play</span></div><div class="line"><a class="code" href="group__Types.html#gaca09348be1b6e6ee7fce49dd4734f1ba">fluid_event_t</a> *evt = <a class="code" href="group__sequencer__events.html#ga7d9f4cea7e6421a105641a9b57c6a67d">new_fluid_event</a>();</div><div class="line"><a class="code" href="group__sequencer__events.html#ga07bf6b85ba0bb7c54eeb2fb9df12c191">fluid_event_set_source</a>(evt, -1);</div><div class="line"><a class="code" href="group__sequencer__events.html#ga554261a62cfa890262ec26366b35ce8a">fluid_event_set_dest</a>(evt, seqid);</div><div class="line"><a class="code" href="group__sequencer__events.html#ga0802471833a4847c5e0467e658a904a4">fluid_event_from_midi_event</a>(evt, event);</div><div class="line"><a class="code" href="group__sequencer.html#ga83314f4ad773979841afe50cc2efd83f">fluid_sequencer_send_at</a>(sequencer, evt, 50, 0); <span class="comment">// relative time</span></div><div class="line"><a class="code" href="group__sequencer__events.html#gae6d14506f08d58b464f24d7b416511b0">delete_fluid_event</a>(evt);</div></div><!-- fragment --><dl class="section since"><dt>Since</dt><dd>2.2.7 </dd></dl>
 
 </div>
 </div>

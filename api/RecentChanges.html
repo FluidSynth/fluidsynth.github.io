@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">libfluidsynth
-   &#160;<span id="projectnumber">2.2.5</span>
+   &#160;<span id="projectnumber">2.2.6</span>
    </div>
   </td>
  </tr>
@@ -85,7 +85,13 @@ $(document).ready(function(){initNavTree('RecentChanges.html','');});
 <div class="title">Recent Changes </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="NewIn2_2_0"></a>
+<div class="textblock"><h1><a class="anchor" id="NewIn2_2_7"></a>
+What's new in 2.2.7?</h1>
+<ul>
+<li>Most getter functions of the MIDI event API are now const correct</li>
+<li><a class="el" href="group__sequencer__events.html#ga0802471833a4847c5e0467e658a904a4" title="Transforms an incoming MIDI event (from a MIDI driver or MIDI router) to a sequencer event...">fluid_event_from_midi_event()</a> has been added</li>
+</ul>
+<h1><a class="anchor" id="NewIn2_2_0"></a>
 What's new in 2.2.0?</h1>
 <ul>
 <li><a class="el" href="group__Types.html#ga6a223e4b8d83753d95c87e1feed58227" title="Callback struct to perform custom file loading of soundfonts. ">fluid_file_callbacks_t</a> <span style="color:red">now uses <code>long long</code> as file-offset type (see <a class="el" href="group__Types.html#ga5c188d5b1e95c245ff7f3b49a6b82ad9" title="A typedef for C99&#39;s type long long, which is at least 64-bit wide, as guaranteed by the C99...">fluid_long_long_t</a>).</span><span style="color:red;font-weight:bold">This is a breaking change</span>, which allows to load SoundFonts bigger than 2GiB on Windows. This change required to bump fluidsynth's SOVERSION.</li>

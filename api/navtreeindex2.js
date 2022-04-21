@@ -1,17 +1,19 @@
 var NAVTREEINDEX2 =
 {
+"group__sequencer__events.html#gab35e3facd105b9dfa0467fbd822f41bd":[6,4,0,17],
+"group__sequencer__events.html#gabb2b015a895822b7f1889da87effeaaf":[6,4,0,25],
 "group__sequencer__events.html#gabee46d49a25cfe87385d7161a102014d":[6,4,0,7],
-"group__sequencer__events.html#gabf6904c7ffb0268b1550851f03662bfe":[6,4,0,26],
-"group__sequencer__events.html#gac6210e6d6e7b5608c18d0fafa8dc8eca":[6,4,0,38],
+"group__sequencer__events.html#gabf6904c7ffb0268b1550851f03662bfe":[6,4,0,27],
+"group__sequencer__events.html#gac6210e6d6e7b5608c18d0fafa8dc8eca":[6,4,0,39],
 "group__sequencer__events.html#gac7de1f3d6c9a5c78945e8619dc652038":[6,4,0,3],
-"group__sequencer__events.html#gacdeca48545a09c3a4af4a09407794593":[6,4,0,10],
-"group__sequencer__events.html#gad4c310a82b604d81089b98d9640f84b9":[6,4,0,40],
-"group__sequencer__events.html#gae042b78a9a3ebed687cbbd6221cc56e2":[6,4,0,37],
-"group__sequencer__events.html#gae242d727b3a2d27f3ccd3f86b71c0452":[6,4,0,22],
-"group__sequencer__events.html#gae4386142bb54310739b42457da5070c0":[6,4,0,15],
-"group__sequencer__events.html#gae5cfe118c82a5522ac2aecb6dd9242b7":[6,4,0,8],
+"group__sequencer__events.html#gacdeca48545a09c3a4af4a09407794593":[6,4,0,11],
+"group__sequencer__events.html#gad4c310a82b604d81089b98d9640f84b9":[6,4,0,41],
+"group__sequencer__events.html#gae042b78a9a3ebed687cbbd6221cc56e2":[6,4,0,38],
+"group__sequencer__events.html#gae242d727b3a2d27f3ccd3f86b71c0452":[6,4,0,23],
+"group__sequencer__events.html#gae4386142bb54310739b42457da5070c0":[6,4,0,16],
+"group__sequencer__events.html#gae5cfe118c82a5522ac2aecb6dd9242b7":[6,4,0,9],
 "group__sequencer__events.html#gae6d14506f08d58b464f24d7b416511b0":[6,4,0,1],
-"group__sequencer__events.html#gaed94b6dad11c28792a26b0053da67374":[6,4,0,11],
+"group__sequencer__events.html#gaed94b6dad11c28792a26b0053da67374":[6,4,0,12],
 "group__sequencer__events.html#gga98ada1fab7a3785a41aa4003645640eba05e9f160eea1d6aeb43299b7bd45530f":[6,4,0,0,4],
 "group__sequencer__events.html#gga98ada1fab7a3785a41aa4003645640eba0c1bce287e2eb79ab4295ca5a6ecf752":[6,4,0,0,14],
 "group__sequencer__events.html#gga98ada1fab7a3785a41aa4003645640eba25aa6c9385a294189c6b18544350734d":[6,4,0,0,11],
@@ -247,7 +249,5 @@ var NAVTREEINDEX2 =
 "settings_audio.html#settings_audio_pipewire_media-category":[5,0,24],
 "settings_audio.html#settings_audio_pipewire_media-role":[5,0,25],
 "settings_audio.html#settings_audio_pipewire_media-type":[5,0,26],
-"settings_audio.html#settings_audio_portaudio_device":[5,0,27],
-"settings_audio.html#settings_audio_pulseaudio_adjust-latency":[5,0,28],
-"settings_audio.html#settings_audio_pulseaudio_device":[5,0,29]
+"settings_audio.html#settings_audio_portaudio_device":[5,0,27]
 };

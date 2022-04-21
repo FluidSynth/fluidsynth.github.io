@@ -32,6 +32,7 @@ var group__sequencer__events =
     [ "fluid_event_channel_pressure", "group__sequencer__events.html#ga9198a1ac38a294e94fc1050c505d2b0e", null ],
     [ "fluid_event_chorus_send", "group__sequencer__events.html#ga694a6602df2c6ca9a507bf26df2783c8", null ],
     [ "fluid_event_control_change", "group__sequencer__events.html#gabee46d49a25cfe87385d7161a102014d", null ],
+    [ "fluid_event_from_midi_event", "group__sequencer__events.html#ga0802471833a4847c5e0467e658a904a4", null ],
     [ "fluid_event_get_bank", "group__sequencer__events.html#gae5cfe118c82a5522ac2aecb6dd9242b7", null ],
     [ "fluid_event_get_channel", "group__sequencer__events.html#ga40e1d9d638954385ef3c8b601d87d472", null ],
     [ "fluid_event_get_control", "group__sequencer__events.html#gacdeca48545a09c3a4af4a09407794593", null ],
