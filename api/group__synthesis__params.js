@@ -1,5 +1,6 @@
 var group__synthesis__params =
 [
+    [ "MIDI Tuning", "group__tuning.html", "group__tuning" ],
     [ "fluid_interp", "group__synthesis__params.html#ga4a2efef77b267500dd9c19c0dc9e4633", [
       [ "FLUID_INTERP_NONE", "group__synthesis__params.html#gga4a2efef77b267500dd9c19c0dc9e4633a27d7b88910ec0601854ba9312ddfaff4", null ],
       [ "FLUID_INTERP_LINEAR", "group__synthesis__params.html#gga4a2efef77b267500dd9c19c0dc9e4633a5c81597532f7e188b5aabc761ae49afd", null ],
