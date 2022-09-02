@@ -197,7 +197,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns <em>buf</em> pointer or NULL if no system command file for this system type.</dd></dl>
-<p>Windows and MACOS9 do not have a system-wide config file currently. For anything else it returns <code>"/etc/fluidsynth.conf"</code>. </p>
+<p>MACOS does not have a system-wide config file currently. Since fluidsynth 2.2.9, the config on Windows is <code>"%PROGRAMDATA%\fluidsynth\fluidsynth.cfg"</code>. For anything else it returns <code>"/etc/fluidsynth.conf"</code>. </p>
 
 </div>
 </div>
