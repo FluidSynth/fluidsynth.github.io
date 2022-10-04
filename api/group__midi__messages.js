@@ -1,6 +1,5 @@
 var group__midi__messages =
 [
-    [ "Synthesis Voice Control", "group__voice__control.html", "group__voice__control" ],
     [ "fluid_synth_all_notes_off", "group__midi__messages.html#ga1699012f35fde248893f52305901cb3f", null ],
     [ "fluid_synth_all_sounds_off", "group__midi__messages.html#gaed72c629ae186c7f149ba6f9edfefc66", null ],
     [ "fluid_synth_bank_select", "group__midi__messages.html#ga7707713c120a938d399b37c00855e2fa", null ],

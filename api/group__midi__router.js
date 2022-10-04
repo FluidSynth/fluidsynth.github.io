@@ -1,6 +1,5 @@
 var group__midi__router =
 [
-    [ "MIDI Driver", "group__midi__driver.html", "group__midi__driver" ],
     [ "fluid_midi_router_rule_type", "group__midi__router.html#gab798a0a5b95607556c9ecfbeaaab962b", [
       [ "FLUID_MIDI_ROUTER_RULE_NOTE", "group__midi__router.html#ggab798a0a5b95607556c9ecfbeaaab962ba44d3968ac6d884210bdace219f17c684", null ],
       [ "FLUID_MIDI_ROUTER_RULE_CC", "group__midi__router.html#ggab798a0a5b95607556c9ecfbeaaab962ba7101b696d6409a75744cced6becc6e6e", null ],

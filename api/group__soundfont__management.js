@@ -1,6 +1,5 @@
 var group__soundfont__management =
 [
-    [ "Effect - Reverb", "group__reverb__effect.html", "group__reverb__effect" ],
     [ "fluid_synth_add_sfont", "group__soundfont__management.html#gac1b901d710f0ef4cc0fa8fced03b1bf0", null ],
     [ "fluid_synth_get_bank_offset", "group__soundfont__management.html#ga99622c4ad737ac9a68fdfe41780c274e", null ],
     [ "fluid_synth_get_sfont", "group__soundfont__management.html#ga04707e690f7b7128df6a96878193bc2d", null ],
