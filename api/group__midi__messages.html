@@ -1244,7 +1244,7 @@ Functions</h2></td></tr>
     <tr><td class="paramname">data</td><td>Buffer containing SYSEX data (not including 0xF0 and 0xF7) </td></tr>
     <tr><td class="paramname">len</td><td>Length of data in buffer </td></tr>
     <tr><td class="paramname">response</td><td>Buffer to store response to or NULL to ignore </td></tr>
-    <tr><td class="paramname">response_len</td><td>IN/OUT parameter, in: size of response buffer, out: amount of data written to response buffer (if FLUID_FAILED is returned and this value is non-zero, it indicates the response buffer is too small) </td></tr>
+    <tr><td class="paramname">response_len</td><td>IN/OUT parameter, in: size of response buffer, out: amount of data written to response buffer (if <a class="el" href="group__misc.html#ga90e8bdbc5a507bbfa5c45bac85a63a61" title="Value that indicates failure, used by most libfluidsynth functions.">FLUID_FAILED</a> is returned and this value is non-zero, it indicates the response buffer is too small) </td></tr>
     <tr><td class="paramname">handled</td><td>Optional location to store boolean value if message was recognized and handled or not (set to TRUE if it was handled) </td></tr>
     <tr><td class="paramname">dryrun</td><td>TRUE to just do a dry run but not actually execute the SYSEX command (useful for checking if a SYSEX message would be handled) </td></tr>
   </table>
@@ -1252,7 +1252,13 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="group__misc.html#gae4efb1c3ce0d550c922504adfb0fb886" title="Value that indicates success, used by most libfluidsynth functions.">FLUID_OK</a> on success, <a class="el" href="group__misc.html#ga90e8bdbc5a507bbfa5c45bac85a63a61" title="Value that indicates failure, used by most libfluidsynth functions.">FLUID_FAILED</a> otherwise </dd></dl>
 <dl class="section since"><dt>Since</dt><dd>1.1.0 </dd></dl>
-
+<dl class="section note"><dt>Note</dt><dd>When Fluidsynth receives an XG System Mode ON message, it compares the <code>synth</code> 's deviceID directly with the deviceID of the SysEx message. This is contrary to the XG spec (page 42), which requires to only compare the lower nibble. However, following the XG spec seems to break drum channels for a lot of MIDI files out there and therefore we've decided for this customization. If you rely on XG System Mode ON messages, make sure to set the setting <a class="el" href="settings_synth.html#settings_synth_device-id">synth.device-id</a> to match the deviceID provided in the SysEx message (in most cases, this will be <code>deviceID=16</code>).</dd></dl>
+<div class="fragment"><div class="line">SYSEX format (0xF0 and 0xF7 bytes shall not be passed to <span class="keyword">this</span> <span class="keyword">function</span>):</div>
+<div class="line">Non-realtime:    0xF0   0x7E      &lt;DeviceId&gt; [BODY] 0xF7</div>
+<div class="line">Realtime:        0xF0   0x7F      &lt;DeviceId&gt; [BODY] 0xF7</div>
+<div class="line">Tuning messages: 0xF0   0x7E/0x7F &lt;DeviceId&gt; 0x08 &lt;sub ID2&gt; [BODY] &lt;ChkSum&gt; 0xF7</div>
+<div class="line">GS DT1 messages: 0xF0   0x41      &lt;DeviceId&gt; 0x42 0x12 [ADDRESS (3 bytes)] [DATA] &lt;ChkSum&gt; 0xF7</div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="ga2b22116537580796c95c8ef2bc9a1e0a"></a>
