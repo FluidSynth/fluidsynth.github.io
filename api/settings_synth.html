@@ -244,14 +244,14 @@ synth.default-soundfont</h1>
 <h1><a class="anchor" id="settings_synth_device-id"></a>
 synth.device-id</h1>
 <dl class="section user"><dt>Type</dt><dd>Integer (int)</dd></dl>
-<dl class="section user"><dt>Min - Max</dt><dd>0 - 126</dd></dl>
+<dl class="section user"><dt>Min - Max</dt><dd>0 - 127</dd></dl>
 <dl class="section user"><dt>Default</dt><dd> 
 <def>0</def>
 </dd></dl>
 <dl class="section user"><dt>Real-time</dt><dd>This setting can be changed during runtime of the synthesizer.</dd></dl>
 <p> 
 <desc>
-                Device identifier used for SYSEX commands, such as MIDI Tuning Standard commands. Fluidsynth will only process those SYSEX commands destined for this ID. Broadcast commands (with ID=127) will always be processed.</desc>
+                Device identifier used for SYSEX commands, such as MIDI Tuning Standard commands. Fluidsynth will only process those SYSEX commands destined for this ID (except when this setting is set to 127, which causes fluidsynth to process all SYSEX commands, regardless of the device ID). Broadcast commands (with ID=127) will always be processed.</desc>
   
 </div>
 </p>
