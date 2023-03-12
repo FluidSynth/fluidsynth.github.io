@@ -143,6 +143,9 @@ Functions</h2></td></tr>
 <tr class="memitem:gabc2d114e2a6926f4db800286b2ebb1da"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__midi__player.html#gabc2d114e2a6926f4db800286b2ebb1da">fluid_player_get_current_tick</a> (<a class="el" href="group__Types.html#gaf6c718e19d8c9c6632cb8ffac6974d80">fluid_player_t</a> *player)</td></tr>
 <tr class="memdesc:gabc2d114e2a6926f4db800286b2ebb1da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of tempo ticks passed.  <a href="group__midi__player.html#gabc2d114e2a6926f4db800286b2ebb1da">More...</a><br /></td></tr>
 <tr class="separator:gabc2d114e2a6926f4db800286b2ebb1da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaea72b4f99ce60bdb3a5da1bb98570574"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__midi__player.html#gaea72b4f99ce60bdb3a5da1bb98570574">fluid_player_get_division</a> (<a class="el" href="group__Types.html#gaf6c718e19d8c9c6632cb8ffac6974d80">fluid_player_t</a> *player)</td></tr>
+<tr class="memdesc:gaea72b4f99ce60bdb3a5da1bb98570574"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the division currently used by a MIDI player.  <a href="group__midi__player.html#gaea72b4f99ce60bdb3a5da1bb98570574">More...</a><br /></td></tr>
+<tr class="separator:gaea72b4f99ce60bdb3a5da1bb98570574"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gac64ed425271261cfccd16c34b1dcfc96"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__midi__player.html#gac64ed425271261cfccd16c34b1dcfc96">fluid_player_get_midi_tempo</a> (<a class="el" href="group__Types.html#gaf6c718e19d8c9c6632cb8ffac6974d80">fluid_player_t</a> *player)</td></tr>
 <tr class="memdesc:gac64ed425271261cfccd16c34b1dcfc96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the tempo currently used by a MIDI player.  <a href="group__midi__player.html#gac64ed425271261cfccd16c34b1dcfc96">More...</a><br /></td></tr>
 <tr class="separator:gac64ed425271261cfccd16c34b1dcfc96"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -403,6 +406,34 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The number of tempo ticks passed </dd></dl>
 <dl class="section since"><dt>Since</dt><dd>1.1.7 </dd></dl>
+
+</div>
+</div>
+<a id="gaea72b4f99ce60bdb3a5da1bb98570574"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaea72b4f99ce60bdb3a5da1bb98570574">&#9670;&nbsp;</a></span>fluid_player_get_division()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int fluid_player_get_division </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__Types.html#gaf6c718e19d8c9c6632cb8ffac6974d80">fluid_player_t</a> *&#160;</td>
+          <td class="paramname"><em>player</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the division currently used by a MIDI player. </p>
+<p>The player can be controlled by internal tempo coming from MIDI file tempo change or controlled by external tempo see <a class="el" href="group__midi__player.html#gab99758ae72fc14dd149a64cb3520700a" title="Set the tempo of a MIDI player.">fluid_player_set_tempo()</a>. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">player</td><td>MIDI player instance. Must be a valid pointer. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>MIDI player division or FLUID_FAILED if error. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>2.3.2 </dd></dl>
 
 </div>
 </div>

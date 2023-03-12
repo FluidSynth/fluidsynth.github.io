@@ -16,6 +16,7 @@ var group__midi__player =
     [ "fluid_player_add_mem", "group__midi__player.html#ga25d05bfa631e9ff520993a1a59de309a", null ],
     [ "fluid_player_get_bpm", "group__midi__player.html#gaf2f0f70165e7693ebc64aff7ad000161", null ],
     [ "fluid_player_get_current_tick", "group__midi__player.html#gabc2d114e2a6926f4db800286b2ebb1da", null ],
+    [ "fluid_player_get_division", "group__midi__player.html#gaea72b4f99ce60bdb3a5da1bb98570574", null ],
     [ "fluid_player_get_midi_tempo", "group__midi__player.html#gac64ed425271261cfccd16c34b1dcfc96", null ],
     [ "fluid_player_get_status", "group__midi__player.html#ga621b4fb7de2cea0a88a50e9f5a0e15b8", null ],
     [ "fluid_player_get_total_ticks", "group__midi__player.html#gab8bec2b53e07daf2313412e4663c0fa7", null ],

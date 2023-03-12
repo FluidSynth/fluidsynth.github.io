@@ -1,5 +1,6 @@
 var NAVTREEINDEX3 =
 {
+"settings_audio.html#settings_audio_portaudio_device":[5,0,27],
 "settings_audio.html#settings_audio_pulseaudio_adjust-latency":[5,0,28],
 "settings_audio.html#settings_audio_pulseaudio_device":[5,0,29],
 "settings_audio.html#settings_audio_pulseaudio_media-role":[5,0,30],
