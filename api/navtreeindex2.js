@@ -1,5 +1,6 @@
 var NAVTREEINDEX2 =
 {
+"group__sequencer__events.html#gaa6c2e2c9a0d155342b0e8c68d2898099":[6,4,0,34],
 "group__sequencer__events.html#gaaf4e734dd3cfde47ad6085b47a7b6dd6":[6,4,0,15],
 "group__sequencer__events.html#gab35e3facd105b9dfa0467fbd822f41bd":[6,4,0,17],
 "group__sequencer__events.html#gabb2b015a895822b7f1889da87effeaaf":[6,4,0,25],
@@ -218,8 +219,8 @@ var NAVTREEINDEX2 =
 "group__voices.html#ggaac296fe3c3d6930261b9ead8afe4db2ba0fe2e3c967922afa7c61990a4a5d01e4":[6,7,3,0,0],
 "group__voices.html#ggaac296fe3c3d6930261b9ead8afe4db2bab6a4717eb5a5f1adc30f89843a0bac4d":[6,7,3,0,2],
 "group__voices.html#ggaac296fe3c3d6930261b9ead8afe4db2baed44612d36459a1254b7ab6f34576a72":[6,7,3,0,1],
-"index.html":[],
 "index.html":[0],
+"index.html":[],
 "index.html#Abstract":[0,0],
 "index.html#Disclaimer":[0,1],
 "modules.html":[6],
@@ -248,6 +249,5 @@ var NAVTREEINDEX2 =
 "settings_audio.html#settings_audio_period-size":[5,0,2],
 "settings_audio.html#settings_audio_periods":[5,0,1],
 "settings_audio.html#settings_audio_pipewire_media-category":[5,0,24],
-"settings_audio.html#settings_audio_pipewire_media-role":[5,0,25],
-"settings_audio.html#settings_audio_pipewire_media-type":[5,0,26]
+"settings_audio.html#settings_audio_pipewire_media-role":[5,0,25]
 };

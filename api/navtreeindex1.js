@@ -1,5 +1,6 @@
 var NAVTREEINDEX1 =
 {
+"group__ladspa.html#ga714b15e7e44663504cc6eff1e66e4ece":[6,8,3,10],
 "group__ladspa.html#ga7997cd13ebbc492a333a4daae917d0a3":[6,8,3,5],
 "group__ladspa.html#ga7a254bb526ab09afd080d00df7aeb98f":[6,8,3,6],
 "group__ladspa.html#ga8030cdc642ad1091272000607fc810ca":[6,8,3,9],
@@ -248,6 +249,5 @@ var NAVTREEINDEX1 =
 "group__sequencer__events.html#ga926dcccf283c8bd0464177d69d29bf8f":[6,4,0,21],
 "group__sequencer__events.html#ga9468eef722fd23dfa70a4f1619091ecb":[6,4,0,40],
 "group__sequencer__events.html#ga98ada1fab7a3785a41aa4003645640eb":[6,4,0,0],
-"group__sequencer__events.html#ga9ccd0cb6b46b8022547638b2fc4b47f3":[6,4,0,42],
-"group__sequencer__events.html#gaa6c2e2c9a0d155342b0e8c68d2898099":[6,4,0,34]
+"group__sequencer__events.html#ga9ccd0cb6b46b8022547638b2fc4b47f3":[6,4,0,42]
 };
