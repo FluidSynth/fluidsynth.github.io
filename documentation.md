@@ -25,4 +25,4 @@ FluidSynth itself:
  - [FluidSynth 2.x API Documentation](/api/)
 
 For legacy versions (FluidSynth 1.x), the old API documentation is also still available:
- - [Legay API Documentation](/api-1.x/)
+ - [Legacy API Documentation](/api-1.x/)
