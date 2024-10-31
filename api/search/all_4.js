@@ -533,7 +533,7 @@ var searchData=
   ['fluid_5fvoice_5ft_569',['fluid_voice_t',['../group__Types.html#ga5123ae5ef2d7806475267380c33604c3',1,'types.h']]],
   ['fluid_5fvoice_5fupdate_5fparam_570',['fluid_voice_update_param',['../group__voices.html#ga78b0ae83ca6dc9e758fd93764bb234fe',1,'fluid_voice_update_param(fluid_voice_t *voice, int gen):&#160;fluid_voice.c'],['../group__voices.html#ga78b0ae83ca6dc9e758fd93764bb234fe',1,'fluid_voice_update_param(fluid_voice_t *voice, int gen):&#160;fluid_voice.c']]],
   ['fluid_5fwarn_571',['FLUID_WARN',['../group__logging.html#ggaa341232c15addd9c336131984840ed9ea394460be1ec74fce15e1ff683606df0f',1,'log.h']]],
-  ['fluidsynth_202_2e3_20developer_20documentation_572',['FluidSynth 2.3 Developer Documentation',['../index.html',1,'']]],
+  ['fluidsynth_202_2e4_20developer_20documentation_572',['FluidSynth 2.4 Developer Documentation',['../index.html',1,'']]],
   ['fluidsynth_5fversion_573',['FLUIDSYNTH_VERSION',['../group__misc.html#ga5b68f548fc26f89b6f4b66af5288555a',1,'version.h']]],
   ['fluidsynth_5fversion_5fmajor_574',['FLUIDSYNTH_VERSION_MAJOR',['../group__misc.html#ga8eaf0d318c2984bc7cc1e01aaab33d80',1,'version.h']]],
   ['fluidsynth_5fversion_5fmicro_575',['FLUIDSYNTH_VERSION_MICRO',['../group__misc.html#ga398cd8555cf7f5d46784ae05603ac6b9',1,'version.h']]],
