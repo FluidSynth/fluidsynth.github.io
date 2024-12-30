@@ -17,8 +17,6 @@ var group__Types =
     [ "fluid_ostream_t", "group__Types.html#ga6d8c441b84ab0430e358438cee876c69", null ],
     [ "fluid_player_t", "group__Types.html#gaf6c718e19d8c9c6632cb8ffac6974d80", null ],
     [ "fluid_preset_t", "group__Types.html#ga985e5ee05f433da841127750f67a4723", null ],
-    [ "fluid_rampreset_t", "group__Types.html#ga8bbeb200df523c6e0e0e86c605b7b98a", null ],
-    [ "fluid_ramsfont_t", "group__Types.html#ga093fe32472dd43adaef22c62feb2d15e", null ],
     [ "fluid_sample_t", "group__Types.html#gabf9174d452679ca1a4ee7d693fb773cf", null ],
     [ "fluid_seq_id_t", "group__Types.html#ga69f729a00307f2b8ec1be0dba2203c12", null ],
     [ "fluid_sequencer_t", "group__Types.html#ga7c7acad4ee620fc954a7ad4d7e87e1c3", null ],

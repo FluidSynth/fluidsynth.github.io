@@ -58,9 +58,9 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "Advanced.html",
-"group__ladspa.html#ga6efd531e35bdd0296ba57c1d26666e30",
-"group__sequencer__events.html#ga87e5cea03b6f90bb6354e8d5ed6abdcc",
-"settings_audio.html#settings_audio_oboe_sharing-mode"
+"group__ladspa.html#ga7997cd13ebbc492a333a4daae917d0a3",
+"group__sequencer__events.html#ga926dcccf283c8bd0464177d69d29bf8f",
+"settings_audio.html#settings_audio_period-size"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -1,7 +1,5 @@
 var NAVTREEINDEX3 =
 {
-"settings_audio.html#settings_audio_oboe_sharing-mode":[5,0,20],
-"settings_audio.html#settings_audio_oss_device":[5,0,23],
 "settings_audio.html#settings_audio_period-size":[5,0,2],
 "settings_audio.html#settings_audio_periods":[5,0,1],
 "settings_audio.html#settings_audio_pipewire_media-category":[5,0,24],
