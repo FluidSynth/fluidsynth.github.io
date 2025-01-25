@@ -1,5 +1,6 @@
 var NAVTREEINDEX2 =
 {
+"group__sequencer__events.html#ga9198a1ac38a294e94fc1050c505d2b0e":[6,4,0,5],
 "group__sequencer__events.html#ga926dcccf283c8bd0464177d69d29bf8f":[6,4,0,21],
 "group__sequencer__events.html#ga9468eef722fd23dfa70a4f1619091ecb":[6,4,0,40],
 "group__sequencer__events.html#ga98ada1fab7a3785a41aa4003645640eb":[6,4,0,0],
@@ -223,8 +224,8 @@ var NAVTREEINDEX2 =
 "group__voices.html#ggaac296fe3c3d6930261b9ead8afe4db2ba0fe2e3c967922afa7c61990a4a5d01e4":[6,7,3,0,0],
 "group__voices.html#ggaac296fe3c3d6930261b9ead8afe4db2bab6a4717eb5a5f1adc30f89843a0bac4d":[6,7,3,0,2],
 "group__voices.html#ggaac296fe3c3d6930261b9ead8afe4db2baed44612d36459a1254b7ab6f34576a72":[6,7,3,0,1],
-"index.html":[0],
 "index.html":[],
+"index.html":[0],
 "index.html#Abstract":[0,0],
 "index.html#Disclaimer":[0,1],
 "modules.html":[6],
@@ -248,6 +249,5 @@ var NAVTREEINDEX2 =
 "settings_audio.html#settings_audio_oboe_id":[5,0,18],
 "settings_audio.html#settings_audio_oboe_performance-mode":[5,0,21],
 "settings_audio.html#settings_audio_oboe_sample-rate-conversion-quality":[5,0,19],
-"settings_audio.html#settings_audio_oboe_sharing-mode":[5,0,20],
-"settings_audio.html#settings_audio_oss_device":[5,0,23]
+"settings_audio.html#settings_audio_oboe_sharing-mode":[5,0,20]
 };

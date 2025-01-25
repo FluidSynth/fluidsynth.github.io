@@ -32,6 +32,7 @@ var NAVTREE =
     [ "Introduction", "Introduction.html", null ],
     [ "Deprecated Functions", "deprecated.html", null ],
     [ "Recent Changes", "RecentChanges.html", [
+      [ "What's new in 2.4.3?", "RecentChanges.html#NewIn2_4_3", null ],
       [ "What's new in 2.4.0?", "RecentChanges.html#NewIn2_4_0", null ],
       [ "What's new in 2.3.2?", "RecentChanges.html#NewIn2_3_2", null ],
       [ "What's new in 2.2.7?", "RecentChanges.html#NewIn2_2_7", null ],
@@ -58,9 +59,9 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "Advanced.html",
-"group__ladspa.html#ga7997cd13ebbc492a333a4daae917d0a3",
-"group__sequencer__events.html#ga926dcccf283c8bd0464177d69d29bf8f",
-"settings_audio.html#settings_audio_period-size"
+"group__ladspa.html#ga714b15e7e44663504cc6eff1e66e4ece",
+"group__sequencer__events.html#ga9198a1ac38a294e94fc1050c505d2b0e",
+"settings_audio.html#settings_audio_oss_device"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

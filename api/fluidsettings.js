@@ -80,6 +80,7 @@ var fluidsettings =
       [ "synth.midi-channels", "settings_synth.html#settings_synth_midi-channels", null ],
       [ "synth.midi-bank-select", "settings_synth.html#settings_synth_midi-bank-select", null ],
       [ "synth.min-note-length", "settings_synth.html#settings_synth_min-note-length", null ],
+      [ "synth.note-cut", "settings_synth.html#settings_synth_note-cut", null ],
       [ "synth.overflow.age", "settings_synth.html#settings_synth_overflow_age", null ],
       [ "synth.overflow.important", "settings_synth.html#settings_synth_overflow_important", null ],
       [ "synth.overflow.important-channels", "settings_synth.html#settings_synth_overflow_important-channels", null ],
