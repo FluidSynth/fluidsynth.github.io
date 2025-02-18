@@ -190,9 +190,10 @@ Functions</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="gga4a2efef77b267500dd9c19c0dc9e4633a5c81597532f7e188b5aabc761ae49afd"></a>FLUID_INTERP_LINEAR&#160;</td><td class="fielddoc"><p>Straight-line interpolation: A bit slower, reasonable audio quality. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="gga4a2efef77b267500dd9c19c0dc9e4633a7c302900233f9b26a8d76f54fe11e024"></a>FLUID_INTERP_4THORDER&#160;</td><td class="fielddoc"><p>Fourth-order interpolation, good quality, the default. </p>
+<tr><td class="fieldname"><a id="gga4a2efef77b267500dd9c19c0dc9e4633a7c302900233f9b26a8d76f54fe11e024"></a>FLUID_INTERP_4THORDER&#160;</td><td class="fielddoc"><p>Fourth-order interpolation, best quality, the default. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="gga4a2efef77b267500dd9c19c0dc9e4633a593125ae8ab8e8f1f1a1bb7bb3f71b02"></a>FLUID_INTERP_7THORDER&#160;</td><td class="fielddoc"><p>Seventh-order interpolation. </p>
+<tr><td class="fieldname"><a id="gga4a2efef77b267500dd9c19c0dc9e4633a593125ae8ab8e8f1f1a1bb7bb3f71b02"></a>FLUID_INTERP_7THORDER&#160;</td><td class="fielddoc"><p>Seventh-point sinc interpolation. </p>
+<dl class="section note"><dt>Note</dt><dd>This interpolation method was believed to provide highest quality. However, in Feb. 2025 it was discovered that for certain samples it does introduce ringing artifacts, which are not present in the 4th order interpolation. This is not a bug, it's rather a limitation of only using 7 points for the sinc interpolation. </dd></dl>
 </td></tr>
 <tr><td class="fieldname"><a id="gga4a2efef77b267500dd9c19c0dc9e4633a8f23e87109748a515273f1289dcb6312"></a>FLUID_INTERP_DEFAULT&#160;</td><td class="fielddoc"><p>Default interpolation method. </p>
 </td></tr>
