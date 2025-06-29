@@ -1,5 +1,6 @@
 var group__modulators =
 [
+    [ "fluid_mod_mapping_t", "group__modulators.html#gaa3705efe48570623a732cdafb7c4415e", null ],
     [ "fluid_mod_flags", "group__modulators.html#ga4b2419150b2a167df7807d5020a6e996", [
       [ "FLUID_MOD_POSITIVE", "group__modulators.html#gga4b2419150b2a167df7807d5020a6e996a915b9287ca1694b748d18e0fb95291bd", null ],
       [ "FLUID_MOD_NEGATIVE", "group__modulators.html#gga4b2419150b2a167df7807d5020a6e996ae36b75d882c477b9c708090b8f39ee2e", null ],
@@ -11,6 +12,7 @@ var group__modulators =
       [ "FLUID_MOD_SWITCH", "group__modulators.html#gga4b2419150b2a167df7807d5020a6e996aea14d1629c4a8dfdf3241b5b61827aec", null ],
       [ "FLUID_MOD_GC", "group__modulators.html#gga4b2419150b2a167df7807d5020a6e996a8705ffb835e7e2e991a74e9827e9409e", null ],
       [ "FLUID_MOD_CC", "group__modulators.html#gga4b2419150b2a167df7807d5020a6e996a61e4c4ad391548b2d12764644e6e8a45", null ],
+      [ "FLUID_MOD_CUSTOM", "group__modulators.html#gga4b2419150b2a167df7807d5020a6e996a7eddf66883e2c3d275ad9c1a1e715753", null ],
       [ "FLUID_MOD_SIN", "group__modulators.html#gga4b2419150b2a167df7807d5020a6e996a5ac8e594df1dff6c76d49c6258127d5a", null ]
     ] ],
     [ "fluid_mod_src", "group__modulators.html#ga801993d69390b21a2d0311d44afb1932", [
@@ -34,10 +36,11 @@ var group__modulators =
     [ "fluid_mod_get_flags2", "group__modulators.html#ga691c2b5a73a66d2d4617866237c83d3d", null ],
     [ "fluid_mod_get_source1", "group__modulators.html#ga4b74a376180b580534f9eb0c4a99fde3", null ],
     [ "fluid_mod_get_source2", "group__modulators.html#ga5d965e43fbda6076adea3f1c0f03290a", null ],
-    [ "fluid_mod_get_transform", "group__modulators.html#ga0e06062983f1b03c8c069185bda00f88", null ],
+    [ "fluid_mod_get_transform", "group__modulators.html#gab7b1d3517480499d8524c89341609fc2", null ],
     [ "fluid_mod_has_dest", "group__modulators.html#gaa027f66cd5a19fa9047bd7ec6dfd2e83", null ],
     [ "fluid_mod_has_source", "group__modulators.html#gac7e78ad9b710ad603031df01a98ebe3e", null ],
     [ "fluid_mod_set_amount", "group__modulators.html#ga68852182191186bb8ae57df326b6a6e4", null ],
+    [ "fluid_mod_set_custom_mapping", "group__modulators.html#ga03a812331a53f1f6dadafba72b8bf80d", null ],
     [ "fluid_mod_set_dest", "group__modulators.html#ga67de291efea62d669e7fe7334daac2be", null ],
     [ "fluid_mod_set_source1", "group__modulators.html#ga2f3b1621d97b4c47f8e8a92992df85e3", null ],
     [ "fluid_mod_set_source2", "group__modulators.html#gadb8188799225464d33e55addc67c0e9a", null ],

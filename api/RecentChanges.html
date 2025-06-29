@@ -87,7 +87,14 @@ $(document).ready(function(){initNavTree('RecentChanges.html',''); initResizable
 <div class="title">Recent Changes </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="NewIn2_4_5"></a>
+<div class="textblock"><h1><a class="anchor" id="NewIn2_5_0"></a>
+What's new in 2.5.0?</h1>
+<ul>
+<li><a class="el" href="group__modulators.html#gga4b2419150b2a167df7807d5020a6e996a5ac8e594df1dff6c76d49c6258127d5a" title="Custom non-standard sinus mapping function.">FLUID_MOD_SIN</a> is now deprecated, use the newly added <a class="el" href="group__modulators.html#ga03a812331a53f1f6dadafba72b8bf80d" title="Set a user defined mapping function of type fluid_mod_mapping_t to mod.">fluid_mod_set_custom_mapping()</a></li>
+<li>A new mode for the custom IIR filter has been added: <a class="el" href="group__iir__filter.html#gga1e682c5d6f22e13947cc07bcd92d7525a347c1326bd6f2ecca54ede27e2d170d5" title="Setting this flag causes the custom filter&#39;s cutoff frequency (fc) to dynamically adjust to the notes...">FLUID_IIR_BEANLAND</a></li>
+<li><a class="el" href="group__modulators.html#gab7b1d3517480499d8524c89341609fc2" title="Get the transform type of a modulator.">fluid_mod_get_transform()</a> now receives a <code>const</code> argument</li>
+</ul>
+<h1><a class="anchor" id="NewIn2_4_5"></a>
 What's new in 2.4.5?</h1>
 <ul>
 <li>In order to use the sdl3 audio driver, the downstream application is responsible for calling <code>SDL_Init()</code> and <code>SDL_Quit()</code>, just like it was practice for the sdl2 audio driver. Fluidsynth may raise a warning if this isn't done, see <a class="el" href="CreatingAudioDriver.html">Creating the audio driver</a></li>
@@ -102,7 +109,7 @@ What's new in 2.4.0?</h1>
 <ul>
 <li>synth.device-id now has a default value of 16</li>
 <li>Default values of reverb and chorus settings have been tuned</li>
-<li><a class="el" href="group__modulators.html#ga0e06062983f1b03c8c069185bda00f88" title="Get the transform type of a modulator.">fluid_mod_get_transform()</a> and <a class="el" href="group__modulators.html#ga56e9f604c9d6a6f0c940a45baaff99a7" title="Set the transform type of a modulator.">fluid_mod_set_transform()</a> for SoundFont 2.04 compliant modulators</li>
+<li><a class="el" href="group__modulators.html#gab7b1d3517480499d8524c89341609fc2" title="Get the transform type of a modulator.">fluid_mod_get_transform()</a> and <a class="el" href="group__modulators.html#ga56e9f604c9d6a6f0c940a45baaff99a7" title="Set the transform type of a modulator.">fluid_mod_set_transform()</a> for SoundFont 2.04 compliant modulators</li>
 </ul>
 <h1><a class="anchor" id="NewIn2_3_2"></a>
 What's new in 2.3.2?</h1>

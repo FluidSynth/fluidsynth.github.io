@@ -102,6 +102,8 @@ Enumerations</h2></td></tr>
 &#160;&#160;<a class="el" href="group__iir__filter.html#gga1e682c5d6f22e13947cc07bcd92d7525a5aa913329adc2c9663486d8e7ceb1104">FLUID_IIR_Q_ZERO_OFF</a> = 1 &lt;&lt; 1
 , <br />
 &#160;&#160;<a class="el" href="group__iir__filter.html#gga1e682c5d6f22e13947cc07bcd92d7525a5ecac11504abbdc9c10843670799369d">FLUID_IIR_NO_GAIN_AMP</a> = 1 &lt;&lt; 2
+, <br />
+&#160;&#160;<a class="el" href="group__iir__filter.html#gga1e682c5d6f22e13947cc07bcd92d7525a347c1326bd6f2ecca54ede27e2d170d5">FLUID_IIR_BEANLAND</a> = 1 &lt;&lt; 3
 <br />
  }</td></tr>
 <tr class="memdesc:ga1e682c5d6f22e13947cc07bcd92d7525"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specifies optional settings to use for the custom IIR filter.  <a href="group__iir__filter.html#ga1e682c5d6f22e13947cc07bcd92d7525">More...</a><br /></td></tr>
@@ -150,6 +152,9 @@ Functions</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="gga1e682c5d6f22e13947cc07bcd92d7525a5ecac11504abbdc9c10843670799369d"></a>FLUID_IIR_NO_GAIN_AMP&#160;</td><td class="fielddoc"><p>The Soundfont spec requires to correct the gain of the filter depending on the filter's Q. </p>
 <p>If this flag is set the filter gain will not be corrected. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga1e682c5d6f22e13947cc07bcd92d7525a347c1326bd6f2ecca54ede27e2d170d5"></a>FLUID_IIR_BEANLAND&#160;</td><td class="fielddoc"><p>Setting this flag causes the custom filter's cutoff frequency (fc) to dynamically adjust to the notes played, so that it is possible to filter at the same spot relative to the sound of the sample playing. </p>
+<p>In this sense, the filter fc honors the key and pitch of a note relative to the sample's root_key: if the key of a note is 2 semitones above the sample's root_key and additionally it's pitched up by 30 cents, the cutoff frequency would be automatically adjusted by +230 cents. E.g. for horns, one can add an emphasis on tones that would "stick to" the horn as it played different notes (provided that these notes use the same sample). The enum is named after Robin Beanland, who has used this technique in Conker's Bad Fur Day and (together with other composers) in Jet Force Gemini, implemented by Mike Currington on the N64. </p>
 </td></tr>
 </table>
 

@@ -84,6 +84,7 @@ $(document).ready(function(){initNavTree('group__modulators.html',''); initResiz
 
 <div class="header">
   <div class="summary">
+<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
@@ -94,6 +95,12 @@ $(document).ready(function(){initNavTree('group__modulators.html',''); initResiz
 <p>SoundFont modulator functions and constants.  
 <a href="#details">More...</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:gaa3705efe48570623a732cdafb7c4415e"><td class="memItemLeft" align="right" valign="top">typedef double(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__modulators.html#gaa3705efe48570623a732cdafb7c4415e">fluid_mod_mapping_t</a>) (const <a class="el" href="group__Types.html#ga6c727efab500d6c0c350d4292e9aa5ef">fluid_mod_t</a> *mod, double value, int is_src1, void *data)</td></tr>
+<tr class="memdesc:gaa3705efe48570623a732cdafb7c4415e"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function transforms or maps a normalised value into a range of [-1;+1].  <a href="group__modulators.html#gaa3705efe48570623a732cdafb7c4415e">More...</a><br /></td></tr>
+<tr class="separator:gaa3705efe48570623a732cdafb7c4415e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
 <tr class="memitem:ga4b2419150b2a167df7807d5020a6e996"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__modulators.html#ga4b2419150b2a167df7807d5020a6e996">fluid_mod_flags</a> { <br />
@@ -116,6 +123,8 @@ Enumerations</h2></td></tr>
 &#160;&#160;<a class="el" href="group__modulators.html#gga4b2419150b2a167df7807d5020a6e996a8705ffb835e7e2e991a74e9827e9409e">FLUID_MOD_GC</a> = 0
 , <br />
 &#160;&#160;<a class="el" href="group__modulators.html#gga4b2419150b2a167df7807d5020a6e996a61e4c4ad391548b2d12764644e6e8a45">FLUID_MOD_CC</a> = 16
+, <br />
+&#160;&#160;<a class="el" href="group__modulators.html#gga4b2419150b2a167df7807d5020a6e996a7eddf66883e2c3d275ad9c1a1e715753">FLUID_MOD_CUSTOM</a> = 0x40
 , <br />
 &#160;&#160;<a class="el" href="group__modulators.html#gga4b2419150b2a167df7807d5020a6e996a5ac8e594df1dff6c76d49c6258127d5a">FLUID_MOD_SIN</a> = 0x80
 <br />
@@ -180,9 +189,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ga5d965e43fbda6076adea3f1c0f03290a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__modulators.html#ga5d965e43fbda6076adea3f1c0f03290a">fluid_mod_get_source2</a> (const <a class="el" href="group__Types.html#ga6c727efab500d6c0c350d4292e9aa5ef">fluid_mod_t</a> *mod)</td></tr>
 <tr class="memdesc:ga5d965e43fbda6076adea3f1c0f03290a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the secondary source value from a modulator.  <a href="group__modulators.html#ga5d965e43fbda6076adea3f1c0f03290a">More...</a><br /></td></tr>
 <tr class="separator:ga5d965e43fbda6076adea3f1c0f03290a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga0e06062983f1b03c8c069185bda00f88"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__modulators.html#ga0e06062983f1b03c8c069185bda00f88">fluid_mod_get_transform</a> (<a class="el" href="group__Types.html#ga6c727efab500d6c0c350d4292e9aa5ef">fluid_mod_t</a> *mod)</td></tr>
-<tr class="memdesc:ga0e06062983f1b03c8c069185bda00f88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the transform type of a modulator.  <a href="group__modulators.html#ga0e06062983f1b03c8c069185bda00f88">More...</a><br /></td></tr>
-<tr class="separator:ga0e06062983f1b03c8c069185bda00f88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab7b1d3517480499d8524c89341609fc2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__modulators.html#gab7b1d3517480499d8524c89341609fc2">fluid_mod_get_transform</a> (const <a class="el" href="group__Types.html#ga6c727efab500d6c0c350d4292e9aa5ef">fluid_mod_t</a> *mod)</td></tr>
+<tr class="memdesc:gab7b1d3517480499d8524c89341609fc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the transform type of a modulator.  <a href="group__modulators.html#gab7b1d3517480499d8524c89341609fc2">More...</a><br /></td></tr>
+<tr class="separator:gab7b1d3517480499d8524c89341609fc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaa027f66cd5a19fa9047bd7ec6dfd2e83"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__modulators.html#gaa027f66cd5a19fa9047bd7ec6dfd2e83">fluid_mod_has_dest</a> (const <a class="el" href="group__Types.html#ga6c727efab500d6c0c350d4292e9aa5ef">fluid_mod_t</a> *mod, int gen)</td></tr>
 <tr class="memdesc:gaa027f66cd5a19fa9047bd7ec6dfd2e83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the modulator has the given destination.  <a href="group__modulators.html#gaa027f66cd5a19fa9047bd7ec6dfd2e83">More...</a><br /></td></tr>
 <tr class="separator:gaa027f66cd5a19fa9047bd7ec6dfd2e83"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -192,6 +201,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ga68852182191186bb8ae57df326b6a6e4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__modulators.html#ga68852182191186bb8ae57df326b6a6e4">fluid_mod_set_amount</a> (<a class="el" href="group__Types.html#ga6c727efab500d6c0c350d4292e9aa5ef">fluid_mod_t</a> *mod, double amount)</td></tr>
 <tr class="memdesc:ga68852182191186bb8ae57df326b6a6e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the scale amount of a modulator.  <a href="group__modulators.html#ga68852182191186bb8ae57df326b6a6e4">More...</a><br /></td></tr>
 <tr class="separator:ga68852182191186bb8ae57df326b6a6e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga03a812331a53f1f6dadafba72b8bf80d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__modulators.html#ga03a812331a53f1f6dadafba72b8bf80d">fluid_mod_set_custom_mapping</a> (<a class="el" href="group__Types.html#ga6c727efab500d6c0c350d4292e9aa5ef">fluid_mod_t</a> *mod, <a class="el" href="group__modulators.html#gaa3705efe48570623a732cdafb7c4415e">fluid_mod_mapping_t</a> mapping_function, void *data)</td></tr>
+<tr class="memdesc:ga03a812331a53f1f6dadafba72b8bf80d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a user defined mapping function of type <a class="el" href="group__modulators.html#gaa3705efe48570623a732cdafb7c4415e" title="This function transforms or maps a normalised value into a range of [-1;+1].">fluid_mod_mapping_t</a> to <code>mod</code>.  <a href="group__modulators.html#ga03a812331a53f1f6dadafba72b8bf80d">More...</a><br /></td></tr>
+<tr class="separator:ga03a812331a53f1f6dadafba72b8bf80d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga67de291efea62d669e7fe7334daac2be"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__modulators.html#ga67de291efea62d669e7fe7334daac2be">fluid_mod_set_dest</a> (<a class="el" href="group__Types.html#ga6c727efab500d6c0c350d4292e9aa5ef">fluid_mod_t</a> *mod, int dst)</td></tr>
 <tr class="memdesc:ga67de291efea62d669e7fe7334daac2be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the destination effect of a modulator.  <a href="group__modulators.html#ga67de291efea62d669e7fe7334daac2be">More...</a><br /></td></tr>
 <tr class="separator:ga67de291efea62d669e7fe7334daac2be"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -213,6 +225,35 @@ Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>SoundFont modulator functions and constants. </p>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="gaa3705efe48570623a732cdafb7c4415e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa3705efe48570623a732cdafb7c4415e">&#9670;&nbsp;</a></span>fluid_mod_mapping_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef double(* fluid_mod_mapping_t) (const <a class="el" href="group__Types.html#ga6c727efab500d6c0c350d4292e9aa5ef">fluid_mod_t</a> *mod, double value, int is_src1, void *data)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function transforms or maps a normalised value into a range of [-1;+1]. </p>
+<p>See <a class="el" href="group__modulators.html#ga03a812331a53f1f6dadafba72b8bf80d" title="Set a user defined mapping function of type fluid_mod_mapping_t to mod.">fluid_mod_set_custom_mapping()</a>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mod</td><td>The modulator instance. The behavior is undefined if you modify @mod through any of the fluid_mod_set*() functions from within the callback. </td></tr>
+    <tr><td class="paramname">value</td><td>The input value, which will be in range [0;16383.f/16384.f] (if the input value originates from the pitch wheel), or [0;127.f/128.f] otherwise. </td></tr>
+    <tr><td class="paramname">data</td><td>Custom data pointer, as set by <a class="el" href="group__modulators.html#ga03a812331a53f1f6dadafba72b8bf80d" title="Set a user defined mapping function of type fluid_mod_mapping_t to mod.">fluid_mod_set_custom_mapping()</a>. </td></tr>
+    <tr><td class="paramname">is_src1</td><td>A boolean, which, if true, indicates that the mapping function is called for source1. Otherwise, it's called for source2. Only useful if two sources have been specified with the <a class="el" href="group__modulators.html#gga4b2419150b2a167df7807d5020a6e996a7eddf66883e2c3d275ad9c1a1e715753" title="Custom mapping function.">FLUID_MOD_CUSTOM</a> flag set. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A value mapped into range [-1.0;+1.0]. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>For return values that exceed the mentioned range, the behavior is unspecified (i.e. it may be honored, it may be clipped, ignored, the entire modulator may be disabled, etc.). </dd></dl>
+
+</div>
+</div>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
 <a id="ga4b2419150b2a167df7807d5020a6e996"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga4b2419150b2a167df7807d5020a6e996">&#9670;&nbsp;</a></span>fluid_mod_flags</h2>
@@ -250,7 +291,10 @@ Functions</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="gga4b2419150b2a167df7807d5020a6e996a61e4c4ad391548b2d12764644e6e8a45"></a>FLUID_MOD_CC&#160;</td><td class="fielddoc"><p>MIDI CC controller (source will be a MIDI CC number) </p>
 </td></tr>
+<tr><td class="fieldname"><a id="gga4b2419150b2a167df7807d5020a6e996a7eddf66883e2c3d275ad9c1a1e715753"></a>FLUID_MOD_CUSTOM&#160;</td><td class="fielddoc"><p>Custom mapping function. </p>
+</td></tr>
 <tr><td class="fieldname"><a id="gga4b2419150b2a167df7807d5020a6e996a5ac8e594df1dff6c76d49c6258127d5a"></a>FLUID_MOD_SIN&#160;</td><td class="fielddoc"><p>Custom non-standard sinus mapping function. </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000001">Deprecated:</a></b></dt><dd>Deprecated since 2.5.0, use <a class="el" href="group__modulators.html#gga4b2419150b2a167df7807d5020a6e996a7eddf66883e2c3d275ad9c1a1e715753" title="Custom mapping function.">FLUID_MOD_CUSTOM</a> and <a class="el" href="group__modulators.html#ga03a812331a53f1f6dadafba72b8bf80d" title="Set a user defined mapping function of type fluid_mod_mapping_t to mod.">fluid_mod_set_custom_mapping()</a> instead.</dd></dl>
 </td></tr>
 </table>
 
@@ -538,8 +582,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga0e06062983f1b03c8c069185bda00f88"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga0e06062983f1b03c8c069185bda00f88">&#9670;&nbsp;</a></span>fluid_mod_get_transform()</h2>
+<a id="gab7b1d3517480499d8524c89341609fc2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab7b1d3517480499d8524c89341609fc2">&#9670;&nbsp;</a></span>fluid_mod_get_transform()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -547,7 +591,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">int fluid_mod_get_transform </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="group__Types.html#ga6c727efab500d6c0c350d4292e9aa5ef">fluid_mod_t</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="group__Types.html#ga6c727efab500d6c0c350d4292e9aa5ef">fluid_mod_t</a> *&#160;</td>
           <td class="paramname"><em>mod</em></td><td>)</td>
           <td></td>
         </tr>
@@ -679,6 +723,50 @@ Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">mod</td><td>The modulator instance </td></tr>
     <tr><td class="paramname">amount</td><td>Scale amount to assign </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga03a812331a53f1f6dadafba72b8bf80d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga03a812331a53f1f6dadafba72b8bf80d">&#9670;&nbsp;</a></span>fluid_mod_set_custom_mapping()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fluid_mod_set_custom_mapping </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__Types.html#ga6c727efab500d6c0c350d4292e9aa5ef">fluid_mod_t</a> *&#160;</td>
+          <td class="paramname"><em>mod</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__modulators.html#gaa3705efe48570623a732cdafb7c4415e">fluid_mod_mapping_t</a>&#160;</td>
+          <td class="paramname"><em>mapping_function</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set a user defined mapping function of type <a class="el" href="group__modulators.html#gaa3705efe48570623a732cdafb7c4415e" title="This function transforms or maps a normalised value into a range of [-1;+1].">fluid_mod_mapping_t</a> to <code>mod</code>. </p>
+<p>To use this function, specify <a class="el" href="group__modulators.html#gga4b2419150b2a167df7807d5020a6e996a7eddf66883e2c3d275ad9c1a1e715753" title="Custom mapping function.">FLUID_MOD_CUSTOM</a> as source flag. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mod</td><td>The modulator instance </td></tr>
+    <tr><td class="paramname">mapping_function</td><td>Pointer to the mapping function to assign </td></tr>
+    <tr><td class="paramname">data</td><td>User defined data pointer that will be passed into the mapping function, or NULL if not needed </td></tr>
   </table>
   </dd>
 </dl>

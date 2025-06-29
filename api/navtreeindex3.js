@@ -1,5 +1,10 @@
 var NAVTREEINDEX3 =
 {
+"settings_audio.html#settings_audio_jack_server":[5,0,17],
+"settings_audio.html#settings_audio_oboe_error-recovery-mode":[5,0,22],
+"settings_audio.html#settings_audio_oboe_id":[5,0,18],
+"settings_audio.html#settings_audio_oboe_performance-mode":[5,0,21],
+"settings_audio.html#settings_audio_oboe_sample-rate-conversion-quality":[5,0,19],
 "settings_audio.html#settings_audio_oboe_sharing-mode":[5,0,20],
 "settings_audio.html#settings_audio_oss_device":[5,0,23],
 "settings_audio.html#settings_audio_period-size":[5,0,2],

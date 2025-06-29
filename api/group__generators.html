@@ -367,11 +367,13 @@ Enumerations</h2></td></tr>
 <dl class="section note"><dt>Note</dt><dd>This is not "standard" SoundFont generator, because it is not mentioned in the list of generators in the SF2 specifications. It is used by FluidSynth internally to compute the nominal pitch of a note on note-on event. By nature it shouldn't be allowed to be modulated, however the specification defines a default modulator having "Initial Pitch" as destination (cf. SF2.01 page 57 section 8.4.10 MIDI Pitch Wheel to Initial Pitch). Thus it is impossible to cancel this default modulator, which would be required to let the MIDI Pitch Wheel controller modulate a different generator. In order to provide this flexibility, FluidSynth &gt;= 2.1.0 uses a default modulator "Pitch Wheel to Fine Tune", rather than Initial Pitch. The same "compromise" can be found on the Audigy 2 ZS for instance. </dd></dl>
 </td></tr>
 <tr><td class="fieldname"><a id="ggad17a24ae3b25f3b8cc5762f818eef9b4a11703f028db7b912ac3a08adb85b3a7e"></a>GEN_CUSTOM_BALANCE&#160;</td><td class="fielddoc"><p>Balance. </p>
-<dl class="section note"><dt>Note</dt><dd>Not a real SoundFont generator </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Not a "standard" SoundFont generator </dd></dl>
 </td></tr>
-<tr><td class="fieldname"><a id="ggad17a24ae3b25f3b8cc5762f818eef9b4af4f15642f21d7daa860231651827103e"></a>GEN_CUSTOM_FILTERFC&#160;</td><td class="fielddoc"><p>Custom filter cutoff frequency. </p>
+<tr><td class="fieldname"><a id="ggad17a24ae3b25f3b8cc5762f818eef9b4af4f15642f21d7daa860231651827103e"></a>GEN_CUSTOM_FILTERFC&#160;</td><td class="fielddoc"><p>Filter cutoff frequency in absolute cents used for custom IIR filter, see <a class="el" href="group__iir__filter.html#gaaf4fda0f2b4e699fceed4b1202541f5f" title="Configure a general-purpose IIR biquad filter.">fluid_synth_set_custom_filter()</a>. </p>
+<dl class="section note"><dt>Note</dt><dd>Not a "standard" SoundFont generator </dd></dl>
 </td></tr>
-<tr><td class="fieldname"><a id="ggad17a24ae3b25f3b8cc5762f818eef9b4afe8f35290c1a5dace4e0e32d827507c8"></a>GEN_CUSTOM_FILTERQ&#160;</td><td class="fielddoc"><p>Custom filter Q. </p>
+<tr><td class="fieldname"><a id="ggad17a24ae3b25f3b8cc5762f818eef9b4afe8f35290c1a5dace4e0e32d827507c8"></a>GEN_CUSTOM_FILTERQ&#160;</td><td class="fielddoc"><p>Filter Q used for custom IIR filter, see <a class="el" href="group__iir__filter.html#gaaf4fda0f2b4e699fceed4b1202541f5f" title="Configure a general-purpose IIR biquad filter.">fluid_synth_set_custom_filter()</a>. </p>
+<dl class="section note"><dt>Note</dt><dd>Not a "standard" SoundFont generator </dd></dl>
 </td></tr>
 </table>
 

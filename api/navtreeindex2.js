@@ -1,5 +1,10 @@
 var NAVTREEINDEX2 =
 {
+"group__sequencer__events.html#ga79f1c2ed05a503157bc564d0135f03be":[6,4,0,33],
+"group__sequencer__events.html#ga7d9f4cea7e6421a105641a9b57c6a67d":[6,4,0,43],
+"group__sequencer__events.html#ga8080c6274f7c73ae4191ce1bf02f399f":[6,4,0,32],
+"group__sequencer__events.html#ga80a9b3613c6fa8c5f0bb0bff00529692":[6,4,0,31],
+"group__sequencer__events.html#ga86c8889039429e39c77638e4fd3f08d4":[6,4,0,13],
 "group__sequencer__events.html#ga87e5cea03b6f90bb6354e8d5ed6abdcc":[6,4,0,35],
 "group__sequencer__events.html#ga9198a1ac38a294e94fc1050c505d2b0e":[6,4,0,5],
 "group__sequencer__events.html#ga926dcccf283c8bd0464177d69d29bf8f":[6,4,0,21],
@@ -244,10 +249,5 @@ var NAVTREEINDEX2 =
 "settings_audio.html#settings_audio_file_type":[5,0,13],
 "settings_audio.html#settings_audio_jack_autoconnect":[5,0,14],
 "settings_audio.html#settings_audio_jack_id":[5,0,15],
-"settings_audio.html#settings_audio_jack_multi":[5,0,16],
-"settings_audio.html#settings_audio_jack_server":[5,0,17],
-"settings_audio.html#settings_audio_oboe_error-recovery-mode":[5,0,22],
-"settings_audio.html#settings_audio_oboe_id":[5,0,18],
-"settings_audio.html#settings_audio_oboe_performance-mode":[5,0,21],
-"settings_audio.html#settings_audio_oboe_sample-rate-conversion-quality":[5,0,19]
+"settings_audio.html#settings_audio_jack_multi":[5,0,16]
 };
