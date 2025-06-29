@@ -87,7 +87,12 @@ $(document).ready(function(){initNavTree('RecentChanges.html',''); initResizable
 <div class="title">Recent Changes </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="NewIn2_4_3"></a>
+<div class="textblock"><h1><a class="anchor" id="NewIn2_4_5"></a>
+What's new in 2.4.5?</h1>
+<ul>
+<li>In order to use the sdl3 audio driver, the downstream application is responsible for calling <code>SDL_Init()</code> and <code>SDL_Quit()</code>, just like it was practice for the sdl2 audio driver. Fluidsynth may raise a warning if this isn't done, see <a class="el" href="CreatingAudioDriver.html">Creating the audio driver</a></li>
+</ul>
+<h1><a class="anchor" id="NewIn2_4_3"></a>
 What's new in 2.4.3?</h1>
 <ul>
 <li>synth.note-cut has been introduced</li>
