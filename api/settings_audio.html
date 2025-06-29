@@ -93,7 +93,7 @@ $(document).ready(function(){initNavTree('settings_audio.html',''); initResizabl
 <h1><a class="anchor" id="settings_audio_driver"></a>
 audio.driver</h1>
 <dl class="section user"><dt>Type</dt><dd>Selection (str)</dd></dl>
-<dl class="section user"><dt>Options</dt><dd>alsa, coreaudio, dart, dsound, file, jack, oboe, opensles, oss, portaudio, pulseaudio, sdl2, sndman, wasapi, waveout</dd></dl>
+<dl class="section user"><dt>Options</dt><dd>alsa, coreaudio, dart, dsound, file, jack, oboe, opensles, oss, portaudio, pulseaudio, sdl3, sndman, wasapi, waveout</dd></dl>
 <dl class="section user"><dt>Default</dt><dd> 
 <def>alsa (Linux),<br>
                   dsound (Windows),<br>
@@ -104,7 +104,7 @@ audio.driver</h1>
 </dd></dl>
 <p> 
 <desc>
-                The audio system to be used. In order to use sdl2 as audio driver, the application is responsible for initializing SDL's audio subsystem.<br><br><strong>Note:</strong> sdl2 and waveout are available since fluidsynth 2.1.
+                The audio system to be used. In order to use sdl3 as audio driver, the application is responsible for initializing SDL's audio subsystem.<br><br><strong>Note:</strong> waveout is available since fluidsynth 2.1.0, sdl3 since fluidsynth 2.4.4.
             </desc>
   
 </div>
@@ -658,15 +658,15 @@ audio.pulseaudio.server</h1>
 <p> 
 <div class="setting-item">
  </p>
-<h1><a class="anchor" id="settings_audio_sdl2_device"></a>
-audio.sdl2.device</h1>
+<h1><a class="anchor" id="settings_audio_sdl3_device"></a>
+audio.sdl3.device</h1>
 <dl class="section user"><dt>Type</dt><dd>String (str)</dd></dl>
 <dl class="section user"><dt>Default</dt><dd> 
 <def>default</def>
 </dd></dl>
 <p> 
 <desc>
-                Device to use for SDL2 driver output.
+                Device to use for SDL3 driver output.
             </desc>
   
 </div>

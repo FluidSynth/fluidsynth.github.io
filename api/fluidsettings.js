@@ -33,7 +33,7 @@ var fluidsettings =
       [ "audio.pulseaudio.device", "settings_audio.html#settings_audio_pulseaudio_device", null ],
       [ "audio.pulseaudio.media-role", "settings_audio.html#settings_audio_pulseaudio_media-role", null ],
       [ "audio.pulseaudio.server", "settings_audio.html#settings_audio_pulseaudio_server", null ],
-      [ "audio.sdl2.device", "settings_audio.html#settings_audio_sdl2_device", null ],
+      [ "audio.sdl3.device", "settings_audio.html#settings_audio_sdl3_device", null ],
       [ "audio.wasapi.device", "settings_audio.html#settings_audio_wasapi_device", null ],
       [ "audio.wasapi.exclusive-mode", "settings_audio.html#settings_audio_wasapi_exclusive-mode", null ],
       [ "audio.waveout.device", "settings_audio.html#settings_audio_waveout_device", null ]
