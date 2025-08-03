@@ -150,7 +150,7 @@ Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>SoundFont synthesizer. </p>
 <p>You create a new synthesizer with <a class="el" href="group__synth.html#ga2aab8e0b82dc9fd086849efacb3c1b1b" title="Create new FluidSynth instance.">new_fluid_synth()</a> and you destroy it with <a class="el" href="group__synth.html#gab42ea6e25476be548deb428c839d7d2b" title="Delete a FluidSynth instance.">delete_fluid_synth()</a>. Use the fluid_settings_t structure to specify the synthesizer characteristics.</p>
-<p>You have to load a SoundFont in order to hear any sound. For that you use the <a class="el" href="group__soundfont__management.html#ga0ba0bc9d4a19c789f9969cd22d22bf66" title="Load a SoundFont file (filename is interpreted by SoundFont loaders).">fluid_synth_sfload()</a> function.</p>
+<p>You have to load a SoundFont in order to hear any sound. For that you use the <a class="el" href="group__soundfont__management.html#ga0ba0bc9d4a19c789f9969cd22d22bf66" title="Load a SoundFont file.">fluid_synth_sfload()</a> function.</p>
 <p>You can use the audio driver functions to open the audio device and create a background audio thread.</p>
 <p>The API for sending MIDI events is probably what you expect: <a class="el" href="group__midi__messages.html#ga038a0f309e8004f39cb5491514bfac54" title="Send a note-on event to a FluidSynth object.">fluid_synth_noteon()</a>, <a class="el" href="group__midi__messages.html#gae68ad5cca7a2c47be2f4b1c703ea9d46" title="Sends a note-off event to a FluidSynth object.">fluid_synth_noteoff()</a>, ... </p>
 <h2 class="groupheader">Function Documentation</h2>

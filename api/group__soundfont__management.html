@@ -120,7 +120,7 @@ Functions</h2></td></tr>
 <tr class="memdesc:gabe740b75208bb17c765111f8838fbd14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Count number of loaded SoundFont files.  <a href="group__soundfont__management.html#gabe740b75208bb17c765111f8838fbd14">More...</a><br /></td></tr>
 <tr class="separator:gabe740b75208bb17c765111f8838fbd14"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga0ba0bc9d4a19c789f9969cd22d22bf66"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__soundfont__management.html#ga0ba0bc9d4a19c789f9969cd22d22bf66">fluid_synth_sfload</a> (<a class="el" href="group__Types.html#gae265f10ae174a13afe010de50d87e1a4">fluid_synth_t</a> *synth, const char *filename, int reset_presets)</td></tr>
-<tr class="memdesc:ga0ba0bc9d4a19c789f9969cd22d22bf66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load a SoundFont file (filename is interpreted by SoundFont loaders).  <a href="group__soundfont__management.html#ga0ba0bc9d4a19c789f9969cd22d22bf66">More...</a><br /></td></tr>
+<tr class="memdesc:ga0ba0bc9d4a19c789f9969cd22d22bf66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load a SoundFont file.  <a href="group__soundfont__management.html#ga0ba0bc9d4a19c789f9969cd22d22bf66">More...</a><br /></td></tr>
 <tr class="separator:ga0ba0bc9d4a19c789f9969cd22d22bf66"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga9dbd7ccd34205edad767cf34b256c654"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__soundfont__management.html#ga9dbd7ccd34205edad767cf34b256c654">fluid_synth_sfreload</a> (<a class="el" href="group__Types.html#gae265f10ae174a13afe010de50d87e1a4">fluid_synth_t</a> *synth, int id)</td></tr>
 <tr class="memdesc:ga9dbd7ccd34205edad767cf34b256c654"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reload a SoundFont.  <a href="group__soundfont__management.html#ga9dbd7ccd34205edad767cf34b256c654">More...</a><br /></td></tr>
@@ -470,8 +470,9 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Load a SoundFont file (filename is interpreted by SoundFont loaders). </p>
-<p>The newly loaded SoundFont will be put on top of the SoundFont stack. Presets are searched starting from the SoundFont on the top of the stack, working the way down the stack until a preset is found.</p>
+<p>Load a SoundFont file. </p>
+<p>The <code>filename</code> is passed onto and interpreted by the SoundFont loaders. On success, the newly loaded SoundFont will be put on top of the SoundFont stack. Presets are searched starting from the SoundFont on the top of the stack, working the way down the stack until a preset is found.</p>
+<p>If the SoundFont is structural defect, it will be rejected and the function will fail.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">synth</td><td>FluidSynth instance </td></tr>

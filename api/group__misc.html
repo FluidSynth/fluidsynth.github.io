@@ -268,8 +268,8 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>TRUE if it could be a SF2, SF3 or DLS file, FALSE otherwise</dd></dl>
-<p>If fluidsynth was built with DLS support, this function will also identify DLS files.</p>
-<dl class="section note"><dt>Note</dt><dd>This function only checks whether header(s) in the RIFF chunk are present. A call to <a class="el" href="group__soundfont__management.html#ga0ba0bc9d4a19c789f9969cd22d22bf66" title="Load a SoundFont file (filename is interpreted by SoundFont loaders).">fluid_synth_sfload()</a> might still fail. </dd></dl>
+<p>This function uses regular <code>fopen()</code>, <code>fread()</code> and <code>fseek()</code> to identify known Soundfont formats. If fluidsynth was built with DLS support, this function will also identify DLS files.</p>
+<dl class="section note"><dt>Note</dt><dd>This function only checks whether certain RIFF chunks are present in the file. A call to <a class="el" href="group__soundfont__management.html#ga0ba0bc9d4a19c789f9969cd22d22bf66" title="Load a SoundFont file.">fluid_synth_sfload()</a> might still fail, as it imposes much stricter structural checks. </dd></dl>
 
 </div>
 </div>
