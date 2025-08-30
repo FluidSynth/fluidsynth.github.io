@@ -27,7 +27,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">libfluidsynth
-   &#160;<span id="projectnumber">2.4.7</span>
+   &#160;<span id="projectnumber">2.4.8</span>
    </div>
   </td>
  </tr>
@@ -267,7 +267,7 @@ synth.dynamic-sample-loading</h1>
 </dd></dl>
 <p> 
 <desc>
-                When set to 1 (TRUE), samples are loaded to and unloaded from memory whenever presets are being selected or unselected for a MIDI channel. PROGRAM_CHANGE and PROGRAM_SELECT events are typically responsible for this.
+                When set to 1 (TRUE), samples are loaded to and unloaded from memory whenever presets are being selected or unselected for a MIDI channel (PROGRAM_CHANGE and PROGRAM_SELECT events are typically responsible for this). This involves memory allocation, which is not realtime safe! So only enable this in non-realtime scenarios! E.g. when rendering to a WAVE file using the fast-file-renderer.
             </desc>
   
 </div>
