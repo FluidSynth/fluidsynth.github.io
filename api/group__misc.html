@@ -211,7 +211,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>Only use this function when the API documentation explicitly says so. Otherwise use adequate <code>delete_fluid_*</code> functions.</dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd>Calling ::free() on memory that is advised to be freed with <a class="el" href="group__misc.html#ga6f11f4e3f8d4eacf38e7e3fe884f3d7b" title="Wrapper for free() that satisfies at least C90 requirements.">fluid_free()</a> results in undefined behaviour! (cf.: "Potential Errors Passing CRT Objects Across DLL Boundaries" found in MS Docs)</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Calling C-std lib <code>free()</code> on memory that is advised to be freed with <a class="el" href="group__misc.html#ga6f11f4e3f8d4eacf38e7e3fe884f3d7b" title="Wrapper for free() that satisfies at least C90 requirements.">fluid_free()</a> results in undefined behaviour! (cf.: "Potential Errors Passing CRT Objects Across DLL Boundaries" found in MS Docs)</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>2.0.7 </dd></dl>
 
 </div>
