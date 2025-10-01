@@ -1,5 +1,7 @@
 var NAVTREEINDEX3 =
 {
+"settings_audio.html#settings_audio_jack_id":[5,0,15],
+"settings_audio.html#settings_audio_jack_multi":[5,0,16],
 "settings_audio.html#settings_audio_jack_server":[5,0,17],
 "settings_audio.html#settings_audio_oboe_error-recovery-mode":[5,0,22],
 "settings_audio.html#settings_audio_oboe_id":[5,0,18],
