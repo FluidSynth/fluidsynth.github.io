@@ -10,5 +10,5 @@ var group__misc =
     [ "fluid_is_midifile", "group__misc.html#ga7211b701745f57e3cef4007bc3d6da13", null ],
     [ "fluid_is_soundfont", "group__misc.html#gaab23ae9dead8de39d85b45a638e23d6f", null ],
     [ "fluid_version", "group__misc.html#gada957b7b6569631bf71d6c5181751ed8", null ],
-    [ "fluid_version_str", "group__misc.html#gacc6a0653756a832a33b78421b846d06d", null ]
+    [ "fluid_version_str", "group__misc.html#gae6e3539954eb487156cdeed328f931e5", null ]
 ];
