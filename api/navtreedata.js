@@ -61,9 +61,9 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "Advanced.html",
-"group__ladspa.html#ga1d6efb392f3f8e9a84e37a2536c2de48",
-"group__sequencer__events.html#ga79f1c2ed05a503157bc564d0135f03be",
-"settings_audio.html#settings_audio_jack_id"
+"group__iir__filter.html#gga1e682c5d6f22e13947cc07bcd92d7525a5ecac11504abbdc9c10843670799369d",
+"group__sequencer__events.html#ga554261a62cfa890262ec26366b35ce8a",
+"settings_audio.html#settings_audio_dsound_device"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

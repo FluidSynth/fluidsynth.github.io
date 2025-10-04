@@ -29,14 +29,21 @@ var group__channel__setup =
       [ "CHANNEL_TYPE_MELODIC", "group__channel__setup.html#ggaada0747654fce5d0a758126fc3c99eb0aa81f75c5ad62a95bf62a276670542f57", null ],
       [ "CHANNEL_TYPE_DRUM", "group__channel__setup.html#ggaada0747654fce5d0a758126fc3c99eb0a3b26ca93ed355e9b82f1b46b8d67ae91", null ]
     ] ],
+    [ "fluid_portamento_time_mode", "group__channel__setup.html#ga1bb91603c39ef9bce39b9c09d0e0b704", [
+      [ "FLUID_PORTAMENTO_TIME_MODE_AUTO", "group__channel__setup.html#gga1bb91603c39ef9bce39b9c09d0e0b704a4d4e290f3cf7b2e4188ad1beb628c0bb", null ],
+      [ "FLUID_PORTAMENTO_TIME_MODE_XG_GS", "group__channel__setup.html#gga1bb91603c39ef9bce39b9c09d0e0b704aa2b77ce202dd002cb58e21502f224b09", null ],
+      [ "FLUID_PORTAMENTO_TIME_MODE_LINEAR", "group__channel__setup.html#gga1bb91603c39ef9bce39b9c09d0e0b704aa6e60a09cd35e16d26ff3cecbfd8654a", null ]
+    ] ],
     [ "fluid_synth_get_basic_channel", "group__channel__setup.html#ga08883f291c77959de32529901df2014b", null ],
     [ "fluid_synth_get_breath_mode", "group__channel__setup.html#ga92e300f8c24321a56d30f091f1e9cc8d", null ],
     [ "fluid_synth_get_legato_mode", "group__channel__setup.html#ga85724d5ab8e18d9ab7818912308c61e2", null ],
     [ "fluid_synth_get_portamento_mode", "group__channel__setup.html#ga6d10213e76010800c4f7224f84460179", null ],
+    [ "fluid_synth_get_portamento_time_mode", "group__channel__setup.html#ga42d94965941fcbdf719d988590edad85", null ],
     [ "fluid_synth_reset_basic_channel", "group__channel__setup.html#ga84d42e3cd77c7385db7ed7f1c0dcbf28", null ],
     [ "fluid_synth_set_basic_channel", "group__channel__setup.html#ga6683d9f71e1ba0342edaebd9b451c618", null ],
     [ "fluid_synth_set_breath_mode", "group__channel__setup.html#ga5d93c60554649a01a0402c78df0b3dfd", null ],
     [ "fluid_synth_set_channel_type", "group__channel__setup.html#gae6de53f3095bb7a68c53dbd5c914a9fb", null ],
     [ "fluid_synth_set_legato_mode", "group__channel__setup.html#ga480f70ed2a454dd51953e48f70d60529", null ],
-    [ "fluid_synth_set_portamento_mode", "group__channel__setup.html#ga010a2d28392cf12cd126b01799676625", null ]
+    [ "fluid_synth_set_portamento_mode", "group__channel__setup.html#ga010a2d28392cf12cd126b01799676625", null ],
+    [ "fluid_synth_set_portamento_time_mode", "group__channel__setup.html#ga67d1dca09832aba4c80313d32e94287f", null ]
 ];

@@ -89,6 +89,7 @@ var fluidsettings =
       [ "synth.overflow.sustained", "settings_synth.html#settings_synth_overflow_sustained", null ],
       [ "synth.overflow.volume", "settings_synth.html#settings_synth_overflow_volume", null ],
       [ "synth.polyphony", "settings_synth.html#settings_synth_polyphony", null ],
+      [ "synth.portamento-time", "settings_synth.html#settings_synth_portamento-time", null ],
       [ "synth.reverb.active", "settings_synth.html#settings_synth_reverb_active", null ],
       [ "synth.reverb.damp", "settings_synth.html#settings_synth_reverb_damp", null ],
       [ "synth.reverb.level", "settings_synth.html#settings_synth_reverb_level", null ],

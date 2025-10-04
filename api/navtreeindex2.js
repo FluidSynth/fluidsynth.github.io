@@ -1,5 +1,11 @@
 var NAVTREEINDEX2 =
 {
+"group__sequencer__events.html#ga554261a62cfa890262ec26366b35ce8a":[6,4,0,36],
+"group__sequencer__events.html#ga5dc6717a2562636d9f53243b507f9118":[6,4,0,22],
+"group__sequencer__events.html#ga64863f0af62b64c7b64c138a519a99a7":[6,4,0,24],
+"group__sequencer__events.html#ga694a6602df2c6ca9a507bf26df2783c8":[6,4,0,6],
+"group__sequencer__events.html#ga6d768c3ef212c21cb95dbc8f83496184":[6,4,0,20],
+"group__sequencer__events.html#ga75211bc6dd0f268d8b6e502493e96cb2":[6,4,0,28],
 "group__sequencer__events.html#ga79f1c2ed05a503157bc564d0135f03be":[6,4,0,33],
 "group__sequencer__events.html#ga7d9f4cea7e6421a105641a9b57c6a67d":[6,4,0,43],
 "group__sequencer__events.html#ga8080c6274f7c73ae4191ce1bf02f399f":[6,4,0,32],
@@ -243,11 +249,5 @@ var NAVTREEINDEX2 =
 "settings_audio.html#settings_audio_coreaudio_channel-map":[5,0,7],
 "settings_audio.html#settings_audio_coreaudio_device":[5,0,6],
 "settings_audio.html#settings_audio_dart_device":[5,0,8],
-"settings_audio.html#settings_audio_driver":[5,0,0],
-"settings_audio.html#settings_audio_dsound_device":[5,0,9],
-"settings_audio.html#settings_audio_file_endian":[5,0,10],
-"settings_audio.html#settings_audio_file_format":[5,0,11],
-"settings_audio.html#settings_audio_file_name":[5,0,12],
-"settings_audio.html#settings_audio_file_type":[5,0,13],
-"settings_audio.html#settings_audio_jack_autoconnect":[5,0,14]
+"settings_audio.html#settings_audio_driver":[5,0,0]
 };
