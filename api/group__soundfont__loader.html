@@ -1438,7 +1438,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="group__misc.html#ga90e8bdbc5a507bbfa5c45bac85a63a61" title="Value that indicates failure, used by most libfluidsynth functions.">FLUID_FAILED</a> on error (e.g. out of memory). Otherwise it contains the number of modulators saved into the buffer. The caller must always free the buffer, even if the return value is zero! </dd></dl>
 <dl class="section since"><dt>Since</dt><dd>2.5.0 </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>This function involves memory allocation and is therefore not real-time safe! </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This function involves memory allocation and is therefore not realtime safe! </dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>This function is not thread-safe. So only call this function when no synthesis thread is concurrently using this <code>sfont</code> instance! </dd></dl>
 
 </div>
@@ -1675,7 +1675,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="group__misc.html#gae4efb1c3ce0d550c922504adfb0fb886" title="Value that indicates success, used by most libfluidsynth functions.">FLUID_OK</a> on success, <a class="el" href="group__misc.html#ga90e8bdbc5a507bbfa5c45bac85a63a61" title="Value that indicates failure, used by most libfluidsynth functions.">FLUID_FAILED</a> otherwise.</dd></dl>
-<dl class="section note"><dt>Note</dt><dd>If <code>mods</code> is a zero-length array or <code>mods</code> is NULL, the default modulators attached to this SoundFont will be unset, causing the synth's default modulators to be added to voices again. The behavior is undefined if the array <code>mods</code> contains multiple identical modulators (i.e. <a class="el" href="group__modulators.html#ga13aafa5da398abe597e9782466bb363f" title="Checks if two modulators are identical in sources, flags and destination.">fluid_mod_test_identity()</a> evaluates to true). Further note that this function involves memory allocation and is therefore not real-time safe!</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If <code>mods</code> is a zero-length array or <code>mods</code> is NULL, the default modulators attached to this SoundFont will be unset, causing the synth's default modulators to be added to voices again. The behavior is undefined if the array <code>mods</code> contains multiple identical modulators (i.e. <a class="el" href="group__modulators.html#ga13aafa5da398abe597e9782466bb363f" title="Checks if two modulators are identical in sources, flags and destination.">fluid_mod_test_identity()</a> evaluates to true). Further note that this function involves memory allocation and is therefore not realtime safe!</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>This function is not thread-safe. So only call this function when no synthesis thread is concurrently using this <code>sfont</code> instance! </dd></dl>
 <dl class="section since"><dt>Since</dt><dd>2.5.0 </dd></dl>
 

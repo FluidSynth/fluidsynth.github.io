@@ -471,7 +471,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Note on unique ID</dd></dl>
-<p>A SoundFont loader may store pointers to voices it has created for real-time control during the operation of a voice (for example: parameter changes in SoundFont editor). The synth uses a pool of voices internally which are 'recycled' and never deallocated.</p>
+<p>A SoundFont loader may store pointers to voices it has created for realtime control during the operation of a voice (for example: parameter changes in SoundFont editor). The synth uses a pool of voices internally which are 'recycled' and never deallocated.</p>
 <p>However, before modifying an existing voice, check</p><ul>
 <li>that its state is still 'playing'</li>
 <li>that the ID is still the same</li>
