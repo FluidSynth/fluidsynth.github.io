@@ -314,7 +314,7 @@ synth.gain</h1>
 </dd></dl>
 <dl class="section user"><dt>Real-time</dt><dd>This setting can be changed during runtime of the synthesizer.</dd></dl>
 <p> 
-<desc>The gain is applied to the final or master output of the synthesizer. It is set to a low value by default to avoid the saturation of the output when many notes are played.</desc>
+<desc>The gain is applied to the final or master output of the synthesizer, but before it will be processed by the limiter (if enabled). It is set to a low value by default to avoid the saturation of the output when many notes are played.</desc>
   
 </div>
 </p>
@@ -331,6 +331,118 @@ synth.ladspa.active</h1>
 <p> 
 <desc>
                 When set to 1 (TRUE) the LADSPA subsystem will be enabled. This subsystem allows to load and interconnect LADSPA plug-ins. The output of the synthesizer is processed by the LADSPA subsystem. Note that the synthesizer has to be compiled with LADSPA support. More information about the LADSPA subsystem can be found in doc/ladspa.md or on the FluidSynth website.</desc>
+  
+</div>
+</p>
+<p> 
+<div class="setting-item">
+ </p>
+<h1><a class="anchor" id="settings_synth_limiter_active"></a>
+synth.limiter.active</h1>
+<dl class="section user"><dt>Type</dt><dd>Boolean (int)</dd></dl>
+<dl class="section user"><dt>Values</dt><dd>0, 1</dd></dl>
+<dl class="section user"><dt>Default</dt><dd> 
+<def>0 (FALSE)</def>
+</dd></dl>
+<p> 
+<desc>
+                When set to 1 (TRUE) a look-ahead limiter is added at the end of fluidsynth's audio processing chain. This limiter helps to prevent clipping and distortion by limiting the gain of the output signal. Note that fluidsynth has to be compiled with limiter support, otherwise any of the limiter related settings will return FLUID_FAILED when attempting to set or get them.</desc>
+  
+</div>
+</p>
+<p> 
+<div class="setting-item">
+ </p>
+<h1><a class="anchor" id="settings_synth_limiter_attack"></a>
+synth.limiter.attack</h1>
+<dl class="section user"><dt>Type</dt><dd>Float (num)</dd></dl>
+<dl class="section user"><dt>Min - Max</dt><dd>1 - 250</dd></dl>
+<dl class="section user"><dt>Default</dt><dd> 
+<def>5</def>
+</dd></dl>
+<p> 
+<desc>
+                When the limiter "sees" an incoming gain-peak, the attack specifies the look-ahead time in milliseconds, i.e. how much time before that peak the output gain will start to be reduced. Higher values allow the limiter to react more smoothly, but also increase latency because the generated audio must be delayed accordingly.</desc>
+  
+</div>
+</p>
+<p> 
+<div class="setting-item">
+ </p>
+<h1><a class="anchor" id="settings_synth_limiter_hold"></a>
+synth.limiter.hold</h1>
+<dl class="section user"><dt>Type</dt><dd>Float (num)</dd></dl>
+<dl class="section user"><dt>Min - Max</dt><dd>0 - 250</dd></dl>
+<dl class="section user"><dt>Default</dt><dd> 
+<def>15</def>
+</dd></dl>
+<p> 
+<desc>
+                Specifies the time in milliseconds how long the previously reduced ("damped") output gain is maintained (after the gain-peak has passed), before the limiter begins to return to the normal gain level.</desc>
+  
+</div>
+</p>
+<p> 
+<div class="setting-item">
+ </p>
+<h1><a class="anchor" id="settings_synth_limiter_release"></a>
+synth.limiter.release</h1>
+<dl class="section user"><dt>Type</dt><dd>Float (num)</dd></dl>
+<dl class="section user"><dt>Min - Max</dt><dd>0 - 250</dd></dl>
+<dl class="section user"><dt>Default</dt><dd> 
+<def>40</def>
+</dd></dl>
+<p> 
+<desc>
+                Specifies the time in milliseconds how quickly the output gain returns towards the normal level after the gain-peak has passed and the hold phase has completed.</desc>
+  
+</div>
+</p>
+<p> 
+<div class="setting-item">
+ </p>
+<h1><a class="anchor" id="settings_synth_limiter_output-limit"></a>
+synth.limiter.output-limit</h1>
+<dl class="section user"><dt>Type</dt><dd>Float (num)</dd></dl>
+<dl class="section user"><dt>Min - Max</dt><dd>0.063 (i.e. 240dB of attenuation) - 1 (i.e. 0dB of attenuation)</dd></dl>
+<dl class="section user"><dt>Default</dt><dd> 
+<def>0.99999</def>
+</dd></dl>
+<p> 
+<desc>
+                Specifies the target output limit of the limiter in linear range and therefore the final output level of fluidsynth's synthesized audio. The audio input for the limiter is amplified by the <code>synth.gain</code> setting.</desc>
+  
+</div>
+</p>
+<p> 
+<div class="setting-item">
+ </p>
+<h1><a class="anchor" id="settings_synth_limiter_smoothing-stages"></a>
+synth.limiter.smoothing-stages</h1>
+<dl class="section user"><dt>Type</dt><dd>Integer (int)</dd></dl>
+<dl class="section user"><dt>Min - Max</dt><dd>1 - 3</dd></dl>
+<dl class="section user"><dt>Default</dt><dd> 
+<def>1</def>
+</dd></dl>
+<p> 
+<desc>
+                Controls how strongly the limiter smooths sudden gain changes. A value of 1 uses a single smoothing stage and gives the fastest response. Values of 2 or 3 apply additional smoothing to the gain envelope, which can reduce distortion and pumping artifacts at the cost of a slightly slower reaction and longer release.</desc>
+  
+</div>
+</p>
+<p> 
+<div class="setting-item">
+ </p>
+<h1><a class="anchor" id="settings_synth_limiter_link-channels"></a>
+synth.limiter.link-channels</h1>
+<dl class="section user"><dt>Type</dt><dd>Float (num)</dd></dl>
+<dl class="section user"><dt>Min - Max</dt><dd>0 - 1</dd></dl>
+<dl class="section user"><dt>Default</dt><dd> 
+<def>0.5</def>
+</dd></dl>
+<p> 
+<desc>
+                Specifies how closely the limiter gains of all output channels (i.e. the left and right channels of a stereo output) are linked together. A value of 1.0 applies the same gain to all channels, based on the loudest channel. A value of 0.0 lets each channel be limited independently. Intermediate values interpolate between these behaviours.</desc>
   
 </div>
 </p>
