@@ -1,5 +1,8 @@
 var NAVTREEINDEX2 =
 {
+"group__sequencer__events.html#ga49e8f04cae451acba9685ab3be7e65b2":[6,4,0,19],
+"group__sequencer__events.html#ga4a15d88d5720922ab82e1c94adf27f86":[6,4,0,4],
+"group__sequencer__events.html#ga4f345bf72188a1a60f47d1a1ec9458dd":[6,4,0,30],
 "group__sequencer__events.html#ga554261a62cfa890262ec26366b35ce8a":[6,4,0,36],
 "group__sequencer__events.html#ga5dc6717a2562636d9f53243b507f9118":[6,4,0,22],
 "group__sequencer__events.html#ga64863f0af62b64c7b64c138a519a99a7":[6,4,0,24],
@@ -246,8 +249,5 @@ var NAVTREEINDEX2 =
 "pages.html":[],
 "settings_audio.html":[5,0],
 "settings_audio.html#settings_audio_alsa_device":[5,0,5],
-"settings_audio.html#settings_audio_coreaudio_channel-map":[5,0,7],
-"settings_audio.html#settings_audio_coreaudio_device":[5,0,6],
-"settings_audio.html#settings_audio_dart_device":[5,0,8],
-"settings_audio.html#settings_audio_driver":[5,0,0]
+"settings_audio.html#settings_audio_coreaudio_channel-map":[5,0,7]
 };

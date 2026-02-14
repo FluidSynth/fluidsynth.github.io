@@ -87,7 +87,13 @@ $(document).ready(function(){initNavTree('RecentChanges.html',''); initResizable
 <div class="title">Recent Changes </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="NewIn2_5_0"></a>
+<div class="textblock"><h1><a class="anchor" id="NewIn2_6_0"></a>
+What's new in 2.6.0?</h1>
+<ul>
+<li>A lookahead limiter has been added, see related setting <code>synth.limiter.*</code></li>
+<li>Support for 24bit and 32bit audio has been added, see <a class="el" href="group__audio__rendering.html#gafe93f25a4a6a479b5344c55fe1260281" title="Synthesize a block of 24 bit audio samples to audio buffers.">fluid_synth_write_s24()</a> and <a class="el" href="group__audio__rendering.html#ga7aa37d65824705dd3a13647f6bcb50fc" title="Synthesize a block of 32 bit audio samples to audio buffers.">fluid_synth_write_s32()</a></li>
+</ul>
+<h1><a class="anchor" id="NewIn2_5_0"></a>
 What's new in 2.5.0?</h1>
 <ul>
 <li><a class="el" href="group__modulators.html#gga4b2419150b2a167df7807d5020a6e996a5ac8e594df1dff6c76d49c6258127d5a" title="Custom non-standard sinus mapping function.">FLUID_MOD_SIN</a> is now deprecated, use the newly added <a class="el" href="group__modulators.html#ga03a812331a53f1f6dadafba72b8bf80d" title="Set a user defined mapping function of type fluid_mod_mapping_t to mod.">fluid_mod_set_custom_mapping()</a></li>

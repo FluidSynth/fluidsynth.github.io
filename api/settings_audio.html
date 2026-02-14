@@ -104,8 +104,16 @@ audio.driver</h1>
 </dd></dl>
 <p> 
 <desc>
-                The audio system to be used. In order to use sdl3 as audio driver, the application is responsible for initializing SDL's audio subsystem.<br><br><strong>Note:</strong> waveout is available since fluidsynth 2.1.0, sdl3 since fluidsynth 2.4.4.
-            </desc>
+                                The audio system to be used.
+                                Some audio drivers support only a subset of audio sample formats.
+                                See <code>audio.sample-format</code> for details, and driver-specific notes
+                                (e.g. WASAPI exclusive mode) for format negotiation behavior.
+                                In order to use sdl3 as audio driver, the application is responsible for initializing
+                                SDL's audio subsystem.
+                                <br><br>
+                                <strong>Note:</strong> waveout is available since fluidsynth 2.1.0, sdl3 since
+                                fluidsynth 2.4.4.
+                        </desc>
   
 </div>
 </p>
@@ -170,14 +178,24 @@ audio.realtime-prio</h1>
 <h1><a class="anchor" id="settings_audio_sample-format"></a>
 audio.sample-format</h1>
 <dl class="section user"><dt>Type</dt><dd>Selection (str)</dd></dl>
-<dl class="section user"><dt>Options</dt><dd>16bits, float</dd></dl>
+<dl class="section user"><dt>Options</dt><dd>16bits, 24bits, 32bits, float</dd></dl>
 <dl class="section user"><dt>Default</dt><dd> 
 <def>16bits</def>
 </dd></dl>
 <p> 
 <desc>
-                The format of the audio samples. This is currently only an indication; the audio driver may ignore this setting if it can't handle the specified format.
-            </desc>
+                                Sample format requested for transferring floating point audio samples
+                                from the synthesizer to the audio hardware. The format actually used
+                                depends on the selected audio driver and output device. Some drivers
+                                may ignore this setting or fail to initialize when an unsupported
+                                format is requested.
+                                <br><br>
+                                At present, only the Windows WASAPI audio driver supports the
+                                <code>24bits</code> and <code>32bits</code> values.
+                                <br><br>
+                                This setting applies to live audio output only.
+                                For file rendering formats, see <code>audio.file.format</code>.
+                        </desc>
   
 </div>
 </p>
@@ -320,6 +338,7 @@ audio.file.format</h1>
                     <li>'s8' is 8 bit signed PCM and</li>
                     <li>'u8' is 8 bit unsigned PCM.</li>
                 </ul>
+                                This setting affects file rendering only and is independent of <code>audio.sample-format</code> used by live audio drivers.
             </desc>
   
 </div>
@@ -710,8 +729,18 @@ audio.wasapi.exclusive-mode</h1>
 </dd></dl>
 <p> 
 <desc>
-                By default, WASAPI will operate in shared mode. Set it to 1 (TRUE) to use WASAPI in exclusive mode. In this mode, you'll benefit from direct soundcard access via kernel streaming, which has an extremely low latency. However, you must pay close attention to other settings, such as synth.sample-rate and audio.sample-format as your soundcard may not accept any possible sample configuration.
-            </desc>
+                                By default, WASAPI will operate in shared mode. Set it to 1 (TRUE) to use WASAPI in exclusive mode.
+                                In this mode, you'll benefit from direct soundcard access, which has extremely
+                                low latency. However, in exclusive mode the requested audio configuration must be supported exactly
+                                by the output device.
+                                <br><br>
+                                Pay close attention to settings of <code>synth.sample-rate</code>, <code>audio.sample-format</code>,
+                                and <code>audio.period-size</code>, as unsupported combinations may cause the WASAPI driver to fail
+                                during initialization.
+                                <br><br>
+                                The <code>fluidsynth -Q</code> command can be used to list the sample rate and format support status
+                                and recommended period sizes for available WASAPI devices.
+                        </desc>
   
 </div>
 </p>

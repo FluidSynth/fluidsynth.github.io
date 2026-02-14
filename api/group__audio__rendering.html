@@ -107,6 +107,12 @@ Functions</h2></td></tr>
 <tr class="memitem:ga6b88528d1ea6322582314197488afab7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__audio__rendering.html#ga6b88528d1ea6322582314197488afab7">fluid_synth_write_s16</a> (<a class="el" href="group__Types.html#gae265f10ae174a13afe010de50d87e1a4">fluid_synth_t</a> *synth, int len, void *lout, int loff, int lincr, void *rout, int roff, int rincr)</td></tr>
 <tr class="memdesc:ga6b88528d1ea6322582314197488afab7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Synthesize a block of 16 bit audio samples to audio buffers.  <a href="group__audio__rendering.html#ga6b88528d1ea6322582314197488afab7">More...</a><br /></td></tr>
 <tr class="separator:ga6b88528d1ea6322582314197488afab7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafe93f25a4a6a479b5344c55fe1260281"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__audio__rendering.html#gafe93f25a4a6a479b5344c55fe1260281">fluid_synth_write_s24</a> (<a class="el" href="group__Types.html#gae265f10ae174a13afe010de50d87e1a4">fluid_synth_t</a> *synth, int len, void *lout, int loff, int lincr, void *rout, int roff, int rincr)</td></tr>
+<tr class="memdesc:gafe93f25a4a6a479b5344c55fe1260281"><td class="mdescLeft">&#160;</td><td class="mdescRight">Synthesize a block of 24 bit audio samples to audio buffers.  <a href="group__audio__rendering.html#gafe93f25a4a6a479b5344c55fe1260281">More...</a><br /></td></tr>
+<tr class="separator:gafe93f25a4a6a479b5344c55fe1260281"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7aa37d65824705dd3a13647f6bcb50fc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__audio__rendering.html#ga7aa37d65824705dd3a13647f6bcb50fc">fluid_synth_write_s32</a> (<a class="el" href="group__Types.html#gae265f10ae174a13afe010de50d87e1a4">fluid_synth_t</a> *synth, int len, void *lout, int loff, int lincr, void *rout, int roff, int rincr)</td></tr>
+<tr class="memdesc:ga7aa37d65824705dd3a13647f6bcb50fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Synthesize a block of 32 bit audio samples to audio buffers.  <a href="group__audio__rendering.html#ga7aa37d65824705dd3a13647f6bcb50fc">More...</a><br /></td></tr>
+<tr class="separator:ga7aa37d65824705dd3a13647f6bcb50fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>The functions in this section can be used to render audio directly to memory buffers. </p>
@@ -215,7 +221,7 @@ Functions</h2></td></tr>
 <div class="line"><span class="keywordtype">float</span>** fx_buf_r = &amp;fx_buf[channels/2];</div>
 <div class="line"> </div>
 <div class="line"><a class="code" href="group__audio__rendering.html#ga9528a3e544c0e26e80f316414d954040">fluid_synth_nwrite_float</a>(synth, FramesToRender, mix_buf_l, mix_buf_r, fx_buf_l, fx_buf_r)</div>
-<div class="ttc" id="agroup__audio__rendering_html_ga9528a3e544c0e26e80f316414d954040"><div class="ttname"><a href="group__audio__rendering.html#ga9528a3e544c0e26e80f316414d954040">fluid_synth_nwrite_float</a></div><div class="ttdeci">int fluid_synth_nwrite_float(fluid_synth_t *synth, int len, float **left, float **right, float **fx_left, float **fx_right)</div><div class="ttdoc">Synthesize a block of floating point audio to separate audio buffers (multi-channel rendering).</div><div class="ttdef"><b>Definition:</b> fluid_synth.c:4074</div></div>
+<div class="ttc" id="agroup__audio__rendering_html_ga9528a3e544c0e26e80f316414d954040"><div class="ttname"><a href="group__audio__rendering.html#ga9528a3e544c0e26e80f316414d954040">fluid_synth_nwrite_float</a></div><div class="ttdeci">int fluid_synth_nwrite_float(fluid_synth_t *synth, int len, float **left, float **right, float **fx_left, float **fx_right)</div><div class="ttdoc">Synthesize a block of floating point audio to separate audio buffers (multi-channel rendering).</div><div class="ttdef"><b>Definition:</b> fluid_synth.c:4073</div></div>
 <div class="ttc" id="agroup__settings_html_gaab27c7ececd6d51f9c9d84cacacf3919"><div class="ttname"><a href="group__settings.html#gaab27c7ececd6d51f9c9d84cacacf3919">fluid_settings_getint</a></div><div class="ttdeci">int fluid_settings_getint(fluid_settings_t *settings, const char *name, int *val)</div><div class="ttdoc">Get an integer value setting.</div><div class="ttdef"><b>Definition:</b> fluid_settings.c:1591</div></div>
 </div><!-- fragment --> 
 </div>
@@ -309,7 +315,7 @@ Functions</h2></td></tr>
 <div class="line">...</div>
 <div class="line">fx[ ((k * <a class="code" href="group__synthesis__params.html#gabacb45dc50c05b7a0bb7229df3081b1b">fluid_synth_count_effects_channels</a>() + j) * 2 + 0) % nfx ]  = left_buffer_for_effect_channel_j_of_unit_k</div>
 <div class="line">fx[ ((k * <a class="code" href="group__synthesis__params.html#gabacb45dc50c05b7a0bb7229df3081b1b">fluid_synth_count_effects_channels</a>() + j) * 2 + 1) % nfx ]  = right_buffer_for_effect_channel_j_of_unit_k</div>
-<div class="ttc" id="agroup__synthesis__params_html_gabacb45dc50c05b7a0bb7229df3081b1b"><div class="ttname"><a href="group__synthesis__params.html#gabacb45dc50c05b7a0bb7229df3081b1b">fluid_synth_count_effects_channels</a></div><div class="ttdeci">int fluid_synth_count_effects_channels(fluid_synth_t *synth)</div><div class="ttdoc">Get the total number of allocated effects channels.</div><div class="ttdef"><b>Definition:</b> fluid_synth.c:7225</div></div>
+<div class="ttc" id="agroup__synthesis__params_html_gabacb45dc50c05b7a0bb7229df3081b1b"><div class="ttname"><a href="group__synthesis__params.html#gabacb45dc50c05b7a0bb7229df3081b1b">fluid_synth_count_effects_channels</a></div><div class="ttdeci">int fluid_synth_count_effects_channels(fluid_synth_t *synth)</div><div class="ttdoc">Get the total number of allocated effects channels.</div><div class="ttdef"><b>Definition:</b> fluid_synth.c:7131</div></div>
 </div><!-- fragment --><p> where <code>0 &lt;= k &lt; <a class="el" href="group__synthesis__params.html#ga2b4731bf062b674937f11db9395360be" title="Get the total number of allocated effects units.">fluid_synth_count_effects_groups()</a></code> is a zero-based index denoting the effects unit and <code>0 &lt;= j &lt; <a class="el" href="group__synthesis__params.html#gabacb45dc50c05b7a0bb7229df3081b1b" title="Get the total number of allocated effects channels.">fluid_synth_count_effects_channels()</a></code> is a zero-based index denoting the effect channel within unit <code>k</code>.</p>
 <p>Any playing voice is assigned to audio channels based on the MIDI channel it's playing on: Let <code>chan</code> be the zero-based MIDI channel index an arbitrary voice is playing on. To determine the audio channel and effects unit it is going to be rendered to use:</p>
 <p><code>i = chan % <a class="el" href="group__synthesis__params.html#ga06915c22716afc8bab6f1e3b7e250f8d" title="Get the total number of allocated audio channels.">fluid_synth_count_audio_groups()</a></code></p>
@@ -489,6 +495,178 @@ Reverb and Chorus are mixed to <code>lout</code> resp. <code>rout</code>. </dd><
 Reverb and Chorus are mixed to <code>lout</code> resp. <code>rout</code>. </dd>
 <dd>
 Dithering is performed when converting from internal floating point to 16 bit audio. </dd></dl>
+
+</div>
+</div>
+<a id="gafe93f25a4a6a479b5344c55fe1260281"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafe93f25a4a6a479b5344c55fe1260281">&#9670;&nbsp;</a></span>fluid_synth_write_s24()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int fluid_synth_write_s24 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__Types.html#gae265f10ae174a13afe010de50d87e1a4">fluid_synth_t</a> *&#160;</td>
+          <td class="paramname"><em>synth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>len</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>lout</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>loff</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>lincr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>rout</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>roff</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>rincr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Synthesize a block of 24 bit audio samples to audio buffers. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">synth</td><td>FluidSynth instance </td></tr>
+    <tr><td class="paramname">len</td><td>Count of audio frames to synthesize </td></tr>
+    <tr><td class="paramname">lout</td><td>Array of 32 bit words to store left channel of audio </td></tr>
+    <tr><td class="paramname">loff</td><td>Offset index in 'lout' for first sample </td></tr>
+    <tr><td class="paramname">lincr</td><td>Increment between samples stored to 'lout' </td></tr>
+    <tr><td class="paramname">rout</td><td>Array of 32 bit words to store right channel of audio </td></tr>
+    <tr><td class="paramname">roff</td><td>Offset index in 'rout' for first sample </td></tr>
+    <tr><td class="paramname">rincr</td><td>Increment between samples stored to 'rout' </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="group__misc.html#gae4efb1c3ce0d550c922504adfb0fb886" title="Value that indicates success, used by most libfluidsynth functions.">FLUID_OK</a> on success, <a class="el" href="group__misc.html#ga90e8bdbc5a507bbfa5c45bac85a63a61" title="Value that indicates failure, used by most libfluidsynth functions.">FLUID_FAILED</a> otherwise</dd></dl>
+<p>Useful for storing interleaved stereo (lout = rout, loff = 0, roff = 1, lincr = 2, rincr = 2).</p>
+<dl class="section note"><dt>Note</dt><dd>Should only be called from synthesis thread. </dd>
+<dd>
+Reverb and Chorus are mixed to <code>lout</code> resp. <code>rout</code>. </dd>
+<dd>
+Output is left-aligned signed 24-bit PCM (24-in-32), produced by clearing the least significant byte after 32-bit conversion from internal floating point. No dithering is performed. </dd></dl>
+
+</div>
+</div>
+<a id="ga7aa37d65824705dd3a13647f6bcb50fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7aa37d65824705dd3a13647f6bcb50fc">&#9670;&nbsp;</a></span>fluid_synth_write_s32()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int fluid_synth_write_s32 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__Types.html#gae265f10ae174a13afe010de50d87e1a4">fluid_synth_t</a> *&#160;</td>
+          <td class="paramname"><em>synth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>len</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>lout</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>loff</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>lincr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>rout</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>roff</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>rincr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Synthesize a block of 32 bit audio samples to audio buffers. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">synth</td><td>FluidSynth instance </td></tr>
+    <tr><td class="paramname">len</td><td>Count of audio frames to synthesize </td></tr>
+    <tr><td class="paramname">lout</td><td>Array of 32 bit words to store left channel of audio </td></tr>
+    <tr><td class="paramname">loff</td><td>Offset index in 'lout' for first sample </td></tr>
+    <tr><td class="paramname">lincr</td><td>Increment between samples stored to 'lout' </td></tr>
+    <tr><td class="paramname">rout</td><td>Array of 32 bit words to store right channel of audio </td></tr>
+    <tr><td class="paramname">roff</td><td>Offset index in 'rout' for first sample </td></tr>
+    <tr><td class="paramname">rincr</td><td>Increment between samples stored to 'rout' </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="group__misc.html#gae4efb1c3ce0d550c922504adfb0fb886" title="Value that indicates success, used by most libfluidsynth functions.">FLUID_OK</a> on success, <a class="el" href="group__misc.html#ga90e8bdbc5a507bbfa5c45bac85a63a61" title="Value that indicates failure, used by most libfluidsynth functions.">FLUID_FAILED</a> otherwise</dd></dl>
+<p>Useful for storing interleaved stereo (lout = rout, loff = 0, roff = 1, lincr = 2, rincr = 2).</p>
+<dl class="section note"><dt>Note</dt><dd>Should only be called from synthesis thread. </dd>
+<dd>
+Reverb and Chorus are mixed to <code>lout</code> resp. <code>rout</code>. </dd>
+<dd>
+Output is signed 32-bit PCM (int32_t), produced by round-and-clip conversion from internal floating point. No dithering is performed. </dd></dl>
 
 </div>
 </div>

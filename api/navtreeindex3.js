@@ -1,5 +1,8 @@
 var NAVTREEINDEX3 =
 {
+"settings_audio.html#settings_audio_coreaudio_device":[5,0,6],
+"settings_audio.html#settings_audio_dart_device":[5,0,8],
+"settings_audio.html#settings_audio_driver":[5,0,0],
 "settings_audio.html#settings_audio_dsound_device":[5,0,9],
 "settings_audio.html#settings_audio_file_endian":[5,0,10],
 "settings_audio.html#settings_audio_file_format":[5,0,11],
