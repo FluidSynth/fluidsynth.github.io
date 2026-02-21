@@ -15,8 +15,8 @@ is used in some mobile apps.
 - Cross platform support (Linux, macOS and Windows to name a few)
 - SoundFont 2 support
 - SoundFont 3 support (vorbis-compressed SF2)
-- Realtime effect control using SoundFont 2.01 modulators
-- Limited support for Downloadable Sounds (DLS) Level 1 & 2
+- Realtime effect control using SoundFont 2.04 modulators
+- Support for Downloadable Sounds (DLS) Level 1 & 2
 - Playback of MIDI files
 - Shared library which can be used in other programs
 - Built in command line shell
@@ -27,10 +27,10 @@ wiki</a>.
 
 ### Current Development Team
 - **[Tom Moebert](https://github.com/derselbst) (Maintainer)**
-- [Jean-Jacques Ceresa](https://github.com/jjceresa)
-- [Marcus Weseloh](https://github.com/mawe42)
 
 ### Former Development Team
+- [Jean-Jacques Ceresa](https://github.com/jjceresa)
+- [Marcus Weseloh](https://github.com/mawe42)
 - David Henningsson
 - Element Green
 - Pedro Lopez-Cabanillas
