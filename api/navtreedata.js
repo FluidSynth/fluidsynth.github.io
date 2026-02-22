@@ -53,6 +53,12 @@ var NAVTREE =
       [ "What's new in 2.0.0?", "RecentChanges.html#NewIn2_0_0", null ]
     ] ],
     [ "Usage Guide", "UsageGuide.html", "UsageGuide" ],
+    [ "Reverb Overview", "ReverbOverview.html", [
+      [ "1. Freeverb", "ReverbOverview.html#autotoc_md0", null ],
+      [ "2. FDN", "ReverbOverview.html#autotoc_md2", null ],
+      [ "3. Lexverb", "ReverbOverview.html#autotoc_md4", null ],
+      [ "4. Dattorro", "ReverbOverview.html#autotoc_md6", null ]
+    ] ],
     [ "Settings Reference", "fluidsettings.html", "fluidsettings" ],
     [ "API Reference", "modules.html", "modules" ],
     [ "Examples", "examples.html", "examples" ]
@@ -62,9 +68,9 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "Advanced.html",
-"group__iir__filter.html#gaaf4fda0f2b4e699fceed4b1202541f5f",
-"group__sequencer__events.html#ga49e8f04cae451acba9685ab3be7e65b2",
-"settings_audio.html#settings_audio_coreaudio_device"
+"group__generators.html#ggad17a24ae3b25f3b8cc5762f818eef9b4af9dcf53c06eaf19d595685d7fac0f678",
+"group__sequencer__events.html#ga36db66e1a41d0916d8e5ed9adc9c6979",
+"modules.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
