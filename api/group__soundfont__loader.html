@@ -490,6 +490,8 @@ Functions</h2></td></tr>
 <p>Same purpose and behaviour as fseek. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramname">handle</td><td>file handle returned by the open callback </td></tr>
+    <tr><td class="paramname">offset</td><td>offset in bytes relative to <code>origin</code> to seek </td></tr>
     <tr><td class="paramname">origin</td><td>either <code>SEEK_SET</code>, <code>SEEK_CUR</code> or <code>SEEK_END</code> </td></tr>
   </table>
   </dd>
