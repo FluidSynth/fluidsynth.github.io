@@ -3,6 +3,11 @@
   description: FluidSynth shell running in GnomeTerminal on Linux.
   href: https://www.fluidsynth.org
 
+- href: https://github.com/bbouchez/wxFluid
+  img: wxFluid-Screenshot.png
+  title: wxFluid
+  description: wxWidgets based GUI frontend for FluidSynth, with RTP-MIDI and Network MIDI 2.0 support
+
 - href: http://www.swamiproject.org
   img: Swami-2_0-screenshot1.png
   title: Swami Instrument Editor
