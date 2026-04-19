@@ -22,7 +22,7 @@ is used in some mobile apps.
 - Built in command line shell
 
 A detailed chart of supported MIDI messages can be found <a
-href="https://github.com/FluidSynth/fluidsynth/wiki/FluidFeatures">in the
+href="https://www.fluidsynth.org/wiki/FluidFeatures">in the
 wiki</a>.
 
 ### Current Development Team

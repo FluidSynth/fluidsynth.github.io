@@ -8,12 +8,12 @@ layout: gallery
 ### Applications using FluidSynth
 
 FluidSynth is used by many different applications on a wide range of platforms. A list
-of some of the applications can be found on the Wiki page [Applications using FluidSynth](https://github.com/FluidSynth/fluidsynth/wiki/Applications).
+of some of the applications can be found on the Wiki page [Applications using FluidSynth](https://www.fluidsynth.org/wiki/Applications).
 
 ### Music and Audio created with FluidSynth
 
 FluidSynth has been used to create some original pieces of music and other audio.
-On the GitHub Wiki page [List of creations](https://github.com/FluidSynth/fluidsynth/wiki/MadeWithFluidSynth) you
+On the GitHub Wiki page [List of creations](https://www.fluidsynth.org/wiki/MadeWithFluidSynth) you
 can find some examples.
 
 ### Screenshots
