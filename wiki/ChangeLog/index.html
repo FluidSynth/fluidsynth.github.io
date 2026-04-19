@@ -1,0 +1,2601 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Wiki for the FluidSynth SoundFont2 Software Synthesizer.">
+      
+      
+        <meta name="author" content="FluidSynth contributors">
+      
+      
+        <link rel="canonical" href="https://www.fluidsynth.org/wiki/ChangeLog/">
+      
+      
+        <link rel="prev" href="../FluidSynth-configuration-files/">
+      
+      
+        <link rel="next" href="../BuildingWithCMake/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../images/favicon.png">
+      <meta name="generator" content="zensical-0.0.33">
+    
+    
+      
+        <title>📝 Changelog - FluidSynth Wiki</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../assets/stylesheets/modern/main.53a7feaf.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../assets/stylesheets/modern/palette.dfe2e883.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,500,500i,700,700i%7CJetBrains+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,a=__md_scope)=>JSON.parse(t.getItem(a.pathname+"."+e)),__md_set=(e,t,a=localStorage,_=__md_scope)=>{try{a.setItem(_.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer" aria-label="Navigation"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#changelog" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="./.." title="FluidSynth Wiki" class="md-header__button md-logo" aria-label="FluidSynth Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 7v14M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer" aria-label="Navigation">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            FluidSynth Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              📝 Changelog
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-sun-moon" viewBox="0 0 24 24"><path d="M12 2v2M14.837 16.385a6 6 0 1 1-7.223-7.222c.624-.147.97.66.715 1.248a4 4 0 0 0 5.26 5.259c.589-.255 1.396.09 1.248.715M16 12a4 4 0 0 0-4-4M19 5l-1.256 1.256M20 12h2"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-moon" viewBox="0 0 24 24"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search" aria-label="Search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+        <a href="https://github.com/FluidSynth/fluidsynth" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    FluidSynth/fluidsynth
+  </div>
+</a>
+      
+    </div>
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="./.." class="md-tabs__link">
+        
+  
+  🏠 Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Download/" class="md-tabs__link">
+          
+  
+  🎹 About FluidSynth
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../Documentation/" class="md-tabs__link">
+          
+  
+  📚 Documentation
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="https://github.com/FluidSynth/fluidsynth/issues" class="md-tabs__link">
+        
+  
+  🪲 Bug Tracker
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="./.." title="FluidSynth Wiki" class="md-nav__button md-logo" aria-label="FluidSynth Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 7v14M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
+
+    </a>
+    FluidSynth Wiki
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/FluidSynth/fluidsynth" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    FluidSynth/fluidsynth
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="./.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🏠 Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../Download/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🎹 About FluidSynth
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📚 Documentation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📚 Documentation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Documentation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📚 Documentation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🙋 For users
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🙋 For users
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GettingStarted/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🚀 Getting started with FluidSynth
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ExampleCommandLines/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    💻 Command Line Examples
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Audio-Drivers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔈 Built-in Audio Drivers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UserManual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📖 User Manual
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FluidSettings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ⚙️ Fluid Settings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FluidFeatures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ✨ Fluid Features
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LowLatency/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ⏱️ Low latency tips
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FluidSynth-configuration-files/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🗂️ FluidSynth configuration files
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🤓 For Developers
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🤓 For Developers
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      
+      
+        
+      
+      
+      <a href="././" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📝 Changelog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BuildingWithCMake/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🛠️ Building FluidSynth with CMake
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../BuildingForAndroid/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🤖 Build for Android
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.fluidsynth.org/api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔗 FluidSynth 2.0 API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.fluidsynth.org/api-1.x/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔗 FluidSynth legacy 1.x API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ladspa/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🖥️ FluidSynth LADSPA Interface
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SoundFont3Format/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ➕ The SoundFont3 Format
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../NotesForPackagers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📦 Notes for Packagers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReleaseCheckList/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ✅ Release Checklist
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Future/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔮 Future of FluidSynth
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/FluidSynth/fluidsynth/issues" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🪲 Bug Tracker
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                      
+                    
+                    
+                  
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="./.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    🏠 Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../Documentation/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    📚 Documentation
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="././" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    🤓 For Developers
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+    <a href="https://github.com/FluidSynth/fluidsynth/edit/master/doc/wiki/ChangeLog.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-file-pen" viewBox="0 0 24 24"><path d="M12.659 22H18a2 2 0 0 0 2-2V8a2.4 2.4 0 0 0-.706-1.706l-3.588-3.588A2.4 2.4 0 0 0 14 2H6a2 2 0 0 0-2 2v9.34"/><path d="M14 2v5a1 1 0 0 0 1 1h5M10.378 12.622a1 1 0 0 1 3 3.003L8.36 20.637a2 2 0 0 1-.854.506l-2.867.837a.5.5 0 0 1-.62-.62l.836-2.869a2 2 0 0 1 .506-.853z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/FluidSynth/fluidsynth/raw/master/doc/wiki/ChangeLog.md" title="View source of this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-file-code-2" viewBox="0 0 24 24"><path d="M4 12.15V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.706.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2h-3.35"/><path d="M14 2v5a1 1 0 0 0 1 1h5M5 16l-3 3 3 3M9 22l3-3-3-3"/></svg>
+    </a>
+  
+
+
+<h1 id="changelog">📝 Changelog</h1>
+<ul>
+<li><a href="#fluidsynth-254">2.5.4</a></li>
+<li><a href="#fluidsynth-253">2.5.3</a></li>
+<li><a href="#fluidsynth-252">2.5.2</a></li>
+<li><a href="#fluidsynth-251">2.5.1</a></li>
+<li><a href="#fluidsynth-250">2.5.0</a></li>
+<li><a href="#fluidsynth-248">2.4.8</a></li>
+<li><a href="#fluidsynth-247">2.4.7</a></li>
+<li><a href="#fluidsynth-246">2.4.6</a></li>
+<li><a href="#fluidsynth-245">2.4.5</a></li>
+<li><a href="#fluidsynth-244">2.4.4</a></li>
+<li><a href="#fluidsynth-243">2.4.3</a></li>
+<li><a href="#fluidsynth-242">2.4.2</a></li>
+<li><a href="#fluidsynth-241">2.4.1</a></li>
+<li><a href="#fluidsynth-240">2.4.0</a></li>
+<li><a href="#fluidsynth-237">2.3.7</a></li>
+<li><a href="#fluidsynth-236">2.3.6</a></li>
+<li><a href="#fluidsynth-235">2.3.5</a></li>
+<li><a href="#fluidsynth-234">2.3.4</a></li>
+<li><a href="#fluidsynth-233">2.3.3</a></li>
+<li><a href="#fluidsynth-232">2.3.2</a></li>
+<li><a href="#fluidsynth-231">2.3.1</a></li>
+<li><a href="#fluidsynth-230">2.3.0</a></li>
+<li><a href="#fluidsynth-229">2.2.9</a></li>
+<li><a href="#fluidsynth-228">2.2.8</a></li>
+<li><a href="#fluidsynth-227">2.2.7</a></li>
+<li><a href="#fluidsynth-226">2.2.6</a></li>
+<li><a href="#fluidsynth-225">2.2.5</a></li>
+<li><a href="#fluidsynth-224">2.2.4</a></li>
+<li><a href="#fluidsynth-223">2.2.3</a></li>
+<li><a href="#fluidsynth-222">2.2.2</a></li>
+<li><a href="#fluidsynth-221">2.2.1</a></li>
+<li><a href="#fluidsynth-220">2.2.0</a></li>
+<li><a href="#fluidsynth-219">2.1.9</a></li>
+<li><a href="#fluidsynth-218">2.1.8</a></li>
+<li><a href="#fluidsynth-217">2.1.7</a></li>
+<li><a href="#fluidsynth-216">2.1.6</a></li>
+<li><a href="#fluidsynth-215">2.1.5</a></li>
+<li><a href="#fluidsynth-214">2.1.4</a></li>
+<li><a href="#fluidsynth-213">2.1.3</a></li>
+<li><a href="#fluidsynth-212">2.1.2</a></li>
+<li><a href="#fluidsynth-211">2.1.1</a></li>
+<li><a href="#fluidsynth-210">2.1.0</a></li>
+<li><a href="#fluidsynth-209">2.0.9</a></li>
+<li><a href="#fluidsynth-208">2.0.8</a></li>
+<li><a href="#fluidsynth-207">2.0.7</a></li>
+<li><a href="#fluidsynth-206">2.0.6</a></li>
+<li><a href="#fluidsynth-205">2.0.5</a></li>
+<li><a href="#fluidsynth-204">2.0.4</a></li>
+<li><a href="#fluidsynth-203">2.0.3</a></li>
+<li><a href="#fluidsynth-202">2.0.2</a></li>
+<li><a href="#fluidsynth-201">2.0.1</a></li>
+<li><a href="#fluidsynth-200">2.0.0</a></li>
+<li><a href="#fluidsynth-1111">1.1.11 and older</a></li>
+</ul>
+<h1 id="fluidsynth-254">FluidSynth 2.5.4</h1>
+<ul>
+<li>The TCP port, fluidsynth's shell server may listen to, is now auto-selected by default (#1763)</li>
+<li>The systemd lock-file <code>/run/lock/fluidsynth</code> has been removed (#1683)</li>
+</ul>
+<h1 id="fluidsynth-253">FluidSynth 2.5.3</h1>
+<ul>
+<li>Support building for tvOS (#1743, thanks to @Ghabry)</li>
+<li>Several minor fixes for the CMake buildsystem (#1742)</li>
+<li>Several documentation updates (#1745, #1736, thanks to @jimhen3ry)</li>
+<li>Fix a build issue when fluidsynth is consumed as part of a bigger CMake project (#1752, thanks to @thal)</li>
+<li>Fix fluidsynth being unable to load SoundFonts when being compiled with an old version of MinGW (#1755)</li>
+</ul>
+<h1 id="fluidsynth-252">FluidSynth 2.5.2</h1>
+<ul>
+<li>The CoreAudio driver has gained iOS support (#1720, thanks to @neoharp-dev)</li>
+<li>Improve error handling and reporting when loading default soundfont (#1712)</li>
+<li>Improve logging and side effect mitigation when basic channel configuration changes (#1695)</li>
+<li>Fix <code>CVE-2025-68617</code> - a heap-based use-after-free involving DLS files (GHSA-ffw2-xvvp-39ch)</li>
+</ul>
+<h1 id="fluidsynth-251">FluidSynth 2.5.1</h1>
+<ul>
+<li>Previous versions have incorrectly exposed private C++ and inline symbols; they are now hidden from the library (#1676)</li>
+<li>FluidSynth now resets DataEntry values when it receives (N)RPN MSB/LSB to prevent off-tuned channels (#1672, thanks to @rsp4jack)</li>
+<li>It is now possible to install the library, header and executable independently of each other (#1693, refer to <a href="../BuildingWithCMake/#installation">wiki</a> for details, thanks to @pedrolcl)</li>
+<li>Add a CI pipeline for iOS and publish precompiled iOS binaries for each release (#1703, #1677, thanks to @withSang)</li>
+<li>Fix the precompiled Windows binaries lacking dependency libraries (#1668)</li>
+<li>Fix a regression introduced in 2.5.0, that could have caused a NULL pointer deref when playing AWE32 NRPN MIDIs (#1691)</li>
+<li>Fix a regression introduced in 2.5.0, that caused convex unipolar modulators to use a concave mapping (#1697)</li>
+<li>Fix a regression introduced in 2.4.6, which in rare cases could have caused the cutoff frequency of the IIR filter to get stuck or change abruptly (#1679)</li>
+<li>Fix a build issue where fluidsynth was trying to find glib even when it shouldn't (#1673, thanks to @dg0yt)</li>
+<li>Fix a build issue on macOS (#1684, thanks to @pedrolcl)</li>
+<li>Fix typos in ALSA log messages (#1704, thanks to @toadster172)</li>
+</ul>
+<h1 id="fluidsynth-250">FluidSynth 2.5.0</h1>
+<p>Starting with 2.5.0, a C++11-compliant compiler and standard library will be required to compile fluidsynth! Additionally, users now have to link FluidSynth's library <code>libfluidsynth</code> against the C++ standard library that was used when compiling fluidsynth.</p>
+<p><strong>It is now possible to compile fluidsynth without GLib!</strong> Pass <code>-Dosal=cpp11 -Denable-libinstpatch=0</code> to CMake when compiling fluidsynth. In addition, if you use a C++17-compliant compiler, fluidsynth will be compiled with <em>native</em> DLS support! Precompiled Windows binaries will be provided for both flavors: glib and C++11 as OSAL.</p>
+<p><strong>Support for GLib and libinstpatch is hereby deprecated.</strong> They will be removed in 2.6.0.</p>
+<h3 id="new-features">New Features</h3>
+<ul>
+<li>Add a C++11-based OS abstraction layer as a replacement for glib, bringing <a href="https://github.com/FluidSynth/fluidsynth/discussions/847#discussioncomment-13183154">these minor limitations</a> when C++17 is unavailable (#1570, thanks to @mmlr)</li>
+<li>Add native support for <strong>D</strong>ownloadable <strong>S</strong>oundfont <strong>F</strong>ormat (#1626, thanks to @rsp4jack)</li>
+<li>FluidSynth now recognizes the <a href="https://github.com/spessasus/soundfont-proposals/blob/main/default_modulators.md"><code>DMOD</code></a> INFO-subchunk (#1582, thanks to @spessasus)</li>
+<li>A new positional flag has been introduced: <code>-b, --bank-offset</code>, (#1538, refer to <a href="../UserManual/#options">UserManual</a> for details)</li>
+<li>FluidSynth now natively supports the long CLI option flags on Windows (#1544)</li>
+<li>FluidSynth now supports native Android logging (#1621, thanks to @neoharp-dev)</li>
+</ul>
+<h3 id="breaking-changes">Breaking Changes</h3>
+<ul>
+<li>Support for SDL2 has been removed - pls. use SDL3 instead (#1594)</li>
+<li>The processing order of fluidsynth's configuration files has been changed (#1573, refer to <a href="../FluidSynth-configuration-files/">wiki</a> for details)</li>
+<li>The legacy shell commands for reverb and chorus have been removed (#1659, refer to <a href="../UserManual/#reverb">UserManual</a> for details)</li>
+</ul>
+<h3 id="musically-breaking-changes">Musically Breaking Changes</h3>
+<ul>
+<li>It was discovered that fluidsynth was mapping some modulators slightly inaccurately into their normalized range (#1651, thanks to @baskanov)</li>
+<li>Some Roland GS NPRN Params are now mapped to CC numbers (#1519, refer to <a href="../FluidFeatures/#roland-nrpns">wiki</a> for details)</li>
+<li>FluidSynth now auto-detects whether Portamento Time is 7bit or 14bit wide - this fixes the infamous Descent Game08 tune (#705, #1232, #1311, #1456, #1495, #1517, see <a href="https://www.fluidsynth.org/api/fluidsettings.xml#synth.portamento-time"><code>synth.portamento-time</code></a> for details)</li>
+<li>Previously, fluidsynth's default behavior was to use portamento only for those notes, that were played in a successive / legato manner; to further improve the portamento experience, this was changed and fluidsynth now plays portamento for all notes by default (#1656)</li>
+</ul>
+<h3 id="other-changes">Other Changes</h3>
+<ul>
+<li>Fix drum kits not always being selected after SysEx GS Rhythm Part (#1579)</li>
+<li>The LGPL license now uses the remote-only FSF address (#1568, thanks to @musicinmybrain)</li>
+<li>The logic for parsing <code>INFO</code> chunks has been revised to improve handling of unknown <code>INFO</code>-subchunks (#1644)</li>
+<li>Fix a race condition in <code>fluid_synth_alloc_voice()</code> public API function (#1664)</li>
+<li>Fix installing static and shared libs cmake targets on the same prefix (#1648, thanks to @pedrolcl)</li>
+<li>The auto-generated lookup tables - that vcpkg and cross-compiling users have learned to love so much - are gone! (#1620)</li>
+</ul>
+<p>For changes related to the public API, pls. <a href="https://www.fluidsynth.org/api/RecentChanges.html">consult the API docs</a>.</p>
+<h1 id="fluidsynth-248">FluidSynth 2.4.8</h1>
+<ul>
+<li>Fix systemd daemon failing with spaces in Soundfont filenames (#1608)</li>
+<li>Fix a build issue on OpenIndiana (#1615)</li>
+<li>FluidSynth now explains why it discards invalid generators when run in verbose mode (#829)</li>
+</ul>
+<h1 id="fluidsynth-247">FluidSynth 2.4.7</h1>
+<ul>
+<li>All previous versions of fluidsynth have incorrectly rejected Soundfont files with unknown <code>INFO</code> subchunks (#1580, thanks to @spessasus)</li>
+<li>Fix build for Windows on ARM64 (#1586, thanks to @carlo-bramini)</li>
+<li>Fix incorrect GS DT1 SysEx checksum validation (#1578)</li>
+<li>Suppress a SIGFPE on OS/2 (#1592, thanks to @komh)</li>
+<li>Android binaries are now compiled with page sizes aligned to 16kB boundary to allow for Android 15+ support (#1600)</li>
+<li>Due to continuing problems with openMP, precompiled Android binaries are now built without openMP support (#1603)</li>
+<li>Fix a NULL pointer dereference during legato mono playing (#1602)</li>
+</ul>
+<h1 id="fluidsynth-246">FluidSynth 2.4.6</h1>
+<ul>
+<li>Fix inconsistent library naming for MSVC vs. MinGW builds (#1543)</li>
+<li>Fix MIDI player skipping some events when seeking (#1532)</li>
+<li>A regression introduced in 2.4.5 could have caused a heap-based buffer overrun (#1560)</li>
+<li>Fix several issues when generating API docs with recent versions of Doxygen (#1566, thanks to @mmlr)</li>
+</ul>
+<h1 id="fluidsynth-245">FluidSynth 2.4.5</h1>
+<ul>
+<li>Prebuilt Windows Binaries were missing <code>SDL3.dll</code> (#1510)</li>
+<li>Fix SDL3 intercepting signals, causing <code>CTRL+C</code> to not quit fluidsynth (#1509)</li>
+<li>Fix a few flaws in the AWE32 NRPN implementation (#1452, #1473)</li>
+<li>A regression introduced in 2.4.4 broke drum preset selection for XG MIDIs (#1508)</li>
+<li>Fix for OpenMP thread affinity crashes on Android devices (#1521, thanks to @looechao)</li>
+<li>Fix fluidsynth's systemd user daemon being unable to create lock file on some distros (#1527, thanks to @andrew-sayers)</li>
+<li>Fix fluidsynth ignoring <code>initialFilterFc</code> generator limits (#1502)</li>
+<li>A regression introduced in 2.3.6 prevented SF2 NRPN messages from being processed correctly (#1536)</li>
+</ul>
+<p><em>Hint to package maintainers: Pls. make sure to install the newly added <code>fluidsynth.tmpfile</code>, as <a href="https://github.com/FluidSynth/fluidsynth/blob/f8cdcb846b5c7c32a1de99db0ff69c4841142a99/contrib/fluidsynth.spec#L101C1-L101C83">shown here</a>.</em></p>
+<h1 id="fluidsynth-244">FluidSynth 2.4.4</h1>
+<ul>
+<li>Support for SDL3 has been added, support for SDL2 has been deprecated (#1485, #1478, thanks to @andyvand)</li>
+<li>Soundfonts that are not respecting the 46 zero-sample padding-space previously sounded incorrect when
+  <code>synth.dynamic-sample-loading</code> was active (#1484)</li>
+<li>Allow drum channels to profit from Soundfont Bank Offsets by no longer ignoring MSB Bank changes (#1475)</li>
+<li>Revise the preset fallback logic for drum channels (#1486)</li>
+<li>A regression introduced in 2.4.1 may have caused interrupted real-time playback when voices were using the lowpass filter (#1481)</li>
+<li>Improve multi-user experience when running fluidsynth as systemd service (#1491, thanks to @andrew-sayers)</li>
+<li>Fix ordering and dependencies of fluidsynth's systemd service (#1500, thanks to @fabiangreffrath)</li>
+<li>Revise fluidsynth's man page (#1499, thanks to @fabiangreffrath)</li>
+</ul>
+<p>Note about cross-compilation: The CMake variable <code>FLUID_HOST_COMPILER</code> has been superseded by the Autools convention of using environment variables like <code>CC_FOR_BUILD</code> and friends (#1501, thanks to @fabiangreffrath)</p>
+<h1 id="fluidsynth-243">FluidSynth 2.4.3</h1>
+<ul>
+<li>It was discovered, that exclusive class note terminations were too slow (#1467, thanks to @mrbumpy409)</li>
+<li>Fix a regression introduced in 2.4.0 that allowed the amplitude of a voice playing in delay phase to rise infinitely (#1451)</li>
+<li>MSGS drum-style note-cut has been converted to an opt-in setting <a href="https://www.fluidsynth.org/api/fluidsettings.xml#synth.note-cut"><code>synth.note-cut</code></a> (#1466)</li>
+<li>Support for SDL2 has been disabled by default* (#1472)</li>
+<li>Fix a regression introduced in 2.4.1 that could have caused infinite audio gain output for some MIDI files under certain configurations (#1464)</li>
+<li>Silence a warning issued by Systemd v254+ (#1474, thanks to @andrew-sayers)</li>
+</ul>
+<p>*It was found that SDL2 hijacks fluidsynth's <code>main()</code> function which causes build problems on Windows, see (#1472). A PR for migrating to SDL3 is highly welcome! If you still want to compile with SDL2 support, you need to explicitly enable it using CMake flag <code>-Denable-sdl2=1</code>.</p>
+<h1 id="fluidsynth-242">FluidSynth 2.4.2</h1>
+<ul>
+<li>Fix audible clicks when turning off voices while using a high filter resonance (#1427)</li>
+<li>Fix a build failure with MSYS2 and MinGW when processing <code>VersionResource.rc</code> (#1448, thanks to @pedrolcl)</li>
+<li>Fix a crash on startup when there are no MIDI devices available on Windows (#1446, thanks to @pedrolcl)</li>
+<li>Restore discovery of libsndfile (#1445)</li>
+<li>Fix a race condition when loading SF3 files containing multiple uncompressed samples (#1457)</li>
+</ul>
+<h1 id="fluidsynth-241">FluidSynth 2.4.1</h1>
+<ul>
+<li>Enable libsndfile to use filename with non-ASCII characters on Windows (#1416, thanks to @pedrolcl and @stardusteyes)</li>
+<li>Fix a few commandline encoding related issues on Windows (#1388, #1421, thanks to @pedrolcl)</li>
+<li>Fix build errors on Windows (#1419, #1422, thanks to @carlo-bramini)</li>
+<li>Fix clicks and pops caused when changing parameters of the lowpass filter (#1415, #1417, #1424)</li>
+<li>Minor adjustment to AWE32 NRPN behavior (#1430)</li>
+</ul>
+<h1 id="fluidsynth-240">FluidSynth 2.4.0</h1>
+<h3 id="new-features_1">New Features</h3>
+<ul>
+<li>Implement MSGS-style Drum Note Cut (#1199)</li>
+<li>Support KAI audio driver on OS/2 (#1332, thanks to @komh)</li>
+<li>Add support for AWE32 NRPNs (#1346)</li>
+<li>Add support for Polyphone's sample loop mode release (#1398, thanks to @spessasus)</li>
+<li>Add support for SF2.04 absolute value modulators (#1391, thanks to @spessasus)</li>
+</ul>
+<h3 id="breaking-changes_1">Breaking Changes</h3>
+<ul>
+<li>LASH support has been removed (#1285)</li>
+</ul>
+<h3 id="musically-breaking-changes_1">Musically Breaking changes</h3>
+<ul>
+<li>The default settings for reverb and chorus have been tuned to provide a more natural perception (#1282, thanks to @es20490446e)</li>
+<li>The behavior of the volume envelope's delay phase was previously incorrect (#1312)</li>
+<li>The <code>ModLfoToVolume</code> generator was not able to increase the volume (#1374)</li>
+<li>FluidSynth's default device-id was changed, allowing it to process (most) SysEX events without further configuration (#1382)</li>
+<li>Previously, some modulators were treated in a non-standard way (#1392, #1389, #1068)</li>
+</ul>
+<h3 id="bug-fixes">Bug Fixes</h3>
+<ul>
+<li>Bogus interpolation of IIR filter coefficients could have caused audible clicks and cracks (#1345)  - yet there is still a potential for clicks and cracks, see #1415</li>
+</ul>
+<h1 id="fluidsynth-237">FluidSynth 2.3.7</h1>
+<ul>
+<li>Fix SF3 decoder producing crackling sound for loud samples (#1380)</li>
+<li>MIDI Format 2 is now rejected correctly since it was never supported (#1366)</li>
+<li>Fix UTF8 encoding issues on Windows (#1388, thanks to @stardusteyes)</li>
+<li>Fix a regression introduced in 2.3.2 causing fluidsynth to fail discovering Oboe (#1393)</li>
+<li>Other minor bugs (#1291, #1403)</li>
+</ul>
+<h1 id="fluidsynth-236">FluidSynth 2.3.6</h1>
+<ul>
+<li>Fix a build issue on OS/2 (#1320, thanks to @komh)</li>
+<li>Fix various encoding issues on Windows related to device names (#1322, thanks to @pedrolcl)</li>
+<li>Fix discovery of gobject by CMake</li>
+<li>Fix a numerical instability that caused the chorus effect to stop working correctly when fluidsynth was compiled in single precision mode (affected all precompiled binaries, #1331, thanks to @jjceresa)</li>
+<li>Fix timing issues in MIDI player related to incorrect handling of running status (#1351)</li>
+<li>Fix ignoring LSB for RPN Pitch bend range events (#1357, thanks to @spessasus)</li>
+</ul>
+<h1 id="fluidsynth-235">FluidSynth 2.3.5</h1>
+<ul>
+<li>Fix setting <code>synth.chorus.speed</code> to its minimum value being reported as out of range (#1284)</li>
+<li>Fix a regression causing libinstpatch and libsndfile not to be discovered on Windows (#1299)</li>
+<li>Fix pipewire audio driver not cleanly being destroyed (#1305, thanks to @mawe42)</li>
+<li>Fix selection logic for XG drum banks (#1307)</li>
+<li>Add cmake flag <code>FLUID_HOST_COMPILER</code> to allow overriding default host compiler required during compilation (#1301)</li>
+<li>LASH support has been deprecated (#1285)</li>
+</ul>
+<h1 id="fluidsynth-234">FluidSynth 2.3.4</h1>
+<ul>
+<li>Fix a build failure when specifying <code>CMAKE_INSTALL_LIBDIR</code> as an absolute path (#1261, thanks to @OPNA2608)</li>
+<li>Fix some MIDI files never finish playing (#1257, thanks to @joanbm)</li>
+<li>Implement IPv6 to IPv4 fallback (#1208, thanks to @ivan-zaera)</li>
+<li>Fix a build failure when using CMake's Xcode generator (#1266, thanks to @bradhowes)</li>
+<li>Fix pipewire's Jack implementation not found by CMake (#1268, thanks to @pedrolcl)</li>
+<li>Fix a regression causing the MIDI Player to terminate prematurely (#1272, thanks to @albedozero)</li>
+</ul>
+<h1 id="fluidsynth-233">FluidSynth 2.3.3</h1>
+<ul>
+<li>Fix choppy sound when selecting pipewire output (#1230, thanks to @nilninull)</li>
+<li>Fix build issues on musl-based distros (#1229)</li>
+<li>Terminate MIDI player once internal synth-ticks overflow to prevent filling up the filesystem (#1233)</li>
+<li>Fix a bug that allowed playing notes outside of key and velocity ranges (#1250)</li>
+</ul>
+<h1 id="fluidsynth-232">FluidSynth 2.3.2</h1>
+<ul>
+<li>Add support for processing all SysEx messages with <code>synth.device-id=127</code> (#1206, thanks to @trolley813)</li>
+<li>Various fixes to linking against static libfluidsynth when consumed through CMake or pkg-config (#1211, #1224, thanks to @FtZPetruska)</li>
+<li>Added <code>fluid_player_get_division</code> (#1220, thanks to @Fruchtzwerg94)</li>
+<li>Fix a regression introduced in 2.3.1 which broke MIDI player's seamless looping (#1227, thanks to @fabiangreffrath)</li>
+</ul>
+<h1 id="fluidsynth-231">FluidSynth 2.3.1</h1>
+<ul>
+<li>Prevent MIDI player from finishing prematurely (#1159, thanks to @topaz)</li>
+<li>Fix a crash when enumerating rawmidi ALSA devices (#1174, thanks to @Bob131)</li>
+<li>Restore systemd sandboxing options and make it work with user units (#1181, thanks to @bluca)</li>
+<li>Handle conflict with pipewire systemd daemon (#1177)</li>
+</ul>
+<h1 id="fluidsynth-230">FluidSynth 2.3.0</h1>
+<h3 id="new-features_2">New Features</h3>
+<ul>
+<li>Add Pipewire audio driver (#982, thanks to @sykhro)</li>
+<li>Major modernization of the CMake build system, <strong>CMake &gt;= 3.13 will now be required</strong> (#969, thanks to @pedrolcl)</li>
+<li>Add multichannel output for the CoreAudio driver (#1081, thanks to @mattrtaylor)</li>
+<li>LADSPA effects are mixed before processing internal effects (#1117, thanks to @albedozero)</li>
+<li>MIDI auto-connect functionality has been extended (#1023, thanks to @pedrolcl)</li>
+<li>Add linear interpolation to convex and concave transfer functions (#1156, thanks to @md1872b)</li>
+<li>Mixing of effects has been parallelized (#1158)</li>
+</ul>
+<h3 id="bug-fixes_1">Bug Fixes</h3>
+<ul>
+<li>Issue  #1073 has been resolved, which may change the sound articulation a bit (#1152)</li>
+<li>Systemd Hardening has been partly reverted (#1147, thanks to @dvzrv)</li>
+<li><code>audio.jack.autoconnect</code> erroneously connected to MIDI ports (#1149, thanks to @ReinholdH)</li>
+<li>Fix build when compiling against OSS 4.0 API (#1150)</li>
+</ul>
+<h1 id="fluidsynth-229">FluidSynth 2.2.9</h1>
+<ul>
+<li>Fix regression in WinMIDI driver introduced in 2.2.8 (#1131, #1141 thanks to @albedozero) </li>
+<li>Tracks cannot be restarted in MIDI player after reaching EOT (#1138, thanks to @albedozero)</li>
+<li>Add a system-wide configuration file for Windows (#1143, thanks to @daniel-1964)</li>
+<li>Harden systemd service file</li>
+<li>Dependency libs for precompiled Android binaries have been updated</li>
+</ul>
+<h1 id="fluidsynth-228">FluidSynth 2.2.8</h1>
+<ul>
+<li>ALSA and WinMIDI drivers now pass system real-time messages on to user callback (#1115, thanks to @albedozero)</li>
+<li>Fix FPU division by zero in <code>fluid_player_set_tempo()</code> (#1111)</li>
+<li>Fix system-wide config file not loaded (#1118)</li>
+<li>PulseAudio driver now honors <code>audio.periods</code> setting (#1127, thanks to @pedrolcl)</li>
+</ul>
+<h1 id="fluidsynth-227">FluidSynth 2.2.7</h1>
+<ul>
+<li>Fix file driver not working correctly on Windows (#1076)</li>
+<li>Add a function to create a sequencer event from a midi event (#1078, thanks to @jimhen3ry)</li>
+<li>Precompiled x86 binaries are now x87-FPU compatible (#1079)</li>
+<li>Fix fluidsynth not responding to SIGINT and SIGTERM when using recent SDL2 (#1071, thanks to @mawe42)</li>
+</ul>
+<h1 id="fluidsynth-226">FluidSynth 2.2.6</h1>
+<ul>
+<li>Undeprecation and minor revisal of the OSS driver (#1038)</li>
+<li>Minor improvements to CoreAudio and CoreMidi drivers (#1047, thanks to @bradhowes)</li>
+<li>Fix sustained voices being held after <code>ALL_CTRL_OFF</code> (#1049)</li>
+<li>Fix clobbering of <code>PORTAMENTO_CTRL</code> after <code>ALL_CRTL_OFF</code> (#1050)</li>
+<li>Prevent Modulation Envelope from being stuck in decay phase, causing detuned voices and potentially other audible glitches for some soundfonts (#1059)</li>
+<li>Fix a compilation issue with recent glib (#1063, thanks to @devingryu)</li>
+</ul>
+<h1 id="fluidsynth-225">FluidSynth 2.2.5</h1>
+<ul>
+<li>Fix a build failure with CMake &lt; 3.12 (#1003, thanks to @komh)</li>
+<li>OSS and MidiShare drivers are now deprecated (#1010)</li>
+<li>Prevent samples accidentally having their loops disabled (#1017)</li>
+<li>Fix framework installation on macOS (#1029, thanks to @pedrolcl)</li>
+</ul>
+<p><em>Pls. note that fluidsynth 2.3.0 will require CMake &gt;= 3.13</em></p>
+<h1 id="fluidsynth-224">FluidSynth 2.2.4</h1>
+<ul>
+<li>Per-channel <code>ALL_SOUND_OFF</code> when seeking/stopping player  (#980, thanks to @albedozero)</li>
+<li>Fix windows related encoding problems (#984, thanks to @tsingakbar)</li>
+<li>Rewind playlist when calling <code>fluid_player_play</code> after all loops are complete (#994, thanks to @albedozero)</li>
+<li>Fix MinGW related static linking issues (#990, thanks to @realnc) </li>
+</ul>
+<h1 id="fluidsynth-223">FluidSynth 2.2.3</h1>
+<ul>
+<li>FluidSynth did not build on macOS 10.5 and earlier (#946, thanks to @evanmiller)</li>
+<li>Fix build with CMake &lt;3.7 (#944, thanks to @komh)</li>
+<li>Fix a NULL dereference in <code>delete_fluid_ladspa_effect()</code> (#963)</li>
+</ul>
+<h1 id="fluidsynth-222">FluidSynth 2.2.2</h1>
+<ul>
+<li>The MIDI router now handles out-of-range parameters in a smarter manner (#891, thanks to @jjceresa)</li>
+<li>Keep pedaling effective when the same note is played more than once (#905, thanks to @jjceresa)</li>
+<li>Select soundfont samples by frequency instead of midi note numbers (#926, thanks to @Naturseptime)</li>
+<li>Fix the sequencer's event ordering for NoteOn vel=0 events (#907)</li>
+<li>libfluidsynth's import library was broken for MinGW builds (#874)</li>
+<li>fluidsynth.exe short option <code>-Q</code> not working (#915, thanks to @pedrolcl)</li>
+<li>Precompiled Android binaries didn't work (#894, #897)</li>
+<li>Fix openMP detection for XCode 12.5 (#917)</li>
+<li>Make <code>audio.jack.autoconnect</code> connect all available ports (#920)</li>
+<li>Prevent MIDI Player from continuously suppressing notes (#935, thanks to @albedozero)</li>
+<li><code>fluidsynth.pc</code> now includes private libraries for static linking (#904)</li>
+<li>Fix typos in code and documentation (#939, thanks to @luzpaz)</li>
+</ul>
+<h1 id="fluidsynth-221">FluidSynth 2.2.1</h1>
+<ul>
+<li>Make ALSA the default driver on Linux (#878)</li>
+<li>Coreaudio driver failed to initialize on macOS 11 (#803, thanks to @ringoz)</li>
+<li>WaveOut driver failed to initialize (#873, thanks to @carlo-bramini)</li>
+<li>COM initialization in WASAPI driver is no longer performed in the caller's context (#839, thanks to @pedrolcl)</li>
+<li>WASPI driver now supports reverb and chorus (#836, thanks to @chirs241097)</li>
+<li>Handle SysEx GM/GM2 mode on, GS reset, and XG reset (#877, thanks to @kode54)</li>
+<li>Old behavior of <code>fluid_player_join</code> has been restored to prevent infinite loop in client code (#872)</li>
+<li>The Soundfont loader code has been refactored, illegal generators will now be skipped more consequently (#823, thanks to @mawe42)</li>
+</ul>
+<h1 id="fluidsynth-220">FluidSynth 2.2.0</h1>
+<p><strong>This release breaks ABI compatibility!</strong> Refer to the <a href="https://www.fluidsynth.org/api/RecentChanges.html#NewIn2_2_0">API docs</a> for details.</p>
+<p>A C++98 compliant compiler is now required to build fluidsynth (<a href="https://lists.nongnu.org/archive/html/fluid-dev/2020-01/msg00010.html">mailing list thread</a>)</p>
+<h3 id="new-features_3">New features</h3>
+<ul>
+<li>Support loading SoundFonts &gt;2GiB on Windows (#629) </li>
+<li>Major overhaul of the sequencer and its event queue (#604)</li>
+<li>Overlapping notes can be handled (#637)</li>
+<li>Performance improvement, since the event queue no longer blocks the rendering thread</li>
+<li>Timescale is not limited to <code>1000</code> anymore and can therefore be used for tempo changes</li>
+<li>The following audio drivers have gained multichannel support</li>
+<li>DSound (#667, thanks to @jjceresa)</li>
+<li>WaveOut (#667, thanks to @jjceresa)</li>
+<li>The WinMIDI driver supports multiple devices (#677, thanks to @jjceresa)</li>
+<li>Handle GS DT1 SysEx messages for setting whether a channel is used for rhythm part (#708, thanks to @chirs241097)</li>
+<li>Support use of UTF-8 filenames under Windows (#718, thanks to @getraid-gg)</li>
+<li>Improved support for overriding tempo of the MIDI player (#711, #713, thanks to @jjceresa)</li>
+<li>Handle settings-related commands in user command file before initializing other objects (#739)</li>
+<li>SoundFont loading has been parallelized (#746, #812, requires openMP)</li>
+<li>The Oboe driver has gained a lower latency and other updates (#740, #741, #747)</li>
+<li>WASAPI driver has been added (#754, thanks to @chirs241097)</li>
+</ul>
+<h3 id="general">General</h3>
+<ul>
+<li>Fix race condition in <code>fluid_player_callback</code> (#783, thanks to @arcln)</li>
+<li>Improvements to LADSPA subsystem (#795, thanks to @mawe42)</li>
+</ul>
+<h1 id="fluidsynth-219">FluidSynth 2.1.9</h1>
+<p>Coreaudio driver failed to initialize on macOS 11 (#803, backport from 2.2.1)</p>
+<h1 id="fluidsynth-218">FluidSynth 2.1.8</h1>
+<ul>
+<li>Rapidly changing channel panning could have caused audible artifacts (#768). Affects all versions back to at least <code>1.1.2</code>.</li>
+<li>Fix a use-after-free when loading malformed soundfonts (#808, <a href="https://github.com/FluidSynth/fluidsynth/security/advisories/GHSA-6fcq-pxhc-jxc9">CVE-2021-21417</a>). Affects all versions back to at least <code>1.1.2</code>.</li>
+<li>The number of allowed LADSPA effect units has been increased.</li>
+</ul>
+<h1 id="fluidsynth-217">FluidSynth 2.1.7</h1>
+<ul>
+<li>a regression introduced in <code>2.1.0</code> prevented chorus from being audible when <code>fluid_synth_process()</code> was used (#751, thanks to @chirs241097)</li>
+<li>a regression introduced in <code>2.0.6</code> prevented the MIDI player from restarting playback after all files have been played (#755, thanks to @rncbc)</li>
+<li>fix a double-free violation introduced in <code>2.0.0</code> after executing the <code>info</code> shell command (#756)</li>
+</ul>
+<h1 id="fluidsynth-216">FluidSynth 2.1.6</h1>
+<p>SoundFonts may never be unloaded correctly, if
+  * polyphony is ever exceeded (#727), or
+  * voices are still playing while their SoundFont is being unloaded.</p>
+<p>Calling <code>delete_fluid_synth()</code> does not free those SoundFonts either. Affected are versions from <code>1.1.4</code> to <code>2.1.5</code> .</p>
+<h4 id="other-bug-fixes">Other bug-fixes:</h4>
+<ul>
+<li>fix a heap-based use-after-free (#733)</li>
+</ul>
+<h1 id="fluidsynth-215">FluidSynth 2.1.5</h1>
+<ul>
+<li>loading DLS may have failed in certain setup environments (#666)</li>
+<li>fix a build failure with GCC 4.8 (#661, thanks to @ffontaine)</li>
+</ul>
+<h1 id="fluidsynth-214">FluidSynth 2.1.4</h1>
+<ul>
+<li>fix an uninitialized memory access possibly triggering an FPE trap</li>
+<li>fix several regressions introduced in <code>2.1.3</code>:</li>
+<li><code>fluid_synth_start()</code> failed for DLS-presets</li>
+<li>fix a NULL dereference in jack driver</li>
+<li>fix a stack-based overflow when creating the synth</li>
+</ul>
+<h1 id="fluidsynth-213">FluidSynth 2.1.3</h1>
+<ul>
+<li>fix a cross-compilation failure from Win32 to WinARM (#630)</li>
+<li>fix issues while <code>fluid_player</code> is seeking (#634, #646)</li>
+<li>fix a NULL pointer dereference if <code>synth.dynamic-sample-loading</code> is enabled (#635)</li>
+<li>fix a NULL pointer dereference in <code>delete_rvoice_mixer_threads()</code> (#640)</li>
+<li>fix a NULL pointer dereference in the soundfont loader (#647, thanks to @jjceresa)</li>
+<li>fix dsound driver playing garbage when terminating fluidsynth (#642, thanks to @jjceresa)</li>
+<li>avoid memory leaks when using libinstpatch (#643)</li>
+</ul>
+<h1 id="fluidsynth-212">FluidSynth 2.1.2</h1>
+<ul>
+<li>fluidsynth now exits with error when user-provided command-line arguments are out-of-range (#623)</li>
+<li>add verbose error logging to opensles and oboe drivers (#627)</li>
+<li>fix a memory leak in oboe driver (#626)</li>
+<li>fix a NULL dereference in the fluidsynth commandline program</li>
+</ul>
+<h1 id="fluidsynth-211">FluidSynth 2.1.1</h1>
+<ul>
+<li>a regression introduced in 2.1.0 caused the jack audio driver to not correct a sample-rate mismatch (#607)</li>
+<li>pkg-config is now being to used to find readline (#606, thanks to @ffontaine)</li>
+<li>fix various typos in the documentation (#600, thanks to @luzpaz)</li>
+<li>fix a memory leak in the file renderer</li>
+<li>fix leaking memory when sequencer clients were not explicitly unregistered (#610)</li>
+<li>fix a heap-based use-after-free in jack driver (#613)</li>
+<li>fix the linker possibly not finding libinstpatch (#617, thanks to @realnc)</li>
+</ul>
+<h1 id="fluidsynth-210">FluidSynth 2.1.0</h1>
+<h3 id="new-features_4">New features</h3>
+<ul>
+<li>new, less "ringing" reverb engine (#380, thanks to @jjceresa)</li>
+<li>new, stereophonic chorus engine (#548, thanks to @jjceresa)</li>
+<li>support for Downloadable Sounds (DLS) files was added (#320, requires <a href="https://github.com/swami/libinstpatch">libinstpatch</a>)</li>
+<li>improved integrity checking of SoundFont modulators (#467, thanks to @jjceresa)</li>
+<li><a href="../ExampleCommandLines/#fluidsynth-to-stdout">rendering to stdout is now possible</a> (#553, thanks to @mawe42)</li>
+<li>the following Audio Drivers have been added:</li>
+<li>Oboe (#464, tested on Android, thanks to @atsushieno)</li>
+<li>OpenSLES (#464, tested on Android, thanks to @atsushieno)</li>
+<li>SDL2 (#478, thanks to @carlo-bramini)</li>
+<li>WaveOut (#466, tested on Win98, WinNT4.0, WinXP, thanks to @carlo-bramini)</li>
+<li>various performance improvements (#543, #545,  #547,  #569,  #573)</li>
+</ul>
+<h3 id="bug-fixes_2">Bug fixes</h3>
+<ul>
+<li>generator <code>modEnvAttack</code> now has a convex shape according to SoundFont spec (#153)</li>
+<li>the default <code>MIDI Pitch Wheel to Initial Pitch</code> modulator now uses <code>Fine Tune</code> as destination generator, allowing it to be overridden by the soundfont designer (#154, thanks to @jjceresa)</li>
+</ul>
+<h1 id="fluidsynth-209">FluidSynth 2.0.9</h1>
+<ul>
+<li>an implicitly declared function (regression of 2.0.8) caused a pointer to int truncation in CoreAudio driver (#591)</li>
+<li>fix a stack-based overflow in CoreAudio driver (#594, thanks to @fkmclane)</li>
+</ul>
+<p><em>Note that this version mistakenly reports as <code>2.0.8</code>.</em></p>
+<h1 id="fluidsynth-208">FluidSynth 2.0.8</h1>
+<ul>
+<li>fix incorrect behavior of <code>fluid_sample_set_sound_data()</code> (#576, thanks to @swesterfeld)</li>
+<li>fix voices being mixed incorrectly, causing audible crackle esp. at sample-rates &gt;48kHz (#580)</li>
+<li>make sure that defining <code>NDEBUG</code> disables assertions</li>
+</ul>
+<h1 id="fluidsynth-207">FluidSynth 2.0.7</h1>
+<ul>
+<li>fix broken audio output when reverb was active after synth creation (#563)</li>
+<li>fix debug console messages not being visible for debug builds on Windows</li>
+</ul>
+<h1 id="fluidsynth-206">FluidSynth 2.0.6</h1>
+<ul>
+<li>fix an uninitialized memory access, which could have led to NULL dereference or heap corruption in an out-of-memory situation</li>
+<li>fix a use-after-free when calling <code>fluid_player_stop()</code></li>
+<li>fix the MIDI player not outputting any sound after stopping and restarting the playback (#550)</li>
+</ul>
+<h1 id="fluidsynth-205">FluidSynth 2.0.5</h1>
+<ul>
+<li>the MIDI player erroneously assumed a default tempo of 125 BPM rather than 120 BPM (#519)</li>
+<li>improve integration of systemd (#516, thanks to @fleger)</li>
+<li>fix a buffering bug in <code>fluid_synth_process()</code> (#527, thanks to @swesterfeld)</li>
+<li>fix a major memory leak when unloading SF3 files (#528, thanks to @mawe42)</li>
+<li>fix several NULL dereferences and memory leaks in jack driver</li>
+<li>fix a memory leak when creating threads</li>
+</ul>
+<h1 id="fluidsynth-204">FluidSynth 2.0.4</h1>
+<ul>
+<li>introduce verbose error reporting for <code>fluid_settings_*</code> functions </li>
+<li>avoid undefined behavior when <code>fopen()</code> directories</li>
+<li>improve compatibility with FreeBSD and DragonFlyBSD (#508, thanks to @t6)</li>
+<li>fix build when cross compiling (#501)</li>
+<li>fix build on Mac OS X 10.4 (#513)</li>
+<li>fix build when compiling with MinGW</li>
+<li>enable network support on Mac by default (#513)</li>
+</ul>
+<h1 id="fluidsynth-203">FluidSynth 2.0.3</h1>
+<ul>
+<li>fix handle leak in winmidi driver (#469, thanks to @carlo-bramini)</li>
+<li>fix build failures when cross compiling (#484)</li>
+<li>fix a bug when calculating the lower boundary of attenuation (#487, thanks to @jjceresa)</li>
+<li>fix a double free in <code>fluid_sample_set_sound_data()</code></li>
+<li>silence a warning when loading soundfonts from memory (#485, thanks to @mawe42)</li>
+<li>minor performance improvements (#461, #471, #482, #486, thanks to @carlo-bramini and @jjceresa)</li>
+</ul>
+<h1 id="fluidsynth-202">FluidSynth 2.0.2</h1>
+<ul>
+<li>fix building fluidsynth without any audio drivers  (#447)</li>
+<li>fix a possibly misaligned memory access in the soundfont loader (#457)</li>
+<li>fix a memory leak in the pulse audio driver (#458)</li>
+<li>fix a NULL deref in the coreaudio driver (#458)</li>
+<li>use cmake to query for DSound and WinMidi support (#449, thanks to @carlo-bramini)</li>
+<li>remove an unintended MFC dependency header (#449, thanks to @carlo-bramini)</li>
+<li>include Windows DLL version info for MinGW builds (#449, thanks to @carlo-bramini)</li>
+<li>implement <code>midi.autoconnect</code> for jack (#450, thanks to @ColinKinloch)</li>
+<li>add a cmake option to disable multi-threading (#463, thanks to @carlo-bramini)</li>
+</ul>
+<h1 id="fluidsynth-201">FluidSynth 2.0.1</h1>
+<ul>
+<li>implement auto-conntect for CoreMidi  (#427, thanks to @ColinKinloch)</li>
+<li>fix a build issue with cmake &lt; 3.3</li>
+<li>fix a crash when creating multiple jack drivers (#434, thanks to @rncbc)</li>
+<li>various fixes to dsound driver (#435, thanks to @carlo-bramini)</li>
+<li>fix multiple potential NULL dereferences (#437)</li>
+<li>fix two memory leaks in the soundfont loader (#437)</li>
+<li>correct upper threshold of <code>synth.chorus.depth</code></li>
+</ul>
+<h1 id="fluidsynth-200">FluidSynth 2.0.0</h1>
+<h3 id="new-features_5">New Features</h3>
+<ul>
+<li>implement polyphonic key pressure (#185, thanks to @mawe42)</li>
+<li>add API for manipulating default modulators (#265, #164, #71, thanks to @mawe42)</li>
+<li>add <code>midi.autoconnect</code> setting for automatically connecting fluidsynth with available MIDI Input ports (currently only for <code>alsa_seq</code> thanks to @tomcucinotta)</li>
+<li>add seek support to midi-player (#261, thanks to @loki666)</li>
+<li>add support for text and lyrics midi events (#111)</li>
+<li>add support for 24 bit sample soundfonts (#301, #329)</li>
+<li>consider "important midi channels" during overflow calculation <code>synth.overflow.important-channels</code> (#294, thanks to @mawe42)</li>
+<li>add a custom default modulator for MIDI CC8 to support proper stereo balance (#317, thanks to @mawe42)</li>
+<li>add support for an additional custom high-pass filter (#331, thanks to @mawe42)</li>
+<li>incorporate JJC's polymono patch (#306, #236, #158)</li>
+<li>add basic channel support</li>
+<li>implement MIDI modes Omni On, Omni Off, Poly, Mono</li>
+<li>implement portamento control</li>
+<li>implement legato control</li>
+<li>implement breath control</li>
+<li>add support soundfont loading from memory (#241)</li>
+<li>add a profiling command interface (#345, thanks to @jjceresa)</li>
+<li>add support on demand sample loading (#366, thanks to @mawe42)</li>
+<li>add reverb and chorus settings (#49)</li>
+<li>allow using the midi router to manipulate midi files when playing from command line</li>
+<li><code>fluid_synth_process()</code> received a new proper implementation</li>
+<li><code>synth.effects-groups</code> allows to render effects of all MIDI channels to separate audio channels</li>
+</ul>
+<h3 id="general_1">General</h3>
+<ul>
+<li>CMake 3.1.0 or later is required for building</li>
+<li>consider channel pressure, key pressure and pitch wheel for lower attenuation boundary calculation (#163, thanks to @mawe42)</li>
+<li>complete rewrite of the LADSPA subsystem (#227,  #235, thanks to @mawe42)</li>
+<li>complete rewrite of the Soundfont Loader API (#334, #309)</li>
+<li>avoid reverb amplitude growing exponentially (#279, thanks to @jjceresa)</li>
+<li>removed deprecated autotools build system</li>
+<li>a minimal build of fluidsynth without requiring pkg-config is supported</li>
+<li>remove deprecated LADCCA support</li>
+<li>use unique device names for the <code>audio.portaudio.device</code> setting (#284, thanks to @jjceresa)</li>
+<li>documentation of the settings moved to <a href="http://www.fluidsynth.org/api/fluidsettings.xml">http://www.fluidsynth.org/api/fluidsettings.xml</a></li>
+<li>adjust MIDI Pan and Balance calculations as outlined by MIDI Recommended Practice (RP-036) (#317, thanks to @mawe42)</li>
+<li>make network support compile-time optional (#307, thanks to @carlo-bramini)</li>
+<li>speed up calculation of chorus modulation waveforms for devices without FPU (#321, thanks to @carlo-bramini)</li>
+<li>cleanup internal audio rendering and mixing engine (#197)</li>
+<li>reduce memory consumption of loaded soundfonts (#370, thanks to @mawe42)</li>
+</ul>
+<h1 id="fluidsynth-1111">FluidSynth 1.1.11</h1>
+<ul>
+<li>fix pkgconfig file for absolute paths (#347, thanks to @krop)</li>
+<li>add a cmake option for OSS support  (#350, thanks to @Ne01eX)</li>
+<li>fix broken <code>enable-midishare</code> cmake option</li>
+<li>fix double free in <code>fluid_midi_router</code> (#352, thanks to @fulinux) </li>
+<li>prevent malicious soundfonts from causing buffer overflows (#354, thanks to @mawe42)</li>
+<li>avoid SF3 files to be loaded incorrectly (#354, thanks to @mawe42)</li>
+<li>fix an endless loop in fast file renderer (#367)</li>
+</ul>
+<h1 id="fluidsynth-1110">FluidSynth 1.1.10</h1>
+<h3 id="bug-fixes_3">Bug Fixes</h3>
+<ul>
+<li>avoid a buffer overrun when loading malformed soundfonts (#327)</li>
+<li>fix <code>synth.default-soundfont</code> returning incomplete path (#332)</li>
+<li>improve reliability of <code>fluid_is_soundfont()</code> (thanks to Orcan Ogetbil)</li>
+<li>minor cmake adjustments for MSVC builds to enable building fluidsynth as vcpkg package (#333, #339, thanks to @stekyne)</li>
+<li>fix build issues against statically built fluidsynth library on all OSs (#341)</li>
+<li>cmake: prevent double usage of <code>LIB_SUFFIX</code> and <code>LIB_INSTALL_DIR</code></li>
+</ul>
+<h3 id="new-features_6">New Features</h3>
+<ul>
+<li>include Windows version info in libfluidsynth.dll (#216, thanks to @harborsiem)</li>
+<li>enable jack midi driver to support more than 16 midi channels (#326)</li>
+<li>enable fluidsynth to be set up as systemd user service (#66, #342, thanks to @dvzrv)</li>
+</ul>
+<h1 id="fluidsynth-119">FluidSynth 1.1.9</h1>
+<h3 id="bug-fixes_4">Bug Fixes</h3>
+<ul>
+<li>fix building the PortAudio driver on Windows (thanks to @ReinholdH)</li>
+<li>fix build if no MIDI drivers are available (thanks to @carlo-bramini)</li>
+<li>fix return value of <code>fluid_file_set_encoding_quality()</code> (thanks to @ReinholdH)</li>
+<li>fix use-after-free in fluid_timer</li>
+<li>fix memory leak in PulseAudio driver</li>
+<li>fix memory leak in rvoice_mixer (thanks to @mawe42)</li>
+<li>fix <code>dumptuning</code> shell command displaying uninitialized values (thanks to @rmattes)</li>
+<li>fix a resource leak in <code>source</code> shell command (thanks to @carlo-bramini)</li>
+<li>harmonize fluidsynth's output library naming with autotools on Windows (#271, thanks to @fabiangreffrath)</li>
+<li>don't set <code>LIB_SUFFIX</code> when building with MinGW (#281, thanks to @fabiangreffrath)</li>
+<li>avoid a possible deadlock when initializing fluidsynth's DLL on Windows (#269, #286, thanks to @carlo-bramini and @jjceresa)</li>
+<li>avoid a buffer overrun when mixing effects channels in <code>fluid_synth_nwrite_float()</code> (#287)</li>
+<li>correctly clean up <code>fluid_server</code> on Windows (#304, thanks to @carlo-bramini)</li>
+</ul>
+<h3 id="new-features_7">New Features</h3>
+<ul>
+<li>implement handling of <code>FLUID_SEQ_ALLSOUNDSOFF</code> events in <code>fluid_seq_fluidsynth_callback()</code></li>
+<li>support for registering audio drivers based on actual needs (#218)</li>
+</ul>
+<h1 id="fluidsynth-118">FluidSynth 1.1.8</h1>
+<p>Minor maintenance release to address some issues introduced with 1.1.7:</p>
+<ul>
+<li>fix build against glib &lt; 2.30 (#202)</li>
+<li>fix dsound audio driver on windows (#215)</li>
+<li>fix a bug around <code>synth.audio-groups</code> setting, which caused improper multichannel rendering (#225)</li>
+<li>cmake &gt;= 3.0.2 is now required</li>
+<li>compilation with clang is now possible</li>
+<li>build fixes on OS/2 (thanks to @komh)</li>
+</ul>
+<h1 id="fluidsynth-117">FluidSynth 1.1.7</h1>
+<p>This is mainly considered to be a maintenance release, although it brings a few new features, see below. <strong>Note</strong> that this is expected to be the last release to ship the deprecated and unmaintained autotools build system! Make sure you check out <a href="../BuildingWithCMake/">how to build fluidsynth using CMake</a>.</p>
+<h3 id="bug-fixes_5">Bug fixes</h3>
+<ul>
+<li><strong>consistently relicense libfluidsynth under LGPL-2.1+</strong> (also addressing fluid_chorus.c, #165)</li>
+<li><code>fluid_synth_set_channel_type()</code> was not exported properly</li>
+<li>introduce visibility control of exported functions (ee54995fabd260f54862cc15c6118fabf8b8b216)</li>
+<li>Avoid memory allocation on program change</li>
+<li>fix calculations for modulators (#194)</li>
+<li>fix SysEx parsing issues (#127, #148, thanks to Erik Ronström and Stas Sergeev)</li>
+<li>fix mangling with illegal sample loops, causing audible glitches (#171,  #149, thanks to @mawe42)</li>
+<li>fix inverse logic of audio.jack.multi option (#135)</li>
+<li>fix channel fine tune RPN to use correct range (#187, thanks to @mawe42)</li>
+<li>fix timing problems when changing the sequencers scale from a callback event (#195, thanks to @imhcyx)</li>
+<li>workaround incorrectly rendered audio when requesting more than 64 frames from <code>fluid_synth_write_*()</code> (#192)</li>
+<li>adjust ALSA MIDI port type (#139)</li>
+<li>avoid voice_count becoming negative (#151, thanks to Jean-Jacques Ceresa)</li>
+<li>avoid notes with a fixed key generator playing forever (#159)</li>
+<li>avoid TCP/IP connections from closing in an undefined manner (b75c8fdb17f842592b7e5af1fb0ddefde7f351d2)</li>
+<li>a lot of memory leaks, NULL dereferences and SegFaults (thanks to Surabhi Mishra)</li>
+<li>fix build</li>
+<li>if EPIPE == ESTRPIPE (#133)</li>
+<li>for mingw32 by checking for inet_ntop() (#132)</li>
+<li>having lash support enabled</li>
+<li>for &gt; VS2015 (#189, thanks to @stekyne)</li>
+</ul>
+<h3 id="new-features_8">New Features</h3>
+<ul>
+<li>add support of vorbis-compressed sf3 sound fonts (#140, thanks to @fabiangreffrath)</li>
+<li>add sostenuto pedal to the synth (#47, #134, thanks to Jean-Jacques Ceresa)</li>
+<li>add vbr quality when encoding with libsndfile</li>
+<li>re-implement routing reverb and chorus to distinct buffers in <code>fluid_synth_nwrite_float()</code> (#135)</li>
+<li>add IPv6 support to socket API (#124)</li>
+<li>add default soundfont setting: <code>synth.default-soundfont</code></li>
+<li>add <code>synth.lock-memory</code> setting</li>
+<li>allow sampledata sharing between different FluidSynth instances (thanks to @kmatheussen)</li>
+</ul>
+<h3 id="new-api-calls">New API calls</h3>
+<ul>
+<li>channel, key, velocity and state getter for <code>fluid_voice_t</code></li>
+<li>tempo, bpm, total length and currentBeat getter for <code>fluid_player</code> (#190, thanks to @quiasmo)</li>
+</ul>
+<h1 id="fluidsynth-116">FluidSynth 1.1.6</h1>
+<h3 id="fixes-and-changes">Fixes and changes</h3>
+<ul>
+<li>Handle MIDI End of track events, ticket #100 (Matt Giuca)</li>
+<li>Prevent broken rendering after a voice overflow, ticket #99  (diwic)</li>
+<li>Enable long arguments where available (plcl)</li>
+<li>Windows: Install fluidsynth.pc (pkg-config spec), ticket #101 (plcl)</li>
+<li>Mac OS X Lion: Fix build failure, ticket #104  (twobits)</li>
+<li>Linux: Prevent libdbus crash (diwic)</li>
+</ul>
+<h3 id="test-results-from-the-fluidsynth-tester-program">Test results from the FluidSynth tester program</h3>
+<p><strong>Tester</strong>
+<strong>Test Case</strong>
+<strong>Result</strong></p>
+<div class="language-text highlight"><pre><span></span><code>S Christian Collins 
+SoundFont compatibility: Proper rendering of modulators, etc 
+OK
+
+S Christian Collins 
+Voice stealing logic 
+OK
+
+S Christian Collins 
+Reverb and chorus 
+OK
+
+Sven Meier 
+Windows build (using mingw-w64) 
+OK
+
+Sven Meier 
+OS X build 
+Untested
+
+Bernd Casper 
+jOrgan setup 
+Untested
+
+Aere Greenway 
+QSynth setup 
+OK
+
+Aere Greenway 
+Low memory and slow CPU environment 
+OK
+
+Matt Giuca 
+Linux build (using Ubuntu) 
+OK
+
+Matt Giuca 
+Fast rendering 
+OK
+
+Matt Giuca 
+FluidSynth as backend to DOSBox 
+OK
+</code></pre></div>
+<h1 id="fluidsynth-115">FluidSynth 1.1.5</h1>
+<p>This is a pure bug fix release compared to 1.1.4. </p>
+<p>The following bugs are fixed: </p>
+<ul>
+<li>Autotools build resulted in the wrong version number for libfluidsynth.so (reported by plcl, Takashi Iwai) </li>
+<li>One symbol was dropped from libfluidsynth.so - this symbol was not part of the public API though. (reported by Alessio Treglia) </li>
+<li>Windows 64 bit: Wrong prototype declaration for MIDI (reported by Graham Goode) </li>
+<li>JACK: Using jack_free instead of free when needed. Note that this might require a later version of JACK than previously. (reported by Graham Goode) </li>
+<li>Update Free Software Foundation address (reported by ogetbilo) </li>
+</ul>
+<h1 id="fluidsynth-114">FluidSynth 1.1.4</h1>
+<h3 id="in-short">In short</h3>
+<p>Version 1.1.4 brings: </p>
+<ul>
+<li>Several improvements and fixes to the CMake build system, especially for Mac OS X </li>
+<li>Several bug fixes to the engine, notably quite a few which could cause [FluidSynth] to sound bad in some cases. </li>
+<li>API additions, that make it possible to <ul>
+<li>load MIDI files from memory </li>
+<li>to inspect/modify MIDI events as they are being played from a MIDI file </li>
+<li>to change channels between melodic and drum mode </li>
+<li>and to silence all notes in one command. </li>
+</ul>
+</li>
+<li>Improvements to the CoreAudio driver </li>
+</ul>
+<h3 id="in-detail">In detail</h3>
+<p>(This is a summary of the commit log) </p>
+<h4 id="enhancements-and-api-additions">Enhancements and API additions</h4>
+<ul>
+<li>Add playback callback from the MIDI file player for intercepting MIDI data on playback. [Jason Vasquez, plcl, diwic, etc] </li>
+<li>Use glib utility function for shell parsing (ticket <a href="https://github.com/FluidSynth/fluidsynth/issues/44">#44</a>) [diwic] </li>
+<li>Allow in-memory midi file to be loaded by the midi engine [Matt Giuca] </li>
+<li>fluid_synth_all_notes_off and fluid_synth_all_sounds_off can now silence all channels at once, and are now public API functions. [jimmy, diwic] </li>
+<li>Allow channels to change state between melodic and drum channels [jimmy] </li>
+<li>support for "audio.coreaudio.device" option in Mac OS X CoreAudio driver [plcl] </li>
+<li>Mac CoreAudio driver adapted to AuHAL [plcl] </li>
+</ul>
+<h4 id="build-system-enhancements-and-fixes">Build system enhancements and fixes</h4>
+<ul>
+<li>Preliminary support for creating in Mac OS X a "[FluidSynth].framework" [plcl] </li>
+<li>Platform dependent options scoped to only the relevant platform [plcl] </li>
+<li>CMake build system fix: unset the variables created by check_pkg_modules() allowing to disable optional features that were formerly enabled [plcl] </li>
+<li>CMake build system fix for ticket <a href="https://github.com/FluidSynth/fluidsynth/issues/90">#90</a>: install dirs configurable [plcl] </li>
+<li>New macro: unset_pkg_config() [plcl] </li>
+<li>The unset() command requires CMake 2.6.3 or newer [plcl] </li>
+<li>fixed creation of the file "fluidsynth.pc", using the new *_INSTALL_DIR variables [plcl] </li>
+<li>removed the deprecated macro "CreateLibtoolFile" (unused) [plcl] </li>
+<li>renamed LT_VERSION_<em> variables as LIB_VERSION_</em> [plcl] </li>
+<li>build system fixes for OS/2 [KO Myung-Hun] </li>
+<li>Don't enable PortAudio support by default [plcl] </li>
+<li>Fix CoreAudio build problem [plcl, reported by Sven Meier] </li>
+<li>fix for ticket <a href="https://github.com/FluidSynth/fluidsynth/issues/97">#97</a> : Latest fluid_midi.c fails to build under MSVC 2010 [plcl] </li>
+<li>gcc flags again: -Wno-vla removed because it is not supported by an Apple compiler [plcl] </li>
+<li>avoid to output a wrong error message [plcl] </li>
+<li>new GCC warning flag, trying to avoid a common MSVC unsupported C language construct [plcl] </li>
+<li>Build documentation instructions [plcl] </li>
+<li>Mac OS X fixes: frameworks build, midi.coremidi.id option. [plcl] </li>
+</ul>
+<h4 id="bug-fixes-misc">Bug fixes (misc)</h4>
+<ul>
+<li>Do not use loop noise floor if sample continues in release phase (ticket <a href="https://github.com/FluidSynth/fluidsynth/issues/93">#93</a>) [diwic, reported by Graham Goode] </li>
+<li>Prevent the IIR filter from loud pops on quick frequency changes (ticket <a href="https://github.com/FluidSynth/fluidsynth/issues/82">#82</a>) [diwic] </li>
+<li>Fix memory leak causing soundfonts not to be deleted in delete_fluid_synth [diwic, reported by R\u0102\u0160mi Denis-Courmont] </li>
+<li>Fix incorrect samplerate for reverb and chorus (ticket <a href="https://github.com/FluidSynth/fluidsynth/issues/89">#89</a>) [jaz001] </li>
+<li>Empty event queue from non-realtime context on startup, prevents timeout [diwic, reported by Krysztof Foltman] </li>
+<li>Allow sample rates down to 8 kHz [diwic] </li>
+<li>Fix for bug with duplicate sample names in [SoundFont] files [jgreen] </li>
+<li>Ignore extra size in [SoundFont] smpl chunk so that [FluidSynth] can load 24 bit [SoundFont] files as 16 bit, rather than rejecting the file. [jgreen] </li>
+<li>Better message when substituting presets, and store XG LSB changes even in drum mode. [diwic] </li>
+<li>Fix notes slightly off pitch (with floats and short loops) [diwic] </li>
+<li>fix for bug "Undefined behavior parsing a MIDI file which unexpectedly ends" (ticket <a href="https://github.com/FluidSynth/fluidsynth/issues/92">#92</a>) [plcl, reported by Matt Giuca] </li>
+</ul>
+<h4 id="code-cleanup-refactoring">Code cleanup / refactoring</h4>
+<ul>
+<li>Code cleanup, and remove unnecessary atomicy and shadow variables, now that the new architecture is in place [diwic] </li>
+<li>Rewrite overflow so that an extra rvoice is used [diwic] </li>
+<li>Fixed warning in fluid_synth.c [plcl] </li>
+<li>Add out-of-memory checks to fluid_player_add and fluid_player_add_mem [diwic] </li>
+<li>reformat fluid_midi.c source according to the coding style. [plcl] </li>
+</ul>
+<h1 id="fluidsynth-113">FluidSynth 1.1.3</h1>
+<p>FluidSynth 1.1.3 is a pure bug-fix release and contains no new functionality. </p>
+<ul>
+<li>Compilation with LADSPA enabled was broken in 1.1.2 - fixed (plcl, diwic) </li>
+<li>Multichannel output broken when double precision was used - fixed (plcl, diwic) </li>
+<li>Doxygen settings (plcl) </li>
+<li>Mac OS X build system fixes (plcl, Benjamin Reed, Jean-Fran\u00e7ois Mertens) </li>
+<li>Fix build problem with scummvm (Alexander Hansen, Ebrahim Mayat) </li>
+<li>Optimize by not starting unused threads with multicore rendering (diwic) </li>
+<li>Window handle creation/destruction in Windows dll version (Andy Fillebrown) </li>
+<li>Race condition in alsa_seq / alsa_raw drivers caused them not to quit (diwic) </li>
+<li>Only free <a href="http://goodexamplepapers.com/">example papers online</a> for students </li>
+</ul>
+<h1 id="fluidsynth-112">FluidSynth 1.1.2</h1>
+<h3 id="big-changes">Big changes:</h3>
+<ul>
+<li>New CMake build system [plcl] <ul>
+<li>Winbuild and Macbuild directories dropped </li>
+<li>Autotools build system is deprecated, but is still working </li>
+</ul>
+</li>
+<li>Rewriting of thread safety [diwic] <ul>
+<li>Two new settings control the thread safety mode. The default is to be backwards compatible. </li>
+</ul>
+</li>
+</ul>
+<h3 id="smaller-changes">Smaller changes:</h3>
+<ul>
+<li>Voice overflow settings [diwic] </li>
+<li>Possible to update polyphony, up to 65536 (and beyond initial setting) [diwic] </li>
+<li>Possible to update sample rate (jack driver updates sample rate correctly) [diwic] </li>
+<li>MIDI Bank Select handling fixed [plcl] </li>
+<li>Source files moved into different subdirectories [diwic] </li>
+<li>Can use RealTimeKit (on Linux) to get real-time priority [diwic] </li>
+<li>Shell commands for pitch bend and pitch bend range [monk] </li>
+<li>PulseAudio driver: specify media role, and allow PulseAudio to adjust latency [diwic] </li>
+<li>Bug fixes [diwic, plcl, KO Myung hun, Felix Krause, laurent, nshepperd] </li>
+</ul>
+<p>For a complete list of changes, please see the svn commit log.</p>
+<h1 id="fluidsynth-111-clarity">FluidSynth 1.1.1 - "Clarity"</h1>
+<p>Changes from previous version 1.1.0</p>
+<h3 id="bug-fixes_6">Bug fixes</h3>
+<ul>
+<li>Recommit fix for voice stealing algorithm (David Henningsson) </li>
+<li>Update deltatime on midi file load, ticket <a href="https://github.com/FluidSynth/fluidsynth/issues/59">#59</a> (David Henningsson and Josh Green, reported by Hans Petter Selasky) </li>
+<li>Build fix on OS X 10.4 (David Fang and Ebrahim Mayat) </li>
+<li>Fixed most asynchronous assignment/query regressions affecting QSynth (chorus, reverb, polyphony, MIDI CCs and presets) (Josh Green, reports and testing by Rui Nuno Capela) </li>
+<li>Reverted queuing of chorus and reverb assignments which fixes real-time performance issues when changing values (Josh Green) </li>
+<li>Fixed issue with audio thread changes affecting CoreAudio on OS X (Josh Green, reported by Ebrahim Mayat) </li>
+<li>Improved SMP safety with CC MIDI controls, polyphony, modulators and synth gain (Josh Green) </li>
+<li>Fixed crash bugs in fluid_timer functions (Josh Green) </li>
+<li>Reverted char * -&gt; const char * changes to function prototypes (Josh Green, reported by Rui Nuno Capela) </li>
+<li>Fixed TCP server build issue where WITHOUT_SERVER was still being set on win32 (Josh Green) </li>
+<li>Fixed crash when Jack driver was re-created (Josh Green) </li>
+<li>Fixed unknown macro warning in FluidSynth man page (David Henningsson) </li>
+</ul>
+<h3 id="misc">Misc</h3>
+<ul>
+<li>Return queue process is now a thread instead of a timer and more responsive (Josh Green) </li>
+<li>Added missing dist files in doc/ (Josh Green) </li>
+<li>Updated README-OSX (Ebrahim Mayat) </li>
+</ul>
+<h3 id="changes-affecting-developers">Changes affecting developers</h3>
+<ul>
+<li>New fluid_synth_get_channel_info() function for a thread safe way of getting channel preset info (Josh Green) </li>
+<li>New fluid_synth_unset_program() function to unset a channel preset assignment (Josh Green) </li>
+<li>Marked fluid_synth_get_channel_preset() as deprecated (Josh Green) </li>
+<li>Developer API docs updated </li>
+</ul>
+<p>See "What's new in 1.1.1?" section in developer API documentation for more details: </p>
+<p><a href="http://fluidsynth.sourceforge.net/api/index.html#NewIn1_1_1">http://fluidsynth.sourceforge.net/api/index.html#NewIn1_1_1</a></p>
+<h3 id="contributors">Contributors</h3>
+<ul>
+<li>Josh Green </li>
+<li>David Henningsson </li>
+<li>Rui Nuno Capela </li>
+<li>Ebrahim Mayat </li>
+<li>David Fang </li>
+<li>Hans Petter Selasky </li>
+</ul>
+<h1 id="fluidsynth-110-a-more-solid-fluid">FluidSynth 1.1.0 - "A More Solid Fluid"</h1>
+<p>Changes from previous version 1.0.9 </p>
+<h3 id="features-and-improvements">Features and improvements</h3>
+<ul>
+<li>Extensive work on making <a href="../">FluidSynth</a> more thread safe, resulting in better stability. </li>
+<li>Audio file rendering for MIDI to audio file conversion, faster than realtime (#15). </li>
+<li>Optional libsndfile support for file rendering in different audio file formats (wav, flac, Ogg Vorbis, etc.) (#30). </li>
+<li>Audio and MIDI are synchronized for MIDI file playback. </li>
+<li>Server can be specified for Jack audio and MIDI drivers. </li>
+<li>Jack audio and MIDI is now synchronized (when same Jack server used). </li>
+<li>MIDI file playback is now timed correctly, even with large audio buffer sizes. </li>
+<li>Fixed issue with missing percussion in MIDI files caused by very short notes, using synth.min-note-length setting (#1). </li>
+<li>Improved support for MIDI tuning standard, including SYSEX support and realtime tuning activation. </li>
+<li>Multicore support for utilizing multiple CPUs for synthesis or increasing speed of file rendering. </li>
+<li>Voices for a note-on event are started synchronously (#46). </li>
+<li>TCP/IP shell server support for windows (#20). </li>
+<li>Improved settings output (-o help) (alphabetically sorted and string options listed). </li>
+<li>Audio driver (-a) and MIDI driver (-m) options now accept "help" and list available options (#41). </li>
+<li>Added audio.realtime-prio and midi.realtime-prio for controlling realtime scheduling of some audio and MIDI drivers. </li>
+<li>Default priority levels of audio and MIDI threads set to 60 and 50 respectively. </li>
+<li>All yes/no string boolean settings converted to integer toggle settings (with backwards compatibility). </li>
+<li>glib is now a required dependency. </li>
+<li>Updated README-OSX </li>
+<li>Added "voice_count" shell command for getting current number of active voices. </li>
+</ul>
+<h3 id="new-command-line-options">New command line options</h3>
+<ul>
+<li>-F, --fast-render=[file] </li>
+<li>-T, --audio-file-type </li>
+<li>-O, --audio-file-format </li>
+<li>-E, --audio-file-endian </li>
+</ul>
+<h3 id="new-or-changed-parameters">New or changed parameters</h3>
+<ul>
+<li>Audio file output settings: audio.file.endian, audio.file.format, audio.file.name, audio.file.type, audio.sample-format </li>
+<li>Realtime scheduling settings: audio.realtime-prio, midi.realtime-prio </li>
+<li>Jack settings: audio.jack.server and midi.jack.server </li>
+<li>Other settings: player.reset-synth, player.timing-source, synth.cpu-cores (experimental), synth.min-note-length </li>
+</ul>
+<h3 id="bug-fixes-and-minor-changes">Bug fixes and minor changes</h3>
+<ul>
+<li>Fixed enabling of high priority scheduling in many audio drivers. </li>
+<li>Fixed bank selection logic </li>
+<li>Build fixes for mingw and VC++ builds on Windows </li>
+<li>Fix default values (after MIDI reset) to be more consistent with MIDI spec (#29). </li>
+<li>Removed VintageDreamsWaves?-v2.sf2 since it wasn't under a free license. </li>
+<li>Solaris build fix (#52) </li>
+<li>Implemented fluid_player_set_loop (#33) </li>
+<li>Fixed scaletune error (#26) </li>
+<li>Fixed synth reset between songs (#31) </li>
+<li>Fixed pitch bend error in Windows MIDI driver (#54) </li>
+<li>Skip remaining track data in MIDI file after EOT (#53) </li>
+<li>Bug fix in MIDI router where mutex was left locked with MIDI system reset message. </li>
+<li>Help command now shows list of topics instead of General help. </li>
+<li>Fixed non-blocking in alsa_raw, alsa_seq and OSS MIDI drivers. </li>
+<li>Fixed segfault on config file load (#45). </li>
+</ul>
+<h3 id="changes-affecting-developers_1">Changes affecting developers</h3>
+<ul>
+<li>Developer API docs overhauled and now very complete. </li>
+<li>Lots of code cleanup in fluid_synth.c, fluid_chorus.c, fluid_reverb.c and fluid_chan.c. </li>
+<li>Improved use of settings hints for all settings. </li>
+<li>char * arguments changed to const char * for many function prototypes. </li>
+<li>Many new API functions. </li>
+</ul>
+<p>See "What's new in 1.1.0?" section in developer API documentation for more details: </p>
+<p><a href="http://fluidsynth.sourceforge.net/api/index.html#NewIn1_1_0">http://fluidsynth.sourceforge.net/api/index.html#NewIn1_1_0</a></p>
+<h3 id="contributors_1">Contributors</h3>
+<ul>
+<li>Josh Green </li>
+<li>David Henningsson </li>
+<li>Pedro Lopez-Cabanillas </li>
+<li>Ebrahim Mayat </li>
+</ul>
+<p>And many others! </p>
+<h1 id="fluidsynth-109-a-sound-future">FluidSynth 1.0.9 - "A Sound Future"</h1>
+<p>Changes from previous version 1.0.8 </p>
+<h3 id="features-and-improvements_1">Features and improvements</h3>
+<ul>
+<li>New PulseAudio? driver (Josh Green) </li>
+<li>New Jack MIDI driver (Josh Green) </li>
+<li>New CoreMIDI driver (Pedro Lopez-Cabanillas) </li>
+<li>PortAudio driver re-written for PortAudio 19 (Josh Green) </li>
+<li>Support for OS/2 including Dart audio driver (KO Myung-Hun) </li>
+<li>RPN GM MIDI messages now handled for Bend Range, Fine Tune and Coarse Tune (Josh Green) </li>
+<li>MIDI channel pressure now handled (Bernat Arlandis i Ma\u00f1\u00f3) </li>
+<li>MIDI Program/Bank instrument fallback selection logic (Josh Green and thanks also to Jimmy) </li>
+<li>Added midi.portname setting to ALSA sequencer, -p command line switch (Nicolas Boulicault) </li>
+<li>Added midi.winmidi.device setting to winmidi driver (Pedro Lopez-Cabanillas) </li>
+<li>Updated Max/MSP [FluidSynth] binding (Norbert Schnell) </li>
+</ul>
+<h3 id="synthesis-changes">Synthesis Changes</h3>
+<ul>
+<li>Volume attenuation [SoundFont] generator now behaves more like EMU10K1 (S. Christian Collins) </li>
+<li>Stop forcing velocity based filtering (S. Christian Collins) </li>
+<li>Fixes to linear/bipolar/positive and convex/bipolar/positive modulator functions (S. Christian Collins) </li>
+<li>Added fix to properly search for percussion instrument (Josh Green) </li>
+<li>Force velocity envelope value to be that of the previous stage when switching from decay to sustain (S. Christian Collins) </li>
+<li>Filter calculation now uses synthesizer sample rate rather than fixed at 44100 (S. Christian Collins) </li>
+</ul>
+<h3 id="bug-fixes_7">Bug fixes</h3>
+<ul>
+<li>Fixed Jack driver in "audio.jack.multi=yes" mode and Jack audio driver cleanup (Bernat Arlandis i Ma\u00f1\u00f3 and Pedro Lopez-Cabanillas) </li>
+<li>Wrong tempo changes (ticket #22 \- Pedro Lopez-Cabanillas) </li>
+<li>Crash bug fix related to using certain modulators in a preset (S. Christian Collins) </li>
+<li>Fix to non-option command line argument processing when not using readline (Pedro Lopez-Cabanillas) </li>
+<li>dsound device can't be selected (Ticket #16 \- Pedro Lopez-Cabanillas) </li>
+<li>Minor build fixes (Josh Green) </li>
+<li>Fixed compilation under MSVC 2008 and older (Pedro Lopez-Cabanillas) </li>
+</ul>
+<h3 id="misc-stuff">Misc. stuff</h3>
+<ul>
+<li>Updated README-OSX build instructions (Ebrahim Mayat) </li>
+<li>[FluidSynth] fink package accepted for Mac OS X (Ebrahim Mayat) </li>
+<li>Minor fixes to [FluidSynth] man page (Sven Hoexter) </li>
+</ul>
+<h1 id="fluidsynth-108-its-about-funky-time">FluidSynth 1.0.8 - "Its about funky time!"</h1>
+<p>Changes from previous version 1.0.7a </p>
+<h3 id="features-and-improvements_2">Features and improvements</h3>
+<ul>
+<li>Improved synthesis interpolation (around loops for smoother looping, optimizations and improved flexibility) </li>
+<li>Dithering on 16 bit converted output (thanks to <strong>Mihail Zenkov</strong> for noting the problem and providing patches) </li>
+<li>Updated fluidmax plugin with polyphony parameter. </li>
+<li>Improved ALSA audio and sequencer drivers. </li>
+<li>Fixed some Floating Point Exceptions which were causing excessive CPU usage </li>
+<li>Some fixes to Chorus and Reverb parameters (thanks to <strong>David Hilvert</strong> for noting problems and providing patches) </li>
+</ul>
+<h3 id="bug-fixes_8">Bug fixes</h3>
+<ul>
+<li>Looping/tuning problem when loop end close to end of sample (Ticket #4 \- Thanks to <strong>Tomas Nykung</strong> for reporting and providing example SoundFonts). </li>
+<li>FluidSynth crashes with QSynth and audio meters turned on (Ticket #5 \- Thanks to <strong>David Hilvert</strong> for reporting) </li>
+<li>ALSA sequencer driver no longer prints out false error messages </li>
+<li>Many memory leaks plugged (thanks to <strong>Paul Millar</strong> for pointing out issues and providing some patches) </li>
+<li>Warning message printed if a non option is not a valid [SoundFont] or MIDI file (thanks to <strong>Nick Daly</strong> for the patch). </li>
+</ul>
+<h3 id="code-cleanup-other-misc-stuff">Code cleanup other misc. stuff</h3>
+<ul>
+<li>Fixed Visual Studio Windows project files and other fixes to build on this platform </li>
+<li>Removed broken SSE support. </li>
+<li>Removed memory alignment hacks (no longer needed). </li>
+<li>Function comments sprinkled throughout the code (not finished yet) </li>
+<li>Updated fluidsynth man page. </li>
+<li>Updated README-OSX (from <strong>Ebrahim Mayat</strong>) </li>
+<li>Added --enable-fpe-check and --enable-trap-on-fpe configure options to aid in Floating Point Exception debugging </li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../FluidSynth-configuration-files/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 🗂️ FluidSynth configuration files">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                🗂️ FluidSynth configuration files
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../BuildingWithCMake/" class="md-footer__link md-footer__link--next" aria-label="Next: 🛠️ Building FluidSynth with CMake">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                🛠️ Building FluidSynth with CMake
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Peter Hannape and others.
+
+    </div>
+  
+  
+    Made with
+    <a href="https://zensical.org/" target="_blank" rel="noopener">
+      Zensical
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/FluidSynth/fluidsynth" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.fluidsynth.org/" target="_blank" rel="noopener" title="www.fluidsynth.org" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20M2 12h20"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate":null,"base":"..","features":["announce.dismiss","content.action.edit","content.action.view","content.code.annotate","content.code.copy","content.code.select","content.footnote.tooltips","content.tabs.link","content.tooltips","header.autohide","navigation.expand","navigation.footer","navigation.indexes","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.path","navigation.prune","navigation.sections","navigation.tabs","navigation.top","navigation.tracking","search.highlight","toc.follow"],"search":"../assets/javascripts/workers/search.e2d2d235.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.63456bd9.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,2498 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Wiki for the FluidSynth SoundFont2 Software Synthesizer.">
+      
+      
+        <meta name="author" content="FluidSynth contributors">
+      
+      
+        <link rel="canonical" href="https://www.fluidsynth.org/wiki/BuildingWithCMake/">
+      
+      
+        <link rel="prev" href="../ChangeLog/">
+      
+      
+        <link rel="next" href="../BuildingForAndroid/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../images/favicon.png">
+      <meta name="generator" content="zensical-0.0.33">
+    
+    
+      
+        <title>🛠️ Building FluidSynth with CMake - FluidSynth Wiki</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../assets/stylesheets/modern/main.53a7feaf.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../assets/stylesheets/modern/palette.dfe2e883.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,500,500i,700,700i%7CJetBrains+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,a=__md_scope)=>JSON.parse(t.getItem(a.pathname+"."+e)),__md_set=(e,t,a=localStorage,_=__md_scope)=>{try{a.setItem(_.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer" aria-label="Navigation"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#building-fluidsynth-with-cmake" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="./.." title="FluidSynth Wiki" class="md-header__button md-logo" aria-label="FluidSynth Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 7v14M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer" aria-label="Navigation">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            FluidSynth Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              🛠️ Building FluidSynth with CMake
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-sun-moon" viewBox="0 0 24 24"><path d="M12 2v2M14.837 16.385a6 6 0 1 1-7.223-7.222c.624-.147.97.66.715 1.248a4 4 0 0 0 5.26 5.259c.589-.255 1.396.09 1.248.715M16 12a4 4 0 0 0-4-4M19 5l-1.256 1.256M20 12h2"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-moon" viewBox="0 0 24 24"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search" aria-label="Search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+        <a href="https://github.com/FluidSynth/fluidsynth" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    FluidSynth/fluidsynth
+  </div>
+</a>
+      
+    </div>
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="./.." class="md-tabs__link">
+        
+  
+  🏠 Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Download/" class="md-tabs__link">
+          
+  
+  🎹 About FluidSynth
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../Documentation/" class="md-tabs__link">
+          
+  
+  📚 Documentation
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="https://github.com/FluidSynth/fluidsynth/issues" class="md-tabs__link">
+        
+  
+  🪲 Bug Tracker
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="./.." title="FluidSynth Wiki" class="md-nav__button md-logo" aria-label="FluidSynth Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 7v14M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
+
+    </a>
+    FluidSynth Wiki
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/FluidSynth/fluidsynth" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    FluidSynth/fluidsynth
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="./.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🏠 Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../Download/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🎹 About FluidSynth
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📚 Documentation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📚 Documentation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Documentation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📚 Documentation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🙋 For users
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🙋 For users
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GettingStarted/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🚀 Getting started with FluidSynth
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ExampleCommandLines/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    💻 Command Line Examples
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Audio-Drivers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔈 Built-in Audio Drivers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UserManual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📖 User Manual
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FluidSettings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ⚙️ Fluid Settings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FluidFeatures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ✨ Fluid Features
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LowLatency/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ⏱️ Low latency tips
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FluidSynth-configuration-files/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🗂️ FluidSynth configuration files
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🤓 For Developers
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🤓 For Developers
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ChangeLog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📝 Changelog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🛠️ Building FluidSynth with CMake
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="././" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🛠️ Building FluidSynth with CMake
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-cmake" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is CMake?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Requirements
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-tips-for-compiling-from-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Tips for compiling from source
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Tips for compiling from source">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#if-something-fails" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        If something fails
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-on-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Building on Linux
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Building on Linux">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#note" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Note
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-with-msys2-on-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Building with MSYS2 on Windows
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Building with MSYS2 on Windows">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#requirements_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#environment-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Environment setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#building" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Building
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-with-cygwin-on-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Building with Cygwin on Windows
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Building with Cygwin on Windows">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#environment-setup_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Environment setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#building_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Building
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-with-mingw-on-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Building with MinGW on Windows
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Building with MinGW on Windows">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#notes-on-compiling-under-windows-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notes on compiling under Windows 10
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Notes on compiling under Windows 10">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#problem-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problem 1.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problem-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problem 2.
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-with-visual-studio-on-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Building with Visual Studio on Windows
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-on-os-x" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Building on OS X
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cross-compilation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cross-Compilation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output-library-naming-conventions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Output Library naming conventions
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../BuildingForAndroid/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🤖 Build for Android
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.fluidsynth.org/api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔗 FluidSynth 2.0 API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.fluidsynth.org/api-1.x/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔗 FluidSynth legacy 1.x API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ladspa/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🖥️ FluidSynth LADSPA Interface
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SoundFont3Format/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ➕ The SoundFont3 Format
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../NotesForPackagers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📦 Notes for Packagers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReleaseCheckList/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ✅ Release Checklist
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Future/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔮 Future of FluidSynth
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/FluidSynth/fluidsynth/issues" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🪲 Bug Tracker
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                      
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-cmake" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is CMake?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Requirements
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-tips-for-compiling-from-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Tips for compiling from source
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Tips for compiling from source">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#if-something-fails" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        If something fails
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-on-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Building on Linux
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Building on Linux">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#note" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Note
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-with-msys2-on-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Building with MSYS2 on Windows
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Building with MSYS2 on Windows">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#requirements_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#environment-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Environment setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#building" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Building
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-with-cygwin-on-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Building with Cygwin on Windows
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Building with Cygwin on Windows">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#environment-setup_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Environment setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#building_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Building
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-with-mingw-on-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Building with MinGW on Windows
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Building with MinGW on Windows">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#notes-on-compiling-under-windows-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notes on compiling under Windows 10
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Notes on compiling under Windows 10">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#problem-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problem 1.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problem-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problem 2.
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-with-visual-studio-on-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Building with Visual Studio on Windows
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-on-os-x" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Building on OS X
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cross-compilation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cross-Compilation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output-library-naming-conventions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Output Library naming conventions
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="./.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    🏠 Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../Documentation/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    📚 Documentation
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../ChangeLog/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    🤓 For Developers
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+    <a href="https://github.com/FluidSynth/fluidsynth/edit/master/doc/wiki/BuildingWithCMake.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-file-pen" viewBox="0 0 24 24"><path d="M12.659 22H18a2 2 0 0 0 2-2V8a2.4 2.4 0 0 0-.706-1.706l-3.588-3.588A2.4 2.4 0 0 0 14 2H6a2 2 0 0 0-2 2v9.34"/><path d="M14 2v5a1 1 0 0 0 1 1h5M10.378 12.622a1 1 0 0 1 3 3.003L8.36 20.637a2 2 0 0 1-.854.506l-2.867.837a.5.5 0 0 1-.62-.62l.836-2.869a2 2 0 0 1 .506-.853z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/FluidSynth/fluidsynth/raw/master/doc/wiki/BuildingWithCMake.md" title="View source of this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-file-code-2" viewBox="0 0 24 24"><path d="M4 12.15V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.706.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2h-3.35"/><path d="M14 2v5a1 1 0 0 0 1 1h5M5 16l-3 3 3 3M9 22l3-3-3-3"/></svg>
+    </a>
+  
+
+
+<h1 id="building-fluidsynth-with-cmake">🛠️ Building FluidSynth with CMake</h1>
+<ul>
+<li><a href="#requirements">Build Requirements</a></li>
+<li><a href="#common-tips-for-compiling-from-source">Common Tips for compiling from source</a></li>
+<li><a href="#building-on-linux">Building on Linux</a></li>
+<li><a href="#building-with-msys2-on-windows">Building with MSYS2 on Windows</a></li>
+<li><a href="#building-with-cygwin-on-windows">Building with Cygwin on Windows</a></li>
+<li><a href="#building-with-mingw-on-windows">Building with MinGW on Windows</a></li>
+<li><a href="#building-with-visual-studio-on-windows">Building with Visual Studio on Windows</a></li>
+<li><a href="#building-on-os-x">Building on OS X</a></li>
+<li><a href="#cross-compilation">Cross-Compilation</a></li>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#output-library-naming-conventions">Output library naming conventions</a></li>
+</ul>
+<h2 id="what-is-cmake">What is CMake?</h2>
+<p>CMake is a cross-platform build system, that can be used to replace the old auto-tools, providing a nice building environment and advanced features. Some of these features are: </p>
+<ul>
+<li>Out of sources build: CMake allows you to build your software into a directory different to the source tree. You can safely delete the build directory and all its contents once you are done. </li>
+<li>Multiple generators: classic makefiles can be generated for Unix and MinGW, but also Visual Studio, XCode and Eclipse CDT projects among other types. </li>
+<li>Graphic front-ends for configuration and build options. </li>
+</ul>
+<p>More information and documentation is available at the <a href="http://www.cmake.org">CMake project site</a></p>
+<p>CMake is free software. You can get the <a href="http://www.cmake.org/cmake/resources/software.html">sources and pre-compiled packages</a> for Linux and other systems. </p>
+<p>You need CMake 3.13 or later to build FluidSynth. However, we <strong>recommend to use CMake 3.18 or later</strong>.</p>
+<h2 id="requirements">Requirements</h2>
+<p>A minimal build of fluidsynth has the following requirements:</p>
+<ul>
+<li>A C compiler. <a href="http://gcc.gnu.org/">GCC</a> is the primary compiler, including the <a href="http://mingw.org">MinGW</a> port for Windows, and the <a href="http://developer.apple.com/tools/gcc_overview.html">Apple port</a> for Mac OS X. MS Visual C is also supported. Technically, <em>any</em> C90 compliant compiler should work.</li>
+<li>Starting with fluidsynth 2.5.0, a C++11 compliant compiler will be required.</li>
+<li>CMake &gt;= 3.13.0</li>
+<li>make, gmake, nmake, or an IDE as <a href="http://www.microsoft.com/express/">MS Visual Studio Express</a>, <a href="http://www.eclipse.org/cdt/">Eclipse CDT</a>, <a href="http://developer.apple.com/tools/xcode/">Xcode</a> and others.</li>
+<li><a href="http://pkg-config.freedesktop.org/wiki/">pkg-config</a> tool.</li>
+<li>Starting with version 2.5.0, fluidsynth additionally requires a submodule <a href="https://github.com/kthohr/gcem">gcem</a>, that GitHub unfortunately doesn't include in the auto-generated source archive. If gcem is unavailable (i.e. the <code>gcem</code> directory in the source archive root is empty), it will be automatically downloaded from GitHub, i.e. <strong>an internet connection will be required during the build</strong>.</li>
+</ul>
+<details><summary>Some other libraries can be <strong>optionally</strong> included at build time, providing additional functionality. Click here to view them.</summary><br />
+
+  * C++17 compliant compiler and standard library
+  * [glib and gthread](http://www.gtk.org) libraries.
+  * [libsndfile](http://www.mega-nerd.com/libsndfile/) - Allows for rendering MIDI to numerous audio file formats. Otherwise, only rendering to RAW PCM files is supported.
+  * [libinstpatch](https://github.com/swami/libinstpatch) - Enables loading of Downloadable Sounds (DLS) files as alternative Soundfont format
+  * [JACK](http://jackaudio.org) - Jack Audio Connection Kit, inter-application audio routing found on Linux and Mac OS X
+  * [ALSA](http://www.alsa-project.org) - Modern audio system found on Linux. FluidSynth supports audio output and the ALSA MIDI sequencer.
+  * [OSS](http://www.opensound.com) - Open Sound System (the older Unix sound system)
+  * [OpenSLES](https://www.khronos.org/opensles/) - A royalty-free, cross-platform, hardware-accelerated audio API tuned for embedded systems (e.g. Android)
+  * [Oboe](https://github.com/google/oboe) - An audio library for real-time audio apps on Android.
+  * [PortAudio](http://www.portaudio.com) - Free, cross-platform, audio I/O library
+  * [PulseAudio](http://www.pulseaudio.org) - Linux sound server
+  * CoreAudio - Audio system found on Mac OS X
+  * DirectSound - Sound drivers found on Windows systems
+  * [WaveOut](https://docs.microsoft.com/de-at/windows/win32/directshow/audio-renderer--waveout--filter) - Alternative to DirectSound driver on Windows
+  * WinMIDI - MIDI driver on Windows
+  * [MidiShare](http://midishare.sourceforge.net) - Cross-platform MIDI environment
+  * [SDL2](https://www.libsdl.org/) - Cross-platform audio library
+  * [LASH](http://www.nongnu.org/lash) - LASH Audio Session Handler, session management support for ALSA and Jack applications
+  * [LADSPA](http://www.ladspa.org) - Audio plugin architecture (FluidSynth can use LADSPA plugins)
+  * Readline - For improved command line editing features in the built-in shell
+
+</details>
+
+<h2 id="common-tips-for-compiling-from-source">Common Tips for compiling from source</h2>
+<p>Get the FluidSynth sources <a href="../Download">somewhere</a>. </p>
+<p>First, <strong>execute CMake from the build directory</strong>, providing the source directory location and optionally, the build options. There are several ways. </p>
+<ul>
+<li>From a command line shell: </li>
+</ul>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>fluidsynth-x.y.z/
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>$<span class="w"> </span>mkdir<span class="w"> </span>build
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>build
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>$<span class="w"> </span>cmake<span class="w"> </span>..
+</span></code></pre></div>
+<p>The last command (<code>cmake ..</code>) can be modified by adding options. Common modifications include e.g.: </p>
+<ul>
+<li><code>-Denable-portaudio=1</code> - PortAudio is disabled by default, this will enable that functionality </li>
+<li><code>-DLIB_SUFFIX=""</code> - make sure we don't put anything in /lib64, this is needed on 64 bit Debian/Ubuntu platforms </li>
+<li><a href="https://cmake.org/cmake/help/latest/variable/CMAKE_INSTALL_PREFIX.html"><code>-DCMAKE_INSTALL_PREFIX=/usr</code></a> - this will effectively <em>overwrite</em> rather than override an existing FluidSynth installation </li>
+<li><a href="https://cmake.org/cmake/help/latest/variable/CMAKE_BUILD_TYPE.html"><code>-DCMAKE_BUILD_TYPE=Debug</code></a> - if you want to help out and find bugs, this will make it easier to debug (but much worse performance)</li>
+<li><code>-Denable-ubsan=1</code> - even better debugging support by using UBSan and ASan.</li>
+<li><a href="https://cmake.org/cmake/help/latest/variable/CMAKE_MSVC_RUNTIME_LIBRARY.html"><code>-DCMAKE_MSVC_RUNTIME_LIBRARY=MultiThreaded</code></a> - if you want to use a statically-linked MSVC runtime library (requires CMake &gt;= 3.15, use <a href="https://github.com/FluidSynth/fluidsynth/blob/7f11a9bf5c7304e04309a6ec9fc515ee815524bf/CMakeLists.txt#L229-L249">this hack</a> if your CMake is too old)</li>
+</ul>
+<p>Valid values for boolean (<code>enable-xxxx</code>) options: 1, 0, yes, no, on, off. </p>
+<ul>
+<li>There are also several alternative CMake front-ends, if you don't want to use the command line interface: <ul>
+<li>ncurses based program, for Linux and Unix: <code>ccmake</code></li>
+<li>GUI, Qt-based program, multiplatform: <code>cmake-gui</code></li>
+<li>GUI, Windows native program: <code>CMakeSetup.exe</code></li>
+</ul>
+</li>
+</ul>
+<p>Then, <strong>execute the build command</strong>. If you used the Makefiles generator (the default in Linux and other Unix systems) then execute <code>make</code>, <code>gmake</code> or <code>mingw32-make</code>. If you generated a project file, e.g. a MSVS solution, use your IDE to build it.</p>
+<p>There are many targets available. To see a complete list of them, type: </p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>$<span class="w"> </span>make<span class="w"> </span><span class="nb">help</span>
+</span></code></pre></div>
+<p>The build process usually hides the compiler command lines. To get a full, verbose build log: </p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>$<span class="w"> </span>make<span class="w"> </span><span class="nv">VERBOSE</span><span class="o">=</span><span class="m">1</span>
+</span></code></pre></div>
+<p>There is a <code>clean</code> target, but not a <code>distclean</code> one. You should use a build directory different to the source tree (as demonstrated in the command line example above). In this case, the <code>distclean</code> target would be equivalent to simply removing the build directory. </p>
+<p>After fluidsynth has been built successfully, it is recommended to <strong>execute the unit tests</strong>:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>$<span class="w"> </span>make<span class="w"> </span>check
+</span></code></pre></div>
+<p>To compile the developer documentation you need <a href="http://www.doxygen.org">Doxygen</a> installed. Use this command from the root build directory: </p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>$<span class="w"> </span>make<span class="w"> </span>doxygen
+</span></code></pre></div>
+<h3 id="if-something-fails">If something fails</h3>
+<p>If there is an error message while executing CMake, this probably means that a required package is missing in your system. You should install the missing component and run CMake again.</p>
+<p>If there is an error when executing the build process, after running a flawless CMake configuration process, this means that there may be an error in the source code, or in the build system, 
+or something incompatible in 3rd party libraries.</p>
+<p>You can provide feedback and ask for help, by sending a report containing your problem(s) to the FluidSynth development mailing list. Make sure to <strong>provide the CMake output and the full, verbose build log</strong>.
+<a href="http://lists.nongnu.org/mailman/listinfo/fluid-dev">http://lists.nongnu.org/mailman/listinfo/fluid-dev</a></p>
+<h2 id="building-on-linux">Building on Linux</h2>
+<p>If your distribution already has a packaged FluidSynth, you may simply install it using the package manager, 
+<a href="../Download/#distributions">as described here</a>. You can also grab the build dependencies automatically by running a command such as </p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>sudo<span class="w"> </span>apt-get<span class="w"> </span>build-dep<span class="w"> </span>fluidsynth<span class="w"> </span>--no-install-recommends
+</span></code></pre></div>
+<p>which should work under Debian/Ubuntu. To build from source please follow the <a href="#common-tips-for-compiling-from-source">common tips</a>.</p>
+<h3 id="note">Note</h3>
+<p>After (un)installation (with <code>sudo make install</code> or <code>sudo make uninstall</code>) you might need update the dynamic linker cache by running <code>sudo ldconfig</code> or you'll end up with a new executable calling the old library! You are experiencing some <code>error while loading shared libraries: libfluidsynth.so</code>? Update the linker cache as well! No root permission? Set the <code>LD_LIBRARY_PATH</code> environment variable to include the path where you've installed libfluidsynth.so, like</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">LD_LIBRARY_PATH</span><span class="o">=</span>/usr/local/lib:<span class="nv">$LD_LIBRARY_PATH</span>
+</span></code></pre></div>
+<h2 id="building-with-msys2-on-windows">Building with MSYS2 on Windows</h2>
+<p>This is probably the easiest and most straightforward method.</p>
+<h3 id="requirements_1">Requirements</h3>
+<ul>
+<li><a href="http://www.msys2.org/">MSYS2</a></li>
+<li>DirectX SDK for dsound. You probably already have this installed, so just ignore it. If you encounter issues with CMake later on, then you can <a href="http://msdn.microsoft.com/en-us/directx/default.aspx">download it directly from Microsoft</a>.</li>
+</ul>
+<h3 id="environment-setup">Environment setup</h3>
+<ol>
+<li>Install MSYS2 in your preferred location and launch it.</li>
+<li>Run <code>pacman -Syyu</code>. Let it update, close the window when requested</li>
+<li>Launch MSYS2 again, either from the mingw32 (32 bit) or mingw64 (64 bit) shell. Choose based on your machine architecture.</li>
+<li>Run <code>pacman -Syyu</code> and update again. This time it should pull more packages.</li>
+<li>Once done, install all the dependencies needed by FluidSynth by running:</li>
+</ol>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>pacman -S make mingw-w64-x86_64-pkg-config mingw-w64-x86_64-gcc mingw-w64-x86_64-cmake glib2-devel mingw-w64-x86_64-glib2 mingw-w64-x86_64-libsndfile
+</span></code></pre></div>
+<p><strong>This is just an example for 64-bit systems. If you are running the 32 bit version, replace <code>x86_64</code> by <code>i686</code>.</strong></p>
+<h3 id="building">Building</h3>
+<ol>
+<li>Grab FluidSynths latest release tarball, as described <a href="../Download/#source-archives">here</a>.</li>
+<li>Unpack the tarball and navigate into the folder containing the extracted files.</li>
+<li>Create a new folder, we'll call it <code>build</code>.</li>
+<li>In the MSYS2 shell, navigate into that folder</li>
+<li>Run cmake on the previous directory, specifying the Makefile type: <code>cmake -G "MSYS Makefiles" ..</code></li>
+<li>Run <code>make</code> to start compilation.</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Make sure to execute <code>fluidsynth</code> in the MSYS2 shell as well. 
+It won't work form the <code>cmd.exe</code> (out-of-the-box).</p>
+</div>
+<h2 id="building-with-cygwin-on-windows">Building with Cygwin on Windows</h2>
+<p>This method provides a full UNIX-like environment. <em>You might run into weird issues with compiled code, such as FluidSynth trying to load Linux audio drivers, or not being able to run FluidSynth without the specific Cygwin DLLs!</em></p>
+<h3 id="environment-setup_1">Environment setup</h3>
+<p>Install <a href="https://www.cygwin.com/">Cygwin</a> following the setup, and selecting <em>at least</em> the following packages (please note that they might already be marked for installation):</p>
+<ul>
+<li>gcc</li>
+<li>cmake</li>
+<li>glib</li>
+</ul>
+<h3 id="building_1">Building</h3>
+<ol>
+<li>Grab FluidSynths latest release tarball, as described <a href="../Download/#source-archives">here</a>.</li>
+<li>Navigate into the cloned repository and create a new folder, we'll call it 'build'.</li>
+<li>Navigate into that folder and run cmake on the previous directory, specifying the Makefile type
+<code>cmake -G "MSYS Makefiles" ..</code></li>
+<li>You're set. Run <code>make</code> to build.</li>
+</ol>
+<h2 id="building-with-mingw-on-windows">Building with MinGW on Windows</h2>
+<p>If you want to use MinGW you need to set up a build environment containing the glib binaries and its dependencies. For simplicity, you can download prebuilt binaries from <a href="http://ftp.gnome.org/pub/gnome/binaries/">gtk.org</a>:</p>
+<p>64-bit Windows:
+  * <a href="http://ftp.gnome.org/pub/gnome/binaries/win64/glib/2.26/glib_2.26.1-1_win64.zip">glib-2.26</a>
+  * <a href="http://ftp.gnome.org/pub/gnome/binaries/win64/glib/2.26/glib-dev_2.26.1-1_win64.zip">glib-dev-2.26</a>
+  * <a href="http://ftp.gnome.org/pub/gnome/binaries/win64/dependencies/pkg-config_0.23-2_win64.zip">pkg-config-0.23</a>
+  * <a href="http://ftp.gnome.org/pub/gnome/binaries/win64/dependencies/proxy-libintl-dev_20100902_win64.zip">proxy-libintl</a>
+  * <a href="http://ftp.gnome.org/pub/gnome/binaries/win64/dependencies/gettext-runtime_0.18.1.1-2_win64.zip">gettext-runtime-0.18</a></p>
+<p>32-bit Windows:
+  * <a href="http://ftp.gnome.org/pub/gnome/binaries/win32/glib/2.28/glib_2.28.8-1_win32.zip">glib-2.28</a>
+  * <a href="http://ftp.gnome.org/pub/gnome/binaries/win32/glib/2.28/glib-dev_2.28.8-1_win32.zip">glib-dev-2.28</a>
+  * <a href="http://ftp.gnome.org/pub/gnome/binaries/win32/dependencies/pkg-config_0.26-1_win32.zip">pkg-config-0.26</a>
+  * <a href="http://ftp.gnome.org/pub/gnome/binaries/win32/dependencies/proxy-libintl-dev_20100902_win32.zip">proxy-libintl</a>
+  * <a href="http://ftp.gnome.org/pub/gnome/binaries/win32/dependencies/gettext-runtime_0.18.1.1-2_win32.zip">gettext-runtime-0.18</a></p>
+<p>Unpack all required ZIPs (see above) to the same directory, a name without spaces, for instance <strong>C:\freesw</strong>. Add <strong>C:\freesw\bin</strong> to the system PATH by executing <code>set PATH=C:\freesw\bin;%PATH%</code>. To verify: Start button -&gt; Command Prompt </p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>C:\\&gt; pkg-config --list-all
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>gio-2.0               GIO - glib I/O library
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>gmodule-2.0           GModule - Dynamic module loader for GLib
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>glib-2.0              GLib - C Utility Library
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>gmodule-no-export-2.0 GModule - Dynamic module loader for GLib
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>gthread-2.0           GThread - Thread support for GLib
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>gobject-2.0           GObject - GLib Type, Object, Parameter and Signal Library
+</span></code></pre></div>
+<p>For instance, this is the layout of the directory with the dependencies installed: </p>
+<div class="language-text highlight"><pre><span></span><code>C:\freesw\
+├───bin
+├───include
+│   └───glib-2.0
+│       ├───gio
+│       ├───glib
+│       └───gobject
+├───lib
+│   └───glib-2.0
+│       └───include
+├───manifest
+├───pkgconfig
+├───share
+│   ├───aclocal
+(...)
+</code></pre></div>
+<p>When installing CMake, make sure to let the installer add CMake to the system <code>PATH</code> environment variable, and create a desktop shortcut icon.</p>
+<p>Obtain <strong>dsound.h</strong> and copy it to <strong>C:\freesw\include</strong>. Either install the Microsoft <a href="http://msdn.microsoft.com/en-us/directx/default.aspx">DirectX SDK</a> or alternatively try <a href="http://www.google.com/codesearch?q=dsound.h&amp;hl=en&amp;btnG=Search+Code">Google Code Search</a> to locate a copy of the header file. Some users have mentioned that the header contained in Wine might work.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For simplicity, you can unzip the dependencies above directly into your MinGW installation directory. </p>
+</div>
+<p>Get <a href="http://mingw.org">MinGW</a>, for convenience you can use the <a href="https://sourceforge.net/projects/tdm-gcc/files/TDM-GCC%20Installer/">TDM Bundle installer</a> (use at your own risk). </p>
+<p>Run CMake, opening the desktop icon shortcut. </p>
+<ul>
+<li>Select "MinGW Makefiles". </li>
+<li>Select the directory containing FluidSynth sources, and another directory for building (e.g. <strong>./build</strong>). </li>
+</ul>
+<p>Start mingw32-make on the command line to build the project: </p>
+<div class="language-text highlight"><pre><span></span><code>&gt;cd
+fluidsynth-x.y.z
+&gt;cd build
+&gt;mingw32-make.exe
+</code></pre></div>
+<h3 id="notes-on-compiling-under-windows-10">Notes on compiling under Windows 10</h3>
+<h4 id="problem-1">Problem 1.</h4>
+<p>pkg-config was not found: Make sure the folder containing the pkg-config.exe is on the PATH env variable or copy the .exe to mingw32\bin folder.</p>
+<h4 id="problem-2">Problem 2.</h4>
+<p>libintl.dll cannot be found (linker calls it intl):</p>
+<p>Make sure libintl.dll is in a directory the linker is looking for (e.g.: <code>c:/mingw32/lib/gcc/mingw32/6.3.0</code>). It does not use the PATH variable. Make sure the filename of libintl.dll does not include the version.</p>
+<h2 id="building-with-visual-studio-on-windows">Building with Visual Studio on Windows</h2>
+<p>This approach requires to use Visual Studio 2015 Update 3 or later versions. In case you are forced to use an older version of Visual Studio, follow the preparations of the <a href="#building-with-mingw-on-windows">MinGW approach</a> and refer to our <a href="https://github.com/FluidSynth/fluidsynth/blob/eb132d8196f11f2a84a44ce6076ad8e8b8c75e32/.appveyor.yml#L72-L76">CI build script for Windows</a> for correct CMake invocation.</p>
+<p>You can get Visual Studio Express Community 2017, from <a href="https://www.visualstudio.com/de/vs/visual-studio-express/">Microsoft</a>. <em>Note: the Community 2017 edition supports many languages, but only C/C++ is needed. You don't need special options, just the defaults.</em></p>
+<p>Prepare your build environment with all prerequisites as described in <a href="#building-with-mingw-on-windows">Building with MinGW</a>. Alternatively you can install glib using the <a href="https://docs.microsoft.com/en-us/cpp/vcpkg">vcpkg</a> tool:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>vcpkg install glib
+</span></code></pre></div></p>
+<p>Run CMake, opening the desktop icon shortcut. </p>
+<ul>
+<li>Select the appropriate version of Visual Studio you are going to use.</li>
+<li>Select the directory containing FluidSynth sources, and another directory for building.</li>
+<li>Click "Configure"</li>
+<li>Press "Generate"</li>
+</ul>
+<p>Go to the build directory, and double-click the file <code>FluidSynth.sln</code>, and build the solution. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>As of fluidsynth 1.1.10 there also exists a vcpkg package:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>vcpkg install fluidsynth
+</span></code></pre></div></p>
+</div>
+<h2 id="building-on-os-x">Building on OS X</h2>
+<p>Get all requirements with <a href="http://mxcl.github.com/homebrew/">Homebrew</a>: </p>
+<div class="language-text highlight"><pre><span></span><code>brew install fluidsynth pkg-config
+</code></pre></div>
+<p>Alternatively install libgnugetopt, readline5, libflac8-dev, libsndfile1-dev, glib2-dev, dbus1.3-dev and cmake manually.</p>
+<p>Install XCode, "DevSDK.pkg" and "CoreAudioSDK.pkg" packages from your OS X install media. </p>
+<p>Run CMake and start the build as described in section <a href="#common-tips-for-compiling-from-source">Common Tips for compiling from source</a>.</p>
+<p>After a successful build you may optionally install the compiled binaries as superuser:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>make install
+</span></code></pre></div>
+<h2 id="cross-compilation">Cross-Compilation</h2>
+<p>In order to cross compile fluidsynth make sure you know about <a href="https://cmake.org/Wiki/CMake_Cross_Compiling">the basics of cross compilation using cmake</a>.</p>
+<p>It is highly recommend to provide cmake with a toolchain file that takes care about basic path handling like where to find the compiler for your target platform. An example toolchain file for compiling for 64-bit Windows using mingw could look like this:</p>
+<div class="language-cmake highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="c"># Cross compile toolchain configuration based on:</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="c"># https://www.cmake.org/Wiki/CMake_Cross_Compiling</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="c"># the name of the target operating system</span>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="nb">SET</span><span class="p">(</span><span class="s">CMAKE_SYSTEM_NAME</span><span class="w"> </span><span class="s">Windows</span><span class="p">)</span>
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="c"># 64 bit mingw-w64 - ADJUST THIS TO YOUR NEEDS!</span>
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="nb">SET</span><span class="p">(</span><span class="s">TOOLCHAIN_PREFIX</span><span class="w"> </span><span class="s2">&quot;x86_64-w64-mingw32&quot;</span><span class="p">)</span>
+</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>
+</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="c"># compilers to use for C and C++</span>
+</span><span id="__span-12-11"><a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="nb">FIND_PROGRAM</span><span class="p">(</span><span class="s">CMAKE_C_COMPILER</span><span class="w"> </span><span class="s">NAMES</span><span class="w"> </span><span class="o">${</span><span class="nv">TOOLCHAIN_PREFIX</span><span class="o">}</span><span class="s">-gcc</span><span class="p">)</span>
+</span><span id="__span-12-12"><a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a><span class="nb">FIND_PROGRAM</span><span class="p">(</span><span class="s">CMAKE_CXX_COMPILER</span><span class="w"> </span><span class="s">NAMES</span><span class="w"> </span><span class="o">${</span><span class="nv">TOOLCHAIN_PREFIX</span><span class="o">}</span><span class="s">-g++</span><span class="p">)</span>
+</span><span id="__span-12-13"><a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a><span class="nb">FIND_PROGRAM</span><span class="p">(</span><span class="s">CMAKE_RC_COMPILER</span><span class="w"> </span><span class="s">NAMES</span><span class="w"> </span><span class="o">${</span><span class="nv">TOOLCHAIN_PREFIX</span><span class="o">}</span><span class="s">-windres</span><span class="p">)</span>
+</span><span id="__span-12-14"><a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a><span class="nb">FIND_PROGRAM</span><span class="p">(</span><span class="s">PKG_CONFIG_EXECUTABLE</span><span class="w"> </span><span class="o">${</span><span class="nv">TOOLCHAIN_PREFIX</span><span class="o">}</span><span class="s">-pkg-config</span><span class="p">)</span>
+</span><span id="__span-12-15"><a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a>
+</span><span id="__span-12-16"><a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a><span class="c"># path to the target environment</span>
+</span><span id="__span-12-17"><a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a><span class="nb">SET</span><span class="p">(</span><span class="s">CMAKE_FIND_ROOT_PATH</span><span class="w"> </span><span class="s">/usr/</span><span class="o">${</span><span class="nv">TOOLCHAIN_PREFIX</span><span class="o">}</span><span class="s">/sys-root/mingw</span><span class="p">)</span>
+</span><span id="__span-12-18"><a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a>
+</span><span id="__span-12-19"><a id="__codelineno-12-19" name="__codelineno-12-19" href="#__codelineno-12-19"></a><span class="c"># search for programs in the build host directories</span>
+</span><span id="__span-12-20"><a id="__codelineno-12-20" name="__codelineno-12-20" href="#__codelineno-12-20"></a><span class="nb">SET</span><span class="p">(</span><span class="s">CMAKE_FIND_ROOT_PATH_MODE_PROGRAM</span><span class="w"> </span><span class="s">NEVER</span><span class="p">)</span>
+</span><span id="__span-12-21"><a id="__codelineno-12-21" name="__codelineno-12-21" href="#__codelineno-12-21"></a><span class="c"># for libraries and headers in the target directories</span>
+</span><span id="__span-12-22"><a id="__codelineno-12-22" name="__codelineno-12-22" href="#__codelineno-12-22"></a><span class="nb">SET</span><span class="p">(</span><span class="s">CMAKE_FIND_ROOT_PATH_MODE_INCLUDE</span><span class="w"> </span><span class="s">ONLY</span><span class="p">)</span>
+</span><span id="__span-12-23"><a id="__codelineno-12-23" name="__codelineno-12-23" href="#__codelineno-12-23"></a><span class="nb">SET</span><span class="p">(</span><span class="s">CMAKE_FIND_ROOT_PATH_MODE_LIBRARY</span><span class="w"> </span><span class="s">ONLY</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Furthermore, fluidsynth's cmake build system heavily relies on using pkg-config. In order to make sure the <code>pkg-config</code> executable of the host system finds the correct libraries for the target platform, set the <code>PKG_CONFIG_LIBDIR</code> environment variable to the path that contains the <code>.pc</code> files for all relevant libraries (i.e. glib, gthread and possibly other dependencies you want to build against).</p>
+<p>As usual create a build subdir within fluidsynth's source tree. Invoke cmake and provide the toolchain file by specifying the <code>-DCMAKE_TOOLCHAIN_FILE</code> flag. Additionally consider manually disabling any optional build dependencies that you cannot provide for the target platform.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="nb">cd</span><span class="w"> </span>fluidsynth/
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>mkdir<span class="w"> </span>build<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>build
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="nb">export</span><span class="w"> </span><span class="nv">PKG_CONFIG_LIBDIR</span><span class="o">=</span>/usr/x86_64-w64-mingw32/sys-root/mingw/lib/pkgconfig
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>cmake<span class="w"> </span>-DCMAKE_TOOLCHAIN_FILE<span class="o">=</span>my-fluid-toolchain.cmake<span class="w"> </span>-Denable-libsndfile<span class="o">=</span><span class="m">0</span><span class="w"> </span>-Denable-dbus<span class="o">=</span><span class="m">0</span><span class="w"> </span>-Denable-pulseaudio<span class="o">=</span><span class="m">0</span><span class="w"> </span>-Denable-jack<span class="o">=</span><span class="m">0</span><span class="w"> </span>..
+</span></code></pre></div>
+<p>If your environment is set up correctly cmake should find the compiler and the glib libraries for the target platform and exit successfully.</p>
+<h2 id="installation">Installation</h2>
+<p>Starting with 2.5.1 fluidsynth provides three cmake components:</p>
+<ul>
+<li><code>fluidsynth_program</code></li>
+<li><code>fluidsynth_runtime</code></li>
+<li><code>fluidsynth_development</code></li>
+</ul>
+<p>Those can be used at install time to selectively install built files. E.g.:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>$ cmake --install build --component fluidsynth_runtime
+</span></code></pre></div>
+will install only the shared library, without installing the CLI program or the headers.</p>
+<h2 id="output-library-naming-conventions">Output Library naming conventions</h2>
+<p>Depending on the target OS and a several compilation settings, fluidsynth's cmake build system will generate library files with different naming. Below is a table which highlights the different naming conventions.</p>
+<p><code>&lt;FULL.SOVERSION&gt;</code> refers to the full version of the library (this is different from fluidsynth's release version!), e.g. <code>3.5.1</code>.</p>
+<p><code>&lt;SOVERSION&gt;</code> refers to the major part of the library version, e.g. <code>3</code>.</p>
+<table>
+<thead>
+<tr>
+<th>OS</th>
+<th>dynamic library</th>
+<th>static library</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MacOS Framework</td>
+<td><code>FluidSynth.framework/Versions/&lt;SOVERSION&gt;/FluidSynth</code></td>
+<td>?</td>
+</tr>
+<tr>
+<td>MacOS Universal Libs</td>
+<td><code>libfluidsynth.&lt;FULL.SOVERSION&gt;.dylib</code></td>
+<td><code>libfluidsynth.a</code></td>
+</tr>
+<tr>
+<td>Android</td>
+<td><code>libfluidsynth.so</code></td>
+<td><code>libfluidsynth.a</code></td>
+</tr>
+<tr>
+<td>Other Unixoids (Linux, BSD, Solaris, etc.)</td>
+<td><code>libfluidsynth.so.&lt;VERSION&gt;</code></td>
+<td><code>libfluidsynth.a</code></td>
+</tr>
+<tr>
+<td>Windows (native &amp; MinGW)</td>
+<td><code>libfluidsynth-&lt;SOVERSION&gt;.dll</code> (import lib: <code>libfluidsynth-&lt;SOVERSION&gt;.lib</code>)</td>
+<td><code>libfluidsynth-&lt;SOVERSION&gt;.lib</code></td>
+</tr>
+<tr>
+<td>Windows (CygWin)</td>
+<td>?</td>
+<td>?</td>
+</tr>
+<tr>
+<td>OS/2</td>
+<td><code>FLUIDSY3.DLL</code></td>
+<td>?</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../ChangeLog/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 📝 Changelog">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                📝 Changelog
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../BuildingForAndroid/" class="md-footer__link md-footer__link--next" aria-label="Next: 🤖 Build for Android">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                🤖 Build for Android
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Peter Hannape and others.
+
+    </div>
+  
+  
+    Made with
+    <a href="https://zensical.org/" target="_blank" rel="noopener">
+      Zensical
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/FluidSynth/fluidsynth" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.fluidsynth.org/" target="_blank" rel="noopener" title="www.fluidsynth.org" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20M2 12h20"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate":null,"base":"..","features":["announce.dismiss","content.action.edit","content.action.view","content.code.annotate","content.code.copy","content.code.select","content.footnote.tooltips","content.tabs.link","content.tooltips","header.autohide","navigation.expand","navigation.footer","navigation.indexes","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.path","navigation.prune","navigation.sections","navigation.tabs","navigation.top","navigation.tracking","search.highlight","toc.follow"],"search":"../assets/javascripts/workers/search.e2d2d235.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.63456bd9.min.js"></script>
+      
+    
+  </body>
+</html>
