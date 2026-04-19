@@ -1,5 +1,6 @@
 var NAVTREEINDEX2 =
 {
+"group__sequencer__events.html#ga2d8c76f2b5ae3962c8e776bdb5800338":[7,4,0,18],
 "group__sequencer__events.html#ga36db66e1a41d0916d8e5ed9adc9c6979":[7,4,0,29],
 "group__sequencer__events.html#ga3b3c8a912be5f84a35eb6b24787b0aa0":[7,4,0,2],
 "group__sequencer__events.html#ga3b7e4e1014790b1b4478249514b6c65d":[7,4,0,26],
@@ -248,6 +249,5 @@ var NAVTREEINDEX2 =
 "group__voices.html#ggaac296fe3c3d6930261b9ead8afe4db2baed44612d36459a1254b7ab6f34576a72":[7,7,3,0,1],
 "index.html":[0],
 "index.html":[],
-"index.html#Abstract":[0,0],
-"index.html#Disclaimer":[0,1]
+"index.html#Abstract":[0,0]
 };

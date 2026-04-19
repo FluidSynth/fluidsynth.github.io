@@ -1,5 +1,6 @@
 var NAVTREEINDEX3 =
 {
+"index.html#Disclaimer":[0,1],
 "modules.html":[7],
 "pages.html":[],
 "settings_audio.html":[6,0],

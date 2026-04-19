@@ -27,7 +27,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">libfluidsynth
-   &#160;<span id="projectnumber">2.5.3</span>
+   &#160;<span id="projectnumber">2.5.4</span>
    </div>
   </td>
  </tr>
@@ -107,12 +107,12 @@ shell.prompt</h1>
 <h1><a class="anchor" id="settings_shell_port"></a>
 shell.port</h1>
 <dl class="section user"><dt>Type</dt><dd>Integer (int)</dd></dl>
-<dl class="section user"><dt>Min - Max</dt><dd>1 - 65535</dd></dl>
+<dl class="section user"><dt>Min - Max</dt><dd>0 - 65535</dd></dl>
 <dl class="section user"><dt>Default</dt><dd> 
-<def>9800</def>
+<def>0</def>
 </dd></dl>
 <p> 
-<desc>The shell can be used in a client/server mode. This setting controls what TCP/IP port the server uses.</desc>
+<desc>The shell can be used in a client/server mode. This setting controls what TCP/IP port the server uses. Since fluidsynth 2.5.4, a value of 0 enables auto mode and selects the first free port, probing from 9800 upwards. Older versions used 9800 as default port. Note that when set to 0, fluidsynth will update the setting during server creation (new_fluid_server2()) with the actual port number used.</desc>
   
 </div>
  </p>
