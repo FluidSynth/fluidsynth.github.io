@@ -1,9 +1,14 @@
 var group__voices =
 [
+    [ "fluid_voice_callback_t", "group__voices.html#gabbf71386b6955171fbdebcce15e335aa", null ],
     [ "fluid_voice_add_mod", "group__voices.html#gaac296fe3c3d6930261b9ead8afe4db2b", [
       [ "FLUID_VOICE_OVERWRITE", "group__voices.html#ggaac296fe3c3d6930261b9ead8afe4db2ba0fe2e3c967922afa7c61990a4a5d01e4", null ],
       [ "FLUID_VOICE_ADD", "group__voices.html#ggaac296fe3c3d6930261b9ead8afe4db2baed44612d36459a1254b7ab6f34576a72", null ],
       [ "FLUID_VOICE_DEFAULT", "group__voices.html#ggaac296fe3c3d6930261b9ead8afe4db2bab6a4717eb5a5f1adc30f89843a0bac4d", null ]
+    ] ],
+    [ "fluid_voice_callback_reason", "group__voices.html#gad17c0654861fb0f3d3aefde0e8fd2309", [
+      [ "FLUID_VOICE_CALLBACK_NOTEOFF", "group__voices.html#ggad17c0654861fb0f3d3aefde0e8fd2309a53c1ff9a8b8d51c69106364451568bb3", null ],
+      [ "FLUID_VOICE_CALLBACK_FINISHED", "group__voices.html#ggad17c0654861fb0f3d3aefde0e8fd2309a9cb3eb3f0f58fe57ea91ea4eee9fa2a5", null ]
     ] ],
     [ "fluid_voice_add_mod", "group__voices.html#ga5a6cdf732d2679a5c23fc12be6041dc7", null ],
     [ "fluid_voice_gen_get", "group__voices.html#ga3590f1d0dd908164148c21566de04449", null ],
@@ -20,5 +25,6 @@ var group__voices =
     [ "fluid_voice_is_sostenuto", "group__voices.html#ga775ad28592d7d23a068fd371b899361d", null ],
     [ "fluid_voice_is_sustained", "group__voices.html#ga964a701c23cd275b129337dc47edf35b", null ],
     [ "fluid_voice_optimize_sample", "group__voices.html#gae3454565b0610385c4fe852561884be6", null ],
+    [ "fluid_voice_set_callback", "group__voices.html#gaffc11596cd8d6c2f7b867d89a8344427", null ],
     [ "fluid_voice_update_param", "group__voices.html#ga78b0ae83ca6dc9e758fd93764bb234fe", null ]
 ];

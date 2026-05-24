@@ -84,6 +84,7 @@ $(document).ready(function(){initNavTree('group__voices.html',''); initResizable
 
 <div class="header">
   <div class="summary">
+<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
@@ -94,6 +95,12 @@ $(document).ready(function(){initNavTree('group__voices.html',''); initResizable
 <p>Synthesis voice manipulation functions.  
 <a href="#details">More...</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:gabbf71386b6955171fbdebcce15e335aa"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__voices.html#gabbf71386b6955171fbdebcce15e335aa">fluid_voice_callback_t</a>) (const <a class="el" href="group__Types.html#ga5123ae5ef2d7806475267380c33604c3">fluid_voice_t</a> *voice, int reason, void *data)</td></tr>
+<tr class="memdesc:gabbf71386b6955171fbdebcce15e335aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback function type for voice events.  <a href="group__voices.html#gabbf71386b6955171fbdebcce15e335aa">More...</a><br /></td></tr>
+<tr class="separator:gabbf71386b6955171fbdebcce15e335aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
 <tr class="memitem:gaac296fe3c3d6930261b9ead8afe4db2b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__voices.html#gaac296fe3c3d6930261b9ead8afe4db2b">fluid_voice_add_mod</a> { <br />
@@ -106,6 +113,14 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:gaac296fe3c3d6930261b9ead8afe4db2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum used with <a class="el" href="group__voices.html#gaac296fe3c3d6930261b9ead8afe4db2b" title="Enum used with fluid_voice_add_mod() to specify how to handle duplicate modulators.">fluid_voice_add_mod()</a> to specify how to handle duplicate modulators.  <a href="group__voices.html#gaac296fe3c3d6930261b9ead8afe4db2b">More...</a><br /></td></tr>
 <tr class="separator:gaac296fe3c3d6930261b9ead8afe4db2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad17c0654861fb0f3d3aefde0e8fd2309"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__voices.html#gad17c0654861fb0f3d3aefde0e8fd2309">fluid_voice_callback_reason</a> { <br />
+&#160;&#160;<a class="el" href="group__voices.html#ggad17c0654861fb0f3d3aefde0e8fd2309a53c1ff9a8b8d51c69106364451568bb3">FLUID_VOICE_CALLBACK_NOTEOFF</a>
+, <br />
+&#160;&#160;<a class="el" href="group__voices.html#ggad17c0654861fb0f3d3aefde0e8fd2309a9cb3eb3f0f58fe57ea91ea4eee9fa2a5">FLUID_VOICE_CALLBACK_FINISHED</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:gad17c0654861fb0f3d3aefde0e8fd2309"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum indicating the reason a voice callback was invoked.  <a href="group__voices.html#gad17c0654861fb0f3d3aefde0e8fd2309">More...</a><br /></td></tr>
+<tr class="separator:gad17c0654861fb0f3d3aefde0e8fd2309"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -154,6 +169,9 @@ Functions</h2></td></tr>
 <tr class="memitem:gae3454565b0610385c4fe852561884be6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__voices.html#gae3454565b0610385c4fe852561884be6">fluid_voice_optimize_sample</a> (<a class="el" href="group__Types.html#gabf9174d452679ca1a4ee7d693fb773cf">fluid_sample_t</a> *s)</td></tr>
 <tr class="memdesc:gae3454565b0610385c4fe852561884be6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the peak volume of a sample for voice off optimization.  <a href="group__voices.html#gae3454565b0610385c4fe852561884be6">More...</a><br /></td></tr>
 <tr class="separator:gae3454565b0610385c4fe852561884be6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaffc11596cd8d6c2f7b867d89a8344427"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__voices.html#gaffc11596cd8d6c2f7b867d89a8344427">fluid_voice_set_callback</a> (<a class="el" href="group__Types.html#ga5123ae5ef2d7806475267380c33604c3">fluid_voice_t</a> *voice, <a class="el" href="group__voices.html#gabbf71386b6955171fbdebcce15e335aa">fluid_voice_callback_t</a> callback, void *data)</td></tr>
+<tr class="memdesc:gaffc11596cd8d6c2f7b867d89a8344427"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a callback function for a voice to be notified about voice state changes.  <a href="group__voices.html#gaffc11596cd8d6c2f7b867d89a8344427">More...</a><br /></td></tr>
+<tr class="separator:gaffc11596cd8d6c2f7b867d89a8344427"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga78b0ae83ca6dc9e758fd93764bb234fe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__voices.html#ga78b0ae83ca6dc9e758fd93764bb234fe">fluid_voice_update_param</a> (<a class="el" href="group__Types.html#ga5123ae5ef2d7806475267380c33604c3">fluid_voice_t</a> *voice, int gen)</td></tr>
 <tr class="memdesc:ga78b0ae83ca6dc9e758fd93764bb234fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update all the synthesis parameters which depend on generator <em>gen</em>.  <a href="group__voices.html#ga78b0ae83ca6dc9e758fd93764bb234fe">More...</a><br /></td></tr>
 <tr class="separator:ga78b0ae83ca6dc9e758fd93764bb234fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -162,6 +180,33 @@ Functions</h2></td></tr>
 <p>Synthesis voice manipulation functions. </p>
 <p>The interface to the synthesizer's voices. Examples on using them can be found in the source code of the default SoundFont loader (fluid_defsfont.c).</p>
 <p>Most of these functions should only be called from within synthesis context, such as the SoundFont loader's noteon method. </p>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="gabbf71386b6955171fbdebcce15e335aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabbf71386b6955171fbdebcce15e335aa">&#9670;&nbsp;</a></span>fluid_voice_callback_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(* fluid_voice_callback_t) (const <a class="el" href="group__Types.html#ga5123ae5ef2d7806475267380c33604c3">fluid_voice_t</a> *voice, int reason, void *data)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Callback function type for voice events. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">voice</td><td>The voice instance that triggered the callback. </td></tr>
+    <tr><td class="paramname">reason</td><td>The reason why the callback was invoked (see <a class="el" href="group__voices.html#gad17c0654861fb0f3d3aefde0e8fd2309" title="Enum indicating the reason a voice callback was invoked.">fluid_voice_callback_reason</a>). </td></tr>
+    <tr><td class="paramname">data</td><td>User-defined data pointer as passed to <a class="el" href="group__voices.html#gaffc11596cd8d6c2f7b867d89a8344427" title="Set a callback function for a voice to be notified about voice state changes.">fluid_voice_set_callback()</a>.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>It is unspecified from which thread the callback is called. However, the callback may be invoked from the synthesis context. In this case, audio synthesis will be blocked until the callback returns. It is therefore highly recommended to keep the callback code short, efficient and non-blocking. In realtime-rendering scenarios it is particularly discouraged to call any public API functions of the synth or the sequencer from within the callback, as this may acquire a mutex.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>2.6.0 </dd></dl>
+
+</div>
+</div>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
 <a id="gaac296fe3c3d6930261b9ead8afe4db2b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gaac296fe3c3d6930261b9ead8afe4db2b">&#9670;&nbsp;</a></span>fluid_voice_add_mod</h2>
@@ -182,6 +227,31 @@ Functions</h2></td></tr>
 <tr><td class="fieldname"><a id="ggaac296fe3c3d6930261b9ead8afe4db2baed44612d36459a1254b7ab6f34576a72"></a>FLUID_VOICE_ADD&#160;</td><td class="fielddoc"><p>Add (sum) modulator amounts. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="ggaac296fe3c3d6930261b9ead8afe4db2bab6a4717eb5a5f1adc30f89843a0bac4d"></a>FLUID_VOICE_DEFAULT&#160;</td><td class="fielddoc"><p>For default modulators only, no need to check for duplicates. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="gad17c0654861fb0f3d3aefde0e8fd2309"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad17c0654861fb0f3d3aefde0e8fd2309">&#9670;&nbsp;</a></span>fluid_voice_callback_reason</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__voices.html#gad17c0654861fb0f3d3aefde0e8fd2309">fluid_voice_callback_reason</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enum indicating the reason a voice callback was invoked. </p>
+<dl class="section since"><dt>Since</dt><dd>2.6.0 </dd></dl>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ggad17c0654861fb0f3d3aefde0e8fd2309a53c1ff9a8b8d51c69106364451568bb3"></a>FLUID_VOICE_CALLBACK_NOTEOFF&#160;</td><td class="fielddoc"><p>A true noteoff is about to be processed for this voice by the next rendering call, i.e. </p>
+<p>the voice is neither sustained nor sostenutoed and is about to enter its release phase with the next rendering call. </p><dl class="section note"><dt>Note</dt><dd>This event may not be fired if the sample ends before the voice receives a noteoff event. Think of short and unlooped percussion samples, for example. </dd></dl>
+</td></tr>
+<tr><td class="fieldname"><a id="ggad17c0654861fb0f3d3aefde0e8fd2309a9cb3eb3f0f58fe57ea91ea4eee9fa2a5"></a>FLUID_VOICE_CALLBACK_FINISHED&#160;</td><td class="fielddoc"><p>The voice has finished playing and is about to be removed from the DSP loop. </p>
+<p>The voice remains valid until the callback returns. After that, the voice instance should be considered invalid as it may be reclaimed immediately afterwards. </p><dl class="section note"><dt>Note</dt><dd>This event will always be fired, even when the voice is being killed or stolen due to polyphony overflow. </dd></dl>
 </td></tr>
 </table>
 
@@ -676,6 +746,54 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="group__misc.html#gae4efb1c3ce0d550c922504adfb0fb886" title="Value that indicates success, used by most libfluidsynth functions.">FLUID_OK</a> on success, <a class="el" href="group__misc.html#ga90e8bdbc5a507bbfa5c45bac85a63a61" title="Value that indicates failure, used by most libfluidsynth functions.">FLUID_FAILED</a> otherwise</dd></dl>
 <p>If the peak volume during the loop is known, then the voice can be released earlier during the release phase. Otherwise, the voice will operate (inaudibly), until the envelope is at the nominal turnoff point. So it's a good idea to call <a class="el" href="group__voices.html#gae3454565b0610385c4fe852561884be6" title="Calculate the peak volume of a sample for voice off optimization.">fluid_voice_optimize_sample()</a> on each sample once. </p>
+
+</div>
+</div>
+<a id="gaffc11596cd8d6c2f7b867d89a8344427"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaffc11596cd8d6c2f7b867d89a8344427">&#9670;&nbsp;</a></span>fluid_voice_set_callback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fluid_voice_set_callback </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__Types.html#ga5123ae5ef2d7806475267380c33604c3">fluid_voice_t</a> *&#160;</td>
+          <td class="paramname"><em>voice</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__voices.html#gabbf71386b6955171fbdebcce15e335aa">fluid_voice_callback_t</a>&#160;</td>
+          <td class="paramname"><em>callback</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set a callback function for a voice to be notified about voice state changes. </p>
+<p>Only one callback function can be registered per voice. Setting a new callback replaces the previous one. Passing NULL as the callback removes any previously registered callback.</p>
+<p>The callback is automatically cleared when the voice is re-initialized for a new note.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">voice</td><td>Voice instance </td></tr>
+    <tr><td class="paramname">callback</td><td>Callback function to register, or NULL to unregister. </td></tr>
+    <tr><td class="paramname">data</td><td>User-defined data pointer passed to the callback.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>This function should be called after <a class="el" href="group__voice__control.html#ga9eb72dfa600b3e77fc31f71702fa1195" title="Allocate a synthesis voice.">fluid_synth_alloc_voice()</a> and before <a class="el" href="group__voice__control.html#ga059afeace88b39329fb48e0da8afa1f3" title="Activate a voice previously allocated with fluid_synth_alloc_voice().">fluid_synth_start_voice()</a> to be guaranteed to receive the callback.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>2.6.0 </dd></dl>
 
 </div>
 </div>
