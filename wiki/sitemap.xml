@@ -19,7 +19,7 @@
         <loc>https://www.fluidsynth.org/wiki/LicensingFAQ/</loc>
       </url>
       <url>
-        <loc>https://www.fluidsynth.org/wiki/Documentation/</loc>
+        <loc>https://www.fluidsynth.org/wiki/ChangeLog/</loc>
       </url>
       <url>
         <loc>https://www.fluidsynth.org/wiki/GettingStarted/</loc>
@@ -34,7 +34,22 @@
         <loc>https://www.fluidsynth.org/wiki/UserManual/</loc>
       </url>
       <url>
-        <loc>https://www.fluidsynth.org/wiki/FluidSettings/</loc>
+        <loc>https://www.fluidsynth.org/wiki/settings/</loc>
+      </url>
+      <url>
+        <loc>https://www.fluidsynth.org/wiki/settings/audio/</loc>
+      </url>
+      <url>
+        <loc>https://www.fluidsynth.org/wiki/settings/midi/</loc>
+      </url>
+      <url>
+        <loc>https://www.fluidsynth.org/wiki/settings/player/</loc>
+      </url>
+      <url>
+        <loc>https://www.fluidsynth.org/wiki/settings/shell/</loc>
+      </url>
+      <url>
+        <loc>https://www.fluidsynth.org/wiki/settings/synth/</loc>
       </url>
       <url>
         <loc>https://www.fluidsynth.org/wiki/FluidFeatures/</loc>
@@ -46,7 +61,13 @@
         <loc>https://www.fluidsynth.org/wiki/FluidSynth-configuration-files/</loc>
       </url>
       <url>
-        <loc>https://www.fluidsynth.org/wiki/ChangeLog/</loc>
+        <loc>https://www.fluidsynth.org/wiki/reverbators/</loc>
+      </url>
+      <url>
+        <loc>https://www.fluidsynth.org/wiki/ladspa/</loc>
+      </url>
+      <url>
+        <loc>https://www.fluidsynth.org/wiki/SoundFont3Format/</loc>
       </url>
       <url>
         <loc>https://www.fluidsynth.org/wiki/BuildingWithCMake/</loc>
@@ -58,18 +79,207 @@
         <loc>https://www.fluidsynth.org/wiki/Using-prebuilt-libraries-on-Android/</loc>
       </url>
       <url>
-        <loc>https://www.fluidsynth.org/wiki/ladspa/</loc>
-      </url>
-      <url>
-        <loc>https://www.fluidsynth.org/wiki/SoundFont3Format/</loc>
-      </url>
-      <url>
         <loc>https://www.fluidsynth.org/wiki/NotesForPackagers/</loc>
       </url>
       <url>
-        <loc>https://www.fluidsynth.org/wiki/ReleaseCheckList/</loc>
+        <loc>https://www.fluidsynth.org/wiki/usage/</loc>
       </url>
       <url>
-        <loc>https://www.fluidsynth.org/wiki/Future/</loc>
+        <loc>https://www.fluidsynth.org/wiki/usage/creating-settings/</loc>
+      </url>
+      <url>
+        <loc>https://www.fluidsynth.org/wiki/usage/creating-synth/</loc>
+      </url>
+      <url>
+        <loc>https://www.fluidsynth.org/wiki/usage/loading-soundfonts/</loc>
+      </url>
+      <url>
+        <loc>https://www.fluidsynth.org/wiki/usage/audio-driver/</loc>
+      </url>
+      <url>
+        <loc>https://www.fluidsynth.org/wiki/usage/using-synth/</loc>
+      </url>
+      <url>
+        <loc>https://www.fluidsynth.org/wiki/usage/sending-midi/</loc>
+      </url>
+      <url>
+        <loc>https://www.fluidsynth.org/wiki/usage/realtime-midi/</loc>
+      </url>
+      <url>
+        <loc>https://www.fluidsynth.org/wiki/usage/midi-player/</loc>
+      </url>
+      <url>
+        <loc>https://www.fluidsynth.org/wiki/usage/file-renderer/</loc>
+      </url>
+      <url>
+        <loc>https://www.fluidsynth.org/wiki/usage/midi-player-mem/</loc>
+      </url>
+      <url>
+        <loc>https://www.fluidsynth.org/wiki/usage/midi-router/</loc>
+      </url>
+      <url>
+        <loc>https://www.fluidsynth.org/wiki/usage/sequencer/</loc>
+      </url>
+      <url>
+        <loc>https://www.fluidsynth.org/wiki/usage/shell/</loc>
+      </url>
+      <url>
+        <loc>https://www.fluidsynth.org/wiki/usage/multi-channel/</loc>
+      </url>
+      <url>
+        <loc>https://www.fluidsynth.org/wiki/usage/synth-context/</loc>
+      </url>
+      <url>
+        <loc>https://www.fluidsynth.org/wiki/usage/advanced/</loc>
+      </url>
+      <url>
+        <loc>https://www.fluidsynth.org/wiki/api/</loc>
+      </url>
+      <url>
+        <loc>https://www.fluidsynth.org/wiki/api/recent-changes/</loc>
+      </url>
+      <url>
+        <loc>https://www.fluidsynth.org/wiki/api/deprecated/</loc>
+      </url>
+      <url>
+        <loc>https://www.fluidsynth.org/wiki/api/Types/</loc>
+      </url>
+      <url>
+        <loc>https://www.fluidsynth.org/wiki/api/audio-driver/</loc>
+      </url>
+      <url>
+        <loc>https://www.fluidsynth.org/wiki/api/audio-output/</loc>
+      </url>
+      <url>
+        <loc>https://www.fluidsynth.org/wiki/api/audio-rendering/</loc>
+      </url>
+      <url>
+        <loc>https://www.fluidsynth.org/wiki/api/channel-setup/</loc>
+      </url>
+      <url>
+        <loc>https://www.fluidsynth.org/wiki/api/chorus-effect/</loc>
+      </url>
+      <url>
+        <loc>https://www.fluidsynth.org/wiki/api/command-handler/</loc>
+      </url>
+      <url>
+        <loc>https://www.fluidsynth.org/wiki/api/command-interface/</loc>
+      </url>
+      <url>
+        <loc>https://www.fluidsynth.org/wiki/api/command-server/</loc>
+      </url>
+      <url>
+        <loc>https://www.fluidsynth.org/wiki/api/command-shell/</loc>
+      </url>
+      <url>
+        <loc>https://www.fluidsynth.org/wiki/api/file-renderer/</loc>
+      </url>
+      <url>
+        <loc>https://www.fluidsynth.org/wiki/api/generators/</loc>
+      </url>
+      <url>
+        <loc>https://www.fluidsynth.org/wiki/api/iir-filter/</loc>
+      </url>
+      <url>
+        <loc>https://www.fluidsynth.org/wiki/api/ladspa/</loc>
+      </url>
+      <url>
+        <loc>https://www.fluidsynth.org/wiki/api/logging/</loc>
+      </url>
+      <url>
+        <loc>https://www.fluidsynth.org/wiki/api/midi-driver/</loc>
+      </url>
+      <url>
+        <loc>https://www.fluidsynth.org/wiki/api/midi-events/</loc>
+      </url>
+      <url>
+        <loc>https://www.fluidsynth.org/wiki/api/midi-input/</loc>
+      </url>
+      <url>
+        <loc>https://www.fluidsynth.org/wiki/api/midi-messages/</loc>
+      </url>
+      <url>
+        <loc>https://www.fluidsynth.org/wiki/api/midi-player/</loc>
+      </url>
+      <url>
+        <loc>https://www.fluidsynth.org/wiki/api/midi-router/</loc>
+      </url>
+      <url>
+        <loc>https://www.fluidsynth.org/wiki/api/misc/</loc>
+      </url>
+      <url>
+        <loc>https://www.fluidsynth.org/wiki/api/modulators/</loc>
+      </url>
+      <url>
+        <loc>https://www.fluidsynth.org/wiki/api/reverb-effect/</loc>
+      </url>
+      <url>
+        <loc>https://www.fluidsynth.org/wiki/api/sequencer-events/</loc>
+      </url>
+      <url>
+        <loc>https://www.fluidsynth.org/wiki/api/sequencer/</loc>
+      </url>
+      <url>
+        <loc>https://www.fluidsynth.org/wiki/api/settings/</loc>
+      </url>
+      <url>
+        <loc>https://www.fluidsynth.org/wiki/api/soundfont-loader/</loc>
+      </url>
+      <url>
+        <loc>https://www.fluidsynth.org/wiki/api/soundfont-management/</loc>
+      </url>
+      <url>
+        <loc>https://www.fluidsynth.org/wiki/api/soundfonts/</loc>
+      </url>
+      <url>
+        <loc>https://www.fluidsynth.org/wiki/api/synth/</loc>
+      </url>
+      <url>
+        <loc>https://www.fluidsynth.org/wiki/api/synthesis-params/</loc>
+      </url>
+      <url>
+        <loc>https://www.fluidsynth.org/wiki/api/tuning/</loc>
+      </url>
+      <url>
+        <loc>https://www.fluidsynth.org/wiki/api/voice-control/</loc>
+      </url>
+      <url>
+        <loc>https://www.fluidsynth.org/wiki/api/voices/</loc>
+      </url>
+      <url>
+        <loc>https://www.fluidsynth.org/wiki/api/examples/example/</loc>
+      </url>
+      <url>
+        <loc>https://www.fluidsynth.org/wiki/api/examples/fluidsynth_arpeggio/</loc>
+      </url>
+      <url>
+        <loc>https://www.fluidsynth.org/wiki/api/examples/fluidsynth_enumsettings/</loc>
+      </url>
+      <url>
+        <loc>https://www.fluidsynth.org/wiki/api/examples/fluidsynth_fx/</loc>
+      </url>
+      <url>
+        <loc>https://www.fluidsynth.org/wiki/api/examples/fluidsynth_instruments/</loc>
+      </url>
+      <url>
+        <loc>https://www.fluidsynth.org/wiki/api/examples/fluidsynth_metronome/</loc>
+      </url>
+      <url>
+        <loc>https://www.fluidsynth.org/wiki/api/examples/fluidsynth_process/</loc>
+      </url>
+      <url>
+        <loc>https://www.fluidsynth.org/wiki/api/examples/fluidsynth_register_adriver/</loc>
+      </url>
+      <url>
+        <loc>https://www.fluidsynth.org/wiki/api/examples/fluidsynth_sfload_mem/</loc>
+      </url>
+      <url>
+        <loc>https://www.fluidsynth.org/wiki/api/examples/fluidsynth_simple/</loc>
+      </url>
+      <url>
+        <loc>https://www.fluidsynth.org/wiki/api/examples/</loc>
+      </url>
+      <url>
+        <loc>https://www.fluidsynth.org/wiki/ReleaseCheckList/</loc>
       </url>
 </urlset>
