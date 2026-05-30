@@ -1,0 +1,6888 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Wiki for the FluidSynth SoundFont2 Software Synthesizer.">
+      
+      
+        <meta name="author" content="FluidSynth contributors">
+      
+      
+        <link rel="canonical" href="https://www.fluidsynth.org/wiki/api/soundfont-loader/">
+      
+      
+        <link rel="prev" href="../settings/">
+      
+      
+        <link rel="next" href="../soundfont-management/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../images/favicon.png">
+      <meta name="generator" content="zensical-0.0.43">
+    
+    
+      
+        <title>SoundFont Loader - FluidSynth Wiki</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../../assets/stylesheets/modern/main.fba56155.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/modern/palette.dfe2e883.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,500,500i,700,700i%7CJetBrains+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer" aria-label="Navigation"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#soundfont-loader" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="FluidSynth Wiki" class="md-header__button md-logo" aria-label="FluidSynth Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 7v14M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer" aria-label="Navigation">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            FluidSynth Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              SoundFont Loader
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-sun-moon" viewBox="0 0 24 24"><path d="M12 2v2M14.837 16.385a6 6 0 1 1-7.223-7.222c.624-.147.97.66.715 1.248a4 4 0 0 0 5.26 5.259c.589-.255 1.396.09 1.248.715M16 12a4 4 0 0 0-4-4M19 5l-1.256 1.256M20 12h2"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-moon" viewBox="0 0 24 24"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search" aria-label="Search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+        <a href="https://github.com/FluidSynth/fluidsynth" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    FluidSynth/fluidsynth
+  </div>
+</a>
+      
+    </div>
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  🏠 Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Download/" class="md-tabs__link">
+          
+  
+  🎹 About FluidSynth
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../ChangeLog/" class="md-tabs__link">
+        
+  
+  📝 Release Notes
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+      
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+      
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../GettingStarted/" class="md-tabs__link">
+          
+  
+  📚 Documentation
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="/wiki/api" class="md-tabs__link">
+        
+  
+  🔍 API
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="https://github.com/FluidSynth/fluidsynth/issues" class="md-tabs__link">
+        
+  
+  🪲 Bug Tracker
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="FluidSynth Wiki" class="md-nav__button md-logo" aria-label="FluidSynth Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 7v14M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
+
+    </a>
+    FluidSynth Wiki
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/FluidSynth/fluidsynth" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    FluidSynth/fluidsynth
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  🏠 Home
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  🎹 About FluidSynth
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+  🎹 About FluidSynth
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Download/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  📥 Get FluidSynth
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SoundFont/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  ‍🔬 About SoundFonts
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Applications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  🖥️ Applications using FluidSynth
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MadeWithFluidSynth/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  🎼 Music made with FluidSynth
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../LicensingFAQ/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  📜 Licensing FAQ
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ChangeLog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  📝 Release Notes
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  📚 Documentation
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+  📚 Documentation
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  🧑 For Users
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+  🧑 For Users
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../GettingStarted/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  🚀 Getting started
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ExampleCommandLines/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  💻 Command Line Examples
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Audio-Drivers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  🔈 Built-in Audio Drivers
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UserManual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  📖 User Manual
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../settings/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  ⚙️ Fluid Settings
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_1_5" id="__nav_4_1_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_1_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+  ⚙️ Fluid Settings
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../settings/audio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Audio driver settings
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../settings/midi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  MIDI driver settings
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../settings/player/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  MIDI player settings
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../settings/shell/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Shell (command line) settings
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../settings/synth/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Synthesizer settings
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FluidFeatures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  ✨ Fluid Features
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../LowLatency/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  ⏱️ Low latency tips
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FluidSynth-configuration-files/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  🗂️ Configuration files
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reverbators/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  🌀 Reverb Overview
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ladspa/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  🖥️ LADSPA Interface
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SoundFont3Format/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  ➕ The SoundFont3 Format
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  🤓 For Developers
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+  🤓 For Developers
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2_1" id="__nav_4_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  🛠️ Compiling Fluidsynth
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+  🛠️ Compiling Fluidsynth
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BuildingWithCMake/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  🛠️ Building FluidSynth with CMake
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BuildingForAndroid/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  🤖 Building for Android
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Using-prebuilt-libraries-on-Android/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  ⚙️ Using prebuilt libraries on Android
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NotesForPackagers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  📦 Notes for Packagers
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../usage/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  📖 Developer Guide
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_2_2" id="__nav_4_2_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+  📖 Developer Guide
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../usage/creating-settings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Creating and changing the settings
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../usage/creating-synth/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Creating the synthesizer
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../usage/loading-soundfonts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Loading and managing SoundFonts
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../usage/audio-driver/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Creating the audio driver
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../usage/using-synth/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Using the synthesizer without an audio driver
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../usage/sending-midi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Sending MIDI events
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../usage/realtime-midi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Creating a real-time MIDI driver
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../usage/midi-player/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Loading and playing a MIDI file
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../usage/file-renderer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Fast file renderer for non-realtime MIDI file rendering
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../usage/midi-player-mem/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Playing a MIDI file from memory
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../usage/midi-router/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Real-time MIDI router
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../usage/sequencer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Using the MIDI sequencer
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../usage/shell/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Shell interface
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../usage/multi-channel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Multi-channel audio rendering
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../usage/synth-context/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Understanding the "synthesis context"
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../usage/advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Advanced features
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  🔍 API Reference
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_2_3" id="__nav_4_2_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+  🔍 API Reference
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../recent-changes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Recent Changes
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deprecated/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Deprecated API
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Types/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Types
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../audio-driver/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Audio Driver
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../audio-output/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Audio Output
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../audio-rendering/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Audio Rendering
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../channel-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  MIDI Channel Setup
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chorus-effect/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Effect - Chorus
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../command-handler/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Command Handler
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../command-interface/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Command Interface
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../command-server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Command Server
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../command-shell/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Command Shell
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../file-renderer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  File Renderer
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../generators/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  SoundFont Generators
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../iir-filter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Effect - IIR Filter
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ladspa/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Effect - LADSPA
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../logging/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Logging
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../midi-driver/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  MIDI Driver
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../midi-events/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  MIDI Events
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../midi-input/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  MIDI Input
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../midi-messages/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  MIDI Channel Messages
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../midi-player/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  MIDI File Player
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../midi-router/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  MIDI Router
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../misc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Miscellaneous
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulators/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  SoundFont Modulators
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reverb-effect/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Effect - Reverb
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sequencer-events/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Sequencer Events
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sequencer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  MIDI Sequencer
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../settings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Settings
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  SoundFont Loader
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="././" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  SoundFont Loader
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#lifecycle-functions-for-soundfont-loader" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Lifecycle Functions for SoundFont Loader
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lifecycle Functions for SoundFont Loader">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new_fluid_sfloader" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>new_fluid_sfloader()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete_fluid_sfloader" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>delete_fluid_sfloader()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#new_fluid_defsfloader" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>new_fluid_defsfloader()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lifecycle-functions-for-soundfont" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Lifecycle Functions for SoundFont
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lifecycle Functions for SoundFont">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new_fluid_sfont" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>new_fluid_sfont()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete_fluid_sfont" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>delete_fluid_sfont()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lifecycle-functions-for-preset" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Lifecycle Functions for Preset
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lifecycle Functions for Preset">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new_fluid_preset" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>new_fluid_preset()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete_fluid_preset" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>delete_fluid_preset()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lifecycle-functions-for-sample" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Lifecycle Functions for Sample
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lifecycle Functions for Sample">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new_fluid_sample" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>new_fluid_sample()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete_fluid_sample" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>delete_fluid_sample()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enumerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Enumerations
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Enumerations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#@254110145054223374313306133161016057052170030000" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>@254110145054223374313306133161016057052170030000</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_sample_type" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_sample_type</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#types" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Types
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fluid_preset_free_t" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_preset_free_t</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_preset_get_banknum_t" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_preset_get_banknum_t</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_preset_get_name_t" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_preset_get_name_t</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_preset_get_num_t" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_preset_get_num_t</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_preset_noteon_t" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_preset_noteon_t</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_sfloader_callback_close_t" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_sfloader_callback_close_t</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_sfloader_callback_open_t" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_sfloader_callback_open_t</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_sfloader_callback_read_t" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_sfloader_callback_read_t</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_sfloader_callback_seek_t" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_sfloader_callback_seek_t</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_sfloader_callback_tell_t" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_sfloader_callback_tell_t</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_sfloader_free_t" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_sfloader_free_t</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_sfloader_load_t" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_sfloader_load_t</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_sfont_free_t" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_sfont_free_t</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_sfont_get_name_t" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_sfont_get_name_t</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_sfont_get_preset_t" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_sfont_get_preset_t</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_sfont_iteration_next_t" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_sfont_iteration_next_t</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_sfont_iteration_start_t" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_sfont_iteration_start_t</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Functions
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fluid_preset_get_banknum" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_preset_get_banknum()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_preset_get_data" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_preset_get_data()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_preset_get_name" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_preset_get_name()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_preset_get_num" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_preset_get_num()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_preset_get_sfont" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_preset_get_sfont()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_preset_set_data" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_preset_set_data()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_sample_set_loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_sample_set_loop()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_sample_set_name" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_sample_set_name()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_sample_set_pitch" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_sample_set_pitch()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_sample_set_sound_data" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_sample_set_sound_data()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_sample_sizeof" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_sample_sizeof()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_sfloader_get_data" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_sfloader_get_data()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_sfloader_set_callbacks" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_sfloader_set_callbacks()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_sfloader_set_data" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_sfloader_set_data()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_sfont_get_data" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_sfont_get_data()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_sfont_get_default_mod" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_sfont_get_default_mod()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_sfont_get_id" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_sfont_get_id()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_sfont_get_name" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_sfont_get_name()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_sfont_get_preset" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_sfont_get_preset()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_sfont_iteration_next" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_sfont_iteration_next()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_sfont_iteration_start" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_sfont_iteration_start()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_sfont_set_data" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_sfont_set_data()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_sfont_set_default_mod" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_sfont_set_default_mod()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_synth_add_sfloader" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_synth_add_sfloader()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_synth_get_channel_preset" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_synth_get_channel_preset()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../soundfont-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  SoundFont Management
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../soundfonts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  SoundFonts
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../synth/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Synthesizer
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../synthesis-params/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Synthesis Parameters
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tuning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  MIDI Tuning
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../voice-control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Synthesis Voice Control
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../voices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Voice Manipulation
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../examples/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  📄 Code Examples
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_2_4" id="__nav_4_2_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+  📄 Code Examples
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/example/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  example
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/fluidsynth_arpeggio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  fluidsynth_arpeggio
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/fluidsynth_enumsettings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  fluidsynth_enumsettings
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/fluidsynth_fx/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  fluidsynth_fx
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/fluidsynth_instruments/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  fluidsynth_instruments
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/fluidsynth_metronome/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  fluidsynth_metronome
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/fluidsynth_process/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  fluidsynth_process
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/fluidsynth_register_adriver/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  fluidsynth_register_adriver
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/fluidsynth_sfload_mem/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  fluidsynth_sfload_mem
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/fluidsynth_simple/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  fluidsynth_simple
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.fluidsynth.org/api-1.x/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  🔗 Legacy 1.x API
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ReleaseCheckList/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  ✅ Release Checklist
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/wiki/api" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  🔍 API
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/FluidSynth/fluidsynth/issues" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  🪲 Bug Tracker
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                      
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#lifecycle-functions-for-soundfont-loader" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Lifecycle Functions for SoundFont Loader
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lifecycle Functions for SoundFont Loader">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new_fluid_sfloader" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>new_fluid_sfloader()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete_fluid_sfloader" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>delete_fluid_sfloader()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#new_fluid_defsfloader" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>new_fluid_defsfloader()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lifecycle-functions-for-soundfont" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Lifecycle Functions for SoundFont
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lifecycle Functions for SoundFont">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new_fluid_sfont" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>new_fluid_sfont()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete_fluid_sfont" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>delete_fluid_sfont()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lifecycle-functions-for-preset" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Lifecycle Functions for Preset
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lifecycle Functions for Preset">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new_fluid_preset" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>new_fluid_preset()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete_fluid_preset" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>delete_fluid_preset()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lifecycle-functions-for-sample" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Lifecycle Functions for Sample
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lifecycle Functions for Sample">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new_fluid_sample" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>new_fluid_sample()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete_fluid_sample" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>delete_fluid_sample()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enumerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Enumerations
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Enumerations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#@254110145054223374313306133161016057052170030000" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>@254110145054223374313306133161016057052170030000</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_sample_type" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_sample_type</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#types" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Types
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fluid_preset_free_t" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_preset_free_t</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_preset_get_banknum_t" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_preset_get_banknum_t</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_preset_get_name_t" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_preset_get_name_t</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_preset_get_num_t" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_preset_get_num_t</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_preset_noteon_t" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_preset_noteon_t</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_sfloader_callback_close_t" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_sfloader_callback_close_t</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_sfloader_callback_open_t" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_sfloader_callback_open_t</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_sfloader_callback_read_t" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_sfloader_callback_read_t</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_sfloader_callback_seek_t" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_sfloader_callback_seek_t</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_sfloader_callback_tell_t" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_sfloader_callback_tell_t</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_sfloader_free_t" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_sfloader_free_t</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_sfloader_load_t" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_sfloader_load_t</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_sfont_free_t" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_sfont_free_t</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_sfont_get_name_t" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_sfont_get_name_t</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_sfont_get_preset_t" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_sfont_get_preset_t</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_sfont_iteration_next_t" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_sfont_iteration_next_t</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_sfont_iteration_start_t" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_sfont_iteration_start_t</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Functions
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fluid_preset_get_banknum" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_preset_get_banknum()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_preset_get_data" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_preset_get_data()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_preset_get_name" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_preset_get_name()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_preset_get_num" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_preset_get_num()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_preset_get_sfont" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_preset_get_sfont()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_preset_set_data" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_preset_set_data()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_sample_set_loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_sample_set_loop()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_sample_set_name" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_sample_set_name()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_sample_set_pitch" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_sample_set_pitch()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_sample_set_sound_data" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_sample_set_sound_data()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_sample_sizeof" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_sample_sizeof()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_sfloader_get_data" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_sfloader_get_data()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_sfloader_set_callbacks" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_sfloader_set_callbacks()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_sfloader_set_data" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_sfloader_set_data()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_sfont_get_data" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_sfont_get_data()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_sfont_get_default_mod" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_sfont_get_default_mod()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_sfont_get_id" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_sfont_get_id()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_sfont_get_name" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_sfont_get_name()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_sfont_get_preset" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_sfont_get_preset()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_sfont_iteration_next" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_sfont_iteration_next()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_sfont_iteration_start" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_sfont_iteration_start()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_sfont_set_data" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_sfont_set_data()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_sfont_set_default_mod" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_sfont_set_default_mod()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_synth_add_sfloader" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_synth_add_sfloader()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_synth_get_channel_preset" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_synth_get_channel_preset()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../.." class="md-path__link">
+        
+  
+  <span class="md-ellipsis">
+    🏠 Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-path__item">
+        <a href="../../GettingStarted/" class="md-path__link">
+          
+  
+  <span class="md-ellipsis">
+    📚 Documentation
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-path__item">
+        <a href="../../BuildingWithCMake/" class="md-path__link">
+          
+  
+  <span class="md-ellipsis">
+    🤓 For Developers
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-path__item">
+        <a href="../" class="md-path__link">
+          
+  
+  <span class="md-ellipsis">
+    🔍 API Reference
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+    <a href="https://github.com/FluidSynth/fluidsynth/edit/master/doc/wiki/api/soundfont-loader.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-file-pen" viewBox="0 0 24 24"><path d="M12.659 22H18a2 2 0 0 0 2-2V8a2.4 2.4 0 0 0-.706-1.706l-3.588-3.588A2.4 2.4 0 0 0 14 2H6a2 2 0 0 0-2 2v9.34"/><path d="M14 2v5a1 1 0 0 0 1 1h5M10.378 12.622a1 1 0 0 1 3 3.003L8.36 20.637a2 2 0 0 1-.854.506l-2.867.837a.5.5 0 0 1-.62-.62l.836-2.869a2 2 0 0 1 .506-.853z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/FluidSynth/fluidsynth/raw/master/doc/wiki/api/soundfont-loader.md" title="View source of this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-file-code-2" viewBox="0 0 24 24"><path d="M4 12.15V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.706.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2h-3.35"/><path d="M14 2v5a1 1 0 0 0 1 1h5M5 16l-3 3 3 3M9 22l3-3-3-3"/></svg>
+    </a>
+  
+
+
+<h1 id="soundfont-loader">SoundFont Loader</h1>
+<p>Create custom SoundFont loaders. </p>
+<p>It is possible to add new SoundFont loaders to the synthesizer. This API allows for virtual SoundFont files to be loaded and synthesized, which may not actually be SoundFont files, as long as they can be represented by the SoundFont synthesis model.</p>
+<p>To add a new SoundFont loader to the synthesizer, call <a href="../soundfont-loader/#fluid_synth_add_sfloader"><code>fluid_synth_add_sfloader()</code></a> and pass a pointer to an <a href="../Types/#fluid_sfloader_t"><code>fluid_sfloader_t</code></a> instance created by <a href="../soundfont-loader/#new_fluid_sfloader"><code>new_fluid_sfloader()</code></a>. On creation, you must specify a callback function <code>load</code> that will be called for every file attempting to load it and if successful returns a <a href="../Types/#fluid_sfont_t"><code>fluid_sfont_t</code></a> instance, or NULL if it fails.</p>
+<p>The <a href="../Types/#fluid_sfont_t"><code>fluid_sfont_t</code></a> structure contains a callback to obtain the name of the SoundFont. It contains two functions to iterate though the contained presets, and one function to obtain a preset corresponding to a bank and preset number. This function should return a <a href="../Types/#fluid_preset_t"><code>fluid_preset_t</code></a> instance.</p>
+<p>The <a href="../Types/#fluid_preset_t"><code>fluid_preset_t</code></a> instance contains some functions to obtain information from the preset (name, bank, number). The most important callback is the noteon function. The noteon function is called by fluidsynth internally and should call <a href="../voice-control/#fluid_synth_alloc_voice"><code>fluid_synth_alloc_voice()</code></a> for every sample that has to be played. <a href="../voice-control/#fluid_synth_alloc_voice"><code>fluid_synth_alloc_voice()</code></a> expects a pointer to a <a href="../Types/#fluid_sample_t"><code>fluid_sample_t</code></a> instance and returns a pointer to the opaque <a href="../Types/#fluid_voice_t"><code>fluid_voice_t</code></a> structure. To set or increment the values of a generator, use <a href="../voices/#fluid_voice_gen_set"><code>fluid_voice_gen_set()</code></a> or <a href="../voices/#fluid_voice_gen_incr"><code>fluid_voice_gen_incr()</code></a>. When you are finished initializing the voice call fluid_voice_start() to start playing the synthesis voice. </p>
+<h2 id="lifecycle-functions-for-soundfont-loader">Lifecycle Functions for SoundFont Loader</h2>
+<h3 id="new_fluid_sfloader"><code>new_fluid_sfloader()</code></h3>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">fluid_sfloader_t</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">new_fluid_sfloader</span><span class="p">(</span><span class="n">fluid_sfloader_load_t</span><span class="w"> </span><span class="n">load</span><span class="p">,</span><span class="w"> </span><span class="n">fluid_sfloader_free_t</span><span class="w"> </span><span class="n">free</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Creates a new SoundFont loader. </p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>load</code></td>
+<td>Pointer to a function that provides a <a href="../Types/#fluid_sfont_t"><code>fluid_sfont_t</code></a> (see <a href="../soundfont-loader/#fluid_sfloader_load_t"><code>fluid_sfloader_load_t</code></a>).</td>
+</tr>
+<tr>
+<td><code>free</code></td>
+<td>Pointer to a function that destroys this instance (see <a href="../soundfont-loader/#fluid_sfloader_free_t"><code>fluid_sfloader_free_t</code></a>). Unless any private data needs to be freed it is sufficient to set this to <a href="../soundfont-loader/#delete_fluid_sfloader"><code>delete_fluid_sfloader()</code></a>.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> the SoundFont loader instance on success, NULL otherwise.  </p>
+<h3 id="delete_fluid_sfloader"><code>delete_fluid_sfloader()</code></h3>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">delete_fluid_sfloader</span><span class="p">(</span><span class="n">fluid_sfloader_t</span><span class="w"> </span><span class="o">*</span><span class="n">loader</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Frees a SoundFont loader created with <a href="../soundfont-loader/#new_fluid_sfloader"><code>new_fluid_sfloader()</code></a>. </p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>loader</code></td>
+<td>The SoundFont loader instance to free.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="new_fluid_defsfloader"><code>new_fluid_defsfloader()</code></h3>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">fluid_sfloader_t</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">new_fluid_defsfloader</span><span class="p">(</span><span class="n">fluid_settings_t</span><span class="w"> </span><span class="o">*</span><span class="n">settings</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Creates a default soundfont2 loader that can be used with <a href="../soundfont-loader/#fluid_synth_add_sfloader"><code>fluid_synth_add_sfloader()</code></a>. </p>
+<p>By default every synth instance has an initial default soundfont loader instance. Calling this function is usually only necessary to load a soundfont from memory, by providing custom callback functions via <a href="../soundfont-loader/#fluid_sfloader_set_callbacks"><code>fluid_sfloader_set_callbacks()</code></a>.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>settings</code></td>
+<td>A settings instance obtained by <a href="../settings/#new_fluid_settings"><code>new_fluid_settings()</code></a></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> A default soundfont2 loader struct  </p>
+<h2 id="lifecycle-functions-for-soundfont">Lifecycle Functions for SoundFont</h2>
+<h3 id="new_fluid_sfont"><code>new_fluid_sfont()</code></h3>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">fluid_sfont_t</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">new_fluid_sfont</span><span class="p">(</span><span class="n">fluid_sfont_get_name_t</span><span class="w"> </span><span class="n">get_name</span><span class="p">,</span><span class="w"> </span><span class="n">fluid_sfont_get_preset_t</span><span class="w"> </span><span class="n">get_preset</span><span class="p">,</span><span class="w"> </span><span class="n">fluid_sfont_iteration_start_t</span><span class="w"> </span><span class="n">iter_start</span><span class="p">,</span><span class="w"> </span><span class="n">fluid_sfont_iteration_next_t</span><span class="w"> </span><span class="n">iter_next</span><span class="p">,</span><span class="w"> </span><span class="n">fluid_sfont_free_t</span><span class="w"> </span><span class="n">free</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Creates a new virtual SoundFont instance structure. </p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>get_name</code></td>
+<td>A function implementing <a href="../soundfont-loader/#fluid_sfont_get_name_t"><code>fluid_sfont_get_name_t</code></a>.</td>
+</tr>
+<tr>
+<td><code>get_preset</code></td>
+<td>A function implementing <a href="../soundfont-loader/#fluid_sfont_get_preset_t"><code>fluid_sfont_get_preset_t</code></a>.</td>
+</tr>
+<tr>
+<td><code>iter_start</code></td>
+<td>A function implementing <a href="../soundfont-loader/#fluid_sfont_iteration_start_t"><code>fluid_sfont_iteration_start_t</code></a>, or NULL if preset iteration not needed.</td>
+</tr>
+<tr>
+<td><code>iter_next</code></td>
+<td>A function implementing <a href="../soundfont-loader/#fluid_sfont_iteration_next_t"><code>fluid_sfont_iteration_next_t</code></a>, or NULL if preset iteration not needed.</td>
+</tr>
+<tr>
+<td><code>free</code></td>
+<td>A function implementing <a href="../soundfont-loader/#fluid_sfont_free_t"><code>fluid_sfont_free_t</code></a>.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> The soundfont instance on success or NULL otherwise.  </p>
+<h3 id="delete_fluid_sfont"><code>delete_fluid_sfont()</code></h3>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">delete_fluid_sfont</span><span class="p">(</span><span class="n">fluid_sfont_t</span><span class="w"> </span><span class="o">*</span><span class="n">sfont</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Destroys a SoundFont instance created with <a href="../soundfont-loader/#new_fluid_sfont"><code>new_fluid_sfont()</code></a>. </p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>sfont</code></td>
+<td>The SoundFont instance to destroy.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> Always returns 0. </p>
+<p>Implements <a href="../soundfont-loader/#fluid_sfont_free_t"><code>fluid_sfont_free_t</code></a>. </p>
+<h2 id="lifecycle-functions-for-preset">Lifecycle Functions for Preset</h2>
+<h3 id="new_fluid_preset"><code>new_fluid_preset()</code></h3>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">fluid_preset_t</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">new_fluid_preset</span><span class="p">(</span><span class="n">fluid_sfont_t</span><span class="w"> </span><span class="o">*</span><span class="n">parent_sfont</span><span class="p">,</span><span class="w"> </span><span class="n">fluid_preset_get_name_t</span><span class="w"> </span><span class="n">get_name</span><span class="p">,</span><span class="w"> </span><span class="n">fluid_preset_get_banknum_t</span><span class="w"> </span><span class="n">get_bank</span><span class="p">,</span><span class="w"> </span><span class="n">fluid_preset_get_num_t</span><span class="w"> </span><span class="n">get_num</span><span class="p">,</span><span class="w"> </span><span class="n">fluid_preset_noteon_t</span><span class="w"> </span><span class="n">noteon</span><span class="p">,</span><span class="w"> </span><span class="n">fluid_preset_free_t</span><span class="w"> </span><span class="n">free</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Create a virtual SoundFont preset instance. </p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>parent_sfont</code></td>
+<td>The SoundFont instance this preset shall belong to</td>
+</tr>
+<tr>
+<td><code>get_name</code></td>
+<td>A function implementing <a href="../soundfont-loader/#fluid_preset_get_name_t"><code>fluid_preset_get_name_t</code></a></td>
+</tr>
+<tr>
+<td><code>get_bank</code></td>
+<td>A function implementing <a href="../soundfont-loader/#fluid_preset_get_banknum_t"><code>fluid_preset_get_banknum_t</code></a></td>
+</tr>
+<tr>
+<td><code>get_num</code></td>
+<td>A function implementing <a href="../soundfont-loader/#fluid_preset_get_num_t"><code>fluid_preset_get_num_t</code></a></td>
+</tr>
+<tr>
+<td><code>noteon</code></td>
+<td>A function implementing <a href="../soundfont-loader/#fluid_preset_noteon_t"><code>fluid_preset_noteon_t</code></a></td>
+</tr>
+<tr>
+<td><code>free</code></td>
+<td>A function implementing <a href="../soundfont-loader/#fluid_preset_free_t"><code>fluid_preset_free_t</code></a></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> The preset instance on success, NULL otherwise.  </p>
+<h3 id="delete_fluid_preset"><code>delete_fluid_preset()</code></h3>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">delete_fluid_preset</span><span class="p">(</span><span class="n">fluid_preset_t</span><span class="w"> </span><span class="o">*</span><span class="n">preset</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Destroys a SoundFont preset instance created with <a href="../soundfont-loader/#new_fluid_preset"><code>new_fluid_preset()</code></a>. </p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>preset</code></td>
+<td>The SoundFont preset instance to destroy.</td>
+</tr>
+</tbody>
+</table>
+<p>Implements <a href="../soundfont-loader/#fluid_preset_free_t"><code>fluid_preset_free_t</code></a>. </p>
+<h2 id="lifecycle-functions-for-sample">Lifecycle Functions for Sample</h2>
+<h3 id="new_fluid_sample"><code>new_fluid_sample()</code></h3>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">fluid_sample_t</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">new_fluid_sample</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Create a new sample instance. </p>
+<p><strong>Returns:</strong> The sample on success, NULL otherwise.  </p>
+<h3 id="delete_fluid_sample"><code>delete_fluid_sample()</code></h3>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">delete_fluid_sample</span><span class="p">(</span><span class="n">fluid_sample_t</span><span class="w"> </span><span class="o">*</span><span class="n">sample</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Destroy a sample instance previously created with <a href="../soundfont-loader/#new_fluid_sample"><code>new_fluid_sample()</code></a>. </p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>sample</code></td>
+<td>The sample to destroy.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="enumerations">Enumerations</h2>
+<h3 id="@254110145054223374313306133161016057052170030000"><code>@254110145054223374313306133161016057052170030000</code></h3>
+<p>Some notification enums for presets and samples. </p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>FLUID_PRESET_SELECTED</code></td>
+<td>Preset selected notify.</td>
+</tr>
+<tr>
+<td><code>FLUID_PRESET_UNSELECTED</code></td>
+<td>Preset unselected notify.</td>
+</tr>
+<tr>
+<td><code>FLUID_SAMPLE_DONE</code></td>
+<td>Sample no longer needed notify.</td>
+</tr>
+<tr>
+<td><code>FLUID_PRESET_PIN</code></td>
+<td>Request to pin preset samples to cache.</td>
+</tr>
+<tr>
+<td><code>FLUID_PRESET_UNPIN</code></td>
+<td>Request to unpin preset samples from cache.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="fluid_sample_type"><code>fluid_sample_type</code></h3>
+<p>Indicates the type of a sample used by the _fluid_sample_t::sampletype field. </p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>FLUID_SAMPLETYPE_MONO</code></td>
+<td>Value used for mono samples.</td>
+</tr>
+<tr>
+<td><code>FLUID_SAMPLETYPE_RIGHT</code></td>
+<td>Value used for right samples of a stereo pair.</td>
+</tr>
+<tr>
+<td><code>FLUID_SAMPLETYPE_LEFT</code></td>
+<td>Value used for left samples of a stereo pair.</td>
+</tr>
+<tr>
+<td><code>FLUID_SAMPLETYPE_LINKED</code></td>
+<td>Value used for linked sample, which is currently not supported.</td>
+</tr>
+<tr>
+<td><code>FLUID_SAMPLETYPE_OGG_VORBIS</code></td>
+<td>Flag used for Ogg Vorbis compressed samples (non-standard compliant extension) as found in the program "sftools" developed by Werner Schweer from MuseScore.  1.1.7</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>FLUID_SAMPLETYPE_ROM</code></td>
+<td>Flag that indicates ROM samples, causing the sample to be ignored.</td>
+</tr>
+</tbody>
+</table>
+<p>This enum corresponds to the <code>SFSampleLink</code> enum in the SoundFont spec. One <code>flag</code> may be bit-wise OR-ed with one <code>value</code>. </p>
+<h2 id="types">Types</h2>
+<h3 id="fluid_preset_free_t"><code>fluid_preset_free_t</code></h3>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">typedef</span><span class="w"> </span><span class="kt">void</span><span class="p">(</span><span class="o">*</span><span class="w"> </span><span class="n">fluid_preset_free_t</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="n">fluid_preset_t</span><span class="w"> </span><span class="o">*</span><span class="n">preset</span><span class="p">);</span>
+</span></code></pre></div>
+<p>Method to free a virtual SoundFont preset. </p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>preset</code></td>
+<td>Virtual SoundFont preset</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> Should return 0 </p>
+<p>Any custom user provided cleanup function must ultimately call <a href="../soundfont-loader/#delete_fluid_preset"><code>delete_fluid_preset()</code></a> to ensure proper cleanup of the <a href="../Types/#fluid_preset_t"><code>fluid_preset_t</code></a> struct. If no private data needs to be freed, setting this to <a href="../soundfont-loader/#delete_fluid_preset"><code>delete_fluid_preset()</code></a> is sufficient. </p>
+<h3 id="fluid_preset_get_banknum_t"><code>fluid_preset_get_banknum_t</code></h3>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">typedef</span><span class="w"> </span><span class="kt">int</span><span class="p">(</span><span class="o">*</span><span class="w"> </span><span class="n">fluid_preset_get_banknum_t</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="n">fluid_preset_t</span><span class="w"> </span><span class="o">*</span><span class="n">preset</span><span class="p">);</span>
+</span></code></pre></div>
+<p>Method to get a virtual SoundFont preset MIDI bank number. </p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>preset</code></td>
+<td>Virtual SoundFont preset</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> The bank number of the preset  </p>
+<h3 id="fluid_preset_get_name_t"><code>fluid_preset_get_name_t</code></h3>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">typedef</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="p">(</span><span class="o">*</span><span class="w"> </span><span class="n">fluid_preset_get_name_t</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="n">fluid_preset_t</span><span class="w"> </span><span class="o">*</span><span class="n">preset</span><span class="p">);</span>
+</span></code></pre></div>
+<p>Method to get a virtual SoundFont preset name. </p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>preset</code></td>
+<td>Virtual SoundFont preset</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> Should return the name of the preset. The returned string must be valid for the duration of the virtual preset (or the duration of the SoundFont, in the case of preset iteration).  </p>
+<h3 id="fluid_preset_get_num_t"><code>fluid_preset_get_num_t</code></h3>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">typedef</span><span class="w"> </span><span class="kt">int</span><span class="p">(</span><span class="o">*</span><span class="w"> </span><span class="n">fluid_preset_get_num_t</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="n">fluid_preset_t</span><span class="w"> </span><span class="o">*</span><span class="n">preset</span><span class="p">);</span>
+</span></code></pre></div>
+<p>Method to get a virtual SoundFont preset MIDI program number. </p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>preset</code></td>
+<td>Virtual SoundFont preset</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> The program number of the preset  </p>
+<h3 id="fluid_preset_noteon_t"><code>fluid_preset_noteon_t</code></h3>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">typedef</span><span class="w"> </span><span class="kt">int</span><span class="p">(</span><span class="o">*</span><span class="w"> </span><span class="n">fluid_preset_noteon_t</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="n">fluid_preset_t</span><span class="w"> </span><span class="o">*</span><span class="n">preset</span><span class="p">,</span><span class="w"> </span><span class="n">fluid_synth_t</span><span class="w"> </span><span class="o">*</span><span class="n">synth</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">chan</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">key</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">vel</span><span class="p">);</span>
+</span></code></pre></div>
+<p>Method to handle a noteon event (synthesize the instrument). </p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>preset</code></td>
+<td>Virtual SoundFont preset</td>
+</tr>
+<tr>
+<td><code>synth</code></td>
+<td>Synthesizer instance</td>
+</tr>
+<tr>
+<td><code>chan</code></td>
+<td>MIDI channel number of the note on event</td>
+</tr>
+<tr>
+<td><code>key</code></td>
+<td>MIDI note number (0-127)</td>
+</tr>
+<tr>
+<td><code>vel</code></td>
+<td>MIDI velocity (0-127)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <a href="../misc/#FLUID_OK"><code>FLUID_OK</code></a> on success (0) or <a href="../misc/#FLUID_FAILED"><code>FLUID_FAILED</code></a> (-1) otherwise </p>
+<p>This method may be called from within synthesis context and therefore should be as efficient as possible and not perform any operations considered bad for realtime audio output (memory allocations and other OS calls).</p>
+<p>Call <a href="../voice-control/#fluid_synth_alloc_voice"><code>fluid_synth_alloc_voice()</code></a> for every sample that has to be played. <a href="../voice-control/#fluid_synth_alloc_voice"><code>fluid_synth_alloc_voice()</code></a> expects a pointer to a <a href="../Types/#fluid_sample_t"><code>fluid_sample_t</code></a> structure and returns a pointer to the opaque <a href="../Types/#fluid_voice_t"><code>fluid_voice_t</code></a> structure. To set or increment the values of a generator, use <a href="../voices/#fluid_voice_gen_set"><code>fluid_voice_gen_set()</code></a> or <a href="../voices/#fluid_voice_gen_incr"><code>fluid_voice_gen_incr()</code></a>. When you are finished initializing the voice call fluid_voice_start() to start playing the synthesis voice. Starting with FluidSynth 1.1.0 all voices created will be started at the same time. </p>
+<h3 id="fluid_sfloader_callback_close_t"><code>fluid_sfloader_callback_close_t</code></h3>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="k">typedef</span><span class="w"> </span><span class="kt">int</span><span class="p">(</span><span class="o">*</span><span class="w"> </span><span class="n">fluid_sfloader_callback_close_t</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">handle</span><span class="p">);</span>
+</span></code></pre></div>
+<p>Closes the handle returned by <a href="../soundfont-loader/#fluid_sfloader_callback_open_t"><code>fluid_sfloader_callback_open_t</code></a> and frees used resources. </p>
+<p><strong>Returns:</strong> returns <a href="../misc/#FLUID_OK"><code>FLUID_OK</code></a> on success, <a href="../misc/#FLUID_FAILED"><code>FLUID_FAILED</code></a> on error  </p>
+<h3 id="fluid_sfloader_callback_open_t"><code>fluid_sfloader_callback_open_t</code></h3>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="k">typedef</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="p">(</span><span class="o">*</span><span class="w"> </span><span class="n">fluid_sfloader_callback_open_t</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">filename</span><span class="p">);</span>
+</span></code></pre></div>
+<p>Opens the file or memory indicated by <code>filename</code> in binary read mode. </p>
+<p><strong>Returns:</strong> returns a file handle on success, NULL otherwise </p>
+<p><code>filename</code> matches the string provided during the <a href="../soundfont-management/#fluid_synth_sfload"><code>fluid_synth_sfload()</code></a> call. </p>
+<h3 id="fluid_sfloader_callback_read_t"><code>fluid_sfloader_callback_read_t</code></h3>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="k">typedef</span><span class="w"> </span><span class="kt">int</span><span class="p">(</span><span class="o">*</span><span class="w"> </span><span class="n">fluid_sfloader_callback_read_t</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">buf</span><span class="p">,</span><span class="w"> </span><span class="n">fluid_long_long_t</span><span class="w"> </span><span class="n">count</span><span class="p">,</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">handle</span><span class="p">);</span>
+</span></code></pre></div>
+<p>Reads <code>count</code> bytes to the specified buffer <code>buf</code>. </p>
+<p><strong>Returns:</strong> returns <a href="../misc/#FLUID_OK"><code>FLUID_OK</code></a> if exactly <code>count</code> bytes were successfully read, else returns <a href="../misc/#FLUID_FAILED"><code>FLUID_FAILED</code></a> and leaves buf unmodified.  </p>
+<h3 id="fluid_sfloader_callback_seek_t"><code>fluid_sfloader_callback_seek_t</code></h3>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="k">typedef</span><span class="w"> </span><span class="kt">int</span><span class="p">(</span><span class="o">*</span><span class="w"> </span><span class="n">fluid_sfloader_callback_seek_t</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">handle</span><span class="p">,</span><span class="w"> </span><span class="n">fluid_long_long_t</span><span class="w"> </span><span class="n">offset</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">origin</span><span class="p">);</span>
+</span></code></pre></div>
+<p>Same purpose and behaviour as fseek. </p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>handle</code></td>
+<td>file handle returned by the open callback</td>
+</tr>
+<tr>
+<td><code>offset</code></td>
+<td>offset in bytes relative to <code>origin</code> to seek</td>
+</tr>
+<tr>
+<td><code>origin</code></td>
+<td>either <code>SEEK_SET</code>, <code>SEEK_CUR</code> or <code>SEEK_END</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> returns <a href="../misc/#FLUID_OK"><code>FLUID_OK</code></a> if the seek was successfully performed while not seeking beyond a buffer or file, <a href="../misc/#FLUID_FAILED"><code>FLUID_FAILED</code></a> otherwise  </p>
+<h3 id="fluid_sfloader_callback_tell_t"><code>fluid_sfloader_callback_tell_t</code></h3>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="k">typedef</span><span class="w"> </span><span class="n">fluid_long_long_t</span><span class="p">(</span><span class="o">*</span><span class="w"> </span><span class="n">fluid_sfloader_callback_tell_t</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">handle</span><span class="p">);</span>
+</span></code></pre></div>
+<p><strong>Returns:</strong> returns current file offset or <a href="../misc/#FLUID_FAILED"><code>FLUID_FAILED</code></a> on error  </p>
+<h3 id="fluid_sfloader_free_t"><code>fluid_sfloader_free_t</code></h3>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="k">typedef</span><span class="w"> </span><span class="kt">void</span><span class="p">(</span><span class="o">*</span><span class="w"> </span><span class="n">fluid_sfloader_free_t</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="n">fluid_sfloader_t</span><span class="w"> </span><span class="o">*</span><span class="n">loader</span><span class="p">);</span>
+</span></code></pre></div>
+<p>The free method should free the memory allocated for a <a href="../Types/#fluid_sfloader_t"><code>fluid_sfloader_t</code></a> instance in addition to any private data. </p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>loader</code></td>
+<td>SoundFont loader</td>
+</tr>
+</tbody>
+</table>
+<p>Any custom user provided cleanup function must ultimately call <a href="../soundfont-loader/#delete_fluid_sfloader"><code>delete_fluid_sfloader()</code></a> to ensure proper cleanup of the <a href="../Types/#fluid_sfloader_t"><code>fluid_sfloader_t</code></a> struct. If no private data needs to be freed, setting this to <a href="../soundfont-loader/#delete_fluid_sfloader"><code>delete_fluid_sfloader()</code></a> is sufficient. </p>
+<h3 id="fluid_sfloader_load_t"><code>fluid_sfloader_load_t</code></h3>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="k">typedef</span><span class="w"> </span><span class="n">fluid_sfont_t</span><span class="w"> </span><span class="o">*</span><span class="p">(</span><span class="o">*</span><span class="w"> </span><span class="n">fluid_sfloader_load_t</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="n">fluid_sfloader_t</span><span class="w"> </span><span class="o">*</span><span class="n">loader</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">filename</span><span class="p">);</span>
+</span></code></pre></div>
+<p>Method to load an instrument file (does not actually need to be a real file name, could be another type of string identifier that the <em>loader</em> understands). </p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>loader</code></td>
+<td>SoundFont loader</td>
+</tr>
+<tr>
+<td><code>filename</code></td>
+<td>File name or other string identifier</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> The loaded instrument file (SoundFont) or NULL if an error occurred.  </p>
+<h3 id="fluid_sfont_free_t"><code>fluid_sfont_free_t</code></h3>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="k">typedef</span><span class="w"> </span><span class="kt">int</span><span class="p">(</span><span class="o">*</span><span class="w"> </span><span class="n">fluid_sfont_free_t</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="n">fluid_sfont_t</span><span class="w"> </span><span class="o">*</span><span class="n">sfont</span><span class="p">);</span>
+</span></code></pre></div>
+<p>Method to free a virtual SoundFont bank. </p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>sfont</code></td>
+<td>Virtual SoundFont to free.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> Should return 0 when it was able to free all resources or non-zero if some of the samples could not be freed because they are still in use, in which case the free will be tried again later, until success. </p>
+<p>Any custom user provided cleanup function must ultimately call <a href="../soundfont-loader/#delete_fluid_sfont"><code>delete_fluid_sfont()</code></a> to ensure proper cleanup of the <a href="../Types/#fluid_sfont_t"><code>fluid_sfont_t</code></a> struct. If no private data needs to be freed, setting this to <a href="../soundfont-loader/#delete_fluid_sfont"><code>delete_fluid_sfont()</code></a> is sufficient. </p>
+<h3 id="fluid_sfont_get_name_t"><code>fluid_sfont_get_name_t</code></h3>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="k">typedef</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="p">(</span><span class="o">*</span><span class="w"> </span><span class="n">fluid_sfont_get_name_t</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="n">fluid_sfont_t</span><span class="w"> </span><span class="o">*</span><span class="n">sfont</span><span class="p">);</span>
+</span></code></pre></div>
+<p>Method to return the name of a virtual SoundFont. </p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>sfont</code></td>
+<td>Virtual SoundFont</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> The name of the virtual SoundFont.  </p>
+<h3 id="fluid_sfont_get_preset_t"><code>fluid_sfont_get_preset_t</code></h3>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="k">typedef</span><span class="w"> </span><span class="n">fluid_preset_t</span><span class="w"> </span><span class="o">*</span><span class="p">(</span><span class="o">*</span><span class="w"> </span><span class="n">fluid_sfont_get_preset_t</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="n">fluid_sfont_t</span><span class="w"> </span><span class="o">*</span><span class="n">sfont</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">bank</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">prenum</span><span class="p">);</span>
+</span></code></pre></div>
+<p>Get a virtual SoundFont preset by bank and program numbers. </p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>sfont</code></td>
+<td>Virtual SoundFont</td>
+</tr>
+<tr>
+<td><code>bank</code></td>
+<td>MIDI bank number (0-16383)</td>
+</tr>
+<tr>
+<td><code>prenum</code></td>
+<td>MIDI preset number (0-127)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> Should return an allocated virtual preset or NULL if it could not be found.  </p>
+<h3 id="fluid_sfont_iteration_next_t"><code>fluid_sfont_iteration_next_t</code></h3>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="k">typedef</span><span class="w"> </span><span class="n">fluid_preset_t</span><span class="w"> </span><span class="o">*</span><span class="p">(</span><span class="o">*</span><span class="w"> </span><span class="n">fluid_sfont_iteration_next_t</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="n">fluid_sfont_t</span><span class="w"> </span><span class="o">*</span><span class="n">sfont</span><span class="p">);</span>
+</span></code></pre></div>
+<p>Virtual SoundFont preset iteration function. </p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>sfont</code></td>
+<td>Virtual SoundFont</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> NULL when no more presets are available, otherwise the a pointer to the current preset </p>
+<p>Returns preset information to the caller. The returned buffer is only valid until a subsequent call to this function. </p>
+<h3 id="fluid_sfont_iteration_start_t"><code>fluid_sfont_iteration_start_t</code></h3>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="k">typedef</span><span class="w"> </span><span class="kt">void</span><span class="p">(</span><span class="o">*</span><span class="w"> </span><span class="n">fluid_sfont_iteration_start_t</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="n">fluid_sfont_t</span><span class="w"> </span><span class="o">*</span><span class="n">sfont</span><span class="p">);</span>
+</span></code></pre></div>
+<p>Start virtual SoundFont preset iteration method. </p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>sfont</code></td>
+<td>Virtual SoundFont</td>
+</tr>
+</tbody>
+</table>
+<p>Starts/re-starts virtual preset iteration in a SoundFont. </p>
+<h2 id="functions">Functions</h2>
+<h3 id="fluid_preset_get_banknum"><code>fluid_preset_get_banknum()</code></h3>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">fluid_preset_get_banknum</span><span class="p">(</span><span class="n">fluid_preset_t</span><span class="w"> </span><span class="o">*</span><span class="n">preset</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Retrieves the presets bank number by executing the <code>get_bank</code> function provided on its creation. </p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>preset</code></td>
+<td>The SoundFont preset instance.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> The bank number of <code>preset</code>.  </p>
+<h3 id="fluid_preset_get_data"><code>fluid_preset_get_data()</code></h3>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">fluid_preset_get_data</span><span class="p">(</span><span class="n">fluid_preset_t</span><span class="w"> </span><span class="o">*</span><span class="n">preset</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Retrieve the private data of a SoundFont preset instance. </p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>preset</code></td>
+<td>The SoundFont preset instance.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> The private data or NULL if none explicitly set before.  </p>
+<h3 id="fluid_preset_get_name"><code>fluid_preset_get_name()</code></h3>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">fluid_preset_get_name</span><span class="p">(</span><span class="n">fluid_preset_t</span><span class="w"> </span><span class="o">*</span><span class="n">preset</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Retrieves the presets name by executing the <code>get_name</code> function provided on its creation. </p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>preset</code></td>
+<td>The SoundFont preset instance.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> Pointer to a NULL-terminated string containing the presets name.  </p>
+<h3 id="fluid_preset_get_num"><code>fluid_preset_get_num()</code></h3>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">fluid_preset_get_num</span><span class="p">(</span><span class="n">fluid_preset_t</span><span class="w"> </span><span class="o">*</span><span class="n">preset</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Retrieves the presets (instrument) number by executing the <code>get_num</code> function provided on its creation. </p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>preset</code></td>
+<td>The SoundFont preset instance.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> The number of <code>preset</code>.  </p>
+<h3 id="fluid_preset_get_sfont"><code>fluid_preset_get_sfont()</code></h3>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="n">fluid_sfont_t</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">fluid_preset_get_sfont</span><span class="p">(</span><span class="n">fluid_preset_t</span><span class="w"> </span><span class="o">*</span><span class="n">preset</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Retrieves the presets parent SoundFont instance. </p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>preset</code></td>
+<td>The SoundFont preset instance.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> The parent SoundFont of <code>preset</code>.  </p>
+<h3 id="fluid_preset_set_data"><code>fluid_preset_set_data()</code></h3>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">fluid_preset_set_data</span><span class="p">(</span><span class="n">fluid_preset_t</span><span class="w"> </span><span class="o">*</span><span class="n">preset</span><span class="p">,</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">data</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Set private data to use with a SoundFont preset instance. </p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>preset</code></td>
+<td>The SoundFont preset instance.</td>
+</tr>
+<tr>
+<td><code>data</code></td>
+<td>The private data to store.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <a href="../misc/#FLUID_OK"><code>FLUID_OK</code></a> on success, <a href="../misc/#FLUID_FAILED"><code>FLUID_FAILED</code></a> otherwise.  </p>
+<h3 id="fluid_sample_set_loop"><code>fluid_sample_set_loop()</code></h3>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">fluid_sample_set_loop</span><span class="p">(</span><span class="n">fluid_sample_t</span><span class="w"> </span><span class="o">*</span><span class="n">sample</span><span class="p">,</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">loop_start</span><span class="p">,</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">loop_end</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Set the loop of a sample. </p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>sample</code></td>
+<td>SoundFont sample</td>
+</tr>
+<tr>
+<td><code>loop_start</code></td>
+<td>Start sample index of the loop.</td>
+</tr>
+<tr>
+<td><code>loop_end</code></td>
+<td>End index of the loop (must be a valid sample as it marks the last sample to be played).</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <a href="../misc/#FLUID_OK"><code>FLUID_OK</code></a> on success, <a href="../misc/#FLUID_FAILED"><code>FLUID_FAILED</code></a> otherwise.  </p>
+<h3 id="fluid_sample_set_name"><code>fluid_sample_set_name()</code></h3>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">fluid_sample_set_name</span><span class="p">(</span><span class="n">fluid_sample_t</span><span class="w"> </span><span class="o">*</span><span class="n">sample</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">name</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Set the name of a SoundFont sample. </p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>sample</code></td>
+<td>SoundFont sample</td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td>Name to assign to sample (20 chars in length + zero terminator)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <a href="../misc/#FLUID_OK"><code>FLUID_OK</code></a> on success, <a href="../misc/#FLUID_FAILED"><code>FLUID_FAILED</code></a> otherwise  </p>
+<h3 id="fluid_sample_set_pitch"><code>fluid_sample_set_pitch()</code></h3>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">fluid_sample_set_pitch</span><span class="p">(</span><span class="n">fluid_sample_t</span><span class="w"> </span><span class="o">*</span><span class="n">sample</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">root_key</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">fine_tune</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Set the pitch of a sample. </p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>sample</code></td>
+<td>SoundFont sample</td>
+</tr>
+<tr>
+<td><code>root_key</code></td>
+<td>Root MIDI note of sample (0-127)</td>
+</tr>
+<tr>
+<td><code>fine_tune</code></td>
+<td>Fine tune in cents</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <a href="../misc/#FLUID_OK"><code>FLUID_OK</code></a> on success, <a href="../misc/#FLUID_FAILED"><code>FLUID_FAILED</code></a> otherwise.  </p>
+<h3 id="fluid_sample_set_sound_data"><code>fluid_sample_set_sound_data()</code></h3>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-35-1"><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">fluid_sample_set_sound_data</span><span class="p">(</span><span class="n">fluid_sample_t</span><span class="w"> </span><span class="o">*</span><span class="n">sample</span><span class="p">,</span><span class="w"> </span><span class="kt">short</span><span class="w"> </span><span class="o">*</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">data24</span><span class="p">,</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">nbframes</span><span class="p">,</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">sample_rate</span><span class="p">,</span><span class="w"> </span><span class="kt">short</span><span class="w"> </span><span class="n">copy_data</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Assign sample data to a SoundFont sample. </p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>sample</code></td>
+<td>SoundFont sample</td>
+</tr>
+<tr>
+<td><code>data</code></td>
+<td>Buffer containing 16 bit (mono-)audio sample data</td>
+</tr>
+<tr>
+<td><code>data24</code></td>
+<td>If not NULL, pointer to the least significant byte counterparts of each sample data point in order to create 24 bit audio samples</td>
+</tr>
+<tr>
+<td><code>nbframes</code></td>
+<td>Number of samples in data</td>
+</tr>
+<tr>
+<td><code>sample_rate</code></td>
+<td>Sampling rate of the sample data</td>
+</tr>
+<tr>
+<td><code>copy_data</code></td>
+<td>TRUE to copy the sample data (and automatically free it upon <a href="../soundfont-loader/#delete_fluid_sample"><code>delete_fluid_sample()</code></a>), FALSE to use it directly (and not free it)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <a href="../misc/#FLUID_OK"><code>FLUID_OK</code></a> on success, <a href="../misc/#FLUID_FAILED"><code>FLUID_FAILED</code></a> otherwise </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If copy_data is FALSE, data should have 8 unused frames at start and 8 unused frames at the end and nbframes should be &gt;=48  </p>
+</div>
+<h3 id="fluid_sample_sizeof"><code>fluid_sample_sizeof()</code></h3>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-36-1"><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a><span class="kt">size_t</span><span class="w"> </span><span class="n">fluid_sample_sizeof</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Returns the size of the <a href="../Types/#fluid_sample_t"><code>fluid_sample_t</code></a> structure. </p>
+<p><strong>Returns:</strong> Size of <a href="../Types/#fluid_sample_t"><code>fluid_sample_t</code></a> in bytes </p>
+<p>Useful in low latency scenarios e.g. to allocate a pool of samples.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It is recommend to zero initialize the memory before using the object. </p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Do NOT allocate samples on the stack and assign them to a voice!  </p>
+</div>
+<h3 id="fluid_sfloader_get_data"><code>fluid_sfloader_get_data()</code></h3>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-37-1"><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">fluid_sfloader_get_data</span><span class="p">(</span><span class="n">fluid_sfloader_t</span><span class="w"> </span><span class="o">*</span><span class="n">loader</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Obtain private data previously set with <a href="../soundfont-loader/#fluid_sfloader_set_data"><code>fluid_sfloader_set_data()</code></a>. </p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>loader</code></td>
+<td>The SoundFont loader instance.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> The private data or NULL if none explicitly set before.  </p>
+<h3 id="fluid_sfloader_set_callbacks"><code>fluid_sfloader_set_callbacks()</code></h3>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-38-1"><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">fluid_sfloader_set_callbacks</span><span class="p">(</span><span class="n">fluid_sfloader_t</span><span class="w"> </span><span class="o">*</span><span class="n">loader</span><span class="p">,</span><span class="w"> </span><span class="n">fluid_sfloader_callback_open_t</span><span class="w"> </span><span class="n">open</span><span class="p">,</span><span class="w"> </span><span class="n">fluid_sfloader_callback_read_t</span><span class="w"> </span><span class="n">read</span><span class="p">,</span><span class="w"> </span><span class="n">fluid_sfloader_callback_seek_t</span><span class="w"> </span><span class="n">seek</span><span class="p">,</span><span class="w"> </span><span class="n">fluid_sfloader_callback_tell_t</span><span class="w"> </span><span class="n">tell</span><span class="p">,</span><span class="w"> </span><span class="n">fluid_sfloader_callback_close_t</span><span class="w"> </span><span class="n">close</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Set custom callbacks to be used upon soundfont loading. </p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>loader</code></td>
+<td>The SoundFont loader instance.</td>
+</tr>
+<tr>
+<td><code>open</code></td>
+<td>A function implementing <a href="../soundfont-loader/#fluid_sfloader_callback_open_t"><code>fluid_sfloader_callback_open_t</code></a>.</td>
+</tr>
+<tr>
+<td><code>read</code></td>
+<td>A function implementing <a href="../soundfont-loader/#fluid_sfloader_callback_read_t"><code>fluid_sfloader_callback_read_t</code></a>.</td>
+</tr>
+<tr>
+<td><code>seek</code></td>
+<td>A function implementing <a href="../soundfont-loader/#fluid_sfloader_callback_seek_t"><code>fluid_sfloader_callback_seek_t</code></a>.</td>
+</tr>
+<tr>
+<td><code>tell</code></td>
+<td>A function implementing <a href="../soundfont-loader/#fluid_sfloader_callback_tell_t"><code>fluid_sfloader_callback_tell_t</code></a>.</td>
+</tr>
+<tr>
+<td><code>close</code></td>
+<td>A function implementing <a href="../soundfont-loader/#fluid_sfloader_callback_close_t"><code>fluid_sfloader_callback_close_t</code></a>.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <a href="../misc/#FLUID_OK"><code>FLUID_OK</code></a> if the callbacks have been successfully set, <a href="../misc/#FLUID_FAILED"><code>FLUID_FAILED</code></a> otherwise. </p>
+<p>Useful for loading a soundfont from memory, see <em>doc/fluidsynth_sfload_mem.c</em> as an example. </p>
+<h3 id="fluid_sfloader_set_data"><code>fluid_sfloader_set_data()</code></h3>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-39-1"><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">fluid_sfloader_set_data</span><span class="p">(</span><span class="n">fluid_sfloader_t</span><span class="w"> </span><span class="o">*</span><span class="n">loader</span><span class="p">,</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">data</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Specify private data to be used by <a href="../soundfont-loader/#fluid_sfloader_load_t"><code>fluid_sfloader_load_t</code></a>. </p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>loader</code></td>
+<td>The SoundFont loader instance.</td>
+</tr>
+<tr>
+<td><code>data</code></td>
+<td>The private data to store.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <a href="../misc/#FLUID_OK"><code>FLUID_OK</code></a> on success, <a href="../misc/#FLUID_FAILED"><code>FLUID_FAILED</code></a> otherwise.  </p>
+<h3 id="fluid_sfont_get_data"><code>fluid_sfont_get_data()</code></h3>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-40-1"><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">fluid_sfont_get_data</span><span class="p">(</span><span class="n">fluid_sfont_t</span><span class="w"> </span><span class="o">*</span><span class="n">sfont</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Retrieve the private data of a SoundFont instance. </p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>sfont</code></td>
+<td>The SoundFont instance.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> The private data or NULL if none explicitly set before.  </p>
+<h3 id="fluid_sfont_get_default_mod"><code>fluid_sfont_get_default_mod()</code></h3>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-41-1"><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">fluid_sfont_get_default_mod</span><span class="p">(</span><span class="n">fluid_sfont_t</span><span class="w"> </span><span class="o">*</span><span class="n">sfont</span><span class="p">,</span><span class="w"> </span><span class="n">fluid_mod_t</span><span class="w"> </span><span class="o">**</span><span class="n">mod_out</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Retrieve a deep copy of all default modulators attached to the provided <code>sfont</code> instance. </p>
+<p>If a SoundFont has any default modulators set, the synth's default modulators (see <a href="../synthesis-params/#fluid_synth_add_default_mod"><code>fluid_synth_add_default_mod()</code></a>) will be ignored. A SF2 will have default modulators attached when the file contained a DMOD chunk. For a DLS file, fluidsynth will always add (custom) default modulators to allow the file being synthesized as accurately as possible.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>sfont</code></td>
+<td>The SoundFont instance.</td>
+</tr>
+<tr>
+<td><code>mod_out</code></td>
+<td>A reference to a <a href="../Types/#fluid_mod_t"><code>fluid_mod_t</code></a> array. The provided pointer variable will be populated by fluidsynth to point to an array. The caller is responsible for freeing the array with <a href="../misc/#fluid_free"><code>fluid_free()</code></a>.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <a href="../misc/#FLUID_FAILED"><code>FLUID_FAILED</code></a> on error (e.g. out of memory). Otherwise it contains the number of modulators saved into the buffer. The caller must always free the buffer, even if the return value is zero!  </p>
+<div class="admonition tip">
+<p class="admonition-title">Since</p>
+<p>2.5.0  </p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This function involves memory allocation and is therefore not realtime safe!  </p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This function is not thread-safe. So only call this function when no synthesis thread is concurrently using this <code>sfont</code> instance!  </p>
+</div>
+<h3 id="fluid_sfont_get_id"><code>fluid_sfont_get_id()</code></h3>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-42-1"><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">fluid_sfont_get_id</span><span class="p">(</span><span class="n">fluid_sfont_t</span><span class="w"> </span><span class="o">*</span><span class="n">sfont</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Retrieve the unique ID of a SoundFont instance. </p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>sfont</code></td>
+<td>The SoundFont instance.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> The SoundFont ID.  </p>
+<h3 id="fluid_sfont_get_name"><code>fluid_sfont_get_name()</code></h3>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-43-1"><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">fluid_sfont_get_name</span><span class="p">(</span><span class="n">fluid_sfont_t</span><span class="w"> </span><span class="o">*</span><span class="n">sfont</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Retrieve the name of a SoundFont instance. </p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>sfont</code></td>
+<td>The SoundFont instance.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> The name of the SoundFont.  </p>
+<h3 id="fluid_sfont_get_preset"><code>fluid_sfont_get_preset()</code></h3>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-44-1"><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a><span class="n">fluid_preset_t</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">fluid_sfont_get_preset</span><span class="p">(</span><span class="n">fluid_sfont_t</span><span class="w"> </span><span class="o">*</span><span class="n">sfont</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">bank</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">prenum</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Retrieve the preset assigned the a SoundFont instance for the given bank and preset number. </p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>sfont</code></td>
+<td>The SoundFont instance.</td>
+</tr>
+<tr>
+<td><code>bank</code></td>
+<td>bank number of the preset</td>
+</tr>
+<tr>
+<td><code>prenum</code></td>
+<td>program number of the preset</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> The preset instance or NULL if none found.  </p>
+<h3 id="fluid_sfont_iteration_next"><code>fluid_sfont_iteration_next()</code></h3>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-45-1"><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a><span class="n">fluid_preset_t</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">fluid_sfont_iteration_next</span><span class="p">(</span><span class="n">fluid_sfont_t</span><span class="w"> </span><span class="o">*</span><span class="n">sfont</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Virtual SoundFont preset iteration function. </p>
+<p>Returns preset information to the caller and advances the internal iteration state to the next preset for subsequent calls. 
+<strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>sfont</code></td>
+<td>The SoundFont instance.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> NULL when no more presets are available, otherwise the a pointer to the current preset  </p>
+<h3 id="fluid_sfont_iteration_start"><code>fluid_sfont_iteration_start()</code></h3>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-46-1"><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">fluid_sfont_iteration_start</span><span class="p">(</span><span class="n">fluid_sfont_t</span><span class="w"> </span><span class="o">*</span><span class="n">sfont</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Starts / re-starts virtual preset iteration in a SoundFont. </p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>sfont</code></td>
+<td>Virtual SoundFont instance</td>
+</tr>
+</tbody>
+</table>
+<h3 id="fluid_sfont_set_data"><code>fluid_sfont_set_data()</code></h3>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-47-1"><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">fluid_sfont_set_data</span><span class="p">(</span><span class="n">fluid_sfont_t</span><span class="w"> </span><span class="o">*</span><span class="n">sfont</span><span class="p">,</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">data</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Set private data to use with a SoundFont instance. </p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>sfont</code></td>
+<td>The SoundFont instance.</td>
+</tr>
+<tr>
+<td><code>data</code></td>
+<td>The private data to store.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <a href="../misc/#FLUID_OK"><code>FLUID_OK</code></a> on success, <a href="../misc/#FLUID_FAILED"><code>FLUID_FAILED</code></a> otherwise.  </p>
+<h3 id="fluid_sfont_set_default_mod"><code>fluid_sfont_set_default_mod()</code></h3>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-48-1"><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">fluid_sfont_set_default_mod</span><span class="p">(</span><span class="n">fluid_sfont_t</span><span class="w"> </span><span class="o">*</span><span class="n">sfont</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">fluid_mod_t</span><span class="w"> </span><span class="o">*</span><span class="n">mods</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">nmods</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Sets the default modulators of a SoundFont instance. </p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>sfont</code></td>
+<td>The SoundFont instance.</td>
+</tr>
+<tr>
+<td><code>mods</code></td>
+<td>Pointer to an array of default modulators. A deep copy will be performed.</td>
+</tr>
+<tr>
+<td><code>nmods</code></td>
+<td>Number of modulators in the provided array.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <a href="../misc/#FLUID_OK"><code>FLUID_OK</code></a> on success, <a href="../misc/#FLUID_FAILED"><code>FLUID_FAILED</code></a> otherwise. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If <code>mods</code> is a zero-length array or <code>mods</code> is NULL, the default modulators attached to this SoundFont will be unset, causing the synth's default modulators to be added to voices again. The behavior is undefined if the array <code>mods</code> contains multiple identical modulators (i.e. <a href="../modulators/#fluid_mod_test_identity"><code>fluid_mod_test_identity()</code></a> evaluates to true). Further note that this function involves memory allocation and is therefore not realtime safe! </p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This function is not thread-safe. So only call this function when no synthesis thread is concurrently using this <code>sfont</code> instance!  </p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Since</p>
+<p>2.5.0  </p>
+</div>
+<h3 id="fluid_synth_add_sfloader"><code>fluid_synth_add_sfloader()</code></h3>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-49-1"><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">fluid_synth_add_sfloader</span><span class="p">(</span><span class="n">fluid_synth_t</span><span class="w"> </span><span class="o">*</span><span class="n">synth</span><span class="p">,</span><span class="w"> </span><span class="n">fluid_sfloader_t</span><span class="w"> </span><span class="o">*</span><span class="n">loader</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Add a SoundFont loader to the synth. </p>
+<p>This function takes ownership of <code>loader</code> and frees it automatically upon <code>synth</code> destruction. 
+<strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>synth</code></td>
+<td>FluidSynth instance</td>
+</tr>
+<tr>
+<td><code>loader</code></td>
+<td>Loader API structure</td>
+</tr>
+</tbody>
+</table>
+<p>SoundFont loaders are used to add custom instrument loading to FluidSynth. The caller supplied functions for loading files, allocating presets, retrieving information on them and synthesizing note-on events. Using this method even non SoundFont instruments can be synthesized, although limited to the SoundFont synthesis model.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Should only be called before any SoundFont files are loaded.  </p>
+</div>
+<h3 id="fluid_synth_get_channel_preset"><code>fluid_synth_get_channel_preset()</code></h3>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-50-1"><a id="__codelineno-50-1" name="__codelineno-50-1" href="#__codelineno-50-1"></a><span class="n">fluid_preset_t</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">fluid_synth_get_channel_preset</span><span class="p">(</span><span class="n">fluid_synth_t</span><span class="w"> </span><span class="o">*</span><span class="n">synth</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">chan</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Get active preset on a MIDI channel. </p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>synth</code></td>
+<td>FluidSynth instance</td>
+</tr>
+<tr>
+<td><code>chan</code></td>
+<td>MIDI channel number (0 to MIDI channel count - 1)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> Preset or NULL if no preset active on <code>chan</code>  </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Should only be called from within synthesis thread, which includes SoundFont loader preset noteon methods. Not thread safe otherwise.  </p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../settings/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Settings">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Settings
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../soundfont-management/" class="md-footer__link md-footer__link--next" aria-label="Next: SoundFont Management">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                SoundFont Management
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Peter Hannape and others.
+
+    </div>
+  
+  
+    Made with
+    <a href="https://zensical.org/" target="_blank" rel="noopener">
+      Zensical
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/FluidSynth/fluidsynth" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.fluidsynth.org/" target="_blank" rel="noopener" title="www.fluidsynth.org" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20M2 12h20"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["announce.dismiss","content.action.edit","content.action.view","content.code.annotate","content.code.copy","content.code.select","content.footnote.tooltips","content.tabs.link","content.tooltips","header.autohide","navigation.footer","navigation.indexes","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.path","navigation.sections","navigation.tabs","navigation.top","navigation.tracking","search.highlight","toc.follow"],"search":"../../assets/javascripts/workers/search.e2d2d235.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.6e5f0216.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -12,36 +12,36 @@
         <meta name="author" content="FluidSynth contributors">
       
       
-        <link rel="canonical" href="https://www.fluidsynth.org/wiki/BuildingForAndroid/">
+        <link rel="canonical" href="https://www.fluidsynth.org/wiki/api/synthesis-params/">
       
       
-        <link rel="prev" href="../BuildingWithCMake/">
+        <link rel="prev" href="../synth/">
       
       
-        <link rel="next" href="../Using-prebuilt-libraries-on-Android/">
+        <link rel="next" href="../tuning/">
       
       
         
       
       
-      <link rel="icon" href="../images/favicon.png">
+      <link rel="icon" href="../../images/favicon.png">
       <meta name="generator" content="zensical-0.0.43">
     
     
       
-        <title>🤖 Building for Android - FluidSynth Wiki</title>
+        <title>Synthesis Parameters - FluidSynth Wiki</title>
       
     
     
       
         
       
-      <link rel="stylesheet" href="../assets/stylesheets/modern/main.fba56155.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/modern/main.fba56155.min.css">
       
         
           
         
-        <link rel="stylesheet" href="../assets/stylesheets/modern/palette.dfe2e883.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/modern/palette.dfe2e883.min.css">
       
       
 
@@ -60,9 +60,9 @@
       
     
     
-      <link rel="stylesheet" href="../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    <script>__md_scope=new URL("../..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
     
       
 
@@ -87,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#building-for-android" class="md-skip">
+        <a href="#synthesis-parameters" class="md-skip">
           Skip to content
         </a>
       
@@ -101,7 +101,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="./.." title="FluidSynth Wiki" class="md-header__button md-logo" aria-label="FluidSynth Wiki" data-md-component="logo">
+    <a href="../.." title="FluidSynth Wiki" class="md-header__button md-logo" aria-label="FluidSynth Wiki" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 7v14M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
@@ -121,7 +121,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              🤖 Building for Android
+              Synthesis Parameters
             
           </span>
         </div>
@@ -215,7 +215,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="./.." class="md-tabs__link">
+      <a href="../.." class="md-tabs__link">
         
   
   🏠 Home
@@ -248,7 +248,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../Download/" class="md-tabs__link">
+        <a href="../../Download/" class="md-tabs__link">
           
   
   🎹 About FluidSynth
@@ -265,7 +265,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../ChangeLog/" class="md-tabs__link">
+      <a href="../../ChangeLog/" class="md-tabs__link">
         
   
   📝 Release Notes
@@ -330,7 +330,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../GettingStarted/" class="md-tabs__link">
+        <a href="../../GettingStarted/" class="md-tabs__link">
           
   
   📚 Documentation
@@ -398,7 +398,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="./.." title="FluidSynth Wiki" class="md-nav__button md-logo" aria-label="FluidSynth Wiki" data-md-component="logo">
+    <a href="../.." title="FluidSynth Wiki" class="md-nav__button md-logo" aria-label="FluidSynth Wiki" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 7v14M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
@@ -428,7 +428,7 @@
   
   
     <li class="md-nav__item">
-      <a href="./.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -516,7 +516,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Download/" class="md-nav__link">
+      <a href="../../Download/" class="md-nav__link">
         
   
   
@@ -543,7 +543,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../SoundFont/" class="md-nav__link">
+      <a href="../../SoundFont/" class="md-nav__link">
         
   
   
@@ -570,7 +570,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Applications/" class="md-nav__link">
+      <a href="../../Applications/" class="md-nav__link">
         
   
   
@@ -597,7 +597,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../MadeWithFluidSynth/" class="md-nav__link">
+      <a href="../../MadeWithFluidSynth/" class="md-nav__link">
         
   
   
@@ -624,7 +624,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../LicensingFAQ/" class="md-nav__link">
+      <a href="../../LicensingFAQ/" class="md-nav__link">
         
   
   
@@ -658,7 +658,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ChangeLog/" class="md-nav__link">
+      <a href="../../ChangeLog/" class="md-nav__link">
         
   
   
@@ -822,7 +822,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../GettingStarted/" class="md-nav__link">
+      <a href="../../GettingStarted/" class="md-nav__link">
         
   
   
@@ -849,7 +849,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ExampleCommandLines/" class="md-nav__link">
+      <a href="../../ExampleCommandLines/" class="md-nav__link">
         
   
   
@@ -876,7 +876,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Audio-Drivers/" class="md-nav__link">
+      <a href="../../Audio-Drivers/" class="md-nav__link">
         
   
   
@@ -903,7 +903,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../UserManual/" class="md-nav__link">
+      <a href="../../UserManual/" class="md-nav__link">
         
   
   
@@ -963,7 +963,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../settings/" class="md-nav__link ">
+            <a href="../../settings/" class="md-nav__link ">
               
   
   
@@ -1005,7 +1005,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../settings/audio/" class="md-nav__link">
+      <a href="../../settings/audio/" class="md-nav__link">
         
   
   
@@ -1032,7 +1032,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../settings/midi/" class="md-nav__link">
+      <a href="../../settings/midi/" class="md-nav__link">
         
   
   
@@ -1059,7 +1059,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../settings/player/" class="md-nav__link">
+      <a href="../../settings/player/" class="md-nav__link">
         
   
   
@@ -1086,7 +1086,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../settings/shell/" class="md-nav__link">
+      <a href="../../settings/shell/" class="md-nav__link">
         
   
   
@@ -1113,7 +1113,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../settings/synth/" class="md-nav__link">
+      <a href="../../settings/synth/" class="md-nav__link">
         
   
   
@@ -1148,7 +1148,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../FluidFeatures/" class="md-nav__link">
+      <a href="../../FluidFeatures/" class="md-nav__link">
         
   
   
@@ -1175,7 +1175,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../LowLatency/" class="md-nav__link">
+      <a href="../../LowLatency/" class="md-nav__link">
         
   
   
@@ -1202,7 +1202,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../FluidSynth-configuration-files/" class="md-nav__link">
+      <a href="../../FluidSynth-configuration-files/" class="md-nav__link">
         
   
   
@@ -1229,7 +1229,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reverbators/" class="md-nav__link">
+      <a href="../../reverbators/" class="md-nav__link">
         
   
   
@@ -1256,7 +1256,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ladspa/" class="md-nav__link">
+      <a href="../../ladspa/" class="md-nav__link">
         
   
   
@@ -1283,7 +1283,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../SoundFont3Format/" class="md-nav__link">
+      <a href="../../SoundFont3Format/" class="md-nav__link">
         
   
   
@@ -1384,10 +1384,8 @@
                 
   
   
-    
   
   
-  
     
     
       
@@ -1408,11 +1406,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_1" >
         
           
           <label class="md-nav__link" for="__nav_4_2_1" id="__nav_4_2_1_label" tabindex="0">
@@ -1432,7 +1430,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_2_1">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1449,7 +1447,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../BuildingWithCMake/" class="md-nav__link">
+      <a href="../../BuildingWithCMake/" class="md-nav__link">
         
   
   
@@ -1473,36 +1471,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-  🤖 Building for Android
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="././" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../BuildingForAndroid/" class="md-nav__link">
         
   
   
@@ -1517,110 +1489,6 @@
   
 
       </a>
-      
-        
-
-
-<nav class="md-nav md-nav--secondary" aria-label="On this page">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      On this page
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#preface" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Preface
-      </span>
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Prerequisites
-      </span>
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Prerequisites">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#this-guide" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        This guide...
-      </span>
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#android-ndk" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Android NDK
-      </span>
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#getting-started" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Getting started
-      </span>
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#if-compilation-of-dependencies-fails" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        If compilation of dependencies fails
-      </span>
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#if-compilation-of-fluidsynth-fails" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        If compilation of fluidsynth fails
-      </span>
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1633,7 +1501,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Using-prebuilt-libraries-on-Android/" class="md-nav__link">
+      <a href="../../Using-prebuilt-libraries-on-Android/" class="md-nav__link">
         
   
   
@@ -1660,7 +1528,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../NotesForPackagers/" class="md-nav__link">
+      <a href="../../NotesForPackagers/" class="md-nav__link">
         
   
   
@@ -1750,7 +1618,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../usage/" class="md-nav__link ">
+            <a href="../../usage/" class="md-nav__link ">
               
   
   
@@ -1792,7 +1660,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../usage/creating-settings/" class="md-nav__link">
+      <a href="../../usage/creating-settings/" class="md-nav__link">
         
   
   
@@ -1819,7 +1687,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../usage/creating-synth/" class="md-nav__link">
+      <a href="../../usage/creating-synth/" class="md-nav__link">
         
   
   
@@ -1846,7 +1714,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../usage/loading-soundfonts/" class="md-nav__link">
+      <a href="../../usage/loading-soundfonts/" class="md-nav__link">
         
   
   
@@ -1873,7 +1741,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../usage/audio-driver/" class="md-nav__link">
+      <a href="../../usage/audio-driver/" class="md-nav__link">
         
   
   
@@ -1900,7 +1768,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../usage/using-synth/" class="md-nav__link">
+      <a href="../../usage/using-synth/" class="md-nav__link">
         
   
   
@@ -1927,7 +1795,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../usage/sending-midi/" class="md-nav__link">
+      <a href="../../usage/sending-midi/" class="md-nav__link">
         
   
   
@@ -1954,7 +1822,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../usage/realtime-midi/" class="md-nav__link">
+      <a href="../../usage/realtime-midi/" class="md-nav__link">
         
   
   
@@ -1981,7 +1849,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../usage/midi-player/" class="md-nav__link">
+      <a href="../../usage/midi-player/" class="md-nav__link">
         
   
   
@@ -2008,7 +1876,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../usage/file-renderer/" class="md-nav__link">
+      <a href="../../usage/file-renderer/" class="md-nav__link">
         
   
   
@@ -2035,7 +1903,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../usage/midi-player-mem/" class="md-nav__link">
+      <a href="../../usage/midi-player-mem/" class="md-nav__link">
         
   
   
@@ -2062,7 +1930,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../usage/midi-router/" class="md-nav__link">
+      <a href="../../usage/midi-router/" class="md-nav__link">
         
   
   
@@ -2089,7 +1957,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../usage/sequencer/" class="md-nav__link">
+      <a href="../../usage/sequencer/" class="md-nav__link">
         
   
   
@@ -2116,7 +1984,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../usage/shell/" class="md-nav__link">
+      <a href="../../usage/shell/" class="md-nav__link">
         
   
   
@@ -2143,7 +2011,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../usage/multi-channel/" class="md-nav__link">
+      <a href="../../usage/multi-channel/" class="md-nav__link">
         
   
   
@@ -2170,7 +2038,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../usage/synth-context/" class="md-nav__link">
+      <a href="../../usage/synth-context/" class="md-nav__link">
         
   
   
@@ -2197,7 +2065,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../usage/advanced/" class="md-nav__link">
+      <a href="../../usage/advanced/" class="md-nav__link">
         
   
   
@@ -2229,6 +2097,8 @@
                 
   
   
+    
+  
   
   
     
@@ -2321,15 +2191,15 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_3" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../api/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   
@@ -2352,7 +2222,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4_2_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -2371,7 +2241,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/recent-changes/" class="md-nav__link">
+      <a href="../recent-changes/" class="md-nav__link">
         
   
   
@@ -2398,7 +2268,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/deprecated/" class="md-nav__link">
+      <a href="../deprecated/" class="md-nav__link">
         
   
   
@@ -2425,7 +2295,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/Types/" class="md-nav__link">
+      <a href="../Types/" class="md-nav__link">
         
   
   
@@ -2452,7 +2322,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/audio-driver/" class="md-nav__link">
+      <a href="../audio-driver/" class="md-nav__link">
         
   
   
@@ -2479,7 +2349,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/audio-output/" class="md-nav__link">
+      <a href="../audio-output/" class="md-nav__link">
         
   
   
@@ -2506,7 +2376,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/audio-rendering/" class="md-nav__link">
+      <a href="../audio-rendering/" class="md-nav__link">
         
   
   
@@ -2533,7 +2403,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/channel-setup/" class="md-nav__link">
+      <a href="../channel-setup/" class="md-nav__link">
         
   
   
@@ -2560,7 +2430,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/chorus-effect/" class="md-nav__link">
+      <a href="../chorus-effect/" class="md-nav__link">
         
   
   
@@ -2587,7 +2457,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/command-handler/" class="md-nav__link">
+      <a href="../command-handler/" class="md-nav__link">
         
   
   
@@ -2614,7 +2484,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/command-interface/" class="md-nav__link">
+      <a href="../command-interface/" class="md-nav__link">
         
   
   
@@ -2641,7 +2511,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/command-server/" class="md-nav__link">
+      <a href="../command-server/" class="md-nav__link">
         
   
   
@@ -2668,7 +2538,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/command-shell/" class="md-nav__link">
+      <a href="../command-shell/" class="md-nav__link">
         
   
   
@@ -2695,7 +2565,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/file-renderer/" class="md-nav__link">
+      <a href="../file-renderer/" class="md-nav__link">
         
   
   
@@ -2722,7 +2592,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/generators/" class="md-nav__link">
+      <a href="../generators/" class="md-nav__link">
         
   
   
@@ -2749,7 +2619,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/iir-filter/" class="md-nav__link">
+      <a href="../iir-filter/" class="md-nav__link">
         
   
   
@@ -2776,7 +2646,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/ladspa/" class="md-nav__link">
+      <a href="../ladspa/" class="md-nav__link">
         
   
   
@@ -2803,7 +2673,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/logging/" class="md-nav__link">
+      <a href="../logging/" class="md-nav__link">
         
   
   
@@ -2830,7 +2700,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/midi-driver/" class="md-nav__link">
+      <a href="../midi-driver/" class="md-nav__link">
         
   
   
@@ -2857,7 +2727,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/midi-events/" class="md-nav__link">
+      <a href="../midi-events/" class="md-nav__link">
         
   
   
@@ -2884,7 +2754,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/midi-input/" class="md-nav__link">
+      <a href="../midi-input/" class="md-nav__link">
         
   
   
@@ -2911,7 +2781,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/midi-messages/" class="md-nav__link">
+      <a href="../midi-messages/" class="md-nav__link">
         
   
   
@@ -2938,7 +2808,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/midi-player/" class="md-nav__link">
+      <a href="../midi-player/" class="md-nav__link">
         
   
   
@@ -2965,7 +2835,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/midi-router/" class="md-nav__link">
+      <a href="../midi-router/" class="md-nav__link">
         
   
   
@@ -2992,7 +2862,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/misc/" class="md-nav__link">
+      <a href="../misc/" class="md-nav__link">
         
   
   
@@ -3019,7 +2889,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/modulators/" class="md-nav__link">
+      <a href="../modulators/" class="md-nav__link">
         
   
   
@@ -3046,7 +2916,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/reverb-effect/" class="md-nav__link">
+      <a href="../reverb-effect/" class="md-nav__link">
         
   
   
@@ -3073,7 +2943,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/sequencer-events/" class="md-nav__link">
+      <a href="../sequencer-events/" class="md-nav__link">
         
   
   
@@ -3100,7 +2970,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/sequencer/" class="md-nav__link">
+      <a href="../sequencer/" class="md-nav__link">
         
   
   
@@ -3127,7 +2997,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/settings/" class="md-nav__link">
+      <a href="../settings/" class="md-nav__link">
         
   
   
@@ -3154,7 +3024,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/soundfont-loader/" class="md-nav__link">
+      <a href="../soundfont-loader/" class="md-nav__link">
         
   
   
@@ -3181,7 +3051,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/soundfont-management/" class="md-nav__link">
+      <a href="../soundfont-management/" class="md-nav__link">
         
   
   
@@ -3208,7 +3078,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/soundfonts/" class="md-nav__link">
+      <a href="../soundfonts/" class="md-nav__link">
         
   
   
@@ -3235,7 +3105,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/synth/" class="md-nav__link">
+      <a href="../synth/" class="md-nav__link">
         
   
   
@@ -3259,10 +3129,36 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../api/synthesis-params/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Synthesis Parameters
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="././" class="md-nav__link md-nav__link--active">
         
   
   
@@ -3277,6 +3173,248 @@
   
 
       </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#enumerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Enumerations
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Enumerations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fluid_interp" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_interp</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_synth_add_mod" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_synth_add_mod</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Functions
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fluid_synth_add_default_mod" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_synth_add_default_mod()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_synth_count_audio_channels" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_synth_count_audio_channels()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_synth_count_audio_groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_synth_count_audio_groups()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_synth_count_effects_channels" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_synth_count_effects_channels()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_synth_count_effects_groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_synth_count_effects_groups()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_synth_count_midi_channels" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_synth_count_midi_channels()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_synth_get_active_voice_count" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_synth_get_active_voice_count()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_synth_get_gain" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_synth_get_gain()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_synth_get_internal_bufsize" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_synth_get_internal_bufsize()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_synth_get_polyphony" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_synth_get_polyphony()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_synth_remove_default_mod" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_synth_remove_default_mod()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_synth_set_gain" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_synth_set_gain()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_synth_set_interp_method" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_synth_set_interp_method()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_synth_set_polyphony" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_synth_set_polyphony()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_synth_set_sample_rate" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_synth_set_sample_rate()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -3289,7 +3427,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/tuning/" class="md-nav__link">
+      <a href="../tuning/" class="md-nav__link">
         
   
   
@@ -3316,7 +3454,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/voice-control/" class="md-nav__link">
+      <a href="../voice-control/" class="md-nav__link">
         
   
   
@@ -3343,7 +3481,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/voices/" class="md-nav__link">
+      <a href="../voices/" class="md-nav__link">
         
   
   
@@ -3421,7 +3559,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../api/examples/" class="md-nav__link ">
+            <a href="../examples/" class="md-nav__link ">
               
   
   
@@ -3461,7 +3599,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/examples/example/" class="md-nav__link">
+      <a href="../examples/example/" class="md-nav__link">
         
   
   
@@ -3488,7 +3626,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/examples/fluidsynth_arpeggio/" class="md-nav__link">
+      <a href="../examples/fluidsynth_arpeggio/" class="md-nav__link">
         
   
   
@@ -3515,7 +3653,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/examples/fluidsynth_enumsettings/" class="md-nav__link">
+      <a href="../examples/fluidsynth_enumsettings/" class="md-nav__link">
         
   
   
@@ -3542,7 +3680,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/examples/fluidsynth_fx/" class="md-nav__link">
+      <a href="../examples/fluidsynth_fx/" class="md-nav__link">
         
   
   
@@ -3569,7 +3707,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/examples/fluidsynth_instruments/" class="md-nav__link">
+      <a href="../examples/fluidsynth_instruments/" class="md-nav__link">
         
   
   
@@ -3596,7 +3734,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/examples/fluidsynth_metronome/" class="md-nav__link">
+      <a href="../examples/fluidsynth_metronome/" class="md-nav__link">
         
   
   
@@ -3623,7 +3761,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/examples/fluidsynth_process/" class="md-nav__link">
+      <a href="../examples/fluidsynth_process/" class="md-nav__link">
         
   
   
@@ -3650,7 +3788,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/examples/fluidsynth_register_adriver/" class="md-nav__link">
+      <a href="../examples/fluidsynth_register_adriver/" class="md-nav__link">
         
   
   
@@ -3677,7 +3815,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/examples/fluidsynth_sfload_mem/" class="md-nav__link">
+      <a href="../examples/fluidsynth_sfload_mem/" class="md-nav__link">
         
   
   
@@ -3704,7 +3842,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/examples/fluidsynth_simple/" class="md-nav__link">
+      <a href="../examples/fluidsynth_simple/" class="md-nav__link">
         
   
   
@@ -3768,7 +3906,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ReleaseCheckList/" class="md-nav__link">
+      <a href="../../ReleaseCheckList/" class="md-nav__link">
         
   
   
@@ -3896,33 +4034,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#preface" class="md-nav__link">
+  <a href="#enumerations" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        Preface
+        Enumerations
       </span>
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Prerequisites
-      </span>
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Prerequisites">
+    <nav class="md-nav" aria-label="Enumerations">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#this-guide" class="md-nav__link">
+  <a href="#fluid_interp" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        This guide...
+        <code>fluid_interp</code>
       </span>
     </span>
   </a>
@@ -3930,10 +4057,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#android-ndk" class="md-nav__link">
+  <a href="#fluid_synth_add_mod" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        Android NDK
+        <code>fluid_synth_add_mod</code>
       </span>
     </span>
   </a>
@@ -3946,35 +4073,184 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#getting-started" class="md-nav__link">
+  <a href="#functions" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        Getting started
+        Functions
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fluid_synth_add_default_mod" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_synth_add_default_mod()</code>
       </span>
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#if-compilation-of-dependencies-fails" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#fluid_synth_count_audio_channels" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        If compilation of dependencies fails
+        <code>fluid_synth_count_audio_channels()</code>
       </span>
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#if-compilation-of-fluidsynth-fails" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#fluid_synth_count_audio_groups" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        If compilation of fluidsynth fails
+        <code>fluid_synth_count_audio_groups()</code>
       </span>
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_synth_count_effects_channels" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_synth_count_effects_channels()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_synth_count_effects_groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_synth_count_effects_groups()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_synth_count_midi_channels" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_synth_count_midi_channels()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_synth_get_active_voice_count" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_synth_get_active_voice_count()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_synth_get_gain" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_synth_get_gain()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_synth_get_internal_bufsize" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_synth_get_internal_bufsize()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_synth_get_polyphony" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_synth_get_polyphony()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_synth_remove_default_mod" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_synth_remove_default_mod()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_synth_set_gain" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_synth_set_gain()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_synth_set_interp_method" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_synth_set_interp_method()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_synth_set_polyphony" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_synth_set_polyphony()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_synth_set_sample_rate" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_synth_set_sample_rate()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -4003,7 +4279,7 @@
   
   
     <li class="md-path__item">
-      <a href="./.." class="md-path__link">
+      <a href="../.." class="md-path__link">
         
   
   <span class="md-ellipsis">
@@ -4063,7 +4339,7 @@
     
     
       <li class="md-path__item">
-        <a href="../GettingStarted/" class="md-path__link">
+        <a href="../../GettingStarted/" class="md-path__link">
           
   
   <span class="md-ellipsis">
@@ -4120,7 +4396,7 @@
     
     
       <li class="md-path__item">
-        <a href="../BuildingWithCMake/" class="md-path__link">
+        <a href="../../BuildingWithCMake/" class="md-path__link">
           
   
   <span class="md-ellipsis">
@@ -4143,6 +4419,76 @@
     
       
         
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
       
         
       
@@ -4155,11 +4501,11 @@
     
     
       <li class="md-path__item">
-        <a href="../BuildingWithCMake/" class="md-path__link">
+        <a href="../" class="md-path__link">
           
   
   <span class="md-ellipsis">
-    🛠️ Compiling Fluidsynth
+    🔍 API Reference
   </span>
 
         </a>
@@ -4176,7 +4522,7 @@
                 
                   
   
-    <a href="https://github.com/FluidSynth/fluidsynth/edit/master/doc/wiki/BuildingForAndroid.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/FluidSynth/fluidsynth/edit/master/doc/wiki/api/synthesis-params.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-file-pen" viewBox="0 0 24 24"><path d="M12.659 22H18a2 2 0 0 0 2-2V8a2.4 2.4 0 0 0-.706-1.706l-3.588-3.588A2.4 2.4 0 0 0 14 2H6a2 2 0 0 0-2 2v9.34"/><path d="M14 2v5a1 1 0 0 0 1 1h5M10.378 12.622a1 1 0 0 1 3 3.003L8.36 20.637a2 2 0 0 1-.854.506l-2.867.837a.5.5 0 0 1-.62-.62l.836-2.869a2 2 0 0 1 .506-.853z"/></svg>
     </a>
@@ -4185,73 +4531,461 @@
     
       
     
-    <a href="https://github.com/FluidSynth/fluidsynth/raw/master/doc/wiki/BuildingForAndroid.md" title="View source of this page" class="md-content__button md-icon">
+    <a href="https://github.com/FluidSynth/fluidsynth/raw/master/doc/wiki/api/synthesis-params.md" title="View source of this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-file-code-2" viewBox="0 0 24 24"><path d="M4 12.15V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.706.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2h-3.35"/><path d="M14 2v5a1 1 0 0 0 1 1h5M5 16l-3 3 3 3M9 22l3-3-3-3"/></svg>
     </a>
   
 
 
-<h1 id="building-for-android">🤖 Building for Android</h1>
-<p>This page demonstrates how to cross-compile the upstream version of fluidsynth for Android, along with <strong>all the dependencies</strong> that fluidsynth requires. Other users have taken shortcuts by custom modifications to fluidsynth's code base that we do not officially support.</p>
-<p>You may find more information about FluidSynth on Android <a href="https://github.com/FluidSynth/fluidsynth/tree/master/doc/android">in the /doc folder</a>.</p>
-<h2 id="preface">Preface</h2>
-<p>So, you want to compile fluidsynth for Android? Are you aware of the fact that fluidsynth is written in C? That means you cannot benefit from nicely portable bytecode, i.e. compile once and deploy for all smartphone architectures and Android versions out there. The code being compiled will be <strong>native</strong> to the device and Android NDK you are targeting. 
-Thus, you will need to deploy fat binaries to your users. Even worse: fluidsynth depends on glib that we use as OSAL library. In order to build the official upstream version of fluidsynth you will have to cross compile glib and it's dependencies first. And again: you'll have to do this for all architectures and Android versions you want to support!</p>
-<p>fluidsynth is licensed under <strong>LGPL-2.1</strong>; <a href="../LicensingFAQ">make sure you understand what that means</a> when using it in your app!</p>
-<p>Note that glib and many of its dependencies are licensed under the LGPL, too. If you <strong>statically link</strong> any of them into your proprietary, closed-source app, you violate the LGPL and end up with a serious license infringement!
-Further note that fluidsynth can be optionally compiled with dependencies that are GPL licensed. In this case <strong>fluidsynth and your app become GPL licensed</strong>! If you don't respect those terms and understand its consequences, you are a potential subject to legal prosecution.</p>
-<p>When using the methods and scripts explained here, there is no guarantee of any kind that they work as expected, esp. not in a commercial product. <strong>NO warranty is provided; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE</strong>.</p>
-<p>If, despite all that, you still want to use fluidsynth on Android, ...well thank you, here's a guide that hopefully turns out to be useful and gives you an idea of the cross-compilation process as a whole.</p>
-<p>If you just want to use fluidsynth on Android without going through all the compilation trouble yourself, you may use the build artifacts from the CI build (cf. README.md).</p>
-<p>If you have questions or need support, contact our mailing list:
-<a href="https://lists.nongnu.org/mailman/listinfo/fluid-dev">https://lists.nongnu.org/mailman/listinfo/fluid-dev</a></p>
-<h2 id="prerequisites">Prerequisites</h2>
-<h4 id="this-guide">This guide...</h4>
-<ul>
-<li>assumes that you are on a Linux machine.</li>
-<li>requires an active internet connection (for downloading dependency libraries).</li>
-<li>assumes that you have a solid understanding of how to compile C/C++ programs from source under Linux.</li>
-<li>assumes that you know about Autotools, CMake, Make, Clang, GCC, Shell.</li>
-<li>recommends that you are a C/C++ programmer (so that you are able to understand and fix compilation errors).</li>
-<li>uses the <a href="https://developer.android.com/ndk/guides/standalone_toolchain">Standalone Toolchain approach of the Android NDK</a>.</li>
-<li>uses clang for compilation as shipped by the Android NDK.</li>
-<li>has been successfully tested for Android NDK r17b and r17c.</li>
-<li>exemplary compiles for <code>arm-eabi</code>.</li>
-</ul>
-<h4 id="android-ndk">Android NDK</h4>
-<p>The NDK has a few prerequisites itself. Unfortunately, they don't seem to be documented. E.g. the <code>clang60</code> compiler shipped with the NDK may require <code>libtinfo.so.5</code> to be installed on your host system. So, make sure <code>libncurses5</code> is installed.
-Keep an eye open for errors like</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>android-ndk-toolchain/bin/clang60: error while loading shared libraries: libtinfo.so.5: cannot open shared object file: No such file or directory
+<h1 id="synthesis-parameters">Synthesis Parameters</h1>
+<p>Functions to control and query synthesis parameters like gain and polyphony count. </p>
+<h2 id="enumerations">Enumerations</h2>
+<h3 id="fluid_interp"><code>fluid_interp</code></h3>
+<p>Synthesis interpolation method. </p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>FLUID_INTERP_NONE</code></td>
+<td>No interpolation: Fastest, but questionable audio quality.</td>
+</tr>
+<tr>
+<td><code>FLUID_INTERP_LINEAR</code></td>
+<td>Straight-line interpolation: A bit slower, reasonable audio quality.</td>
+</tr>
+<tr>
+<td><code>FLUID_INTERP_4THORDER</code></td>
+<td>Fourth-order interpolation, best quality, the default.</td>
+</tr>
+<tr>
+<td><code>FLUID_INTERP_7THORDER</code></td>
+<td>Seventh-point sinc interpolation.  This interpolation method was believed to provide highest quality. However, in Feb. 2025 it was discovered that for certain samples it does introduce ringing artifacts, which are not present in the 4th order interpolation. This is not a bug, it's rather a limitation of only using 7 points for the sinc interpolation.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>FLUID_INTERP_DEFAULT</code></td>
+<td>Default interpolation method.</td>
+</tr>
+<tr>
+<td><code>FLUID_INTERP_HIGHEST</code></td>
+<td>Highest interpolation method.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="fluid_synth_add_mod"><code>fluid_synth_add_mod</code></h3>
+<p>Enum used with <a href="../synthesis-params/#fluid_synth_add_default_mod"><code>fluid_synth_add_default_mod()</code></a> to specify how to handle duplicate modulators. </p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>FLUID_SYNTH_OVERWRITE</code></td>
+<td>Overwrite any existing matching modulator.</td>
+</tr>
+<tr>
+<td><code>FLUID_SYNTH_ADD</code></td>
+<td>Sum up modulator amounts.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="functions">Functions</h2>
+<h3 id="fluid_synth_add_default_mod"><code>fluid_synth_add_default_mod()</code></h3>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">fluid_synth_add_default_mod</span><span class="p">(</span><span class="n">fluid_synth_t</span><span class="w"> </span><span class="o">*</span><span class="n">synth</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">fluid_mod_t</span><span class="w"> </span><span class="o">*</span><span class="n">mod</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">mode</span><span class="p">)</span>
 </span></code></pre></div>
-<p>to capture even more missing dependencies that the NDK requires and make sure they are installed on your host system.</p>
-<h2 id="getting-started">Getting started</h2>
-<ul>
-<li>Read the preface above!</li>
-<li><a href="#preface">Seriously, read the preface</a>!!</li>
-<li>Download the Android NDK</li>
-<li>Download <a href="https://gist.github.com/derselbst/885641b86b8bd0e5fd1b1d846d4b286b">fluid-android-prepare.sh</a> and <a href="https://gist.github.com/derselbst/88917bf177d25cfc1067a37b442dd5ff">fluid-android-compile.sh</a></li>
-<li>Open <code>fluid-android-prepare.sh</code> and study it</li>
-<li>Adjust the <code>$DEV</code> and <code>$NDK</code> variables to your needs</li>
-<li>Adjust the target architecture and <code>$ANDROID_API</code> to your needs</li>
-<li>Open the <code>bash</code> shell, source the <code>fluid-android-prepare.sh</code>, make a folder
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">source</span><span class="w"> </span>fluid-android-prepare.sh
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>mkdir<span class="w"> </span><span class="nv">$DEV</span>
-</span></code></pre></div></li>
-<li>Provide the extracted NDK folder (e.g. android-ndk-r17b) at <code>$NDK</code> (i.e. move it there)</li>
-<li>Move <code>android-prepare.sh</code> and <code>android-compile.sh</code> into <code>$DEV</code></li>
-<li><code>cd $DEV</code></li>
-<li>In the same shell, where you've just sourced <code>fluid-android-prepare.sh</code>, start the build process by
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>bash<span class="w"> </span>fluid-android-compile.sh
-</span></code></pre></div></li>
-</ul>
-<p>That's it. All dependencies are downloaded and compiled one after another. No errors should occur. 
-Once done you should end up with a directory <code>$PREFIX</code> containing all binaries needed to run fluidsynth on Android (about 100 MiB on arm-eabi) that you can integrate into your favorite environment or IDE 
-(cf. <a href="../Using-prebuilt-libraries-on-Android/">Using prebuilt libraries on Android</a>).</p>
-<h2 id="if-compilation-of-dependencies-fails">If compilation of dependencies fails</h2>
-<p>Study the output of autotools. Keep an eye open for any warnings that might come up. Also, study autotools <code>config.log</code>. You might try to ask for help at our mailing list. However, preferably you should contact the respective project directly.</p>
-<h2 id="if-compilation-of-fluidsynth-fails">If compilation of fluidsynth fails</h2>
-<p>Ask for help at our mailing list. Provide as much information as possible! (Commands, log files, etc.) If you have already identified a bug in fluidsynth's build system or elsewhere, feel free to open a ticket directly here at GitHub.</p>
+<p>Adds the specified modulator <code>mod</code> as default modulator to the synth. </p>
+<p><code>mod</code> will take effect for any subsequently created voice. 
+<strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>synth</code></td>
+<td>FluidSynth instance</td>
+</tr>
+<tr>
+<td><code>mod</code></td>
+<td>Modulator info (values copied, passed in object can be freed immediately afterwards)</td>
+</tr>
+<tr>
+<td><code>mode</code></td>
+<td>Determines how to handle an existing identical modulator (<a href="../synthesis-params/#fluid_synth_add_mod"><code>fluid_synth_add_mod</code></a>)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <a href="../misc/#FLUID_OK"><code>FLUID_OK</code></a> on success, <a href="../misc/#FLUID_FAILED"><code>FLUID_FAILED</code></a> otherwise </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Not realtime safe (due to internal memory allocation) and therefore should not be called from synthesis context at the risk of stalling audio output.  </p>
+</div>
+<h3 id="fluid_synth_count_audio_channels"><code>fluid_synth_count_audio_channels()</code></h3>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">fluid_synth_count_audio_channels</span><span class="p">(</span><span class="n">fluid_synth_t</span><span class="w"> </span><span class="o">*</span><span class="n">synth</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Get the total count of audio channels. </p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>synth</code></td>
+<td>FluidSynth instance</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> Count of audio channel stereo pairs (1 = 2 channels, 2 = 4, etc)  </p>
+<h3 id="fluid_synth_count_audio_groups"><code>fluid_synth_count_audio_groups()</code></h3>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">fluid_synth_count_audio_groups</span><span class="p">(</span><span class="n">fluid_synth_t</span><span class="w"> </span><span class="o">*</span><span class="n">synth</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Get the total number of allocated audio channels. </p>
+<p>Usually identical to the number of audio channels. Can be employed by LADSPA effects subsystem.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>synth</code></td>
+<td>FluidSynth instance</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> Count of audio group stereo pairs (1 = 2 channels, 2 = 4, etc)  </p>
+<h3 id="fluid_synth_count_effects_channels"><code>fluid_synth_count_effects_channels()</code></h3>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">fluid_synth_count_effects_channels</span><span class="p">(</span><span class="n">fluid_synth_t</span><span class="w"> </span><span class="o">*</span><span class="n">synth</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Get the total number of allocated effects channels. </p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>synth</code></td>
+<td>FluidSynth instance</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> Count of allocated effects channels  </p>
+<h3 id="fluid_synth_count_effects_groups"><code>fluid_synth_count_effects_groups()</code></h3>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">fluid_synth_count_effects_groups</span><span class="p">(</span><span class="n">fluid_synth_t</span><span class="w"> </span><span class="o">*</span><span class="n">synth</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Get the total number of allocated effects units. </p>
+<p>This is the same number as initially provided by the setting <a href="../../settings/synth/#settings_synth_effects-groups"><code>synth.effects-groups</code></a>. 
+<strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>synth</code></td>
+<td>FluidSynth instance</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> Count of allocated effects units  </p>
+<h3 id="fluid_synth_count_midi_channels"><code>fluid_synth_count_midi_channels()</code></h3>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">fluid_synth_count_midi_channels</span><span class="p">(</span><span class="n">fluid_synth_t</span><span class="w"> </span><span class="o">*</span><span class="n">synth</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Get the total count of MIDI channels. </p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>synth</code></td>
+<td>FluidSynth instance</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> Count of MIDI channels  </p>
+<h3 id="fluid_synth_get_active_voice_count"><code>fluid_synth_get_active_voice_count()</code></h3>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">fluid_synth_get_active_voice_count</span><span class="p">(</span><span class="n">fluid_synth_t</span><span class="w"> </span><span class="o">*</span><span class="n">synth</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Get current number of active voices. </p>
+<p>I.e. the no. of voices that have been started and have not yet finished. Unless called from synthesis context, this number does not necessarily have to be equal to the number of voices currently processed by the DSP loop, see below. 
+<strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>synth</code></td>
+<td>FluidSynth instance</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> Number of currently active voices.  </p>
+<div class="admonition tip">
+<p class="admonition-title">Since</p>
+<p>1.1.0 </p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To generate accurate continuous statistics of the voice count, caller should ensure this function is called synchronously with the audio synthesis process. This can be done in the <a href="../audio-driver/#new_fluid_audio_driver2"><code>new_fluid_audio_driver2()</code></a> audio callback function for example. Otherwise every call to this function may return different voice counts as it may change after any (concurrent) call to fluid_synth_write_*() made by e.g. an audio driver or the applications audio rendering thread.  </p>
+</div>
+<h3 id="fluid_synth_get_gain"><code>fluid_synth_get_gain()</code></h3>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kt">float</span><span class="w"> </span><span class="n">fluid_synth_get_gain</span><span class="p">(</span><span class="n">fluid_synth_t</span><span class="w"> </span><span class="o">*</span><span class="n">synth</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Get synth output gain value. </p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>synth</code></td>
+<td>FluidSynth instance</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> Synth gain value (0.0 to 10.0)  </p>
+<h3 id="fluid_synth_get_internal_bufsize"><code>fluid_synth_get_internal_bufsize()</code></h3>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">fluid_synth_get_internal_bufsize</span><span class="p">(</span><span class="n">fluid_synth_t</span><span class="w"> </span><span class="o">*</span><span class="n">synth</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Get the internal synthesis buffer size value. </p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>synth</code></td>
+<td>FluidSynth instance</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> Internal buffer size in audio frames. </p>
+<p>Audio is synthesized at this number of frames at a time. Defaults to 64 frames. I.e. the synth can only react to notes, control changes, and other audio affecting events after having processed 64 audio frames. </p>
+<h3 id="fluid_synth_get_polyphony"><code>fluid_synth_get_polyphony()</code></h3>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">fluid_synth_get_polyphony</span><span class="p">(</span><span class="n">fluid_synth_t</span><span class="w"> </span><span class="o">*</span><span class="n">synth</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Get current synthesizer polyphony (max number of voices). </p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>synth</code></td>
+<td>FluidSynth instance</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> Synth polyphony value.  </p>
+<div class="admonition tip">
+<p class="admonition-title">Since</p>
+<p>1.0.6  </p>
+</div>
+<h3 id="fluid_synth_remove_default_mod"><code>fluid_synth_remove_default_mod()</code></h3>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">fluid_synth_remove_default_mod</span><span class="p">(</span><span class="n">fluid_synth_t</span><span class="w"> </span><span class="o">*</span><span class="n">synth</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">fluid_mod_t</span><span class="w"> </span><span class="o">*</span><span class="n">mod</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Removes the specified modulator <code>mod</code> from the synth's default modulator list. </p>
+<p><a href="../modulators/#fluid_mod_test_identity"><code>fluid_mod_test_identity()</code></a> will be used to test modulator matching. 
+<strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>synth</code></td>
+<td>synth instance</td>
+</tr>
+<tr>
+<td><code>mod</code></td>
+<td>The modulator to remove</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <a href="../misc/#FLUID_OK"><code>FLUID_OK</code></a> if a matching modulator was found and successfully removed, <a href="../misc/#FLUID_FAILED"><code>FLUID_FAILED</code></a> otherwise </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Not realtime safe (due to internal memory freeing) and therefore should not be called from synthesis context at the risk of stalling audio output.  </p>
+</div>
+<h3 id="fluid_synth_set_gain"><code>fluid_synth_set_gain()</code></h3>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">fluid_synth_set_gain</span><span class="p">(</span><span class="n">fluid_synth_t</span><span class="w"> </span><span class="o">*</span><span class="n">synth</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">gain</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Set synth output gain value. </p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>synth</code></td>
+<td>FluidSynth instance</td>
+</tr>
+<tr>
+<td><code>gain</code></td>
+<td>Gain value (function clamps value to the range 0.0 to 10.0)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="fluid_synth_set_interp_method"><code>fluid_synth_set_interp_method()</code></h3>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">fluid_synth_set_interp_method</span><span class="p">(</span><span class="n">fluid_synth_t</span><span class="w"> </span><span class="o">*</span><span class="n">synth</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">chan</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">interp_method</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Set synthesis interpolation method on one or all MIDI channels. </p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>synth</code></td>
+<td>FluidSynth instance</td>
+</tr>
+<tr>
+<td><code>chan</code></td>
+<td>MIDI channel to set interpolation method on or -1 for all channels</td>
+</tr>
+<tr>
+<td><code>interp_method</code></td>
+<td>Interpolation method (<a href="../synthesis-params/#fluid_interp"><code>fluid_interp</code></a>)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <a href="../misc/#FLUID_OK"><code>FLUID_OK</code></a> on success, <a href="../misc/#FLUID_FAILED"><code>FLUID_FAILED</code></a> otherwise  </p>
+<h3 id="fluid_synth_set_polyphony"><code>fluid_synth_set_polyphony()</code></h3>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">fluid_synth_set_polyphony</span><span class="p">(</span><span class="n">fluid_synth_t</span><span class="w"> </span><span class="o">*</span><span class="n">synth</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">polyphony</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Set synthesizer polyphony (max number of voices). </p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>synth</code></td>
+<td>FluidSynth instance</td>
+</tr>
+<tr>
+<td><code>polyphony</code></td>
+<td>Polyphony to assign</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <a href="../misc/#FLUID_OK"><code>FLUID_OK</code></a> on success, <a href="../misc/#FLUID_FAILED"><code>FLUID_FAILED</code></a> otherwise  </p>
+<div class="admonition tip">
+<p class="admonition-title">Since</p>
+<p>1.0.6  </p>
+</div>
+<h3 id="fluid_synth_set_sample_rate"><code>fluid_synth_set_sample_rate()</code></h3>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">fluid_synth_set_sample_rate</span><span class="p">(</span><span class="n">fluid_synth_t</span><span class="w"> </span><span class="o">*</span><span class="n">synth</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">sample_rate</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Set up an event to change the sample-rate of the synth during the next rendering call. </p>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>This function is broken-by-design! Don't use it! Starting with fluidsynth 2.4.4 it's a no-op. Instead, specify the sample-rate when creating the synth. </p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Deprecated</p>
+<p>As of fluidsynth 2.1.0 this function has been deprecated. Changing the sample-rate is generally not considered to be a realtime use-case, as it always produces some audible artifact ("click", "pop") on the dry sound and effects (because LFOs for chorus and reverb need to be reinitialized). The sample-rate change may also require memory allocation deep down in the effect units. However, this memory allocation may fail and there is no way for the caller to know that, because the actual change of the sample-rate is executed during rendering. This function cannot (must not) do the sample-rate change itself, otherwise the synth needs to be locked down, causing rendering to block. Esp. do not use this function if this <code>synth</code> instance is used by an audio driver, because the audio driver cannot be notified by this sample-rate change. Long story short: don't use it. </p>
+</div>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="n">fluid_synth_t</span><span class="o">*</span><span class="w"> </span><span class="n">synth</span><span class="p">;</span><span class="w"> </span><span class="c1">// assume initialized</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="c1">// [...]</span>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="c1">// sample-rate change needed? Delete the audio driver, if any.</span>
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="n">delete_fluid_audio_driver</span><span class="p">(</span><span class="n">adriver</span><span class="p">);</span>
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="c1">// then delete the synth</span>
+</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="n">delete_fluid_synth</span><span class="p">(</span><span class="n">synth</span><span class="p">);</span>
+</span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="c1">// update the sample-rate</span>
+</span><span id="__span-15-8"><a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a><span class="n">fluid_settings_setnum</span><span class="p">(</span><span class="n">settings</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;synth.sample-rate&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">22050.0</span><span class="p">);</span>
+</span><span id="__span-15-9"><a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a><span class="c1">// and re-create objects</span>
+</span><span id="__span-15-10"><a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a><span class="n">synth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">new_fluid_synth</span><span class="p">(</span><span class="n">settings</span><span class="p">);</span>
+</span><span id="__span-15-11"><a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a><span class="n">adriver</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">new_fluid_audio_driver</span><span class="p">(</span><span class="n">settings</span><span class="p">,</span><span class="w"> </span><span class="n">synth</span><span class="p">);</span>
+</span></code></pre></div>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>synth</code></td>
+<td>FluidSynth instance</td>
+</tr>
+<tr>
+<td><code>sample_rate</code></td>
+<td>New sample-rate (Hz)</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Since</p>
+<p>1.1.2  </p>
+</div>
 
 
 
@@ -4291,7 +5025,7 @@ Once done you should end up with a directory <code>$PREFIX</code> containing all
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../BuildingWithCMake/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 🛠️ Building FluidSynth with CMake">
+          <a href="../synth/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Synthesizer">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
@@ -4301,20 +5035,20 @@ Once done you should end up with a directory <code>$PREFIX</code> containing all
                 Previous
               </span>
               <div class="md-ellipsis">
-                🛠️ Building FluidSynth with CMake
+                Synthesizer
               </div>
             </div>
           </a>
         
         
           
-          <a href="../Using-prebuilt-libraries-on-Android/" class="md-footer__link md-footer__link--next" aria-label="Next: ⚙️ Using prebuilt libraries on Android">
+          <a href="../tuning/" class="md-footer__link md-footer__link--next" aria-label="Next: MIDI Tuning">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                ⚙️ Using prebuilt libraries on Android
+                MIDI Tuning
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -4385,10 +5119,10 @@ Once done you should end up with a directory <code>$PREFIX</code> containing all
     
       
       
-      <script id="__config" type="application/json">{"annotate":null,"base":"..","features":["announce.dismiss","content.action.edit","content.action.view","content.code.annotate","content.code.copy","content.code.select","content.footnote.tooltips","content.tabs.link","content.tooltips","header.autohide","navigation.footer","navigation.indexes","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.path","navigation.sections","navigation.tabs","navigation.top","navigation.tracking","search.highlight","toc.follow"],"search":"../assets/javascripts/workers/search.e2d2d235.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["announce.dismiss","content.action.edit","content.action.view","content.code.annotate","content.code.copy","content.code.select","content.footnote.tooltips","content.tabs.link","content.tooltips","header.autohide","navigation.footer","navigation.indexes","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.path","navigation.sections","navigation.tabs","navigation.top","navigation.tracking","search.highlight","toc.follow"],"search":"../../assets/javascripts/workers/search.e2d2d235.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
-      <script src="../assets/javascripts/bundle.6e5f0216.min.js"></script>
+      <script src="../../assets/javascripts/bundle.6e5f0216.min.js"></script>
       
     
   </body>

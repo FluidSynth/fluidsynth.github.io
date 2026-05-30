@@ -12,36 +12,36 @@
         <meta name="author" content="FluidSynth contributors">
       
       
-        <link rel="canonical" href="https://www.fluidsynth.org/wiki/BuildingForAndroid/">
+        <link rel="canonical" href="https://www.fluidsynth.org/wiki/settings/shell/">
       
       
-        <link rel="prev" href="../BuildingWithCMake/">
+        <link rel="prev" href="../player/">
       
       
-        <link rel="next" href="../Using-prebuilt-libraries-on-Android/">
+        <link rel="next" href="../synth/">
       
       
         
       
       
-      <link rel="icon" href="../images/favicon.png">
+      <link rel="icon" href="../../images/favicon.png">
       <meta name="generator" content="zensical-0.0.43">
     
     
       
-        <title>🤖 Building for Android - FluidSynth Wiki</title>
+        <title>Shell (command line) settings - FluidSynth Wiki</title>
       
     
     
       
         
       
-      <link rel="stylesheet" href="../assets/stylesheets/modern/main.fba56155.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/modern/main.fba56155.min.css">
       
         
           
         
-        <link rel="stylesheet" href="../assets/stylesheets/modern/palette.dfe2e883.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/modern/palette.dfe2e883.min.css">
       
       
 
@@ -60,9 +60,9 @@
       
     
     
-      <link rel="stylesheet" href="../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    <script>__md_scope=new URL("../..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
     
       
 
@@ -87,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#building-for-android" class="md-skip">
+        <a href="#shell-command-line-settings" class="md-skip">
           Skip to content
         </a>
       
@@ -101,7 +101,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="./.." title="FluidSynth Wiki" class="md-header__button md-logo" aria-label="FluidSynth Wiki" data-md-component="logo">
+    <a href="../.." title="FluidSynth Wiki" class="md-header__button md-logo" aria-label="FluidSynth Wiki" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 7v14M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
@@ -121,7 +121,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              🤖 Building for Android
+              Shell (command line) settings
             
           </span>
         </div>
@@ -215,7 +215,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="./.." class="md-tabs__link">
+      <a href="../.." class="md-tabs__link">
         
   
   🏠 Home
@@ -248,7 +248,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../Download/" class="md-tabs__link">
+        <a href="../../Download/" class="md-tabs__link">
           
   
   🎹 About FluidSynth
@@ -265,7 +265,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../ChangeLog/" class="md-tabs__link">
+      <a href="../../ChangeLog/" class="md-tabs__link">
         
   
   📝 Release Notes
@@ -330,7 +330,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../GettingStarted/" class="md-tabs__link">
+        <a href="../../GettingStarted/" class="md-tabs__link">
           
   
   📚 Documentation
@@ -398,7 +398,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="./.." title="FluidSynth Wiki" class="md-nav__button md-logo" aria-label="FluidSynth Wiki" data-md-component="logo">
+    <a href="../.." title="FluidSynth Wiki" class="md-nav__button md-logo" aria-label="FluidSynth Wiki" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 7v14M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
@@ -428,7 +428,7 @@
   
   
     <li class="md-nav__item">
-      <a href="./.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -516,7 +516,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Download/" class="md-nav__link">
+      <a href="../../Download/" class="md-nav__link">
         
   
   
@@ -543,7 +543,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../SoundFont/" class="md-nav__link">
+      <a href="../../SoundFont/" class="md-nav__link">
         
   
   
@@ -570,7 +570,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Applications/" class="md-nav__link">
+      <a href="../../Applications/" class="md-nav__link">
         
   
   
@@ -597,7 +597,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../MadeWithFluidSynth/" class="md-nav__link">
+      <a href="../../MadeWithFluidSynth/" class="md-nav__link">
         
   
   
@@ -624,7 +624,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../LicensingFAQ/" class="md-nav__link">
+      <a href="../../LicensingFAQ/" class="md-nav__link">
         
   
   
@@ -658,7 +658,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ChangeLog/" class="md-nav__link">
+      <a href="../../ChangeLog/" class="md-nav__link">
         
   
   
@@ -742,6 +742,8 @@
                 
   
   
+    
+  
   
   
     
@@ -756,571 +758,6 @@
         
       
         
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-      
-      
-        
-          
-          
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
-        
-          
-          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-  🧑 For Users
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_1">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-  🧑 For Users
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../GettingStarted/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-  🚀 Getting started
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ExampleCommandLines/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-  💻 Command Line Examples
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Audio-Drivers/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-  🔈 Built-in Audio Drivers
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../UserManual/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-  📖 User Manual
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_5" >
-        
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../settings/" class="md-nav__link ">
-              
-  
-  
-  <span class="md-ellipsis">
-    
-  
-  ⚙️ Fluid Settings
-
-    
-  </span>
-  
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_4_1_5" id="__nav_4_1_5_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_1_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_1_5">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-  ⚙️ Fluid Settings
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../settings/audio/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-  Audio driver settings
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../settings/midi/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-  MIDI driver settings
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../settings/player/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-  MIDI player settings
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../settings/shell/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-  Shell (command line) settings
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../settings/synth/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-  Synthesizer settings
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../FluidFeatures/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-  ✨ Fluid Features
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../LowLatency/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-  ⏱️ Low latency tips
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../FluidSynth-configuration-files/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-  🗂️ Configuration files
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../reverbators/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-  🌀 Reverb Overview
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ladspa/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-  🖥️ LADSPA Interface
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../SoundFont3Format/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-  ➕ The SoundFont3 Format
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    
-    
       
         
       
@@ -1350,17 +787,17 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" checked>
         
           
-          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="">
             
   
   
   <span class="md-ellipsis">
     
   
-  🤓 For Developers
+  🧑 For Users
 
     
   </span>
@@ -1370,15 +807,123 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_4_2">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_1">
             <span class="md-nav__icon md-icon"></span>
             
   
-  🤓 For Developers
+  🧑 For Users
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../GettingStarted/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  🚀 Getting started
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ExampleCommandLines/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  💻 Command Line Examples
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Audio-Drivers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  🔈 Built-in Audio Drivers
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UserManual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  📖 User Manual
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -1390,6 +935,12 @@
   
     
     
+      
+        
+          
+        
+      
+        
       
         
       
@@ -1412,35 +963,44 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_5" checked>
         
           
-          <label class="md-nav__link" for="__nav_4_2_1" id="__nav_4_2_1_label" tabindex="0">
-            
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
   
   
   <span class="md-ellipsis">
     
   
-  🛠️ Compiling Fluidsynth
+  ⚙️ Fluid Settings
 
     
   </span>
   
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_1_5" id="__nav_4_1_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_1_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_4_2_1">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_1_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_1_5">
             <span class="md-nav__icon md-icon"></span>
             
   
-  🛠️ Compiling Fluidsynth
+  ⚙️ Fluid Settings
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
             
               
                 
@@ -1449,14 +1009,68 @@
   
   
     <li class="md-nav__item">
-      <a href="../BuildingWithCMake/" class="md-nav__link">
+      <a href="../audio/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-  🛠️ Building FluidSynth with CMake
+  Audio driver settings
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../midi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  MIDI driver settings
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../player/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  MIDI player settings
 
     
   </span>
@@ -1492,7 +1106,7 @@
   <span class="md-ellipsis">
     
   
-  🤖 Building for Android
+  Shell (command line) settings
 
     
   </span>
@@ -1509,7 +1123,7 @@
   <span class="md-ellipsis">
     
   
-  🤖 Building for Android
+  Shell (command line) settings
 
     
   </span>
@@ -1535,10 +1149,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#preface" class="md-nav__link">
+  <a href="#settings_shell_port" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        Preface
+        <code>shell.port</code>
       </span>
     </span>
   </a>
@@ -1546,71 +1160,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+  <a href="#settings_shell_prompt" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        Prerequisites
-      </span>
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Prerequisites">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#this-guide" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        This guide...
-      </span>
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#android-ndk" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Android NDK
-      </span>
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#getting-started" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Getting started
-      </span>
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#if-compilation-of-dependencies-fails" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        If compilation of dependencies fails
-      </span>
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#if-compilation-of-fluidsynth-fails" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        If compilation of fluidsynth fails
+        <code>shell.prompt</code>
       </span>
     </span>
   </a>
@@ -1633,7 +1186,393 @@
   
   
     <li class="md-nav__item">
-      <a href="../Using-prebuilt-libraries-on-Android/" class="md-nav__link">
+      <a href="../synth/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Synthesizer settings
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FluidFeatures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  ✨ Fluid Features
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../LowLatency/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  ⏱️ Low latency tips
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FluidSynth-configuration-files/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  🗂️ Configuration files
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reverbators/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  🌀 Reverb Overview
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ladspa/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  🖥️ LADSPA Interface
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SoundFont3Format/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  ➕ The SoundFont3 Format
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  🤓 For Developers
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+  🤓 For Developers
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2_1" id="__nav_4_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  🛠️ Compiling Fluidsynth
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+  🛠️ Compiling Fluidsynth
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BuildingWithCMake/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  🛠️ Building FluidSynth with CMake
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BuildingForAndroid/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  🤖 Building for Android
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Using-prebuilt-libraries-on-Android/" class="md-nav__link">
         
   
   
@@ -1660,7 +1599,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../NotesForPackagers/" class="md-nav__link">
+      <a href="../../NotesForPackagers/" class="md-nav__link">
         
   
   
@@ -1750,7 +1689,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../usage/" class="md-nav__link ">
+            <a href="../../usage/" class="md-nav__link ">
               
   
   
@@ -1792,7 +1731,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../usage/creating-settings/" class="md-nav__link">
+      <a href="../../usage/creating-settings/" class="md-nav__link">
         
   
   
@@ -1819,7 +1758,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../usage/creating-synth/" class="md-nav__link">
+      <a href="../../usage/creating-synth/" class="md-nav__link">
         
   
   
@@ -1846,7 +1785,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../usage/loading-soundfonts/" class="md-nav__link">
+      <a href="../../usage/loading-soundfonts/" class="md-nav__link">
         
   
   
@@ -1873,7 +1812,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../usage/audio-driver/" class="md-nav__link">
+      <a href="../../usage/audio-driver/" class="md-nav__link">
         
   
   
@@ -1900,7 +1839,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../usage/using-synth/" class="md-nav__link">
+      <a href="../../usage/using-synth/" class="md-nav__link">
         
   
   
@@ -1927,7 +1866,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../usage/sending-midi/" class="md-nav__link">
+      <a href="../../usage/sending-midi/" class="md-nav__link">
         
   
   
@@ -1954,7 +1893,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../usage/realtime-midi/" class="md-nav__link">
+      <a href="../../usage/realtime-midi/" class="md-nav__link">
         
   
   
@@ -1981,7 +1920,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../usage/midi-player/" class="md-nav__link">
+      <a href="../../usage/midi-player/" class="md-nav__link">
         
   
   
@@ -2008,7 +1947,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../usage/file-renderer/" class="md-nav__link">
+      <a href="../../usage/file-renderer/" class="md-nav__link">
         
   
   
@@ -2035,7 +1974,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../usage/midi-player-mem/" class="md-nav__link">
+      <a href="../../usage/midi-player-mem/" class="md-nav__link">
         
   
   
@@ -2062,7 +2001,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../usage/midi-router/" class="md-nav__link">
+      <a href="../../usage/midi-router/" class="md-nav__link">
         
   
   
@@ -2089,7 +2028,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../usage/sequencer/" class="md-nav__link">
+      <a href="../../usage/sequencer/" class="md-nav__link">
         
   
   
@@ -2116,7 +2055,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../usage/shell/" class="md-nav__link">
+      <a href="../../usage/shell/" class="md-nav__link">
         
   
   
@@ -2143,7 +2082,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../usage/multi-channel/" class="md-nav__link">
+      <a href="../../usage/multi-channel/" class="md-nav__link">
         
   
   
@@ -2170,7 +2109,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../usage/synth-context/" class="md-nav__link">
+      <a href="../../usage/synth-context/" class="md-nav__link">
         
   
   
@@ -2197,7 +2136,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../usage/advanced/" class="md-nav__link">
+      <a href="../../usage/advanced/" class="md-nav__link">
         
   
   
@@ -2329,7 +2268,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../api/" class="md-nav__link ">
+            <a href="../../api/" class="md-nav__link ">
               
   
   
@@ -2371,7 +2310,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/recent-changes/" class="md-nav__link">
+      <a href="../../api/recent-changes/" class="md-nav__link">
         
   
   
@@ -2398,7 +2337,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/deprecated/" class="md-nav__link">
+      <a href="../../api/deprecated/" class="md-nav__link">
         
   
   
@@ -2425,7 +2364,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/Types/" class="md-nav__link">
+      <a href="../../api/Types/" class="md-nav__link">
         
   
   
@@ -2452,7 +2391,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/audio-driver/" class="md-nav__link">
+      <a href="../../api/audio-driver/" class="md-nav__link">
         
   
   
@@ -2479,7 +2418,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/audio-output/" class="md-nav__link">
+      <a href="../../api/audio-output/" class="md-nav__link">
         
   
   
@@ -2506,7 +2445,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/audio-rendering/" class="md-nav__link">
+      <a href="../../api/audio-rendering/" class="md-nav__link">
         
   
   
@@ -2533,7 +2472,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/channel-setup/" class="md-nav__link">
+      <a href="../../api/channel-setup/" class="md-nav__link">
         
   
   
@@ -2560,7 +2499,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/chorus-effect/" class="md-nav__link">
+      <a href="../../api/chorus-effect/" class="md-nav__link">
         
   
   
@@ -2587,7 +2526,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/command-handler/" class="md-nav__link">
+      <a href="../../api/command-handler/" class="md-nav__link">
         
   
   
@@ -2614,7 +2553,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/command-interface/" class="md-nav__link">
+      <a href="../../api/command-interface/" class="md-nav__link">
         
   
   
@@ -2641,7 +2580,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/command-server/" class="md-nav__link">
+      <a href="../../api/command-server/" class="md-nav__link">
         
   
   
@@ -2668,7 +2607,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/command-shell/" class="md-nav__link">
+      <a href="../../api/command-shell/" class="md-nav__link">
         
   
   
@@ -2695,7 +2634,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/file-renderer/" class="md-nav__link">
+      <a href="../../api/file-renderer/" class="md-nav__link">
         
   
   
@@ -2722,7 +2661,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/generators/" class="md-nav__link">
+      <a href="../../api/generators/" class="md-nav__link">
         
   
   
@@ -2749,7 +2688,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/iir-filter/" class="md-nav__link">
+      <a href="../../api/iir-filter/" class="md-nav__link">
         
   
   
@@ -2776,7 +2715,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/ladspa/" class="md-nav__link">
+      <a href="../../api/ladspa/" class="md-nav__link">
         
   
   
@@ -2803,7 +2742,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/logging/" class="md-nav__link">
+      <a href="../../api/logging/" class="md-nav__link">
         
   
   
@@ -2830,7 +2769,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/midi-driver/" class="md-nav__link">
+      <a href="../../api/midi-driver/" class="md-nav__link">
         
   
   
@@ -2857,7 +2796,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/midi-events/" class="md-nav__link">
+      <a href="../../api/midi-events/" class="md-nav__link">
         
   
   
@@ -2884,7 +2823,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/midi-input/" class="md-nav__link">
+      <a href="../../api/midi-input/" class="md-nav__link">
         
   
   
@@ -2911,7 +2850,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/midi-messages/" class="md-nav__link">
+      <a href="../../api/midi-messages/" class="md-nav__link">
         
   
   
@@ -2938,7 +2877,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/midi-player/" class="md-nav__link">
+      <a href="../../api/midi-player/" class="md-nav__link">
         
   
   
@@ -2965,7 +2904,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/midi-router/" class="md-nav__link">
+      <a href="../../api/midi-router/" class="md-nav__link">
         
   
   
@@ -2992,7 +2931,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/misc/" class="md-nav__link">
+      <a href="../../api/misc/" class="md-nav__link">
         
   
   
@@ -3019,7 +2958,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/modulators/" class="md-nav__link">
+      <a href="../../api/modulators/" class="md-nav__link">
         
   
   
@@ -3046,7 +2985,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/reverb-effect/" class="md-nav__link">
+      <a href="../../api/reverb-effect/" class="md-nav__link">
         
   
   
@@ -3073,7 +3012,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/sequencer-events/" class="md-nav__link">
+      <a href="../../api/sequencer-events/" class="md-nav__link">
         
   
   
@@ -3100,7 +3039,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/sequencer/" class="md-nav__link">
+      <a href="../../api/sequencer/" class="md-nav__link">
         
   
   
@@ -3127,7 +3066,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/settings/" class="md-nav__link">
+      <a href="../../api/settings/" class="md-nav__link">
         
   
   
@@ -3154,7 +3093,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/soundfont-loader/" class="md-nav__link">
+      <a href="../../api/soundfont-loader/" class="md-nav__link">
         
   
   
@@ -3181,7 +3120,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/soundfont-management/" class="md-nav__link">
+      <a href="../../api/soundfont-management/" class="md-nav__link">
         
   
   
@@ -3208,7 +3147,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/soundfonts/" class="md-nav__link">
+      <a href="../../api/soundfonts/" class="md-nav__link">
         
   
   
@@ -3235,7 +3174,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/synth/" class="md-nav__link">
+      <a href="../../api/synth/" class="md-nav__link">
         
   
   
@@ -3262,7 +3201,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/synthesis-params/" class="md-nav__link">
+      <a href="../../api/synthesis-params/" class="md-nav__link">
         
   
   
@@ -3289,7 +3228,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/tuning/" class="md-nav__link">
+      <a href="../../api/tuning/" class="md-nav__link">
         
   
   
@@ -3316,7 +3255,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/voice-control/" class="md-nav__link">
+      <a href="../../api/voice-control/" class="md-nav__link">
         
   
   
@@ -3343,7 +3282,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/voices/" class="md-nav__link">
+      <a href="../../api/voices/" class="md-nav__link">
         
   
   
@@ -3421,7 +3360,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../api/examples/" class="md-nav__link ">
+            <a href="../../api/examples/" class="md-nav__link ">
               
   
   
@@ -3461,7 +3400,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/examples/example/" class="md-nav__link">
+      <a href="../../api/examples/example/" class="md-nav__link">
         
   
   
@@ -3488,7 +3427,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/examples/fluidsynth_arpeggio/" class="md-nav__link">
+      <a href="../../api/examples/fluidsynth_arpeggio/" class="md-nav__link">
         
   
   
@@ -3515,7 +3454,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/examples/fluidsynth_enumsettings/" class="md-nav__link">
+      <a href="../../api/examples/fluidsynth_enumsettings/" class="md-nav__link">
         
   
   
@@ -3542,7 +3481,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/examples/fluidsynth_fx/" class="md-nav__link">
+      <a href="../../api/examples/fluidsynth_fx/" class="md-nav__link">
         
   
   
@@ -3569,7 +3508,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/examples/fluidsynth_instruments/" class="md-nav__link">
+      <a href="../../api/examples/fluidsynth_instruments/" class="md-nav__link">
         
   
   
@@ -3596,7 +3535,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/examples/fluidsynth_metronome/" class="md-nav__link">
+      <a href="../../api/examples/fluidsynth_metronome/" class="md-nav__link">
         
   
   
@@ -3623,7 +3562,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/examples/fluidsynth_process/" class="md-nav__link">
+      <a href="../../api/examples/fluidsynth_process/" class="md-nav__link">
         
   
   
@@ -3650,7 +3589,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/examples/fluidsynth_register_adriver/" class="md-nav__link">
+      <a href="../../api/examples/fluidsynth_register_adriver/" class="md-nav__link">
         
   
   
@@ -3677,7 +3616,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/examples/fluidsynth_sfload_mem/" class="md-nav__link">
+      <a href="../../api/examples/fluidsynth_sfload_mem/" class="md-nav__link">
         
   
   
@@ -3704,7 +3643,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/examples/fluidsynth_simple/" class="md-nav__link">
+      <a href="../../api/examples/fluidsynth_simple/" class="md-nav__link">
         
   
   
@@ -3768,7 +3707,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ReleaseCheckList/" class="md-nav__link">
+      <a href="../../ReleaseCheckList/" class="md-nav__link">
         
   
   
@@ -3896,10 +3835,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#preface" class="md-nav__link">
+  <a href="#settings_shell_port" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        Preface
+        <code>shell.port</code>
       </span>
     </span>
   </a>
@@ -3907,71 +3846,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+  <a href="#settings_shell_prompt" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        Prerequisites
-      </span>
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Prerequisites">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#this-guide" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        This guide...
-      </span>
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#android-ndk" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Android NDK
-      </span>
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#getting-started" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Getting started
-      </span>
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#if-compilation-of-dependencies-fails" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        If compilation of dependencies fails
-      </span>
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#if-compilation-of-fluidsynth-fails" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        If compilation of fluidsynth fails
+        <code>shell.prompt</code>
       </span>
     </span>
   </a>
@@ -4003,7 +3881,7 @@
   
   
     <li class="md-path__item">
-      <a href="./.." class="md-path__link">
+      <a href="../.." class="md-path__link">
         
   
   <span class="md-ellipsis">
@@ -4063,7 +3941,7 @@
     
     
       <li class="md-path__item">
-        <a href="../GettingStarted/" class="md-path__link">
+        <a href="../../GettingStarted/" class="md-path__link">
           
   
   <span class="md-ellipsis">
@@ -4097,15 +3975,7 @@
       
         
       
-    
-    
-    
-    
-      
-  
-  
-    
-    
+        
       
         
       
@@ -4120,11 +3990,11 @@
     
     
       <li class="md-path__item">
-        <a href="../BuildingWithCMake/" class="md-path__link">
+        <a href="../../GettingStarted/" class="md-path__link">
           
   
   <span class="md-ellipsis">
-    🤓 For Developers
+    🧑 For Users
   </span>
 
         </a>
@@ -4132,15 +4002,18 @@
     
   
 
-    
-  
-
       
         
   
   
     
     
+      
+        
+          
+        
+      
+        
       
         
       
@@ -4155,11 +4028,11 @@
     
     
       <li class="md-path__item">
-        <a href="../BuildingWithCMake/" class="md-path__link">
+        <a href="../" class="md-path__link">
           
   
   <span class="md-ellipsis">
-    🛠️ Compiling Fluidsynth
+    ⚙️ Fluid Settings
   </span>
 
         </a>
@@ -4176,7 +4049,7 @@
                 
                   
   
-    <a href="https://github.com/FluidSynth/fluidsynth/edit/master/doc/wiki/BuildingForAndroid.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/FluidSynth/fluidsynth/edit/master/doc/wiki/settings/shell.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-file-pen" viewBox="0 0 24 24"><path d="M12.659 22H18a2 2 0 0 0 2-2V8a2.4 2.4 0 0 0-.706-1.706l-3.588-3.588A2.4 2.4 0 0 0 14 2H6a2 2 0 0 0-2 2v9.34"/><path d="M14 2v5a1 1 0 0 0 1 1h5M10.378 12.622a1 1 0 0 1 3 3.003L8.36 20.637a2 2 0 0 1-.854.506l-2.867.837a.5.5 0 0 1-.62-.62l.836-2.869a2 2 0 0 1 .506-.853z"/></svg>
     </a>
@@ -4185,73 +4058,66 @@
     
       
     
-    <a href="https://github.com/FluidSynth/fluidsynth/raw/master/doc/wiki/BuildingForAndroid.md" title="View source of this page" class="md-content__button md-icon">
+    <a href="https://github.com/FluidSynth/fluidsynth/raw/master/doc/wiki/settings/shell.md" title="View source of this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-file-code-2" viewBox="0 0 24 24"><path d="M4 12.15V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.706.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2h-3.35"/><path d="M14 2v5a1 1 0 0 0 1 1h5M5 16l-3 3 3 3M9 22l3-3-3-3"/></svg>
     </a>
   
 
 
-<h1 id="building-for-android">🤖 Building for Android</h1>
-<p>This page demonstrates how to cross-compile the upstream version of fluidsynth for Android, along with <strong>all the dependencies</strong> that fluidsynth requires. Other users have taken shortcuts by custom modifications to fluidsynth's code base that we do not officially support.</p>
-<p>You may find more information about FluidSynth on Android <a href="https://github.com/FluidSynth/fluidsynth/tree/master/doc/android">in the /doc folder</a>.</p>
-<h2 id="preface">Preface</h2>
-<p>So, you want to compile fluidsynth for Android? Are you aware of the fact that fluidsynth is written in C? That means you cannot benefit from nicely portable bytecode, i.e. compile once and deploy for all smartphone architectures and Android versions out there. The code being compiled will be <strong>native</strong> to the device and Android NDK you are targeting. 
-Thus, you will need to deploy fat binaries to your users. Even worse: fluidsynth depends on glib that we use as OSAL library. In order to build the official upstream version of fluidsynth you will have to cross compile glib and it's dependencies first. And again: you'll have to do this for all architectures and Android versions you want to support!</p>
-<p>fluidsynth is licensed under <strong>LGPL-2.1</strong>; <a href="../LicensingFAQ">make sure you understand what that means</a> when using it in your app!</p>
-<p>Note that glib and many of its dependencies are licensed under the LGPL, too. If you <strong>statically link</strong> any of them into your proprietary, closed-source app, you violate the LGPL and end up with a serious license infringement!
-Further note that fluidsynth can be optionally compiled with dependencies that are GPL licensed. In this case <strong>fluidsynth and your app become GPL licensed</strong>! If you don't respect those terms and understand its consequences, you are a potential subject to legal prosecution.</p>
-<p>When using the methods and scripts explained here, there is no guarantee of any kind that they work as expected, esp. not in a commercial product. <strong>NO warranty is provided; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE</strong>.</p>
-<p>If, despite all that, you still want to use fluidsynth on Android, ...well thank you, here's a guide that hopefully turns out to be useful and gives you an idea of the cross-compilation process as a whole.</p>
-<p>If you just want to use fluidsynth on Android without going through all the compilation trouble yourself, you may use the build artifacts from the CI build (cf. README.md).</p>
-<p>If you have questions or need support, contact our mailing list:
-<a href="https://lists.nongnu.org/mailman/listinfo/fluid-dev">https://lists.nongnu.org/mailman/listinfo/fluid-dev</a></p>
-<h2 id="prerequisites">Prerequisites</h2>
-<h4 id="this-guide">This guide...</h4>
-<ul>
-<li>assumes that you are on a Linux machine.</li>
-<li>requires an active internet connection (for downloading dependency libraries).</li>
-<li>assumes that you have a solid understanding of how to compile C/C++ programs from source under Linux.</li>
-<li>assumes that you know about Autotools, CMake, Make, Clang, GCC, Shell.</li>
-<li>recommends that you are a C/C++ programmer (so that you are able to understand and fix compilation errors).</li>
-<li>uses the <a href="https://developer.android.com/ndk/guides/standalone_toolchain">Standalone Toolchain approach of the Android NDK</a>.</li>
-<li>uses clang for compilation as shipped by the Android NDK.</li>
-<li>has been successfully tested for Android NDK r17b and r17c.</li>
-<li>exemplary compiles for <code>arm-eabi</code>.</li>
-</ul>
-<h4 id="android-ndk">Android NDK</h4>
-<p>The NDK has a few prerequisites itself. Unfortunately, they don't seem to be documented. E.g. the <code>clang60</code> compiler shipped with the NDK may require <code>libtinfo.so.5</code> to be installed on your host system. So, make sure <code>libncurses5</code> is installed.
-Keep an eye open for errors like</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>android-ndk-toolchain/bin/clang60: error while loading shared libraries: libtinfo.so.5: cannot open shared object file: No such file or directory
-</span></code></pre></div>
-<p>to capture even more missing dependencies that the NDK requires and make sure they are installed on your host system.</p>
-<h2 id="getting-started">Getting started</h2>
-<ul>
-<li>Read the preface above!</li>
-<li><a href="#preface">Seriously, read the preface</a>!!</li>
-<li>Download the Android NDK</li>
-<li>Download <a href="https://gist.github.com/derselbst/885641b86b8bd0e5fd1b1d846d4b286b">fluid-android-prepare.sh</a> and <a href="https://gist.github.com/derselbst/88917bf177d25cfc1067a37b442dd5ff">fluid-android-compile.sh</a></li>
-<li>Open <code>fluid-android-prepare.sh</code> and study it</li>
-<li>Adjust the <code>$DEV</code> and <code>$NDK</code> variables to your needs</li>
-<li>Adjust the target architecture and <code>$ANDROID_API</code> to your needs</li>
-<li>Open the <code>bash</code> shell, source the <code>fluid-android-prepare.sh</code>, make a folder
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">source</span><span class="w"> </span>fluid-android-prepare.sh
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>mkdir<span class="w"> </span><span class="nv">$DEV</span>
-</span></code></pre></div></li>
-<li>Provide the extracted NDK folder (e.g. android-ndk-r17b) at <code>$NDK</code> (i.e. move it there)</li>
-<li>Move <code>android-prepare.sh</code> and <code>android-compile.sh</code> into <code>$DEV</code></li>
-<li><code>cd $DEV</code></li>
-<li>In the same shell, where you've just sourced <code>fluid-android-prepare.sh</code>, start the build process by
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>bash<span class="w"> </span>fluid-android-compile.sh
-</span></code></pre></div></li>
-</ul>
-<p>That's it. All dependencies are downloaded and compiled one after another. No errors should occur. 
-Once done you should end up with a directory <code>$PREFIX</code> containing all binaries needed to run fluidsynth on Android (about 100 MiB on arm-eabi) that you can integrate into your favorite environment or IDE 
-(cf. <a href="../Using-prebuilt-libraries-on-Android/">Using prebuilt libraries on Android</a>).</p>
-<h2 id="if-compilation-of-dependencies-fails">If compilation of dependencies fails</h2>
-<p>Study the output of autotools. Keep an eye open for any warnings that might come up. Also, study autotools <code>config.log</code>. You might try to ask for help at our mailing list. However, preferably you should contact the respective project directly.</p>
-<h2 id="if-compilation-of-fluidsynth-fails">If compilation of fluidsynth fails</h2>
-<p>Ask for help at our mailing list. Provide as much information as possible! (Commands, log files, etc.) If you have already identified a bug in fluidsynth's build system or elsewhere, feel free to open a ticket directly here at GitHub.</p>
+<h1 id="shell-command-line-settings">Shell (command line) settings</h1>
+<h2 id="settings_shell_port"><code>shell.port</code></h2>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td><code>Integer (int)</code></td>
+</tr>
+<tr>
+<td>Default</td>
+<td><code>0</code></td>
+</tr>
+<tr>
+<td>Min</td>
+<td><code>0</code></td>
+</tr>
+<tr>
+<td>Max</td>
+<td><code>65535</code></td>
+</tr>
+</tbody>
+</table>
+<p>The shell can be used in a client/server mode. This setting controls what TCP/IP port the server uses. Since fluidsynth 2.5.4, a value of 0 enables auto mode and selects the first free port, probing from 9800 upwards. Older versions used 9800 as default port.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When set to 0, fluidsynth will update the setting during server creation (new_fluid_server2()) with the actual port number used.</p>
+</div>
+<h2 id="settings_shell_prompt"><code>shell.prompt</code></h2>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td><code>String (str)</code></td>
+</tr>
+<tr>
+<td>Default</td>
+<td><code>(empty string)</code></td>
+</tr>
+</tbody>
+</table>
+<p>In dump mode we set the prompt to "" (empty string). The ui cannot easily handle lines, which don't end with cr. Changing the prompt cannot be done through a command, because the current shell does not handle empty arguments.</p>
 
 
 
@@ -4291,7 +4157,7 @@ Once done you should end up with a directory <code>$PREFIX</code> containing all
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../BuildingWithCMake/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 🛠️ Building FluidSynth with CMake">
+          <a href="../player/" class="md-footer__link md-footer__link--prev" aria-label="Previous: MIDI player settings">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
@@ -4301,20 +4167,20 @@ Once done you should end up with a directory <code>$PREFIX</code> containing all
                 Previous
               </span>
               <div class="md-ellipsis">
-                🛠️ Building FluidSynth with CMake
+                MIDI player settings
               </div>
             </div>
           </a>
         
         
           
-          <a href="../Using-prebuilt-libraries-on-Android/" class="md-footer__link md-footer__link--next" aria-label="Next: ⚙️ Using prebuilt libraries on Android">
+          <a href="../synth/" class="md-footer__link md-footer__link--next" aria-label="Next: Synthesizer settings">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                ⚙️ Using prebuilt libraries on Android
+                Synthesizer settings
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -4385,10 +4251,10 @@ Once done you should end up with a directory <code>$PREFIX</code> containing all
     
       
       
-      <script id="__config" type="application/json">{"annotate":null,"base":"..","features":["announce.dismiss","content.action.edit","content.action.view","content.code.annotate","content.code.copy","content.code.select","content.footnote.tooltips","content.tabs.link","content.tooltips","header.autohide","navigation.footer","navigation.indexes","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.path","navigation.sections","navigation.tabs","navigation.top","navigation.tracking","search.highlight","toc.follow"],"search":"../assets/javascripts/workers/search.e2d2d235.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["announce.dismiss","content.action.edit","content.action.view","content.code.annotate","content.code.copy","content.code.select","content.footnote.tooltips","content.tabs.link","content.tooltips","header.autohide","navigation.footer","navigation.indexes","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.path","navigation.sections","navigation.tabs","navigation.top","navigation.tracking","search.highlight","toc.follow"],"search":"../../assets/javascripts/workers/search.e2d2d235.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
-      <script src="../assets/javascripts/bundle.6e5f0216.min.js"></script>
+      <script src="../../assets/javascripts/bundle.6e5f0216.min.js"></script>
       
     
   </body>

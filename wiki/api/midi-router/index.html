@@ -12,36 +12,36 @@
         <meta name="author" content="FluidSynth contributors">
       
       
-        <link rel="canonical" href="https://www.fluidsynth.org/wiki/BuildingForAndroid/">
+        <link rel="canonical" href="https://www.fluidsynth.org/wiki/api/midi-router/">
       
       
-        <link rel="prev" href="../BuildingWithCMake/">
+        <link rel="prev" href="../midi-player/">
       
       
-        <link rel="next" href="../Using-prebuilt-libraries-on-Android/">
+        <link rel="next" href="../misc/">
       
       
         
       
       
-      <link rel="icon" href="../images/favicon.png">
+      <link rel="icon" href="../../images/favicon.png">
       <meta name="generator" content="zensical-0.0.43">
     
     
       
-        <title>🤖 Building for Android - FluidSynth Wiki</title>
+        <title>MIDI Router - FluidSynth Wiki</title>
       
     
     
       
         
       
-      <link rel="stylesheet" href="../assets/stylesheets/modern/main.fba56155.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/modern/main.fba56155.min.css">
       
         
           
         
-        <link rel="stylesheet" href="../assets/stylesheets/modern/palette.dfe2e883.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/modern/palette.dfe2e883.min.css">
       
       
 
@@ -60,9 +60,9 @@
       
     
     
-      <link rel="stylesheet" href="../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    <script>__md_scope=new URL("../..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
     
       
 
@@ -87,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#building-for-android" class="md-skip">
+        <a href="#midi-router" class="md-skip">
           Skip to content
         </a>
       
@@ -101,7 +101,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="./.." title="FluidSynth Wiki" class="md-header__button md-logo" aria-label="FluidSynth Wiki" data-md-component="logo">
+    <a href="../.." title="FluidSynth Wiki" class="md-header__button md-logo" aria-label="FluidSynth Wiki" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 7v14M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
@@ -121,7 +121,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              🤖 Building for Android
+              MIDI Router
             
           </span>
         </div>
@@ -215,7 +215,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="./.." class="md-tabs__link">
+      <a href="../.." class="md-tabs__link">
         
   
   🏠 Home
@@ -248,7 +248,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../Download/" class="md-tabs__link">
+        <a href="../../Download/" class="md-tabs__link">
           
   
   🎹 About FluidSynth
@@ -265,7 +265,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../ChangeLog/" class="md-tabs__link">
+      <a href="../../ChangeLog/" class="md-tabs__link">
         
   
   📝 Release Notes
@@ -330,7 +330,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../GettingStarted/" class="md-tabs__link">
+        <a href="../../GettingStarted/" class="md-tabs__link">
           
   
   📚 Documentation
@@ -398,7 +398,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="./.." title="FluidSynth Wiki" class="md-nav__button md-logo" aria-label="FluidSynth Wiki" data-md-component="logo">
+    <a href="../.." title="FluidSynth Wiki" class="md-nav__button md-logo" aria-label="FluidSynth Wiki" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 7v14M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
@@ -428,7 +428,7 @@
   
   
     <li class="md-nav__item">
-      <a href="./.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -516,7 +516,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Download/" class="md-nav__link">
+      <a href="../../Download/" class="md-nav__link">
         
   
   
@@ -543,7 +543,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../SoundFont/" class="md-nav__link">
+      <a href="../../SoundFont/" class="md-nav__link">
         
   
   
@@ -570,7 +570,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Applications/" class="md-nav__link">
+      <a href="../../Applications/" class="md-nav__link">
         
   
   
@@ -597,7 +597,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../MadeWithFluidSynth/" class="md-nav__link">
+      <a href="../../MadeWithFluidSynth/" class="md-nav__link">
         
   
   
@@ -624,7 +624,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../LicensingFAQ/" class="md-nav__link">
+      <a href="../../LicensingFAQ/" class="md-nav__link">
         
   
   
@@ -658,7 +658,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ChangeLog/" class="md-nav__link">
+      <a href="../../ChangeLog/" class="md-nav__link">
         
   
   
@@ -822,7 +822,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../GettingStarted/" class="md-nav__link">
+      <a href="../../GettingStarted/" class="md-nav__link">
         
   
   
@@ -849,7 +849,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ExampleCommandLines/" class="md-nav__link">
+      <a href="../../ExampleCommandLines/" class="md-nav__link">
         
   
   
@@ -876,7 +876,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Audio-Drivers/" class="md-nav__link">
+      <a href="../../Audio-Drivers/" class="md-nav__link">
         
   
   
@@ -903,7 +903,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../UserManual/" class="md-nav__link">
+      <a href="../../UserManual/" class="md-nav__link">
         
   
   
@@ -963,7 +963,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../settings/" class="md-nav__link ">
+            <a href="../../settings/" class="md-nav__link ">
               
   
   
@@ -1005,7 +1005,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../settings/audio/" class="md-nav__link">
+      <a href="../../settings/audio/" class="md-nav__link">
         
   
   
@@ -1032,7 +1032,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../settings/midi/" class="md-nav__link">
+      <a href="../../settings/midi/" class="md-nav__link">
         
   
   
@@ -1059,7 +1059,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../settings/player/" class="md-nav__link">
+      <a href="../../settings/player/" class="md-nav__link">
         
   
   
@@ -1086,7 +1086,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../settings/shell/" class="md-nav__link">
+      <a href="../../settings/shell/" class="md-nav__link">
         
   
   
@@ -1113,7 +1113,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../settings/synth/" class="md-nav__link">
+      <a href="../../settings/synth/" class="md-nav__link">
         
   
   
@@ -1148,7 +1148,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../FluidFeatures/" class="md-nav__link">
+      <a href="../../FluidFeatures/" class="md-nav__link">
         
   
   
@@ -1175,7 +1175,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../LowLatency/" class="md-nav__link">
+      <a href="../../LowLatency/" class="md-nav__link">
         
   
   
@@ -1202,7 +1202,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../FluidSynth-configuration-files/" class="md-nav__link">
+      <a href="../../FluidSynth-configuration-files/" class="md-nav__link">
         
   
   
@@ -1229,7 +1229,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reverbators/" class="md-nav__link">
+      <a href="../../reverbators/" class="md-nav__link">
         
   
   
@@ -1256,7 +1256,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ladspa/" class="md-nav__link">
+      <a href="../../ladspa/" class="md-nav__link">
         
   
   
@@ -1283,7 +1283,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../SoundFont3Format/" class="md-nav__link">
+      <a href="../../SoundFont3Format/" class="md-nav__link">
         
   
   
@@ -1384,10 +1384,8 @@
                 
   
   
-    
   
   
-  
     
     
       
@@ -1408,11 +1406,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_1" >
         
           
           <label class="md-nav__link" for="__nav_4_2_1" id="__nav_4_2_1_label" tabindex="0">
@@ -1432,7 +1430,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_2_1">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1449,7 +1447,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../BuildingWithCMake/" class="md-nav__link">
+      <a href="../../BuildingWithCMake/" class="md-nav__link">
         
   
   
@@ -1473,36 +1471,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-  🤖 Building for Android
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="././" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../BuildingForAndroid/" class="md-nav__link">
         
   
   
@@ -1517,110 +1489,6 @@
   
 
       </a>
-      
-        
-
-
-<nav class="md-nav md-nav--secondary" aria-label="On this page">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      On this page
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#preface" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Preface
-      </span>
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Prerequisites
-      </span>
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Prerequisites">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#this-guide" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        This guide...
-      </span>
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#android-ndk" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Android NDK
-      </span>
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#getting-started" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Getting started
-      </span>
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#if-compilation-of-dependencies-fails" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        If compilation of dependencies fails
-      </span>
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#if-compilation-of-fluidsynth-fails" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        If compilation of fluidsynth fails
-      </span>
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1633,7 +1501,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Using-prebuilt-libraries-on-Android/" class="md-nav__link">
+      <a href="../../Using-prebuilt-libraries-on-Android/" class="md-nav__link">
         
   
   
@@ -1660,7 +1528,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../NotesForPackagers/" class="md-nav__link">
+      <a href="../../NotesForPackagers/" class="md-nav__link">
         
   
   
@@ -1750,7 +1618,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../usage/" class="md-nav__link ">
+            <a href="../../usage/" class="md-nav__link ">
               
   
   
@@ -1792,7 +1660,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../usage/creating-settings/" class="md-nav__link">
+      <a href="../../usage/creating-settings/" class="md-nav__link">
         
   
   
@@ -1819,7 +1687,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../usage/creating-synth/" class="md-nav__link">
+      <a href="../../usage/creating-synth/" class="md-nav__link">
         
   
   
@@ -1846,7 +1714,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../usage/loading-soundfonts/" class="md-nav__link">
+      <a href="../../usage/loading-soundfonts/" class="md-nav__link">
         
   
   
@@ -1873,7 +1741,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../usage/audio-driver/" class="md-nav__link">
+      <a href="../../usage/audio-driver/" class="md-nav__link">
         
   
   
@@ -1900,7 +1768,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../usage/using-synth/" class="md-nav__link">
+      <a href="../../usage/using-synth/" class="md-nav__link">
         
   
   
@@ -1927,7 +1795,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../usage/sending-midi/" class="md-nav__link">
+      <a href="../../usage/sending-midi/" class="md-nav__link">
         
   
   
@@ -1954,7 +1822,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../usage/realtime-midi/" class="md-nav__link">
+      <a href="../../usage/realtime-midi/" class="md-nav__link">
         
   
   
@@ -1981,7 +1849,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../usage/midi-player/" class="md-nav__link">
+      <a href="../../usage/midi-player/" class="md-nav__link">
         
   
   
@@ -2008,7 +1876,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../usage/file-renderer/" class="md-nav__link">
+      <a href="../../usage/file-renderer/" class="md-nav__link">
         
   
   
@@ -2035,7 +1903,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../usage/midi-player-mem/" class="md-nav__link">
+      <a href="../../usage/midi-player-mem/" class="md-nav__link">
         
   
   
@@ -2062,7 +1930,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../usage/midi-router/" class="md-nav__link">
+      <a href="../../usage/midi-router/" class="md-nav__link">
         
   
   
@@ -2089,7 +1957,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../usage/sequencer/" class="md-nav__link">
+      <a href="../../usage/sequencer/" class="md-nav__link">
         
   
   
@@ -2116,7 +1984,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../usage/shell/" class="md-nav__link">
+      <a href="../../usage/shell/" class="md-nav__link">
         
   
   
@@ -2143,7 +2011,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../usage/multi-channel/" class="md-nav__link">
+      <a href="../../usage/multi-channel/" class="md-nav__link">
         
   
   
@@ -2170,7 +2038,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../usage/synth-context/" class="md-nav__link">
+      <a href="../../usage/synth-context/" class="md-nav__link">
         
   
   
@@ -2197,7 +2065,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../usage/advanced/" class="md-nav__link">
+      <a href="../../usage/advanced/" class="md-nav__link">
         
   
   
@@ -2229,6 +2097,8 @@
                 
   
   
+    
+  
   
   
     
@@ -2321,15 +2191,15 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_3" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../api/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   
@@ -2352,7 +2222,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4_2_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -2371,7 +2241,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/recent-changes/" class="md-nav__link">
+      <a href="../recent-changes/" class="md-nav__link">
         
   
   
@@ -2398,7 +2268,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/deprecated/" class="md-nav__link">
+      <a href="../deprecated/" class="md-nav__link">
         
   
   
@@ -2425,7 +2295,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/Types/" class="md-nav__link">
+      <a href="../Types/" class="md-nav__link">
         
   
   
@@ -2452,7 +2322,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/audio-driver/" class="md-nav__link">
+      <a href="../audio-driver/" class="md-nav__link">
         
   
   
@@ -2479,7 +2349,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/audio-output/" class="md-nav__link">
+      <a href="../audio-output/" class="md-nav__link">
         
   
   
@@ -2506,7 +2376,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/audio-rendering/" class="md-nav__link">
+      <a href="../audio-rendering/" class="md-nav__link">
         
   
   
@@ -2533,7 +2403,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/channel-setup/" class="md-nav__link">
+      <a href="../channel-setup/" class="md-nav__link">
         
   
   
@@ -2560,7 +2430,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/chorus-effect/" class="md-nav__link">
+      <a href="../chorus-effect/" class="md-nav__link">
         
   
   
@@ -2587,7 +2457,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/command-handler/" class="md-nav__link">
+      <a href="../command-handler/" class="md-nav__link">
         
   
   
@@ -2614,7 +2484,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/command-interface/" class="md-nav__link">
+      <a href="../command-interface/" class="md-nav__link">
         
   
   
@@ -2641,7 +2511,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/command-server/" class="md-nav__link">
+      <a href="../command-server/" class="md-nav__link">
         
   
   
@@ -2668,7 +2538,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/command-shell/" class="md-nav__link">
+      <a href="../command-shell/" class="md-nav__link">
         
   
   
@@ -2695,7 +2565,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/file-renderer/" class="md-nav__link">
+      <a href="../file-renderer/" class="md-nav__link">
         
   
   
@@ -2722,7 +2592,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/generators/" class="md-nav__link">
+      <a href="../generators/" class="md-nav__link">
         
   
   
@@ -2749,7 +2619,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/iir-filter/" class="md-nav__link">
+      <a href="../iir-filter/" class="md-nav__link">
         
   
   
@@ -2776,7 +2646,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/ladspa/" class="md-nav__link">
+      <a href="../ladspa/" class="md-nav__link">
         
   
   
@@ -2803,7 +2673,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/logging/" class="md-nav__link">
+      <a href="../logging/" class="md-nav__link">
         
   
   
@@ -2830,7 +2700,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/midi-driver/" class="md-nav__link">
+      <a href="../midi-driver/" class="md-nav__link">
         
   
   
@@ -2857,7 +2727,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/midi-events/" class="md-nav__link">
+      <a href="../midi-events/" class="md-nav__link">
         
   
   
@@ -2884,7 +2754,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/midi-input/" class="md-nav__link">
+      <a href="../midi-input/" class="md-nav__link">
         
   
   
@@ -2911,7 +2781,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/midi-messages/" class="md-nav__link">
+      <a href="../midi-messages/" class="md-nav__link">
         
   
   
@@ -2938,7 +2808,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/midi-player/" class="md-nav__link">
+      <a href="../midi-player/" class="md-nav__link">
         
   
   
@@ -2962,10 +2832,36 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../api/midi-router/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  MIDI Router
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="././" class="md-nav__link md-nav__link--active">
         
   
   
@@ -2980,6 +2876,249 @@
   
 
       </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#lifecycle-functions-for-midi-router" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Lifecycle Functions for MIDI Router
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lifecycle Functions for MIDI Router">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new_fluid_midi_router" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>new_fluid_midi_router()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete_fluid_midi_router" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>delete_fluid_midi_router()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lifecycle-functions-for-midi-router-rule" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Lifecycle Functions for MIDI Router Rule
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lifecycle Functions for MIDI Router Rule">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new_fluid_midi_router_rule" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>new_fluid_midi_router_rule()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete_fluid_midi_router_rule" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>delete_fluid_midi_router_rule()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enumerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Enumerations
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Enumerations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fluid_midi_router_rule_type" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_midi_router_rule_type</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Functions
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fluid_midi_dump_postrouter" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_midi_dump_postrouter()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_midi_dump_prerouter" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_midi_dump_prerouter()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_midi_router_add_rule" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_midi_router_add_rule()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_midi_router_clear_rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_midi_router_clear_rules()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_midi_router_handle_midi_event" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_midi_router_handle_midi_event()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_midi_router_rule_set_chan" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_midi_router_rule_set_chan()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_midi_router_rule_set_param1" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_midi_router_rule_set_param1()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_midi_router_rule_set_param2" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_midi_router_rule_set_param2()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_midi_router_set_default_rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_midi_router_set_default_rules()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2992,7 +3131,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/misc/" class="md-nav__link">
+      <a href="../misc/" class="md-nav__link">
         
   
   
@@ -3019,7 +3158,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/modulators/" class="md-nav__link">
+      <a href="../modulators/" class="md-nav__link">
         
   
   
@@ -3046,7 +3185,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/reverb-effect/" class="md-nav__link">
+      <a href="../reverb-effect/" class="md-nav__link">
         
   
   
@@ -3073,7 +3212,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/sequencer-events/" class="md-nav__link">
+      <a href="../sequencer-events/" class="md-nav__link">
         
   
   
@@ -3100,7 +3239,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/sequencer/" class="md-nav__link">
+      <a href="../sequencer/" class="md-nav__link">
         
   
   
@@ -3127,7 +3266,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/settings/" class="md-nav__link">
+      <a href="../settings/" class="md-nav__link">
         
   
   
@@ -3154,7 +3293,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/soundfont-loader/" class="md-nav__link">
+      <a href="../soundfont-loader/" class="md-nav__link">
         
   
   
@@ -3181,7 +3320,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/soundfont-management/" class="md-nav__link">
+      <a href="../soundfont-management/" class="md-nav__link">
         
   
   
@@ -3208,7 +3347,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/soundfonts/" class="md-nav__link">
+      <a href="../soundfonts/" class="md-nav__link">
         
   
   
@@ -3235,7 +3374,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/synth/" class="md-nav__link">
+      <a href="../synth/" class="md-nav__link">
         
   
   
@@ -3262,7 +3401,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/synthesis-params/" class="md-nav__link">
+      <a href="../synthesis-params/" class="md-nav__link">
         
   
   
@@ -3289,7 +3428,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/tuning/" class="md-nav__link">
+      <a href="../tuning/" class="md-nav__link">
         
   
   
@@ -3316,7 +3455,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/voice-control/" class="md-nav__link">
+      <a href="../voice-control/" class="md-nav__link">
         
   
   
@@ -3343,7 +3482,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/voices/" class="md-nav__link">
+      <a href="../voices/" class="md-nav__link">
         
   
   
@@ -3421,7 +3560,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../api/examples/" class="md-nav__link ">
+            <a href="../examples/" class="md-nav__link ">
               
   
   
@@ -3461,7 +3600,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/examples/example/" class="md-nav__link">
+      <a href="../examples/example/" class="md-nav__link">
         
   
   
@@ -3488,7 +3627,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/examples/fluidsynth_arpeggio/" class="md-nav__link">
+      <a href="../examples/fluidsynth_arpeggio/" class="md-nav__link">
         
   
   
@@ -3515,7 +3654,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/examples/fluidsynth_enumsettings/" class="md-nav__link">
+      <a href="../examples/fluidsynth_enumsettings/" class="md-nav__link">
         
   
   
@@ -3542,7 +3681,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/examples/fluidsynth_fx/" class="md-nav__link">
+      <a href="../examples/fluidsynth_fx/" class="md-nav__link">
         
   
   
@@ -3569,7 +3708,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/examples/fluidsynth_instruments/" class="md-nav__link">
+      <a href="../examples/fluidsynth_instruments/" class="md-nav__link">
         
   
   
@@ -3596,7 +3735,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/examples/fluidsynth_metronome/" class="md-nav__link">
+      <a href="../examples/fluidsynth_metronome/" class="md-nav__link">
         
   
   
@@ -3623,7 +3762,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/examples/fluidsynth_process/" class="md-nav__link">
+      <a href="../examples/fluidsynth_process/" class="md-nav__link">
         
   
   
@@ -3650,7 +3789,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/examples/fluidsynth_register_adriver/" class="md-nav__link">
+      <a href="../examples/fluidsynth_register_adriver/" class="md-nav__link">
         
   
   
@@ -3677,7 +3816,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/examples/fluidsynth_sfload_mem/" class="md-nav__link">
+      <a href="../examples/fluidsynth_sfload_mem/" class="md-nav__link">
         
   
   
@@ -3704,7 +3843,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/examples/fluidsynth_simple/" class="md-nav__link">
+      <a href="../examples/fluidsynth_simple/" class="md-nav__link">
         
   
   
@@ -3768,7 +3907,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ReleaseCheckList/" class="md-nav__link">
+      <a href="../../ReleaseCheckList/" class="md-nav__link">
         
   
   
@@ -3896,33 +4035,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#preface" class="md-nav__link">
+  <a href="#lifecycle-functions-for-midi-router" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        Preface
+        Lifecycle Functions for MIDI Router
       </span>
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Prerequisites
-      </span>
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Prerequisites">
+    <nav class="md-nav" aria-label="Lifecycle Functions for MIDI Router">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#this-guide" class="md-nav__link">
+  <a href="#new_fluid_midi_router" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        This guide...
+        <code>new_fluid_midi_router()</code>
       </span>
     </span>
   </a>
@@ -3930,10 +4058,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#android-ndk" class="md-nav__link">
+  <a href="#delete_fluid_midi_router" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        Android NDK
+        <code>delete_fluid_midi_router()</code>
       </span>
     </span>
   </a>
@@ -3946,35 +4074,185 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#getting-started" class="md-nav__link">
+  <a href="#lifecycle-functions-for-midi-router-rule" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        Getting started
+        Lifecycle Functions for MIDI Router Rule
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lifecycle Functions for MIDI Router Rule">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new_fluid_midi_router_rule" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>new_fluid_midi_router_rule()</code>
       </span>
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#if-compilation-of-dependencies-fails" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#delete_fluid_midi_router_rule" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        If compilation of dependencies fails
+        <code>delete_fluid_midi_router_rule()</code>
       </span>
     </span>
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#if-compilation-of-fluidsynth-fails" class="md-nav__link">
+  <a href="#enumerations" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        If compilation of fluidsynth fails
+        Enumerations
       </span>
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Enumerations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fluid_midi_router_rule_type" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_midi_router_rule_type</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Functions
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fluid_midi_dump_postrouter" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_midi_dump_postrouter()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_midi_dump_prerouter" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_midi_dump_prerouter()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_midi_router_add_rule" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_midi_router_add_rule()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_midi_router_clear_rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_midi_router_clear_rules()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_midi_router_handle_midi_event" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_midi_router_handle_midi_event()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_midi_router_rule_set_chan" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_midi_router_rule_set_chan()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_midi_router_rule_set_param1" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_midi_router_rule_set_param1()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_midi_router_rule_set_param2" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_midi_router_rule_set_param2()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluid_midi_router_set_default_rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fluid_midi_router_set_default_rules()</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -4003,7 +4281,7 @@
   
   
     <li class="md-path__item">
-      <a href="./.." class="md-path__link">
+      <a href="../.." class="md-path__link">
         
   
   <span class="md-ellipsis">
@@ -4063,7 +4341,7 @@
     
     
       <li class="md-path__item">
-        <a href="../GettingStarted/" class="md-path__link">
+        <a href="../../GettingStarted/" class="md-path__link">
           
   
   <span class="md-ellipsis">
@@ -4120,7 +4398,7 @@
     
     
       <li class="md-path__item">
-        <a href="../BuildingWithCMake/" class="md-path__link">
+        <a href="../../BuildingWithCMake/" class="md-path__link">
           
   
   <span class="md-ellipsis">
@@ -4143,6 +4421,76 @@
     
       
         
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
       
         
       
@@ -4155,11 +4503,11 @@
     
     
       <li class="md-path__item">
-        <a href="../BuildingWithCMake/" class="md-path__link">
+        <a href="../" class="md-path__link">
           
   
   <span class="md-ellipsis">
-    🛠️ Compiling Fluidsynth
+    🔍 API Reference
   </span>
 
         </a>
@@ -4176,7 +4524,7 @@
                 
                   
   
-    <a href="https://github.com/FluidSynth/fluidsynth/edit/master/doc/wiki/BuildingForAndroid.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/FluidSynth/fluidsynth/edit/master/doc/wiki/api/midi-router.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-file-pen" viewBox="0 0 24 24"><path d="M12.659 22H18a2 2 0 0 0 2-2V8a2.4 2.4 0 0 0-.706-1.706l-3.588-3.588A2.4 2.4 0 0 0 14 2H6a2 2 0 0 0-2 2v9.34"/><path d="M14 2v5a1 1 0 0 0 1 1h5M10.378 12.622a1 1 0 0 1 3 3.003L8.36 20.637a2 2 0 0 1-.854.506l-2.867.837a.5.5 0 0 1-.62-.62l.836-2.869a2 2 0 0 1 .506-.853z"/></svg>
     </a>
@@ -4185,73 +4533,448 @@
     
       
     
-    <a href="https://github.com/FluidSynth/fluidsynth/raw/master/doc/wiki/BuildingForAndroid.md" title="View source of this page" class="md-content__button md-icon">
+    <a href="https://github.com/FluidSynth/fluidsynth/raw/master/doc/wiki/api/midi-router.md" title="View source of this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-file-code-2" viewBox="0 0 24 24"><path d="M4 12.15V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.706.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2h-3.35"/><path d="M14 2v5a1 1 0 0 0 1 1h5M5 16l-3 3 3 3M9 22l3-3-3-3"/></svg>
     </a>
   
 
 
-<h1 id="building-for-android">🤖 Building for Android</h1>
-<p>This page demonstrates how to cross-compile the upstream version of fluidsynth for Android, along with <strong>all the dependencies</strong> that fluidsynth requires. Other users have taken shortcuts by custom modifications to fluidsynth's code base that we do not officially support.</p>
-<p>You may find more information about FluidSynth on Android <a href="https://github.com/FluidSynth/fluidsynth/tree/master/doc/android">in the /doc folder</a>.</p>
-<h2 id="preface">Preface</h2>
-<p>So, you want to compile fluidsynth for Android? Are you aware of the fact that fluidsynth is written in C? That means you cannot benefit from nicely portable bytecode, i.e. compile once and deploy for all smartphone architectures and Android versions out there. The code being compiled will be <strong>native</strong> to the device and Android NDK you are targeting. 
-Thus, you will need to deploy fat binaries to your users. Even worse: fluidsynth depends on glib that we use as OSAL library. In order to build the official upstream version of fluidsynth you will have to cross compile glib and it's dependencies first. And again: you'll have to do this for all architectures and Android versions you want to support!</p>
-<p>fluidsynth is licensed under <strong>LGPL-2.1</strong>; <a href="../LicensingFAQ">make sure you understand what that means</a> when using it in your app!</p>
-<p>Note that glib and many of its dependencies are licensed under the LGPL, too. If you <strong>statically link</strong> any of them into your proprietary, closed-source app, you violate the LGPL and end up with a serious license infringement!
-Further note that fluidsynth can be optionally compiled with dependencies that are GPL licensed. In this case <strong>fluidsynth and your app become GPL licensed</strong>! If you don't respect those terms and understand its consequences, you are a potential subject to legal prosecution.</p>
-<p>When using the methods and scripts explained here, there is no guarantee of any kind that they work as expected, esp. not in a commercial product. <strong>NO warranty is provided; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE</strong>.</p>
-<p>If, despite all that, you still want to use fluidsynth on Android, ...well thank you, here's a guide that hopefully turns out to be useful and gives you an idea of the cross-compilation process as a whole.</p>
-<p>If you just want to use fluidsynth on Android without going through all the compilation trouble yourself, you may use the build artifacts from the CI build (cf. README.md).</p>
-<p>If you have questions or need support, contact our mailing list:
-<a href="https://lists.nongnu.org/mailman/listinfo/fluid-dev">https://lists.nongnu.org/mailman/listinfo/fluid-dev</a></p>
-<h2 id="prerequisites">Prerequisites</h2>
-<h4 id="this-guide">This guide...</h4>
-<ul>
-<li>assumes that you are on a Linux machine.</li>
-<li>requires an active internet connection (for downloading dependency libraries).</li>
-<li>assumes that you have a solid understanding of how to compile C/C++ programs from source under Linux.</li>
-<li>assumes that you know about Autotools, CMake, Make, Clang, GCC, Shell.</li>
-<li>recommends that you are a C/C++ programmer (so that you are able to understand and fix compilation errors).</li>
-<li>uses the <a href="https://developer.android.com/ndk/guides/standalone_toolchain">Standalone Toolchain approach of the Android NDK</a>.</li>
-<li>uses clang for compilation as shipped by the Android NDK.</li>
-<li>has been successfully tested for Android NDK r17b and r17c.</li>
-<li>exemplary compiles for <code>arm-eabi</code>.</li>
-</ul>
-<h4 id="android-ndk">Android NDK</h4>
-<p>The NDK has a few prerequisites itself. Unfortunately, they don't seem to be documented. E.g. the <code>clang60</code> compiler shipped with the NDK may require <code>libtinfo.so.5</code> to be installed on your host system. So, make sure <code>libncurses5</code> is installed.
-Keep an eye open for errors like</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>android-ndk-toolchain/bin/clang60: error while loading shared libraries: libtinfo.so.5: cannot open shared object file: No such file or directory
+<h1 id="midi-router">MIDI Router</h1>
+<p>Rule based transformation and filtering of MIDI events. </p>
+<h2 id="lifecycle-functions-for-midi-router">Lifecycle Functions for MIDI Router</h2>
+<h3 id="new_fluid_midi_router"><code>new_fluid_midi_router()</code></h3>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">fluid_midi_router_t</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">new_fluid_midi_router</span><span class="p">(</span><span class="n">fluid_settings_t</span><span class="w"> </span><span class="o">*</span><span class="n">settings</span><span class="p">,</span><span class="w"> </span><span class="n">handle_midi_event_func_t</span><span class="w"> </span><span class="n">handler</span><span class="p">,</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">event_handler_data</span><span class="p">)</span>
 </span></code></pre></div>
-<p>to capture even more missing dependencies that the NDK requires and make sure they are installed on your host system.</p>
-<h2 id="getting-started">Getting started</h2>
-<ul>
-<li>Read the preface above!</li>
-<li><a href="#preface">Seriously, read the preface</a>!!</li>
-<li>Download the Android NDK</li>
-<li>Download <a href="https://gist.github.com/derselbst/885641b86b8bd0e5fd1b1d846d4b286b">fluid-android-prepare.sh</a> and <a href="https://gist.github.com/derselbst/88917bf177d25cfc1067a37b442dd5ff">fluid-android-compile.sh</a></li>
-<li>Open <code>fluid-android-prepare.sh</code> and study it</li>
-<li>Adjust the <code>$DEV</code> and <code>$NDK</code> variables to your needs</li>
-<li>Adjust the target architecture and <code>$ANDROID_API</code> to your needs</li>
-<li>Open the <code>bash</code> shell, source the <code>fluid-android-prepare.sh</code>, make a folder
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">source</span><span class="w"> </span>fluid-android-prepare.sh
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>mkdir<span class="w"> </span><span class="nv">$DEV</span>
-</span></code></pre></div></li>
-<li>Provide the extracted NDK folder (e.g. android-ndk-r17b) at <code>$NDK</code> (i.e. move it there)</li>
-<li>Move <code>android-prepare.sh</code> and <code>android-compile.sh</code> into <code>$DEV</code></li>
-<li><code>cd $DEV</code></li>
-<li>In the same shell, where you've just sourced <code>fluid-android-prepare.sh</code>, start the build process by
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>bash<span class="w"> </span>fluid-android-compile.sh
-</span></code></pre></div></li>
-</ul>
-<p>That's it. All dependencies are downloaded and compiled one after another. No errors should occur. 
-Once done you should end up with a directory <code>$PREFIX</code> containing all binaries needed to run fluidsynth on Android (about 100 MiB on arm-eabi) that you can integrate into your favorite environment or IDE 
-(cf. <a href="../Using-prebuilt-libraries-on-Android/">Using prebuilt libraries on Android</a>).</p>
-<h2 id="if-compilation-of-dependencies-fails">If compilation of dependencies fails</h2>
-<p>Study the output of autotools. Keep an eye open for any warnings that might come up. Also, study autotools <code>config.log</code>. You might try to ask for help at our mailing list. However, preferably you should contact the respective project directly.</p>
-<h2 id="if-compilation-of-fluidsynth-fails">If compilation of fluidsynth fails</h2>
-<p>Ask for help at our mailing list. Provide as much information as possible! (Commands, log files, etc.) If you have already identified a bug in fluidsynth's build system or elsewhere, feel free to open a ticket directly here at GitHub.</p>
+<p>Create a new midi router. </p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>settings</code></td>
+<td>Settings used to configure MIDI router</td>
+</tr>
+<tr>
+<td><code>handler</code></td>
+<td>MIDI event callback.</td>
+</tr>
+<tr>
+<td><code>event_handler_data</code></td>
+<td>Caller defined data pointer which gets passed to 'handler'</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> New MIDI router instance or NULL on error </p>
+<p>The new router will start with default rules and therefore pass all events unmodified.</p>
+<p>The MIDI handler callback should process the possibly filtered/modified MIDI events from the MIDI router and forward them on to a synthesizer for example. The function <a href="../midi-input/#fluid_synth_handle_midi_event"><code>fluid_synth_handle_midi_event()</code></a> can be used for <em>handle</em> and a <a href="../Types/#fluid_synth_t"><code>fluid_synth_t</code></a> passed as the <em>event_handler_data</em> parameter for this purpose. </p>
+<h3 id="delete_fluid_midi_router"><code>delete_fluid_midi_router()</code></h3>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">delete_fluid_midi_router</span><span class="p">(</span><span class="n">fluid_midi_router_t</span><span class="w"> </span><span class="o">*</span><span class="n">handler</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Delete a MIDI router instance. </p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>router</code></td>
+<td>MIDI router to delete</td>
+</tr>
+</tbody>
+</table>
+<h2 id="lifecycle-functions-for-midi-router-rule">Lifecycle Functions for MIDI Router Rule</h2>
+<h3 id="new_fluid_midi_router_rule"><code>new_fluid_midi_router_rule()</code></h3>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">fluid_midi_router_rule_t</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">new_fluid_midi_router_rule</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Create a new MIDI router rule. </p>
+<p><strong>Returns:</strong> Newly allocated router rule or NULL if out of memory. </p>
+<p>The new rule is a "unity" rule which will accept any values and won't modify them.</p>
+<div class="admonition tip">
+<p class="admonition-title">Since</p>
+<p>1.1.0  </p>
+</div>
+<h3 id="delete_fluid_midi_router_rule"><code>delete_fluid_midi_router_rule()</code></h3>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">delete_fluid_midi_router_rule</span><span class="p">(</span><span class="n">fluid_midi_router_rule_t</span><span class="w"> </span><span class="o">*</span><span class="n">rule</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Free a MIDI router rule. </p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>rule</code></td>
+<td>Router rule to free</td>
+</tr>
+</tbody>
+</table>
+<p>Note that rules which have been added to a router are managed by the router, so this function should seldom be needed.</p>
+<div class="admonition tip">
+<p class="admonition-title">Since</p>
+<p>1.1.0  </p>
+</div>
+<h2 id="enumerations">Enumerations</h2>
+<h3 id="fluid_midi_router_rule_type"><code>fluid_midi_router_rule_type</code></h3>
+<p>MIDI router rule type. </p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>FLUID_MIDI_ROUTER_RULE_NOTE</code></td>
+<td>MIDI note rule.</td>
+</tr>
+<tr>
+<td><code>FLUID_MIDI_ROUTER_RULE_CC</code></td>
+<td>MIDI controller rule.</td>
+</tr>
+<tr>
+<td><code>FLUID_MIDI_ROUTER_RULE_PROG_CHANGE</code></td>
+<td>MIDI program change rule.</td>
+</tr>
+<tr>
+<td><code>FLUID_MIDI_ROUTER_RULE_PITCH_BEND</code></td>
+<td>MIDI pitch bend rule.</td>
+</tr>
+<tr>
+<td><code>FLUID_MIDI_ROUTER_RULE_CHANNEL_PRESSURE</code></td>
+<td>MIDI channel pressure rule.</td>
+</tr>
+<tr>
+<td><code>FLUID_MIDI_ROUTER_RULE_KEY_PRESSURE</code></td>
+<td>MIDI key pressure rule.</td>
+</tr>
+<tr>
+<td><code>FLUID_MIDI_ROUTER_RULE_COUNT</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Since</p>
+<p>1.1.0  </p>
+</div>
+<h2 id="functions">Functions</h2>
+<h3 id="fluid_midi_dump_postrouter"><code>fluid_midi_dump_postrouter()</code></h3>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">fluid_midi_dump_postrouter</span><span class="p">(</span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="n">fluid_midi_event_t</span><span class="w"> </span><span class="o">*</span><span class="n">event</span><span class="p">)</span>
+</span></code></pre></div>
+<p>MIDI event callback function to display event information to stdout. </p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>data</code></td>
+<td>MIDI router instance</td>
+</tr>
+<tr>
+<td><code>event</code></td>
+<td>MIDI event data</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <a href="../misc/#FLUID_OK"><code>FLUID_OK</code></a> on success, <a href="../misc/#FLUID_FAILED"><code>FLUID_FAILED</code></a> otherwise </p>
+<p>An implementation of the <a href="../midi-input/#handle_midi_event_func_t"><code>handle_midi_event_func_t</code></a> function type, used for displaying MIDI event information between the MIDI driver and router to stdout. Useful for adding into a MIDI router chain for debugging MIDI events. </p>
+<h3 id="fluid_midi_dump_prerouter"><code>fluid_midi_dump_prerouter()</code></h3>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">fluid_midi_dump_prerouter</span><span class="p">(</span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="n">fluid_midi_event_t</span><span class="w"> </span><span class="o">*</span><span class="n">event</span><span class="p">)</span>
+</span></code></pre></div>
+<p>MIDI event callback function to display event information to stdout. </p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>data</code></td>
+<td>MIDI router instance</td>
+</tr>
+<tr>
+<td><code>event</code></td>
+<td>MIDI event data</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <a href="../misc/#FLUID_OK"><code>FLUID_OK</code></a> on success, <a href="../misc/#FLUID_FAILED"><code>FLUID_FAILED</code></a> otherwise </p>
+<p>An implementation of the <a href="../midi-input/#handle_midi_event_func_t"><code>handle_midi_event_func_t</code></a> function type, used for displaying MIDI event information between the MIDI driver and router to stdout. Useful for adding into a MIDI router chain for debugging MIDI events. </p>
+<h3 id="fluid_midi_router_add_rule"><code>fluid_midi_router_add_rule()</code></h3>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">fluid_midi_router_add_rule</span><span class="p">(</span><span class="n">fluid_midi_router_t</span><span class="w"> </span><span class="o">*</span><span class="n">router</span><span class="p">,</span><span class="w"> </span><span class="n">fluid_midi_router_rule_t</span><span class="w"> </span><span class="o">*</span><span class="n">rule</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">type</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Add a rule to a MIDI router. </p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>router</code></td>
+<td>MIDI router</td>
+</tr>
+<tr>
+<td><code>rule</code></td>
+<td>Rule to add (used directly and should not be accessed again following a successful call to this function).</td>
+</tr>
+<tr>
+<td><code>type</code></td>
+<td>The type of rule to add (<a href="../midi-router/#fluid_midi_router_rule_type"><code>fluid_midi_router_rule_type</code></a>)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <a href="../misc/#FLUID_OK"><code>FLUID_OK</code></a> on success, <a href="../misc/#FLUID_FAILED"><code>FLUID_FAILED</code></a> otherwise (invalid rule for example)  </p>
+<div class="admonition tip">
+<p class="admonition-title">Since</p>
+<p>1.1.0  </p>
+</div>
+<h3 id="fluid_midi_router_clear_rules"><code>fluid_midi_router_clear_rules()</code></h3>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">fluid_midi_router_clear_rules</span><span class="p">(</span><span class="n">fluid_midi_router_t</span><span class="w"> </span><span class="o">*</span><span class="n">router</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Clear all rules in a MIDI router. </p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>router</code></td>
+<td>Router to clear all rules from</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <a href="../misc/#FLUID_OK"><code>FLUID_OK</code></a> on success, <a href="../misc/#FLUID_FAILED"><code>FLUID_FAILED</code></a> otherwise </p>
+<p>An empty router will drop all events until rules are added.</p>
+<div class="admonition tip">
+<p class="admonition-title">Since</p>
+<p>1.1.0  </p>
+</div>
+<h3 id="fluid_midi_router_handle_midi_event"><code>fluid_midi_router_handle_midi_event()</code></h3>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">fluid_midi_router_handle_midi_event</span><span class="p">(</span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="n">fluid_midi_event_t</span><span class="w"> </span><span class="o">*</span><span class="n">event</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Handle a MIDI event through a MIDI router instance. </p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>data</code></td>
+<td>MIDI router instance <a href="../Types/#fluid_midi_router_t"><code>fluid_midi_router_t</code></a>, its a void * so that this function can be used as a callback for other subsystems (<a href="../midi-driver/#new_fluid_midi_driver"><code>new_fluid_midi_driver()</code></a> for example).</td>
+</tr>
+<tr>
+<td><code>event</code></td>
+<td>MIDI event to handle</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <a href="../misc/#FLUID_OK"><code>FLUID_OK</code></a> if all rules were applied successfully, <a href="../misc/#FLUID_FAILED"><code>FLUID_FAILED</code></a> if an error occurred while applying a rule or (since 2.2.2) the event was ignored because a parameter was out-of-range after the rule had been applied. See the note below. </p>
+<p>Purpose: The midi router is called for each event, that is received via the 'physical' midi input. Each event can trigger an arbitrary number of generated events (one for each rule that matches).</p>
+<p>In default mode, a noteon event is just forwarded to the synth's 'noteon' function, a 'CC' event to the synth's 'CC' function and so on.</p>
+<p>The router can be used to:
+- filter messages (for example: Pass sustain pedal CCs only to selected channels) 
+- split the keyboard (noteon with notenr &lt; x: to ch 1, &gt;x to ch 2) 
+- layer sounds (for each noteon received on ch 1, create a noteon on ch1, ch2, ch3,...) 
+- velocity scaling (for each noteon event, scale the velocity by 1.27 to give DX7 users a chance) 
+- velocity switching ("v &lt;=100: Angel Choir; V &gt; 100: Hell's Bells") 
+- get rid of aftertouch 
+- ... </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Each input event has values (ch, par1, par2) that could be changed by a rule. After a rule has been applied on any value and the value is out of range, the event can be either ignored or the value can be clamped depending on the type of the event:
+- To get full benefice of the rule the value is clamped and the event passed to the output. 
+- To avoid MIDI messages conflicts at the output, the event is ignored (i.e not passed to the output).
+- ch out of range: event is ignored regardless of the event type. 
+- par1 out of range: event is ignored for PROG_CHANGE or CONTROL_CHANGE type, par1 is clamped otherwise. 
+- par2 out of range: par2 is clamped regardless of the event type.  </p>
+</div>
+<h3 id="fluid_midi_router_rule_set_chan"><code>fluid_midi_router_rule_set_chan()</code></h3>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">fluid_midi_router_rule_set_chan</span><span class="p">(</span><span class="n">fluid_midi_router_rule_t</span><span class="w"> </span><span class="o">*</span><span class="n">rule</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">min</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">max</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">mul</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">add</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Set the channel portion of a rule. </p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>rule</code></td>
+<td>MIDI router rule</td>
+</tr>
+<tr>
+<td><code>min</code></td>
+<td>Minimum value for rule match</td>
+</tr>
+<tr>
+<td><code>max</code></td>
+<td>Maximum value for rule match</td>
+</tr>
+<tr>
+<td><code>mul</code></td>
+<td>Value which is multiplied by matching event's channel value (1.0 to not modify)</td>
+</tr>
+<tr>
+<td><code>add</code></td>
+<td>Value which is added to matching event's channel value (0 to not modify)</td>
+</tr>
+</tbody>
+</table>
+<p>The <em>min</em> and <em>max</em> parameters define a channel range window to match incoming events to. If <em>min</em> is less than or equal to <em>max</em> then an event is matched if its channel is within the defined range (including <em>min</em> and <em>max</em>). If <em>min</em> is greater than <em>max</em> then rule is inverted and matches everything except in <em>between</em> the defined range (so <em>min</em> and <em>max</em> would match).</p>
+<p>The <em>mul</em> and <em>add</em> values are used to modify event channel values prior to sending the event, if the rule matches.</p>
+<div class="admonition tip">
+<p class="admonition-title">Since</p>
+<p>1.1.0  </p>
+</div>
+<h3 id="fluid_midi_router_rule_set_param1"><code>fluid_midi_router_rule_set_param1()</code></h3>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">fluid_midi_router_rule_set_param1</span><span class="p">(</span><span class="n">fluid_midi_router_rule_t</span><span class="w"> </span><span class="o">*</span><span class="n">rule</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">min</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">max</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">mul</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">add</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Set the first parameter portion of a rule. </p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>rule</code></td>
+<td>MIDI router rule</td>
+</tr>
+<tr>
+<td><code>min</code></td>
+<td>Minimum value for rule match</td>
+</tr>
+<tr>
+<td><code>max</code></td>
+<td>Maximum value for rule match</td>
+</tr>
+<tr>
+<td><code>mul</code></td>
+<td>Value which is multiplied by matching event's 1st parameter value (1.0 to not modify)</td>
+</tr>
+<tr>
+<td><code>add</code></td>
+<td>Value which is added to matching event's 1st parameter value (0 to not modify)</td>
+</tr>
+</tbody>
+</table>
+<p>The 1st parameter of an event depends on the type of event. For note events its the MIDI note #, for CC events its the MIDI control number, for program change events its the MIDI program #, for pitch bend events its the bend value, for channel pressure its the channel pressure value and for key pressure its the MIDI note number.</p>
+<p>Pitch bend values have a maximum value of 16383 (8192 is pitch bend center) and all other events have a max of 127. All events have a minimum value of 0.</p>
+<p>The <em>min</em> and <em>max</em> parameters define a parameter range window to match incoming events to. If <em>min</em> is less than or equal to <em>max</em> then an event is matched if its 1st parameter is within the defined range (including <em>min</em> and <em>max</em>). If <em>min</em> is greater than <em>max</em> then rule is inverted and matches everything except in <em>between</em> the defined range (so <em>min</em> and <em>max</em> would match).</p>
+<p>The <em>mul</em> and <em>add</em> values are used to modify event 1st parameter values prior to sending the event, if the rule matches.</p>
+<div class="admonition tip">
+<p class="admonition-title">Since</p>
+<p>1.1.0  </p>
+</div>
+<h3 id="fluid_midi_router_rule_set_param2"><code>fluid_midi_router_rule_set_param2()</code></h3>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">fluid_midi_router_rule_set_param2</span><span class="p">(</span><span class="n">fluid_midi_router_rule_t</span><span class="w"> </span><span class="o">*</span><span class="n">rule</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">min</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">max</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">mul</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">add</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Set the second parameter portion of a rule. </p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>rule</code></td>
+<td>MIDI router rule</td>
+</tr>
+<tr>
+<td><code>min</code></td>
+<td>Minimum value for rule match</td>
+</tr>
+<tr>
+<td><code>max</code></td>
+<td>Maximum value for rule match</td>
+</tr>
+<tr>
+<td><code>mul</code></td>
+<td>Value which is multiplied by matching event's 2nd parameter value (1.0 to not modify)</td>
+</tr>
+<tr>
+<td><code>add</code></td>
+<td>Value which is added to matching event's 2nd parameter value (0 to not modify)</td>
+</tr>
+</tbody>
+</table>
+<p>The 2nd parameter of an event depends on the type of event. For note events its the MIDI velocity, for CC events its the control value and for key pressure events its the key pressure value. All other types lack a 2nd parameter.</p>
+<p>All applicable 2nd parameters have the range 0-127.</p>
+<p>The <em>min</em> and <em>max</em> parameters define a parameter range window to match incoming events to. If <em>min</em> is less than or equal to <em>max</em> then an event is matched if its 2nd parameter is within the defined range (including <em>min</em> and <em>max</em>). If <em>min</em> is greater than <em>max</em> then rule is inverted and matches everything except in <em>between</em> the defined range (so <em>min</em> and <em>max</em> would match).</p>
+<p>The <em>mul</em> and <em>add</em> values are used to modify event 2nd parameter values prior to sending the event, if the rule matches.</p>
+<div class="admonition tip">
+<p class="admonition-title">Since</p>
+<p>1.1.0  </p>
+</div>
+<h3 id="fluid_midi_router_set_default_rules"><code>fluid_midi_router_set_default_rules()</code></h3>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">fluid_midi_router_set_default_rules</span><span class="p">(</span><span class="n">fluid_midi_router_t</span><span class="w"> </span><span class="o">*</span><span class="n">router</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Set a MIDI router to use default "unity" rules. </p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>router</code></td>
+<td>Router to set to default rules.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <a href="../misc/#FLUID_OK"><code>FLUID_OK</code></a> on success, <a href="../misc/#FLUID_FAILED"><code>FLUID_FAILED</code></a> otherwise </p>
+<p>Such a router will pass all events unmodified.</p>
+<div class="admonition tip">
+<p class="admonition-title">Since</p>
+<p>1.1.0  </p>
+</div>
 
 
 
@@ -4291,7 +5014,7 @@ Once done you should end up with a directory <code>$PREFIX</code> containing all
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../BuildingWithCMake/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 🛠️ Building FluidSynth with CMake">
+          <a href="../midi-player/" class="md-footer__link md-footer__link--prev" aria-label="Previous: MIDI File Player">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
@@ -4301,20 +5024,20 @@ Once done you should end up with a directory <code>$PREFIX</code> containing all
                 Previous
               </span>
               <div class="md-ellipsis">
-                🛠️ Building FluidSynth with CMake
+                MIDI File Player
               </div>
             </div>
           </a>
         
         
           
-          <a href="../Using-prebuilt-libraries-on-Android/" class="md-footer__link md-footer__link--next" aria-label="Next: ⚙️ Using prebuilt libraries on Android">
+          <a href="../misc/" class="md-footer__link md-footer__link--next" aria-label="Next: Miscellaneous">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                ⚙️ Using prebuilt libraries on Android
+                Miscellaneous
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -4385,10 +5108,10 @@ Once done you should end up with a directory <code>$PREFIX</code> containing all
     
       
       
-      <script id="__config" type="application/json">{"annotate":null,"base":"..","features":["announce.dismiss","content.action.edit","content.action.view","content.code.annotate","content.code.copy","content.code.select","content.footnote.tooltips","content.tabs.link","content.tooltips","header.autohide","navigation.footer","navigation.indexes","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.path","navigation.sections","navigation.tabs","navigation.top","navigation.tracking","search.highlight","toc.follow"],"search":"../assets/javascripts/workers/search.e2d2d235.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["announce.dismiss","content.action.edit","content.action.view","content.code.annotate","content.code.copy","content.code.select","content.footnote.tooltips","content.tabs.link","content.tooltips","header.autohide","navigation.footer","navigation.indexes","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.path","navigation.sections","navigation.tabs","navigation.top","navigation.tracking","search.highlight","toc.follow"],"search":"../../assets/javascripts/workers/search.e2d2d235.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
-      <script src="../assets/javascripts/bundle.6e5f0216.min.js"></script>
+      <script src="../../assets/javascripts/bundle.6e5f0216.min.js"></script>
       
     
   </body>
