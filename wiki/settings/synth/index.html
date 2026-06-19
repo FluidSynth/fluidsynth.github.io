@@ -1594,6 +1594,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#settings_synth_reverb_engine" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>synth.reverb.engine</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#settings_synth_reverb_level" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
@@ -4715,6 +4726,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#settings_synth_reverb_engine" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>synth.reverb.engine</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#settings_synth_reverb_level" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
@@ -5436,7 +5458,7 @@
 <p>When set to 1 (TRUE) a look-ahead limiter is added at the end of fluidsynth's audio processing chain. This limiter helps to prevent clipping and distortion by limiting the gain of the output signal.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>FluidSynth has to be compiled with limiter support, otherwise any of the limiter related settings will return FLUID_FAILED when attempting to set or get them.</p>
+<p>The limiter requires FluidSynth to be compiled with Signalsmith Audio Basics support, otherwise any of the limiter related settings will return FLUID_FAILED when attempting to set or get them.</p>
 </div>
 <h2 id="settings_synth_limiter_attack"><code>synth.limiter.attack</code></h2>
 <table>
@@ -6065,7 +6087,7 @@
 <tbody>
 <tr>
 <td>Type</td>
-<td><code>Boolean (int)</code></td>
+<td><code>Integer (int)</code></td>
 </tr>
 <tr>
 <td>Default</td>
@@ -6093,7 +6115,7 @@
 </tr>
 <tr>
 <td>Default</td>
-<td><code>0.3 (since version 2.4.0), 0.0 (2.3.x and older)</code></td>
+<td><code>0.2 (since version 2.6.0), 0.3 (from versions 2.4.0 to 2.5.x), 0.0 (2.3.x and older)</code></td>
 </tr>
 <tr>
 <td>Min</td>
@@ -6106,6 +6128,34 @@
 </tbody>
 </table>
 <p>Sets the amount of reverb damping.</p>
+<h2 id="settings_synth_reverb_engine"><code>synth.reverb.engine</code></h2>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td><code>Selection (str)</code></td>
+</tr>
+<tr>
+<td>Default</td>
+<td><code>dat</code></td>
+</tr>
+<tr>
+<td>Options</td>
+<td><code>fdn, free, lex, dat, smith</code></td>
+</tr>
+</tbody>
+</table>
+<p>Selects the reverb engine to use. Note that engine selection applies at synth creation only and cannot be changed during runtime. An overview of supported reverb engines is available in the<a href="https://www.fluidsynth.org/api/ReverbOverview.html">API documentation.</a></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The<code>smith</code>engine requires FluidSynth to be compiled with Signalsmith Audio Basics support.</p>
+</div>
 <h2 id="settings_synth_reverb_level"><code>synth.reverb.level</code></h2>
 <div class="admonition tip">
 <p class="admonition-title">Real-time</p>
@@ -6169,7 +6219,11 @@
 </tr>
 </tbody>
 </table>
-<p>Sets the room size (i.e. amount of wet) reverb.</p>
+<p>Sets the room size (i.e. decay duration of wet) reverb.</p>
+<div class="admonition warning">
+<p class="admonition-title">Attention</p>
+<p>Depending on the reverb engine, higher values may cause audio feedback, similar to hanging notes or accumulating output amplitudes!</p>
+</div>
 <h2 id="settings_synth_reverb_width"><code>synth.reverb.width</code></h2>
 <div class="admonition tip">
 <p class="admonition-title">Real-time</p>
@@ -6201,7 +6255,7 @@
 </tr>
 </tbody>
 </table>
-<p>Sets the stereo spread of the reverb signal. A value of 0 indicates no stereo-separation causing the reverb to sound like a monophonic signal. A value of 1 indicates maximum separation between the uncorrelated left and right channels (note that reverb is still a monophonic effect). This subrange<code>[0;1]</code>is recommended for general usage. Values bigger than 1 increase (or exaggerate) the perception of the uncorrelated left and right signals. Otherwise, this setting should be considered as dimensionless quantity, with its maximum value existing for historical reasons.</p>
+<p>Sets the stereo spread of the reverb signal, i.e. how much the wet-left signal contributes to the wet-right signal and vice versa. A value of 0 indicates no stereo-spread causing the reverb to sound like a monophonic signal. A value of 1 indicates maximum spread between the uncorrelated left and right channels. This subrange<code>[0;1]</code>is recommended for general usage. Values bigger than 1 increase (or exaggerate) the perception of the uncorrelated left and right signals. Otherwise, this setting should be considered as dimensionless quantity, with its maximum value existing for historical reasons.</p>
 <div class="admonition warning">
 <p class="admonition-title">Attention</p>
 <p>Under some circumstances, values bigger than 1 may induce a feedback into the signal which can be perceived as unpleasant.</p>
