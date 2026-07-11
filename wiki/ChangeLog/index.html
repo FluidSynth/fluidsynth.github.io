@@ -6740,7 +6740,7 @@
 <ul>
 <li>It was discovered that fluidsynth was mapping some modulators slightly inaccurately into their normalized range (#1651, thanks to @baskanov)</li>
 <li>Some Roland GS NPRN Params are now mapped to CC numbers (#1519, refer to <a href="../FluidFeatures/#roland-nrpns">wiki</a> for details)</li>
-<li>FluidSynth now auto-detects whether Portamento Time is 7bit or 14bit wide - this fixes the infamous Descent Game08 tune (#705, #1232, #1311, #1456, #1495, #1517, see <a href="https://www.fluidsynth.org/api/fluidsettings.xml#synth.portamento-time"><code>synth.portamento-time</code></a> for details)</li>
+<li>FluidSynth now auto-detects whether Portamento Time is 7bit or 14bit wide - this fixes the infamous Descent Game08 tune (#705, #1232, #1311, #1456, #1495, #1517, see <a href="/wiki/settings/synth/#settings_synth_portamento-time"><code>synth.portamento-time</code></a> for details)</li>
 <li>Previously, fluidsynth's default behavior was to use portamento only for those notes, that were played in a successive / legato manner; to further improve the portamento experience, this was changed and fluidsynth now plays portamento for all notes by default (#1656)</li>
 </ul>
 <h3 id="other-changes">Other Changes</h3>
@@ -6752,7 +6752,7 @@
 <li>Fix installing static and shared libs cmake targets on the same prefix (#1648, thanks to @pedrolcl)</li>
 <li>The auto-generated lookup tables - that vcpkg and cross-compiling users have learned to love so much - are gone! (#1620)</li>
 </ul>
-<p>For changes related to the public API, pls. <a href="https://www.fluidsynth.org/api/RecentChanges.html">consult the API docs</a>.</p>
+<p>For changes related to the public API, pls. <a href="https://www.fluidsynth.org/wiki/api/recent-changes/">consult the API docs</a>.</p>
 <h2 id="fluidsynth-248">FluidSynth 2.4.8</h2>
 <ul>
 <li>Fix systemd daemon failing with spaces in Soundfont filenames (#1608)</li>
@@ -6805,7 +6805,7 @@
 <ul>
 <li>It was discovered, that exclusive class note terminations were too slow (#1467, thanks to @mrbumpy409)</li>
 <li>Fix a regression introduced in 2.4.0 that allowed the amplitude of a voice playing in delay phase to rise infinitely (#1451)</li>
-<li>MSGS drum-style note-cut has been converted to an opt-in setting <a href="https://www.fluidsynth.org/api/fluidsettings.xml#synth.note-cut"><code>synth.note-cut</code></a> (#1466)</li>
+<li>MSGS drum-style note-cut has been converted to an opt-in setting <a href="/wiki/settings/synth/#settings_synth_note-cut"><code>synth.note-cut</code></a> (#1466)</li>
 <li>Support for SDL2 has been disabled by default* (#1472)</li>
 <li>Fix a regression introduced in 2.4.1 that could have caused infinite audio gain output for some MIDI files under certain configurations (#1464)</li>
 <li>Silence a warning issued by Systemd v254+ (#1474, thanks to @andrew-sayers)</li>
@@ -7005,7 +7005,7 @@
 <li>The Soundfont loader code has been refactored, illegal generators will now be skipped more consequently (#823, thanks to @mawe42)</li>
 </ul>
 <h2 id="fluidsynth-220">FluidSynth 2.2.0</h2>
-<p><strong>This release breaks ABI compatibility!</strong> Refer to the <a href="https://www.fluidsynth.org/api/RecentChanges.html#NewIn2_2_0">API docs</a> for details.</p>
+<p><strong>This release breaks ABI compatibility!</strong> Refer to the <a href="/wiki/api/recent-changes/#whats-new-in-220">API docs</a> for details.</p>
 <p>A C++98 compliant compiler is now required to build fluidsynth (<a href="https://lists.nongnu.org/archive/html/fluid-dev/2020-01/msg00010.html">mailing list thread</a>)</p>
 <h3 id="new-features_3">New features</h3>
 <ul>
@@ -7224,7 +7224,7 @@
 <li>a minimal build of fluidsynth without requiring pkg-config is supported</li>
 <li>remove deprecated LADCCA support</li>
 <li>use unique device names for the <code>audio.portaudio.device</code> setting (#284, thanks to @jjceresa)</li>
-<li>documentation of the settings moved to <a href="http://www.fluidsynth.org/api/fluidsettings.xml">http://www.fluidsynth.org/api/fluidsettings.xml</a></li>
+<li>documentation of the settings moved to <a href="https://www.fluidsynth.org/wiki/settings/">https://www.fluidsynth.org/wiki/settings/</a></li>
 <li>adjust MIDI Pan and Balance calculations as outlined by MIDI Recommended Practice (RP-036) (#317, thanks to @mawe42)</li>
 <li>make network support compile-time optional (#307, thanks to @carlo-bramini)</li>
 <li>speed up calculation of chorus modulation waveforms for devices without FPU (#321, thanks to @carlo-bramini)</li>

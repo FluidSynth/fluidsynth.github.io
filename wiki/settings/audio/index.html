@@ -4837,7 +4837,7 @@
 </tr>
 </tbody>
 </table>
-<p>Selects the ALSA audio device to use.</p>
+<p>Selects the ALSA audio device to use. </p>
 <h2 id="settings_audio_coreaudio_channel-map"><code>audio.coreaudio.channel-map</code></h2>
 <table>
 <thead>
@@ -4857,10 +4857,10 @@
 </tr>
 </tbody>
 </table>
-<p>This setting is a comma-separated integer list that maps fluidsynth mono-channels to CoreAudio device output channels. Each position in the list represents the output channel of the CoreAudio device. The value of each position indicates the zero-based index of the fluidsynth output mono-channel to route there (i.e. the buffer index used for fluid_synth_process()). Additionally, the special value of -1 will turn off an output.  </p>
-<p>For example, the default map for a single stereo output is "0,1". A value of "0,0" will copy the left channel to the right, a value of "1,0" will flip left and right, and a value of "-1,1" will play only the right channel.  </p>
-<p>With a six-channel output device, and the synth.audio-channels and synth.audio-groups settings both set to "2", a channel map of "-1,-1,0,1,2,3" will result in notes from odd MIDI channels (audible on the first stereo channel, i.e. mono-indices 0,1) being sent to outputs 3 and 4, and even MIDI channels (audible on the second stereo channel, i.e. mono-indices 2,3) being sent to outputs 5 and 6.  </p>
-<p>If the list specifies less than the number of available outputs channels, outputs beyond those specified will maintain the default channel mapping given by the CoreAudio driver.</p>
+<p>This setting is a comma-separated integer list that maps fluidsynth mono-channels to CoreAudio device output channels. Each position in the list represents the output channel of the CoreAudio device. The value of each position indicates the zero-based index of the fluidsynth output mono-channel to route there (i.e. the buffer index used for <code>fluid_synth_process()</code>). Additionally, the special value of -1 will turn off an output.   </p>
+<p>For example, the default map for a single stereo output is "0,1". A value of "0,0" will copy the left channel to the right, a value of "1,0" will flip left and right, and a value of "-1,1" will play only the right channel.   </p>
+<p>With a six-channel output device, and the synth.audio-channels and synth.audio-groups settings both set to "2", a channel map of "-1,-1,0,1,2,3" will result in notes from odd MIDI channels (audible on the first stereo channel, i.e. mono-indices 0,1) being sent to outputs 3 and 4, and even MIDI channels (audible on the second stereo channel, i.e. mono-indices 2,3) being sent to outputs 5 and 6.   </p>
+<p>If the list specifies less than the number of available outputs channels, outputs beyond those specified will maintain the default channel mapping given by the CoreAudio driver. </p>
 <h2 id="settings_audio_coreaudio_device"><code>audio.coreaudio.device</code></h2>
 <table>
 <thead>
@@ -4880,7 +4880,7 @@
 </tr>
 </tbody>
 </table>
-<p>Selects the CoreAudio device to use.</p>
+<p>Selects the CoreAudio device to use. </p>
 <h2 id="settings_audio_dart_device"><code>audio.dart.device</code></h2>
 <table>
 <thead>
@@ -4900,7 +4900,7 @@
 </tr>
 </tbody>
 </table>
-<p>Selects the Dart (OS/2 driver) device to use.</p>
+<p>Selects the Dart (OS/2 driver) device to use. </p>
 <h2 id="settings_audio_driver"><code>audio.driver</code></h2>
 <table>
 <thead>
@@ -4916,7 +4916,7 @@
 </tr>
 <tr>
 <td>Default</td>
-<td><code>alsa (Linux), dsound (Windows), sndman (MacOS9), coreaudio (Mac OS X), dart (OS/2)</code></td>
+<td><code>alsa (Linux),  dsound (Windows),  sndman (MacOS9),  coreaudio (Mac OS X),  dart (OS/2)</code></td>
 </tr>
 <tr>
 <td>Options</td>
@@ -4924,10 +4924,10 @@
 </tr>
 </tbody>
 </table>
-<p>The audio system to be used. Some audio drivers support only a subset of audio sample formats. See<code>audio.sample-format</code>for details, and driver-specific notes (e.g. WASAPI exclusive mode) for format negotiation behavior. In order to use sdl3 as audio driver, the application is responsible for initializing SDL's audio subsystem.  </p>
+<p>The audio system to be used. Some audio drivers support only a subset of audio sample formats. See <code>audio.sample-format</code> for details, and driver-specific notes (e.g. WASAPI exclusive mode) for format negotiation behavior. In order to use sdl3 as audio driver, the application is responsible for initializing SDL's audio subsystem.   </p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><code>waveout</code>is available since fluidsynth 2.1.0,<code>sdl3</code>since fluidsynth 2.4.4.</p>
+<p><code>waveout</code> is available since fluidsynth 2.1.0, <code>sdl3</code> since fluidsynth 2.4.4.</p>
 </div>
 <h2 id="settings_audio_dsound_device"><code>audio.dsound.device</code></h2>
 <table>
@@ -4948,7 +4948,7 @@
 </tr>
 </tbody>
 </table>
-<p>Selects the DirectSound (Windows) device to use. Starting with 2.3.6 all device names are expected to be UTF8 encoded.</p>
+<p>Selects the DirectSound (Windows) device to use. Starting with 2.3.6 all device names are expected to be UTF8 encoded. </p>
 <h2 id="settings_audio_file_endian"><code>audio.file.endian</code></h2>
 <table>
 <thead>
@@ -4964,7 +4964,7 @@
 </tr>
 <tr>
 <td>Default</td>
-<td><code>'auto' if libsndfile support is built in, 'cpu' otherwise.</code></td>
+<td><code>'auto' if libsndfile support is built in,  'cpu' otherwise.</code></td>
 </tr>
 <tr>
 <td>Options</td>
@@ -4972,7 +4972,7 @@
 </tr>
 </tbody>
 </table>
-<p>Defines the byte order when using the 'file' driver or file renderer to store audio to a file. 'auto' uses the default for the given file type, 'cpu' uses the CPU byte order, 'big' uses big endian byte order and 'little' uses little endian byte order.</p>
+<p>Defines the byte order when using the 'file' driver or file renderer to store audio to a file. 'auto' uses the default for the given file type, 'cpu' uses the CPU byte order, 'big' uses big endian byte order and 'little' uses little endian byte order. </p>
 <h2 id="settings_audio_file_format"><code>audio.file.format</code></h2>
 <table>
 <thead>
@@ -4996,7 +4996,7 @@
 </tr>
 </tbody>
 </table>
-<p>Defines the audio format when rendering audio to a file. Limited to 's16' if no libsndfile support.</p>
+<p>Defines the audio format when rendering audio to a file. Limited to 's16' if no libsndfile support. </p>
 <ul>
 <li>
 <p>'double' is 64 bit floating point,</p>
@@ -5020,7 +5020,7 @@
 <p>'u8' is 8 bit unsigned PCM.</p>
 </li>
 </ul>
-<p>This setting affects file rendering only and is independent of<code>audio.sample-format</code>used by live audio drivers.</p>
+<p>This setting affects file rendering only and is independent of <code>audio.sample-format</code> used by live audio drivers. </p>
 <h2 id="settings_audio_file_name"><code>audio.file.name</code></h2>
 <table>
 <thead>
@@ -5036,11 +5036,11 @@
 </tr>
 <tr>
 <td>Default</td>
-<td><code>'fluidsynth.wav' if libsndfile support is built in, 'fluidsynth.raw' otherwise.</code></td>
+<td><code>'fluidsynth.wav' if libsndfile support is built in,  'fluidsynth.raw' otherwise.</code></td>
 </tr>
 </tbody>
 </table>
-<p>Specifies the file name to store the audio to, when rendering audio to a file.</p>
+<p>Specifies the file name to store the audio to, when rendering audio to a file. </p>
 <h2 id="settings_audio_file_type"><code>audio.file.type</code></h2>
 <table>
 <thead>
@@ -5056,7 +5056,7 @@
 </tr>
 <tr>
 <td>Default</td>
-<td><code>'auto' if libsndfile support is built in, 'raw' otherwise.</code></td>
+<td><code>'auto' if libsndfile support is built in,  'raw' otherwise.</code></td>
 </tr>
 <tr>
 <td>Options</td>
@@ -5064,7 +5064,7 @@
 </tr>
 </tbody>
 </table>
-<p>Sets the file type of the file which the audio will be stored to. 'auto' attempts to determine the file type from the audio.file.name file extension and falls back to 'wav' if the extension doesn't match any types. Limited to 'raw' if compiled without libsndfile support. Actual options will vary depending on libsndfile library.</p>
+<p>Sets the file type of the file which the audio will be stored to. 'auto' attempts to determine the file type from the audio.file.name file extension and falls back to 'wav' if the extension doesn't match any types. Limited to 'raw' if compiled without libsndfile support. Actual options will vary depending on libsndfile library. </p>
 <h2 id="settings_audio_jack_autoconnect"><code>audio.jack.autoconnect</code></h2>
 <table>
 <thead>
@@ -5084,7 +5084,7 @@
 </tr>
 </tbody>
 </table>
-<p>If 1 (TRUE), then FluidSynth output is automatically connected to jack system audio output.</p>
+<p>If 1 (TRUE), then FluidSynth output is automatically connected to jack system audio output. </p>
 <h2 id="settings_audio_jack_id"><code>audio.jack.id</code></h2>
 <table>
 <thead>
@@ -5104,7 +5104,7 @@
 </tr>
 </tbody>
 </table>
-<p>Unique identifier used when creating Jack client connection.</p>
+<p>Unique identifier used when creating Jack client connection. </p>
 <h2 id="settings_audio_jack_multi"><code>audio.jack.multi</code></h2>
 <table>
 <thead>
@@ -5124,7 +5124,7 @@
 </tr>
 </tbody>
 </table>
-<p>If 1 (TRUE), then multi-channel Jack output will be enabled if synth.audio-channels is greater than 1.</p>
+<p>If 1 (TRUE), then multi-channel Jack output will be enabled if synth.audio-channels is greater than 1. </p>
 <h2 id="settings_audio_jack_server"><code>audio.jack.server</code></h2>
 <table>
 <thead>
@@ -5144,7 +5144,7 @@
 </tr>
 </tbody>
 </table>
-<p>Jack server to connect to. Defaults to an empty string, which uses default Jack server.</p>
+<p>Jack server to connect to. Defaults to an empty string, which uses default Jack server. </p>
 <h2 id="settings_audio_oboe_error-recovery-mode"><code>audio.oboe.error-recovery-mode</code></h2>
 <table>
 <thead>
@@ -5168,7 +5168,7 @@
 </tr>
 </tbody>
 </table>
-<p>Sets the error recovery mode when audio device error such as earphone disconnection occurred. It reconnects by default (same as OpenSLES behavior), but can be stopped if Stop is specified.</p>
+<p>Sets the error recovery mode when audio device error such as earphone disconnection occurred. It reconnects by default (same as OpenSLES behavior), but can be stopped if Stop is specified. </p>
 <h2 id="settings_audio_oboe_id"><code>audio.oboe.id</code></h2>
 <table>
 <thead>
@@ -5196,7 +5196,7 @@
 </tr>
 </tbody>
 </table>
-<p>Request an audio device identified device using an ID as pointed out by Oboe's documentation.</p>
+<p>Request an audio device identified device using an ID as pointed out by Oboe's documentation. </p>
 <h2 id="settings_audio_oboe_performance-mode"><code>audio.oboe.performance-mode</code></h2>
 <table>
 <thead>
@@ -5220,7 +5220,7 @@
 </tr>
 </tbody>
 </table>
-<p>Sets the performance mode as pointed out by Oboe's documentation.</p>
+<p>Sets the performance mode as pointed out by Oboe's documentation. </p>
 <h2 id="settings_audio_oboe_sample-rate-conversion-quality"><code>audio.oboe.sample-rate-conversion-quality</code></h2>
 <table>
 <thead>
@@ -5244,7 +5244,7 @@
 </tr>
 </tbody>
 </table>
-<p>Sets the sample-rate conversion quality as pointed out by Oboe's documentation.</p>
+<p>Sets the sample-rate conversion quality as pointed out by Oboe's documentation. </p>
 <h2 id="settings_audio_oboe_sharing-mode"><code>audio.oboe.sharing-mode</code></h2>
 <table>
 <thead>
@@ -5268,7 +5268,7 @@
 </tr>
 </tbody>
 </table>
-<p>Sets the sharing mode as pointed out by Oboe's documentation.</p>
+<p>Sets the sharing mode as pointed out by Oboe's documentation. </p>
 <h2 id="settings_audio_oss_device"><code>audio.oss.device</code></h2>
 <table>
 <thead>
@@ -5288,7 +5288,7 @@
 </tr>
 </tbody>
 </table>
-<p>Device to use for OSS audio output.</p>
+<p>Device to use for OSS audio output. </p>
 <h2 id="settings_audio_period-size"><code>audio.period-size</code></h2>
 <table>
 <thead>
@@ -5304,7 +5304,7 @@
 </tr>
 <tr>
 <td>Default</td>
-<td><code>512 (Windows), 64 (all other)</code></td>
+<td><code>512 (Windows),  64 (all other)</code></td>
 </tr>
 <tr>
 <td>Min</td>
@@ -5316,7 +5316,7 @@
 </tr>
 </tbody>
 </table>
-<p>This is the number of audio samples most audio drivers will request from the synth at one time. In other words, it's the amount of samples the synth is allowed to render in one go when no state changes (events) are about to happen. Because of that, specifying too big numbers here may cause MIDI events to be poorly quantized (=untimed) when a MIDI driver or the synth's API directly is used, as fluidsynth cannot determine when those events are to arrive. This issue does not matter, when using the MIDI player or the MIDI sequencer, because in this case, fluidsynth does know when events will be received.</p>
+<p>This is the number of audio samples most audio drivers will request from the synth at one time. In other words, it's the amount of samples the synth is allowed to render in one go when no state changes (events) are about to happen. Because of that, specifying too big numbers here may cause MIDI events to be poorly quantized (=untimed) when a MIDI driver or the synth's API directly is used, as fluidsynth cannot determine when those events are to arrive. This issue does not matter, when using the MIDI player or the MIDI sequencer, because in this case, fluidsynth does know when events will be received. </p>
 <h2 id="settings_audio_periods"><code>audio.periods</code></h2>
 <table>
 <thead>
@@ -5332,7 +5332,7 @@
 </tr>
 <tr>
 <td>Default</td>
-<td><code>8 (Windows, MacOS9), 16 (all other)</code></td>
+<td><code>8 (Windows, MacOS9),  16 (all other)</code></td>
 </tr>
 <tr>
 <td>Min</td>
@@ -5344,7 +5344,7 @@
 </tr>
 </tbody>
 </table>
-<p>The number of the audio buffers used by the driver. This number of buffers, multiplied by the buffer size (see setting audio.period-size), determines the maximum latency of the audio driver.</p>
+<p>The number of the audio buffers used by the driver. This number of buffers, multiplied by the buffer size (see setting audio.period-size), determines the maximum latency of the audio driver. </p>
 <h2 id="settings_audio_pipewire_media-category"><code>audio.pipewire.media-category</code></h2>
 <table>
 <thead>
@@ -5364,7 +5364,7 @@
 </tr>
 </tbody>
 </table>
-<p>The media category to use. This value will be passed to<code>PW_KEY_MEDIA_CATEGORY</code>, see Pipewire documentation for valid values.</p>
+<p>The media category to use. This value will be passed to <code>PW_KEY_MEDIA_CATEGORY</code>, see Pipewire documentation for valid values. </p>
 <h2 id="settings_audio_pipewire_media-role"><code>audio.pipewire.media-role</code></h2>
 <table>
 <thead>
@@ -5384,7 +5384,7 @@
 </tr>
 </tbody>
 </table>
-<p>The media role to use. This value will be passed to<code>PW_KEY_MEDIA_ROLE</code>, see Pipewire documentation for valid values.</p>
+<p>The media role to use. This value will be passed to <code>PW_KEY_MEDIA_ROLE</code>, see Pipewire documentation for valid values. </p>
 <h2 id="settings_audio_pipewire_media-type"><code>audio.pipewire.media-type</code></h2>
 <table>
 <thead>
@@ -5404,7 +5404,7 @@
 </tr>
 </tbody>
 </table>
-<p>The media type to use. This value will be passed to<code>PW_KEY_MEDIA_TYPE</code>, see Pipewire documentation for valid values.</p>
+<p>The media type to use. This value will be passed to <code>PW_KEY_MEDIA_TYPE</code>, see Pipewire documentation for valid values. </p>
 <h2 id="settings_audio_portaudio_device"><code>audio.portaudio.device</code></h2>
 <table>
 <thead>
@@ -5424,10 +5424,10 @@
 </tr>
 </tbody>
 </table>
-<p>Device to use for PortAudio driver output. The format of the device name is: "<device_index>:<host_api_name>:<host_device_name>" e.g. "11:Windows DirectSound:SB PCI".</p>
+<p>Device to use for PortAudio driver output. The format of the device name is: "<device_index>:<host_api_name>:<host_device_name>" e.g. "11:Windows DirectSound:SB PCI". </p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><code>'PortAudio Default'</code>is a special value which outputs to the default PortAudio device.</p>
+<p><code>'PortAudio Default'</code> is a special value which outputs to the default PortAudio device.</p>
 </div>
 <h2 id="settings_audio_pulseaudio_adjust-latency"><code>audio.pulseaudio.adjust-latency</code></h2>
 <table>
@@ -5448,7 +5448,7 @@
 </tr>
 </tbody>
 </table>
-<p>If TRUE initializes the maximum length of the audio buffer to the highest supported value and increases the latency dynamically if PulseAudio suggests so. Else uses a buffer with length of "audio.period-size".</p>
+<p>If TRUE initializes the maximum length of the audio buffer to the highest supported value and increases the latency dynamically if PulseAudio suggests so. Else uses a buffer with length of "audio.period-size". </p>
 <h2 id="settings_audio_pulseaudio_device"><code>audio.pulseaudio.device</code></h2>
 <table>
 <thead>
@@ -5468,7 +5468,7 @@
 </tr>
 </tbody>
 </table>
-<p>Device to use for PulseAudio driver output.</p>
+<p>Device to use for PulseAudio driver output. </p>
 <h2 id="settings_audio_pulseaudio_media-role"><code>audio.pulseaudio.media-role</code></h2>
 <table>
 <thead>
@@ -5488,7 +5488,7 @@
 </tr>
 </tbody>
 </table>
-<p>PulseAudio media role information.</p>
+<p>PulseAudio media role information. </p>
 <h2 id="settings_audio_pulseaudio_server"><code>audio.pulseaudio.server</code></h2>
 <table>
 <thead>
@@ -5508,7 +5508,7 @@
 </tr>
 </tbody>
 </table>
-<p>Server to use for PulseAudio driver output.</p>
+<p>Server to use for PulseAudio driver output. </p>
 <h2 id="settings_audio_realtime-prio"><code>audio.realtime-prio</code></h2>
 <table>
 <thead>
@@ -5536,7 +5536,7 @@
 </tr>
 </tbody>
 </table>
-<p>Sets the realtime scheduling priority of the audio synthesis thread. This includes the synthesis threads created by the synth (in case synth.cpu-cores was greater 1). A value of 0 disables high priority scheduling. Linux is the only platform which currently makes use of different priority levels as specified by this setting. On other operating systems the thread priority is set to maximum. Drivers which use this option: alsa, oss and pulseaudio</p>
+<p>Sets the realtime scheduling priority of the audio synthesis thread. This includes the synthesis threads created by the synth (in case synth.cpu-cores was greater 1). A value of 0 disables high priority scheduling. Linux is the only platform which currently makes use of different priority levels as specified by this setting. On other operating systems the thread priority is set to maximum. Drivers which use this option: alsa, oss and pulseaudio </p>
 <h2 id="settings_audio_sample-format"><code>audio.sample-format</code></h2>
 <table>
 <thead>
@@ -5560,9 +5560,9 @@
 </tr>
 </tbody>
 </table>
-<p>Sample format requested for transferring floating point audio samples from the synthesizer to the audio hardware. The format actually used depends on the selected audio driver and output device. Some drivers may ignore this setting or fail to initialize when an unsupported format is requested.  </p>
-<p>At present, only the Windows WASAPI audio driver supports the<code>24bits</code>and<code>32bits</code>values.  </p>
-<p>This setting applies to live audio output only. For file rendering formats, see<code>audio.file.format</code>.</p>
+<p>Sample format requested for transferring floating point audio samples from the synthesizer to the audio hardware. The format actually used depends on the selected audio driver and output device. Some drivers may ignore this setting or fail to initialize when an unsupported format is requested.   </p>
+<p>At present, only the Windows WASAPI audio driver supports the <code>24bits</code> and <code>32bits</code> values.   </p>
+<p>This setting applies to live audio output only. For file rendering formats, see <code>audio.file.format</code>. </p>
 <h2 id="settings_audio_sdl3_device"><code>audio.sdl3.device</code></h2>
 <table>
 <thead>
@@ -5582,7 +5582,7 @@
 </tr>
 </tbody>
 </table>
-<p>Device to use for SDL3 driver output.</p>
+<p>Device to use for SDL3 driver output. </p>
 <h2 id="settings_audio_wasapi_device"><code>audio.wasapi.device</code></h2>
 <table>
 <thead>
@@ -5602,12 +5602,12 @@
 </tr>
 </tbody>
 </table>
-<p>Device to use for WASAPI driver output. Starting with 2.3.6 all device names are expected to be UTF8 encoded.  </p>
+<p>Device to use for WASAPI driver output. Starting with 2.3.6 all device names are expected to be UTF8 encoded.   </p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>When using the WASAPI audio driver, more detailed information about device and format negotiation (e.g. whether the requested format was accepted natively, adjusted, or rejected) may be obtained by installing a custom log callback using<code>fluid_set_log_function()</code>.  </p>
+<p>When using the WASAPI audio driver, more detailed information about device and format negotiation (e.g. whether the requested format was accepted natively, adjusted, or rejected) may be obtained by installing a custom log callback using <code>fluid_set_log_function()</code>.   </p>
 </div>
-<p>The WASAPI driver reports informational, warning, and error messages received from the OS during device initialization, which can be used as a best-effort heuristic to distinguish between:</p>
+<p>The WASAPI driver reports informational, warning, and error messages received from the OS during device initialization, which can be used as a best-effort heuristic to distinguish between: </p>
 <ul>
 <li>
 <p>Successful native opens,</p>
@@ -5619,7 +5619,7 @@
 <p>failed opens.</p>
 </li>
 </ul>
-<p>This mechanism is used internally by the<code>fluidsynth -Q</code>command, see<a href="https://github.com/FluidSynth/fluidsynth/blob/master/src/fluid_wasapi_device_enumerate.c">fluid_wasapi_device_enumerate.c</a>for a reference implementation. The content and meaning of log messages are not part of the public API contract and may change between releases.</p>
+<p>This mechanism is used internally by the <code>fluidsynth -Q</code> command, see <a href="https://github.com/FluidSynth/fluidsynth/blob/master/src/fluid_wasapi_device_enumerate.c">fluid_wasapi_device_enumerate.c</a> for a reference implementation. The content and meaning of log messages are not part of the public API contract and may change between releases. </p>
 <h2 id="settings_audio_wasapi_exclusive-mode"><code>audio.wasapi.exclusive-mode</code></h2>
 <table>
 <thead>
@@ -5639,9 +5639,9 @@
 </tr>
 </tbody>
 </table>
-<p>By default, WASAPI will operate in shared mode. Set it to 1 (TRUE) to use WASAPI in exclusive mode. In this mode, you'll benefit from direct soundcard access, which has extremely low latency. However, in exclusive mode the requested audio configuration must be supported exactly by the output device.  </p>
-<p>Pay close attention to settings of<code>synth.sample-rate</code>,<code>audio.sample-format</code>, and<code>audio.period-size</code>, as unsupported combinations may cause the WASAPI driver to fail during initialization.  </p>
-<p>The<code>fluidsynth -Q</code>command can be used to list the sample rate and format support status and recommended period sizes for available WASAPI devices.</p>
+<p>By default, WASAPI will operate in shared mode. Set it to 1 (TRUE) to use WASAPI in exclusive mode. In this mode, you'll benefit from direct soundcard access, which has extremely low latency. However, in exclusive mode the requested audio configuration must be supported exactly by the output device.   </p>
+<p>Pay close attention to settings of <code>synth.sample-rate</code>, <code>audio.sample-format</code>, and <code>audio.period-size</code>, as unsupported combinations may cause the WASAPI driver to fail during initialization.   </p>
+<p>The <code>fluidsynth -Q</code> command can be used to list the sample rate and format support status and recommended period sizes for available WASAPI devices. </p>
 <h2 id="settings_audio_waveout_device"><code>audio.waveout.device</code></h2>
 <table>
 <thead>
@@ -5661,7 +5661,7 @@
 </tr>
 </tbody>
 </table>
-<p>Device to use for WaveOut driver output. Starting with 2.3.6 all device names are expected to be UTF8 encoded.</p>
+<p>Device to use for WaveOut driver output. Starting with 2.3.6 all device names are expected to be UTF8 encoded. </p>
 
 
 

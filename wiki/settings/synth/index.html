@@ -5247,7 +5247,7 @@
 </tr>
 </tbody>
 </table>
-<p>Sets the number of synthesis CPU cores. If set to a value greater than 1, additional synthesis threads will be created to do the actual rendering work that is then returned synchronously by the render function. This has the affect of utilizing more of the total CPU for voices or decreasing render times when synthesizing audio. So for example, if you set cpu-cores to 4, fluidsynth will attempt to split the synthesis work it needs to do between the client's calling thread and three additional (internal) worker threads. As soon as all threads have done their work, their results are collected and the resulting buffer is returned to the caller.</p>
+<p>Sets the number of synthesis CPU cores. If set to a value greater than 1, additional synthesis threads will be created to do the actual rendering work that is then returned synchronously by the render function. This has the affect of utilizing more of the total CPU for voices or decreasing render times when synthesizing audio. So for example, if you set cpu-cores to 4, fluidsynth will attempt to split the synthesis work it needs to do between the client's calling thread and three additional (internal) worker threads. As soon as all threads have done their work, their results are collected and the resulting buffer is returned to the caller. </p>
 <h2 id="settings_synth_default-soundfont"><code>synth.default-soundfont</code></h2>
 <table>
 <thead>
@@ -5263,7 +5263,7 @@
 </tr>
 <tr>
 <td>Default</td>
-<td><code>C:\soundfonts\default.sf2 (Windows), ${CMAKE_INSTALL_PREFIX}/share/soundfonts/default.sf2 (all others)</code></td>
+<td><code>C:\soundfonts\default.sf2 (Windows),  ${CMAKE_INSTALL_PREFIX}/share/soundfonts/default.sf2 (all others)</code></td>
 </tr>
 </tbody>
 </table>
@@ -5319,7 +5319,7 @@
 </tr>
 </tbody>
 </table>
-<p>When set to 1 (TRUE), samples are loaded to and unloaded from memory whenever presets are being selected or unselected for a MIDI channel (PROGRAM_CHANGE and PROGRAM_SELECT events are typically responsible for this). This involves memory allocation, which is not realtime safe! So only enable this in non-realtime scenarios! E.g. when rendering to a WAVE file using the fast-file-renderer.</p>
+<p>When set to 1 (TRUE), samples are loaded to and unloaded from memory whenever presets are being selected or unselected for a MIDI channel (PROGRAM_CHANGE and PROGRAM_SELECT events are typically responsible for this). This involves memory allocation, which is not realtime safe! So only enable this in non-realtime scenarios! E.g. when rendering to a WAVE file using the fast-file-renderer. </p>
 <h2 id="settings_synth_effects-channels"><code>synth.effects-channels</code></h2>
 <table>
 <thead>
@@ -5375,10 +5375,10 @@
 </tr>
 </tbody>
 </table>
-<p>Specifies the number of effects groups. By default, the sound of all voices is rendered by one reverb and one chorus effect respectively (even for multi-channel rendering). This setting gives the user control which effects of a voice to render to which independent audio channels. E.g. setting synth.effects-groups == synth.midi-channels allows to render the effects of each MIDI channel to separate audio buffers. If synth.effects-groups is smaller than the number of MIDI channels, it will wrap around.</p>
+<p>Specifies the number of effects groups. By default, the sound of all voices is rendered by one reverb and one chorus effect respectively (even for multi-channel rendering). This setting gives the user control which effects of a voice to render to which independent audio channels. E.g. setting synth.effects-groups == synth.midi-channels allows to render the effects of each MIDI channel to separate audio buffers. If synth.effects-groups is smaller than the number of MIDI channels, it will wrap around. </p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Any value<code>&gt;1</code>will significantly increase CPU usage.</p>
+<p>Any value <code>&gt;1</code> will significantly increase CPU usage.</p>
 </div>
 <h2 id="settings_synth_gain"><code>synth.gain</code></h2>
 <div class="admonition tip">
@@ -5431,7 +5431,7 @@
 </tr>
 </tbody>
 </table>
-<p>When set to 1 (TRUE) the LADSPA subsystem will be enabled. This subsystem allows to load and interconnect LADSPA plug-ins. The output of the synthesizer is processed by the LADSPA subsystem.</p>
+<p>When set to 1 (TRUE) the LADSPA subsystem will be enabled. This subsystem allows to load and interconnect LADSPA plug-ins. The output of the synthesizer is processed by the LADSPA subsystem. </p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>FluidSynth has to be compiled with LADSPA support! More information about the LADSPA subsystem can be found in doc/ladspa.md or on the FluidSynth website.</p>
@@ -5455,7 +5455,7 @@
 </tr>
 </tbody>
 </table>
-<p>When set to 1 (TRUE) a look-ahead limiter is added at the end of fluidsynth's audio processing chain. This limiter helps to prevent clipping and distortion by limiting the gain of the output signal.</p>
+<p>When set to 1 (TRUE) a look-ahead limiter is added at the end of fluidsynth's audio processing chain. This limiter helps to prevent clipping and distortion by limiting the gain of the output signal. </p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The limiter requires FluidSynth to be compiled with Signalsmith Audio Basics support, otherwise any of the limiter related settings will return FLUID_FAILED when attempting to set or get them.</p>
@@ -5571,7 +5571,7 @@
 </tr>
 </tbody>
 </table>
-<p>Specifies the target output limit of the limiter in linear range and therefore the final output level of fluidsynth's synthesized audio. The audio input for the limiter is amplified by the<code>synth.gain</code>setting.</p>
+<p>Specifies the target output limit of the limiter in linear range and therefore the final output level of fluidsynth's synthesized audio. The audio input for the limiter is amplified by the <code>synth.gain</code> setting.</p>
 <h2 id="settings_synth_limiter_release"><code>synth.limiter.release</code></h2>
 <table>
 <thead>
@@ -5671,7 +5671,7 @@
 </tr>
 </tbody>
 </table>
-<p>This setting defines how the synthesizer interprets Bank Select messages.</p>
+<p>This setting defines how the synthesizer interprets Bank Select messages. </p>
 <ul>
 <li>
 <p>gs: (default) CC0 becomes the bank number, CC32 is ignored.</p>
@@ -5769,7 +5769,7 @@
 </tr>
 </tbody>
 </table>
-<p>This setting specifies the behavior for releasing voices, if the same note is hit twice on the same channel. Early synthesizers like the Roland SC-55 and Microsoft Wavetable GS MIDI synthesizer (MSGS) are terminating notes abruptly that have already received a noteOff after receiving a noteOn for the same key. This behavior was presumably implemented to save polyphony in these systems. This setting was introduced in fluidsynth 2.4.3 and can be enabled to mimic this behavior, to esp. play back old tunes like Doom E1M1 more accurately. This setting supports the following values:</p>
+<p>This setting specifies the behavior for releasing voices, if the same note is hit twice on the same channel. Early synthesizers like the Roland SC-55 and Microsoft Wavetable GS MIDI synthesizer (MSGS) are terminating notes abruptly that have already received a noteOff after receiving a noteOn for the same key. This behavior was presumably implemented to save polyphony in these systems. This setting was introduced in fluidsynth 2.4.3 and can be enabled to mimic this behavior, to esp. play back old tunes like Doom E1M1 more accurately. This setting supports the following values: </p>
 <ul>
 <li>
 <p>0: A regular noteOff is applied to the previous note, which is the default SF2 compliant behavior.</p>
@@ -5816,7 +5816,7 @@
 </tr>
 </tbody>
 </table>
-<p>This score is divided by the number of seconds this voice has been active and is added to the overflow priority. It is usually a positive value and gives voices which have just been started a higher priority, making them less likely to be killed in an overflow situation.</p>
+<p>This score is divided by the number of seconds this voice has been active and is added to the overflow priority. It is usually a positive value and gives voices which have just been started a higher priority, making them less likely to be killed in an overflow situation. </p>
 <h2 id="settings_synth_overflow_important"><code>synth.overflow.important</code></h2>
 <div class="admonition tip">
 <p class="admonition-title">Real-time</p>
@@ -5848,7 +5848,7 @@
 </tr>
 </tbody>
 </table>
-<p>This score is added to voices on channels marked with the synth.overflow.important-channels setting.</p>
+<p>This score is added to voices on channels marked with the synth.overflow.important-channels setting. </p>
 <h2 id="settings_synth_overflow_important-channels"><code>synth.overflow.important-channels</code></h2>
 <div class="admonition tip">
 <p class="admonition-title">Real-time</p>
@@ -5872,7 +5872,7 @@
 </tr>
 </tbody>
 </table>
-<p>This setting is a comma-separated list of MIDI channel numbers that should be treated as "important" by the overflow calculation, adding the score set by synth.overflow.important to each voice on those channels. It can be used to make voices on particular MIDI channels less likely (synth.overflow.important &gt; 0) or more likely (synth.overflow.important &lt; 0) to be killed in an overflow situation. Channel numbers are 1-based, so the first MIDI channel is number 1.</p>
+<p>This setting is a comma-separated list of MIDI channel numbers that should be treated as "important" by the overflow calculation, adding the score set by synth.overflow.important to each voice on those channels. It can be used to make voices on particular MIDI channels less likely (synth.overflow.important &gt; 0) or more likely (synth.overflow.important &lt; 0) to be killed in an overflow situation. Channel numbers are 1-based, so the first MIDI channel is number 1. </p>
 <h2 id="settings_synth_overflow_percussion"><code>synth.overflow.percussion</code></h2>
 <div class="admonition tip">
 <p class="admonition-title">Real-time</p>
@@ -5904,7 +5904,7 @@
 </tr>
 </tbody>
 </table>
-<p>Sets the overflow priority score added to voices on a percussion channel. This is usually a positive score, to give percussion voices a higher priority and less chance of being killed in an overflow situation.</p>
+<p>Sets the overflow priority score added to voices on a percussion channel. This is usually a positive score, to give percussion voices a higher priority and less chance of being killed in an overflow situation. </p>
 <h2 id="settings_synth_overflow_released"><code>synth.overflow.released</code></h2>
 <div class="admonition tip">
 <p class="admonition-title">Real-time</p>
@@ -5936,7 +5936,7 @@
 </tr>
 </tbody>
 </table>
-<p>Sets the overflow priority score added to voices that have already received a note-off event. This is usually a negative score, to give released voices a lower priority so that they are killed first in an overflow situation.</p>
+<p>Sets the overflow priority score added to voices that have already received a note-off event. This is usually a negative score, to give released voices a lower priority so that they are killed first in an overflow situation. </p>
 <h2 id="settings_synth_overflow_sustained"><code>synth.overflow.sustained</code></h2>
 <div class="admonition tip">
 <p class="admonition-title">Real-time</p>
@@ -5968,7 +5968,7 @@
 </tr>
 </tbody>
 </table>
-<p>Sets the overflow priority score added to voices that are currently sustained. With the default value, sustained voices are considered less important and are more likely to be killed in an overflow situation.</p>
+<p>Sets the overflow priority score added to voices that are currently sustained. With the default value, sustained voices are considered less important and are more likely to be killed in an overflow situation. </p>
 <h2 id="settings_synth_overflow_volume"><code>synth.overflow.volume</code></h2>
 <div class="admonition tip">
 <p class="admonition-title">Real-time</p>
@@ -6000,7 +6000,7 @@
 </tr>
 </tbody>
 </table>
-<p>Sets the overflow priority score added to voices based on their current volume. The voice volume is normalized to a value between 0 and 1 and multiplied with this setting. So voices with maximum volume get added the full score, voices with only half that volume get added half of this score.</p>
+<p>Sets the overflow priority score added to voices based on their current volume. The voice volume is normalized to a value between 0 and 1 and multiplied with this setting. So voices with maximum volume get added the full score, voices with only half that volume get added half of this score. </p>
 <h2 id="settings_synth_polyphony"><code>synth.polyphony</code></h2>
 <div class="admonition tip">
 <p class="admonition-title">Real-time</p>
@@ -6060,10 +6060,10 @@
 </tr>
 </tbody>
 </table>
-<p>This setting was introduced in 2.5.0 to specify how to handle portamento time CC MSB and LSB.</p>
+<p>This setting was introduced in 2.5.0 to specify how to handle portamento time CC MSB and LSB. </p>
 <ul>
 <li>
-<p>'linear' - portamento time is 14 bits wide and calculated as<code>CC5 * 128 + CC37</code>in milliseconds (this was fluidsynth's behavior before this setting was introduced).</p>
+<p>'linear' - portamento time is 14 bits wide and calculated as <code>CC5 * 128 + CC37</code> in milliseconds (this was fluidsynth's behavior before this setting was introduced).</p>
 </li>
 <li>
 <p>'xg-gs' - portamento time is 7 bits wide, using only CC5, which is mapped onto a concave curve ranging from 0s to 480s. The exact mapping was derived through listening tests and may be subject to change between different versions of fluidsynth. This setting should be used for older MIDI files, like Descent Game08.</p>
@@ -6095,7 +6095,7 @@
 </tr>
 </tbody>
 </table>
-<p>When set to 1 (TRUE) the reverb effects module is activated. Otherwise, no reverb will be added to the output signal. The amount of signal sent to the reverb module depends on the "reverb send" generator defined in the SoundFont.</p>
+<p>When set to 1 (TRUE) the reverb effects module is activated. Otherwise, no reverb will be added to the output signal. The amount of signal sent to the reverb module depends on the "reverb send" generator defined in the SoundFont. </p>
 <h2 id="settings_synth_reverb_damp"><code>synth.reverb.damp</code></h2>
 <div class="admonition tip">
 <p class="admonition-title">Real-time</p>
@@ -6151,10 +6151,10 @@
 </tr>
 </tbody>
 </table>
-<p>Selects the reverb engine to use. Note that engine selection applies at synth creation only and cannot be changed during runtime. An overview of supported reverb engines is available in the<a href="https://www.fluidsynth.org/api/ReverbOverview.html">API documentation.</a></p>
+<p>Introduced in version 2.6.0, this setting selects the reverb engine to use. The engine selection applies at synth creation only and cannot be changed during the lifetime of a synth. An overview of those reverb engines is available in the <a href="https://www.fluidsynth.org/wiki/reverbators/">wiki.</a></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The<code>smith</code>engine requires FluidSynth to be compiled with Signalsmith Audio Basics support.</p>
+<p>Not all reverb engines may be present in all versions of fluidsynth. E.g. the <code>smith</code> engine requires FluidSynth to be compiled with Signalsmith Audio Basics support. Therefore, implementations are advised to query this setting for available options using <code>fluid_settings_foreach_option()</code>. </p>
 </div>
 <h2 id="settings_synth_reverb_level"><code>synth.reverb.level</code></h2>
 <div class="admonition tip">
@@ -6219,7 +6219,7 @@
 </tr>
 </tbody>
 </table>
-<p>Sets the room size (i.e. decay duration of wet) reverb.</p>
+<p>Sets the room size (i.e. decay duration of wet) reverb. </p>
 <div class="admonition warning">
 <p class="admonition-title">Attention</p>
 <p>Depending on the reverb engine, higher values may cause audio feedback, similar to hanging notes or accumulating output amplitudes!</p>
@@ -6255,7 +6255,7 @@
 </tr>
 </tbody>
 </table>
-<p>Sets the stereo spread of the reverb signal, i.e. how much the wet-left signal contributes to the wet-right signal and vice versa. A value of 0 indicates no stereo-spread causing the reverb to sound like a monophonic signal. A value of 1 indicates maximum spread between the uncorrelated left and right channels. This subrange<code>[0;1]</code>is recommended for general usage. Values bigger than 1 increase (or exaggerate) the perception of the uncorrelated left and right signals. Otherwise, this setting should be considered as dimensionless quantity, with its maximum value existing for historical reasons.</p>
+<p>Sets the stereo spread of the reverb signal, i.e. how much the wet-left signal contributes to the wet-right signal and vice versa. A value of 0 indicates no stereo-spread causing the reverb to sound like a monophonic signal. A value of 1 indicates maximum spread between the uncorrelated left and right channels. This subrange <code>[0;1]</code> is recommended for general usage. Values bigger than 1 increase (or exaggerate) the perception of the uncorrelated left and right signals. Otherwise, this setting should be considered as dimensionless quantity, with its maximum value existing for historical reasons. </p>
 <div class="admonition warning">
 <p class="admonition-title">Attention</p>
 <p>Under some circumstances, values bigger than 1 may induce a feedback into the signal which can be perceived as unpleasant.</p>
@@ -6287,9 +6287,9 @@
 </tr>
 </tbody>
 </table>
-<p>The sample rate of the audio generated by the synthesizer. For optimal performance, make sure this value equals the native output rate of the audio driver (in case you are using any of FluidSynth's audio drivers). Some drivers, such as Oboe, will interpolate sample rates, whereas others, such as JACK, will override this setting if a mismatch with the native output rate is detected.  </p>
-<p>Important: This setting should not be changed during runtime of the synthesizer.  </p>
-<p>The sample rate is applied when the synthesizer is created and controls the rate at which samples are synthesized. Changing this value after creating the synthesizer does not affect the synthesizer. Audio drivers created later may use the updated setting value and cause the audio to play out of tune. If you need to change the sample rate, recreate both the synthesizer and the audio driver using settings with the new sample rate.</p>
+<p>The sample rate of the audio generated by the synthesizer. For optimal performance, make sure this value equals the native output rate of the audio driver (in case you are using any of FluidSynth's audio drivers). Some drivers, such as Oboe, will interpolate sample rates, whereas others, such as JACK, will override this setting if a mismatch with the native output rate is detected.   </p>
+<p>Important: This setting should not be changed during runtime of the synthesizer.   </p>
+<p>The sample rate is applied when the synthesizer is created and controls the rate at which samples are synthesized. Changing this value after creating the synthesizer does not affect the synthesizer. Audio drivers created later may use the updated setting value and cause the audio to play out of tune. If you need to change the sample rate, recreate both the synthesizer and the audio driver using settings with the new sample rate. </p>
 <h2 id="settings_synth_threadsafe-api"><code>synth.threadsafe-api</code></h2>
 <table>
 <thead>
@@ -6309,7 +6309,7 @@
 </tr>
 </tbody>
 </table>
-<p>Controls whether the synth's public API is protected by a mutex or not. Default is on, turn it off for slightly better performance if you know you're only accessing the synth from one thread only, this could be the case in many embedded use cases for example.</p>
+<p>Controls whether the synth's public API is protected by a mutex or not. Default is on, turn it off for slightly better performance if you know you're only accessing the synth from one thread only, this could be the case in many embedded use cases for example. </p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>libfluidsynth can use many threads by itself (shell is one, midi driver is one, midi player is one etc) so you should usually leave it on.</p>
@@ -6333,7 +6333,7 @@
 </tr>
 </tbody>
 </table>
-<p>When set to 1 (TRUE) the synthesizer will print out information about the received MIDI events to the stdout. This can be helpful for debugging. This setting cannot be changed after the synthesizer has started.</p>
+<p>When set to 1 (TRUE) the synthesizer will print out information about the received MIDI events to the stdout. This can be helpful for debugging. This setting cannot be changed after the synthesizer has started. </p>
 
 
 
