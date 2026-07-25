@@ -1310,6 +1310,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#settings_audio_pipewire_async" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>audio.pipewire.async</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#settings_audio_pipewire_media-category" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
@@ -4451,6 +4462,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#settings_audio_pipewire_async" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>audio.pipewire.async</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#settings_audio_pipewire_media-category" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
@@ -5345,6 +5367,30 @@
 </tbody>
 </table>
 <p>The number of the audio buffers used by the driver. This number of buffers, multiplied by the buffer size (see setting audio.period-size), determines the maximum latency of the audio driver. </p>
+<h2 id="settings_audio_pipewire_async"><code>audio.pipewire.async</code></h2>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td><code>Boolean (int)</code></td>
+</tr>
+<tr>
+<td>Default</td>
+<td><code>1 (TRUE)</code></td>
+</tr>
+</tbody>
+</table>
+<p>If TRUE, creates an asynchronous PipeWire stream. This isolates synthesizer from PipeWire's synchronous processing graph, preventing system-wide audio dropouts (xruns) during heavy workload (such as high polyphones). Requires PipeWire &gt;= 0.3.73. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Enabling this automatically doubles the actual latency.</p>
+</div>
 <h2 id="settings_audio_pipewire_media-category"><code>audio.pipewire.media-category</code></h2>
 <table>
 <thead>
