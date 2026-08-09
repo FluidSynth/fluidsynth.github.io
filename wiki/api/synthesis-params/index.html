@@ -4564,8 +4564,24 @@
 <td>Fourth-order interpolation, best quality, the default.</td>
 </tr>
 <tr>
+<td><code>FLUID_INTERP_MID</code></td>
+<td>Sinc interpolation with a better quality than <a href="../synthesis-params/#fluid_interp"><code>FLUID_INTERP_4THORDER</code></a> (currently 11th order sinc).</td>
+</tr>
+<tr>
+<td><code>FLUID_INTERP_HIGH</code></td>
+<td>Sinc interpolation with an even higher-level quality (25 points).</td>
+</tr>
+<tr>
+<td><code>FLUID_INTERP_HIGHEST</code></td>
+<td>Highest interpolation method available.  Typically a very high order sinc. Utterly slow and pretty much unusable for real-time rendering.</td>
+</tr>
+<tr>
 <td><code>FLUID_INTERP_7THORDER</code></td>
-<td>Seventh-point sinc interpolation.  This interpolation method was believed to provide highest quality. However, in Feb. 2025 it was discovered that for certain samples it does introduce ringing artifacts, which are not present in the 4th order interpolation. This is not a bug, it's rather a limitation of only using 7 points for the sinc interpolation.</td>
+<td>Before fluidsynth 2.6.0, this indicated seventh-point sinc interpolation.  As of fluidsynth 2.6.0 this enum value is deprecated as its naming no longer reflects its implementation.</td>
+</tr>
+<tr>
+<td>This interpolation method was believed to provide highest quality. However, in Feb. 2025 it was discovered that for certain samples it does introduce ringing artifacts, which are not present in the 4th order interpolation. This is not a bug, it's rather a limitation of only using 7 points for the sinc interpolation.</td>
+<td></td>
 </tr>
 <tr>
 <td></td>
@@ -4574,10 +4590,6 @@
 <tr>
 <td><code>FLUID_INTERP_DEFAULT</code></td>
 <td>Default interpolation method.</td>
-</tr>
-<tr>
-<td><code>FLUID_INTERP_HIGHEST</code></td>
-<td>Highest interpolation method.</td>
 </tr>
 </tbody>
 </table>

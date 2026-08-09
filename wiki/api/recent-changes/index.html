@@ -4542,6 +4542,7 @@
 <li>A lookahead limiter has been added, see <a href="../../settings/synth/#settings_synth_limiter_active"><code>synth.limiter.active</code></a> and other related limiter settings </li>
 <li>Support for 24bit and 32bit audio has been added, see <a href=".././audio-rendering/#fluid_synth_write_s24"><code>fluid_synth_write_s24()</code></a> and <a href=".././audio-rendering/#fluid_synth_write_s32"><code>fluid_synth_write_s32()</code></a> </li>
 <li>Added <a href=".././voices/#fluid_voice_set_callback"><code>fluid_voice_set_callback()</code></a> for voice lifecycle notifications </li>
+<li><a href=".././synthesis-params/#fluid_interp"><code>FLUID_INTERP_7THORDER</code></a> was deprecated. Since its value aliased with <a href=".././synthesis-params/#fluid_interp"><code>FLUID_INTERP_HIGHEST</code></a> both now indicate the highest interpolation fluidsynth can achieve, which is also the slowest. Much slower than in previous versions. For faster sinc interpolations, pls. refer to the newly added values <a href=".././synthesis-params/#fluid_interp"><code>FLUID_INTERP_MID</code></a> and <a href=".././synthesis-params/#fluid_interp"><code>FLUID_INTERP_HIGH</code></a> </li>
 </ul>
 <h2 id="whats-new-in-254">What's new in 2.5.4?</h2>
 <ul>
