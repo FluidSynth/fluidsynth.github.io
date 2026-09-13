@@ -3292,6 +3292,45 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="fluid_voice_add_mod">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#FLUID_VOICE_OVERWRITE" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>FLUID_VOICE_OVERWRITE</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#FLUID_VOICE_ADD" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>FLUID_VOICE_ADD</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#FLUID_VOICE_DEFAULT" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>FLUID_VOICE_DEFAULT</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -3302,6 +3341,34 @@
       </span>
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="fluid_voice_callback_reason">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#FLUID_VOICE_CALLBACK_NOTEOFF" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>FLUID_VOICE_CALLBACK_NOTEOFF</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#FLUID_VOICE_CALLBACK_FINISHED" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>FLUID_VOICE_CALLBACK_FINISHED</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -4104,6 +4171,45 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="fluid_voice_add_mod">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#FLUID_VOICE_OVERWRITE" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>FLUID_VOICE_OVERWRITE</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#FLUID_VOICE_ADD" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>FLUID_VOICE_ADD</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#FLUID_VOICE_DEFAULT" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>FLUID_VOICE_DEFAULT</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -4114,6 +4220,34 @@
       </span>
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="fluid_voice_callback_reason">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#FLUID_VOICE_CALLBACK_NOTEOFF" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>FLUID_VOICE_CALLBACK_NOTEOFF</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#FLUID_VOICE_CALLBACK_FINISHED" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>FLUID_VOICE_CALLBACK_FINISHED</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -4645,56 +4779,28 @@
 <h2 id="enumerations">Enumerations</h2>
 <h3 id="fluid_voice_add_mod"><code>fluid_voice_add_mod</code></h3>
 <p>Enum used with <a href="../voices/#fluid_voice_add_mod"><code>fluid_voice_add_mod()</code></a> to specify how to handle duplicate modulators. </p>
-<table>
-<thead>
-<tr>
-<th>Value</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>FLUID_VOICE_OVERWRITE</code></td>
-<td>Overwrite any existing matching modulator.</td>
-</tr>
-<tr>
-<td><code>FLUID_VOICE_ADD</code></td>
-<td>Add (sum) modulator amounts.</td>
-</tr>
-<tr>
-<td><code>FLUID_VOICE_DEFAULT</code></td>
-<td>For default modulators only, no need to check for duplicates.</td>
-</tr>
-</tbody>
-</table>
+<h4 id="FLUID_VOICE_OVERWRITE"><code>FLUID_VOICE_OVERWRITE</code></h4>
+<p>Overwrite any existing matching modulator. </p>
+<h4 id="FLUID_VOICE_ADD"><code>FLUID_VOICE_ADD</code></h4>
+<p>Add (sum) modulator amounts. </p>
+<h4 id="FLUID_VOICE_DEFAULT"><code>FLUID_VOICE_DEFAULT</code></h4>
+<p>For default modulators only, no need to check for duplicates. </p>
 <h3 id="fluid_voice_callback_reason"><code>fluid_voice_callback_reason</code></h3>
 <p>Enum indicating the reason a voice callback was invoked. </p>
-<table>
-<thead>
-<tr>
-<th>Value</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>FLUID_VOICE_CALLBACK_NOTEOFF</code></td>
-<td>A true noteoff is about to be processed for this voice by the next rendering call, i.e.  the voice is neither sustained nor sostenutoed and is about to enter its release phase with the next rendering call. This event may not be fired if the sample ends before the voice receives a noteoff event. Think of short and unlooped percussion samples, for example.</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><code>FLUID_VOICE_CALLBACK_FINISHED</code></td>
-<td>The voice has finished playing and is about to be removed from the DSP loop.  The voice remains valid until the callback returns. After that, the voice instance should be considered invalid as it may be reclaimed immediately afterwards. This event will always be fired, even when the voice is being killed or stolen due to polyphony overflow.</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
+<h4 id="FLUID_VOICE_CALLBACK_NOTEOFF"><code>FLUID_VOICE_CALLBACK_NOTEOFF</code></h4>
+<p>A true noteoff is about to be processed for this voice by the next rendering call, i.e. </p>
+<p>the voice is neither sustained nor sostenutoed and is about to enter its release phase with the next rendering call. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This event may not be fired if the sample ends before the voice receives a noteoff event. Think of short and unlooped percussion samples, for example.  </p>
+</div>
+<h4 id="FLUID_VOICE_CALLBACK_FINISHED"><code>FLUID_VOICE_CALLBACK_FINISHED</code></h4>
+<p>The voice has finished playing and is about to be removed from the DSP loop. </p>
+<p>The voice remains valid until the callback returns. After that, the voice instance should be considered invalid as it may be reclaimed immediately afterwards. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This event will always be fired, even when the voice is being killed or stolen due to polyphony overflow.  </p>
+</div>
 <div class="admonition tip">
 <p class="admonition-title">Since</p>
 <p>2.6.0  </p>

@@ -5136,7 +5136,7 @@
 - <a href="../sequencer-events/#fluid_seq_event_type"><code>FLUID_SEQ_NOTEON</code></a> and <a href="../sequencer-events/#fluid_seq_event_type"><code>FLUID_SEQ_NOTE</code></a> events succeed any other event type. 
 - Otherwise the order is undefined. </p>
 </div>
-<p>Or mathematically: <a href="../sequencer-events/#fluid_seq_event_type"><code>FLUID_SEQ_NOTEOFF</code></a> &lt; <a href="../sequencer-events/#fluid_seq_event_type"><code>FLUID_SEQ_SYSTEMRESET</code></a> &lt; <a href="../sequencer-events/#fluid_seq_event_type"><code>FLUID_SEQ_UNREGISTERING</code></a> &lt; ... &lt; (<a href="../sequencer-events/#fluid_seq_event_type"><code>FLUID_SEQ_NOTEON</code></a> &amp;&amp; <a href="../sequencer-events/#fluid_seq_event_type"><code>FLUID_SEQ_NOTE</code></a>) </p>
+<p>Or mathematically: <a href="../sequencer-events/#fluid_seq_event_type"><code>FLUID_SEQ_NOTEOFF</code></a> &lt; <a href="../sequencer-events/#fluid_seq_event_type"><code>FLUID_SEQ_SYSTEMRESET</code></a> &lt; <a href="../sequencer-events/#fluid_seq_event_type"><code>FLUID_SEQ_UNREGISTERING</code></a> &lt; ... &lt; (<a href="../sequencer-events/#fluid_seq_event_type"><code>FLUID_SEQ_NOTEON</code></a> &amp;&amp; <a href="../sequencer-events/#fluid_seq_event_type"><code>FLUID_SEQ_NOTE</code></a>)  </p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Be careful with relative ticks when sending many events! See <a href="../sequencer/#fluid_event_callback_t"><code>fluid_event_callback_t</code></a> for details.  </p>

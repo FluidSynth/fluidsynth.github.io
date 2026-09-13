@@ -2482,6 +2482,34 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="fluid_midi_channel_type">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#CHANNEL_TYPE_MELODIC" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>CHANNEL_TYPE_MELODIC = 0</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#CHANNEL_TYPE_DRUM" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>CHANNEL_TYPE_DRUM = 1</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -2521,6 +2549,34 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="fluid_channel_mode_flags">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#FLUID_CHANNEL_POLY_OFF" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>FLUID_CHANNEL_POLY_OFF = 0x01</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#FLUID_CHANNEL_OMNI_OFF" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>FLUID_CHANNEL_OMNI_OFF = 0x02</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -2531,6 +2587,78 @@
       </span>
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="fluid_basic_channel_modes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#FLUID_CHANNEL_MODE_MASK" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>FLUID_CHANNEL_MODE_MASK = (FLUID_CHANNEL_OMNI_OFF | FLUID_CHANNEL_POLY_OFF)</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#FLUID_CHANNEL_MODE_OMNION_POLY" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>FLUID_CHANNEL_MODE_OMNION_POLY = (int)FLUID_CHANNEL_MODE_MASK &amp; (int)(~FLUID_CHANNEL_OMNI_OFF &amp; ~FLUID_CHANNEL_POLY_OFF)</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#FLUID_CHANNEL_MODE_OMNION_MONO" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>FLUID_CHANNEL_MODE_OMNION_MONO = (int)FLUID_CHANNEL_MODE_MASK &amp; (int)(~FLUID_CHANNEL_OMNI_OFF &amp; FLUID_CHANNEL_POLY_OFF)</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#FLUID_CHANNEL_MODE_OMNIOFF_POLY" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>FLUID_CHANNEL_MODE_OMNIOFF_POLY = (int)FLUID_CHANNEL_MODE_MASK &amp; (int)(FLUID_CHANNEL_OMNI_OFF &amp; ~FLUID_CHANNEL_POLY_OFF)</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#FLUID_CHANNEL_MODE_OMNIOFF_MONO" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>FLUID_CHANNEL_MODE_OMNIOFF_MONO = (int)FLUID_CHANNEL_MODE_MASK &amp; (int)(FLUID_CHANNEL_OMNI_OFF | FLUID_CHANNEL_POLY_OFF)</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#FLUID_CHANNEL_MODE_LAST" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>FLUID_CHANNEL_MODE_LAST</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -2593,6 +2721,45 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="fluid_channel_legato_mode">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#FLUID_CHANNEL_LEGATO_MODE_RETRIGGER" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>FLUID_CHANNEL_LEGATO_MODE_RETRIGGER</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#FLUID_CHANNEL_LEGATO_MODE_MULTI_RETRIGGER" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>FLUID_CHANNEL_LEGATO_MODE_MULTI_RETRIGGER</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#FLUID_CHANNEL_LEGATO_MODE_LAST" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>FLUID_CHANNEL_LEGATO_MODE_LAST</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -2642,6 +2809,56 @@
       </span>
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="fluid_channel_portamento_mode">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#FLUID_CHANNEL_PORTAMENTO_MODE_EACH_NOTE" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>FLUID_CHANNEL_PORTAMENTO_MODE_EACH_NOTE</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#FLUID_CHANNEL_PORTAMENTO_MODE_LEGATO_ONLY" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>FLUID_CHANNEL_PORTAMENTO_MODE_LEGATO_ONLY</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#FLUID_CHANNEL_PORTAMENTO_MODE_STACCATO_ONLY" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>FLUID_CHANNEL_PORTAMENTO_MODE_STACCATO_ONLY</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#FLUID_CHANNEL_PORTAMENTO_MODE_LAST" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>FLUID_CHANNEL_PORTAMENTO_MODE_LAST</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -2693,6 +2910,45 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="fluid_channel_breath_flags">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#FLUID_CHANNEL_BREATH_POLY" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>FLUID_CHANNEL_BREATH_POLY = 0x10</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#FLUID_CHANNEL_BREATH_MONO" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>FLUID_CHANNEL_BREATH_MONO = 0x20</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#FLUID_CHANNEL_BREATH_SYNC" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>FLUID_CHANNEL_BREATH_SYNC = 0x40</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -2742,6 +2998,56 @@
       </span>
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="fluid_portamento_time_mode">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#FLUID_PORTAMENTO_TIME_MODE_AUTO" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>FLUID_PORTAMENTO_TIME_MODE_AUTO</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#FLUID_PORTAMENTO_TIME_MODE_XG_GS" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>FLUID_PORTAMENTO_TIME_MODE_XG_GS</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#FLUID_PORTAMENTO_TIME_MODE_LINEAR" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>FLUID_PORTAMENTO_TIME_MODE_LINEAR</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#FLUID_PORTAMENTO_TIME_MODE_LAST" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>FLUID_PORTAMENTO_TIME_MODE_LAST</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -4144,6 +4450,34 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="fluid_midi_channel_type">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#CHANNEL_TYPE_MELODIC" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>CHANNEL_TYPE_MELODIC = 0</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#CHANNEL_TYPE_DRUM" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>CHANNEL_TYPE_DRUM = 1</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -4183,6 +4517,34 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="fluid_channel_mode_flags">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#FLUID_CHANNEL_POLY_OFF" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>FLUID_CHANNEL_POLY_OFF = 0x01</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#FLUID_CHANNEL_OMNI_OFF" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>FLUID_CHANNEL_OMNI_OFF = 0x02</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -4193,6 +4555,78 @@
       </span>
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="fluid_basic_channel_modes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#FLUID_CHANNEL_MODE_MASK" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>FLUID_CHANNEL_MODE_MASK = (FLUID_CHANNEL_OMNI_OFF | FLUID_CHANNEL_POLY_OFF)</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#FLUID_CHANNEL_MODE_OMNION_POLY" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>FLUID_CHANNEL_MODE_OMNION_POLY = (int)FLUID_CHANNEL_MODE_MASK &amp; (int)(~FLUID_CHANNEL_OMNI_OFF &amp; ~FLUID_CHANNEL_POLY_OFF)</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#FLUID_CHANNEL_MODE_OMNION_MONO" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>FLUID_CHANNEL_MODE_OMNION_MONO = (int)FLUID_CHANNEL_MODE_MASK &amp; (int)(~FLUID_CHANNEL_OMNI_OFF &amp; FLUID_CHANNEL_POLY_OFF)</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#FLUID_CHANNEL_MODE_OMNIOFF_POLY" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>FLUID_CHANNEL_MODE_OMNIOFF_POLY = (int)FLUID_CHANNEL_MODE_MASK &amp; (int)(FLUID_CHANNEL_OMNI_OFF &amp; ~FLUID_CHANNEL_POLY_OFF)</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#FLUID_CHANNEL_MODE_OMNIOFF_MONO" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>FLUID_CHANNEL_MODE_OMNIOFF_MONO = (int)FLUID_CHANNEL_MODE_MASK &amp; (int)(FLUID_CHANNEL_OMNI_OFF | FLUID_CHANNEL_POLY_OFF)</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#FLUID_CHANNEL_MODE_LAST" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>FLUID_CHANNEL_MODE_LAST</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -4255,6 +4689,45 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="fluid_channel_legato_mode">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#FLUID_CHANNEL_LEGATO_MODE_RETRIGGER" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>FLUID_CHANNEL_LEGATO_MODE_RETRIGGER</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#FLUID_CHANNEL_LEGATO_MODE_MULTI_RETRIGGER" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>FLUID_CHANNEL_LEGATO_MODE_MULTI_RETRIGGER</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#FLUID_CHANNEL_LEGATO_MODE_LAST" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>FLUID_CHANNEL_LEGATO_MODE_LAST</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -4304,6 +4777,56 @@
       </span>
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="fluid_channel_portamento_mode">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#FLUID_CHANNEL_PORTAMENTO_MODE_EACH_NOTE" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>FLUID_CHANNEL_PORTAMENTO_MODE_EACH_NOTE</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#FLUID_CHANNEL_PORTAMENTO_MODE_LEGATO_ONLY" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>FLUID_CHANNEL_PORTAMENTO_MODE_LEGATO_ONLY</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#FLUID_CHANNEL_PORTAMENTO_MODE_STACCATO_ONLY" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>FLUID_CHANNEL_PORTAMENTO_MODE_STACCATO_ONLY</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#FLUID_CHANNEL_PORTAMENTO_MODE_LAST" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>FLUID_CHANNEL_PORTAMENTO_MODE_LAST</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -4355,6 +4878,45 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="fluid_channel_breath_flags">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#FLUID_CHANNEL_BREATH_POLY" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>FLUID_CHANNEL_BREATH_POLY = 0x10</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#FLUID_CHANNEL_BREATH_MONO" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>FLUID_CHANNEL_BREATH_MONO = 0x20</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#FLUID_CHANNEL_BREATH_SYNC" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>FLUID_CHANNEL_BREATH_SYNC = 0x40</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -4404,6 +4966,56 @@
       </span>
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="fluid_portamento_time_mode">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#FLUID_PORTAMENTO_TIME_MODE_AUTO" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>FLUID_PORTAMENTO_TIME_MODE_AUTO</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#FLUID_PORTAMENTO_TIME_MODE_XG_GS" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>FLUID_PORTAMENTO_TIME_MODE_XG_GS</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#FLUID_PORTAMENTO_TIME_MODE_LINEAR" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>FLUID_PORTAMENTO_TIME_MODE_LINEAR</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#FLUID_PORTAMENTO_TIME_MODE_LAST" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>FLUID_PORTAMENTO_TIME_MODE_LAST</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -4723,24 +5335,10 @@
 <h2 id="channel-type">Channel Type</h2>
 <h3 id="fluid_midi_channel_type"><code>fluid_midi_channel_type</code></h3>
 <p>The midi channel type used by <a href="../channel-setup/#fluid_synth_set_channel_type"><code>fluid_synth_set_channel_type()</code></a>. </p>
-<table>
-<thead>
-<tr>
-<th>Value</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>CHANNEL_TYPE_MELODIC</code></td>
-<td>Melodic midi channel.</td>
-</tr>
-<tr>
-<td><code>CHANNEL_TYPE_DRUM</code></td>
-<td>Drum midi channel.</td>
-</tr>
-</tbody>
-</table>
+<h4 id="CHANNEL_TYPE_MELODIC"><code>CHANNEL_TYPE_MELODIC = 0</code></h4>
+<p>Melodic midi channel. </p>
+<h4 id="CHANNEL_TYPE_DRUM"><code>CHANNEL_TYPE_DRUM = 1</code></h4>
+<p>Drum midi channel. </p>
 <h3 id="fluid_synth_set_channel_type"><code>fluid_synth_set_channel_type()</code></h3>
 <div class="language-c highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">fluid_synth_set_channel_type</span><span class="p">(</span><span class="n">fluid_synth_t</span><span class="w"> </span><span class="o">*</span><span class="n">synth</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">chan</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">type</span><span class="p">)</span>
 </span></code></pre></div>
@@ -4776,60 +5374,23 @@
 <h2 id="basic-channel-mode">Basic Channel Mode</h2>
 <h3 id="fluid_channel_mode_flags"><code>fluid_channel_mode_flags</code></h3>
 <p>Channel mode bits OR-ed together so that it matches with the midi spec: poly omnion (0), mono omnion (1), poly omnioff (2), mono omnioff (3). </p>
-<table>
-<thead>
-<tr>
-<th>Value</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>FLUID_CHANNEL_POLY_OFF</code></td>
-<td>if flag is set, the basic channel is in mono on state, if not set poly is on</td>
-</tr>
-<tr>
-<td><code>FLUID_CHANNEL_OMNI_OFF</code></td>
-<td>if flag is set, the basic channel is in omni off state, if not set omni is on</td>
-</tr>
-</tbody>
-</table>
+<h4 id="FLUID_CHANNEL_POLY_OFF"><code>FLUID_CHANNEL_POLY_OFF = 0x01</code></h4>
+<p>if flag is set, the basic channel is in mono on state, if not set poly is on </p>
+<h4 id="FLUID_CHANNEL_OMNI_OFF"><code>FLUID_CHANNEL_OMNI_OFF = 0x02</code></h4>
+<p>if flag is set, the basic channel is in omni off state, if not set omni is on </p>
 <h3 id="fluid_basic_channel_modes"><code>fluid_basic_channel_modes</code></h3>
 <p>Indicates the mode a basic channel is set to. </p>
-<table>
-<thead>
-<tr>
-<th>Value</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>FLUID_CHANNEL_MODE_MASK</code></td>
-<td>Mask Poly and Omni bits of <a href="../channel-setup/#fluid_channel_mode_flags"><code>fluid_channel_mode_flags</code></a>, usually only used internally.</td>
-</tr>
-<tr>
-<td><code>FLUID_CHANNEL_MODE_OMNION_POLY</code></td>
-<td>corresponds to MIDI mode 0</td>
-</tr>
-<tr>
-<td><code>FLUID_CHANNEL_MODE_OMNION_MONO</code></td>
-<td>corresponds to MIDI mode 1</td>
-</tr>
-<tr>
-<td><code>FLUID_CHANNEL_MODE_OMNIOFF_POLY</code></td>
-<td>corresponds to MIDI mode 2</td>
-</tr>
-<tr>
-<td><code>FLUID_CHANNEL_MODE_OMNIOFF_MONO</code></td>
-<td>corresponds to MIDI mode 3</td>
-</tr>
-<tr>
-<td><code>FLUID_CHANNEL_MODE_LAST</code></td>
-<td></td>
-</tr>
-</tbody>
-</table>
+<h4 id="FLUID_CHANNEL_MODE_MASK"><code>FLUID_CHANNEL_MODE_MASK = (FLUID_CHANNEL_OMNI_OFF | FLUID_CHANNEL_POLY_OFF)</code></h4>
+<p>Mask Poly and Omni bits of <a href="../channel-setup/#fluid_channel_mode_flags"><code>fluid_channel_mode_flags</code></a>, usually only used internally. </p>
+<h4 id="FLUID_CHANNEL_MODE_OMNION_POLY"><code>FLUID_CHANNEL_MODE_OMNION_POLY = (int)FLUID_CHANNEL_MODE_MASK &amp; (int)(~FLUID_CHANNEL_OMNI_OFF &amp; ~FLUID_CHANNEL_POLY_OFF)</code></h4>
+<p>corresponds to MIDI mode 0 </p>
+<h4 id="FLUID_CHANNEL_MODE_OMNION_MONO"><code>FLUID_CHANNEL_MODE_OMNION_MONO = (int)FLUID_CHANNEL_MODE_MASK &amp; (int)(~FLUID_CHANNEL_OMNI_OFF &amp; FLUID_CHANNEL_POLY_OFF)</code></h4>
+<p>corresponds to MIDI mode 1 </p>
+<h4 id="FLUID_CHANNEL_MODE_OMNIOFF_POLY"><code>FLUID_CHANNEL_MODE_OMNIOFF_POLY = (int)FLUID_CHANNEL_MODE_MASK &amp; (int)(FLUID_CHANNEL_OMNI_OFF &amp; ~FLUID_CHANNEL_POLY_OFF)</code></h4>
+<p>corresponds to MIDI mode 2 </p>
+<h4 id="FLUID_CHANNEL_MODE_OMNIOFF_MONO"><code>FLUID_CHANNEL_MODE_OMNIOFF_MONO = (int)FLUID_CHANNEL_MODE_MASK &amp; (int)(FLUID_CHANNEL_OMNI_OFF | FLUID_CHANNEL_POLY_OFF)</code></h4>
+<p>corresponds to MIDI mode 3 </p>
+<h4 id="FLUID_CHANNEL_MODE_LAST"><code>FLUID_CHANNEL_MODE_LAST</code></h4>
 <h3 id="fluid_synth_reset_basic_channel"><code>fluid_synth_reset_basic_channel()</code></h3>
 <div class="language-c highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">fluid_synth_reset_basic_channel</span><span class="p">(</span><span class="n">fluid_synth_t</span><span class="w"> </span><span class="o">*</span><span class="n">synth</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">chan</span><span class="p">)</span>
 </span></code></pre></div>
@@ -4862,7 +5423,7 @@
     - <a href="../misc/#FLUID_FAILED"><code>FLUID_FAILED</code></a>
     - synth is NULL. 
     - chan is outside MIDI channel count. 
-    - chan isn't a basic channel.  </p>
+    - chan isn't a basic channel.    </p>
 <h3 id="fluid_synth_get_basic_channel"><code>fluid_synth_get_basic_channel()</code></h3>
 <div class="language-c highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">fluid_synth_get_basic_channel</span><span class="p">(</span><span class="n">fluid_synth_t</span><span class="w"> </span><span class="o">*</span><span class="n">synth</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">chan</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">basic_chan_out</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">mode_chan_out</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">basic_val_out</span><span class="p">)</span>
 </span></code></pre></div>
@@ -4906,7 +5467,7 @@
     - <a href="../misc/#FLUID_OK"><code>FLUID_OK</code></a> on success. 
     - <a href="../misc/#FLUID_FAILED"><code>FLUID_FAILED</code></a>
     - synth is NULL. 
-    - chan is outside MIDI channel count.  </p>
+    - chan is outside MIDI channel count.    </p>
 <h3 id="fluid_synth_set_basic_channel"><code>fluid_synth_set_basic_channel()</code></h3>
 <div class="language-c highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">fluid_synth_set_basic_channel</span><span class="p">(</span><span class="n">fluid_synth_t</span><span class="w"> </span><span class="o">*</span><span class="n">synth</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">chan</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">mode</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">val</span><span class="p">)</span>
 </span></code></pre></div>
@@ -4951,32 +5512,15 @@
     - chan is outside MIDI channel count. 
     - mode is invalid. 
     - val has a number of channels overlapping another basic channel group or been above MIDI channel count. 
-    - When the function fails, any existing basic channels aren't modified.  </p>
+    - When the function fails, any existing basic channels aren't modified.    </p>
 <h2 id="legato-mode">Legato Mode</h2>
 <h3 id="fluid_channel_legato_mode"><code>fluid_channel_legato_mode</code></h3>
 <p>Indicates the legato mode a channel is set to n1,n2,n3,. </p>
-<table>
-<thead>
-<tr>
-<th>Value</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>FLUID_CHANNEL_LEGATO_MODE_RETRIGGER</code></td>
-<td>Mode 0 - Release previous note, start a new note.</td>
-</tr>
-<tr>
-<td><code>FLUID_CHANNEL_LEGATO_MODE_MULTI_RETRIGGER</code></td>
-<td>Mode 1 - On contiguous notes retrigger in attack section using current value, shape attack using current dynamic and make use of previous voices if any.</td>
-</tr>
-<tr>
-<td><code>FLUID_CHANNEL_LEGATO_MODE_LAST</code></td>
-<td></td>
-</tr>
-</tbody>
-</table>
+<h4 id="FLUID_CHANNEL_LEGATO_MODE_RETRIGGER"><code>FLUID_CHANNEL_LEGATO_MODE_RETRIGGER</code></h4>
+<p>Mode 0 - Release previous note, start a new note. </p>
+<h4 id="FLUID_CHANNEL_LEGATO_MODE_MULTI_RETRIGGER"><code>FLUID_CHANNEL_LEGATO_MODE_MULTI_RETRIGGER</code></h4>
+<p>Mode 1 - On contiguous notes retrigger in attack section using current value, shape attack using current dynamic and make use of previous voices if any. </p>
+<h4 id="FLUID_CHANNEL_LEGATO_MODE_LAST"><code>FLUID_CHANNEL_LEGATO_MODE_LAST</code></h4>
 <p>. is a legato passage. n1 is the first note, and n2,n3,n4 are played legato with previous note. </p>
 <h3 id="fluid_synth_set_legato_mode"><code>fluid_synth_set_legato_mode()</code></h3>
 <div class="language-c highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">fluid_synth_set_legato_mode</span><span class="p">(</span><span class="n">fluid_synth_t</span><span class="w"> </span><span class="o">*</span><span class="n">synth</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">chan</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">legatomode</span><span class="p">)</span>
@@ -5010,7 +5554,7 @@
     - <a href="../misc/#FLUID_FAILED"><code>FLUID_FAILED</code></a>
     - synth is NULL. 
     - chan is outside MIDI channel count. 
-    - legatomode is invalid.  </p>
+    - legatomode is invalid.    </p>
 <h3 id="fluid_synth_get_legato_mode"><code>fluid_synth_get_legato_mode()</code></h3>
 <div class="language-c highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">fluid_synth_get_legato_mode</span><span class="p">(</span><span class="n">fluid_synth_t</span><span class="w"> </span><span class="o">*</span><span class="n">synth</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">chan</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">legatomode</span><span class="p">)</span>
 </span></code></pre></div>
@@ -5043,36 +5587,17 @@
     - <a href="../misc/#FLUID_FAILED"><code>FLUID_FAILED</code></a>
     - synth is NULL. 
     - chan is outside MIDI channel count. 
-    - legatomode is NULL.  </p>
+    - legatomode is NULL.    </p>
 <h2 id="portamento-mode">Portamento Mode</h2>
 <h3 id="fluid_channel_portamento_mode"><code>fluid_channel_portamento_mode</code></h3>
 <p>Indicates the portamento mode a channel is set to. </p>
-<table>
-<thead>
-<tr>
-<th>Value</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>FLUID_CHANNEL_PORTAMENTO_MODE_EACH_NOTE</code></td>
-<td>Mode 0 - Portamento on each note (staccato or legato).</td>
-</tr>
-<tr>
-<td><code>FLUID_CHANNEL_PORTAMENTO_MODE_LEGATO_ONLY</code></td>
-<td>Mode 1 - Portamento only on legato note.</td>
-</tr>
-<tr>
-<td><code>FLUID_CHANNEL_PORTAMENTO_MODE_STACCATO_ONLY</code></td>
-<td>Mode 2 - Portamento only on staccato note.</td>
-</tr>
-<tr>
-<td><code>FLUID_CHANNEL_PORTAMENTO_MODE_LAST</code></td>
-<td></td>
-</tr>
-</tbody>
-</table>
+<h4 id="FLUID_CHANNEL_PORTAMENTO_MODE_EACH_NOTE"><code>FLUID_CHANNEL_PORTAMENTO_MODE_EACH_NOTE</code></h4>
+<p>Mode 0 - Portamento on each note (staccato or legato). </p>
+<h4 id="FLUID_CHANNEL_PORTAMENTO_MODE_LEGATO_ONLY"><code>FLUID_CHANNEL_PORTAMENTO_MODE_LEGATO_ONLY</code></h4>
+<p>Mode 1 - Portamento only on legato note. </p>
+<h4 id="FLUID_CHANNEL_PORTAMENTO_MODE_STACCATO_ONLY"><code>FLUID_CHANNEL_PORTAMENTO_MODE_STACCATO_ONLY</code></h4>
+<p>Mode 2 - Portamento only on staccato note. </p>
+<h4 id="FLUID_CHANNEL_PORTAMENTO_MODE_LAST"><code>FLUID_CHANNEL_PORTAMENTO_MODE_LAST</code></h4>
 <h3 id="fluid_synth_set_portamento_mode"><code>fluid_synth_set_portamento_mode()</code></h3>
 <div class="language-c highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">fluid_synth_set_portamento_mode</span><span class="p">(</span><span class="n">fluid_synth_t</span><span class="w"> </span><span class="o">*</span><span class="n">synth</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">chan</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">portamentomode</span><span class="p">)</span>
 </span></code></pre></div>
@@ -5105,7 +5630,7 @@
     - <a href="../misc/#FLUID_FAILED"><code>FLUID_FAILED</code></a>
     - synth is NULL. 
     - chan is outside MIDI channel count. 
-    - portamentomode is invalid.  </p>
+    - portamentomode is invalid.    </p>
 <h3 id="fluid_synth_get_portamento_mode"><code>fluid_synth_get_portamento_mode()</code></h3>
 <div class="language-c highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">fluid_synth_get_portamento_mode</span><span class="p">(</span><span class="n">fluid_synth_t</span><span class="w"> </span><span class="o">*</span><span class="n">synth</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">chan</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">portamentomode</span><span class="p">)</span>
 </span></code></pre></div>
@@ -5138,32 +5663,16 @@
     - <a href="../misc/#FLUID_FAILED"><code>FLUID_FAILED</code></a>
     - synth is NULL. 
     - chan is outside MIDI channel count. 
-    - portamentomode is NULL.  </p>
+    - portamentomode is NULL.    </p>
 <h2 id="breath-mode">Breath Mode</h2>
 <h3 id="fluid_channel_breath_flags"><code>fluid_channel_breath_flags</code></h3>
 <p>Indicates the breath mode a channel is set to. </p>
-<table>
-<thead>
-<tr>
-<th>Value</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>FLUID_CHANNEL_BREATH_POLY</code></td>
-<td>when channel is poly, this flag indicates that the default velocity to initial attenuation modulator is replaced by a breath to initial attenuation modulator</td>
-</tr>
-<tr>
-<td><code>FLUID_CHANNEL_BREATH_MONO</code></td>
-<td>when channel is mono, this flag indicates that the default velocity to initial attenuation modulator is replaced by a breath modulator</td>
-</tr>
-<tr>
-<td><code>FLUID_CHANNEL_BREATH_SYNC</code></td>
-<td>when channel is mono, this flag indicates that the breath controller(MSB)triggers noteon/noteoff on the running note</td>
-</tr>
-</tbody>
-</table>
+<h4 id="FLUID_CHANNEL_BREATH_POLY"><code>FLUID_CHANNEL_BREATH_POLY = 0x10</code></h4>
+<p>when channel is poly, this flag indicates that the default velocity to initial attenuation modulator is replaced by a breath to initial attenuation modulator </p>
+<h4 id="FLUID_CHANNEL_BREATH_MONO"><code>FLUID_CHANNEL_BREATH_MONO = 0x20</code></h4>
+<p>when channel is mono, this flag indicates that the default velocity to initial attenuation modulator is replaced by a breath modulator </p>
+<h4 id="FLUID_CHANNEL_BREATH_SYNC"><code>FLUID_CHANNEL_BREATH_SYNC = 0x40</code></h4>
+<p>when channel is mono, this flag indicates that the breath controller(MSB)triggers noteon/noteoff on the running note </p>
 <h3 id="fluid_synth_set_breath_mode"><code>fluid_synth_set_breath_mode()</code></h3>
 <div class="language-c highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">fluid_synth_set_breath_mode</span><span class="p">(</span><span class="n">fluid_synth_t</span><span class="w"> </span><span class="o">*</span><span class="n">synth</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">chan</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">breathmode</span><span class="p">)</span>
 </span></code></pre></div>
@@ -5195,7 +5704,7 @@
     - <a href="../misc/#FLUID_OK"><code>FLUID_OK</code></a> on success. 
     - <a href="../misc/#FLUID_FAILED"><code>FLUID_FAILED</code></a>
     - synth is NULL. 
-    - chan is outside MIDI channel count.  </p>
+    - chan is outside MIDI channel count.    </p>
 <h3 id="fluid_synth_get_breath_mode"><code>fluid_synth_get_breath_mode()</code></h3>
 <div class="language-c highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">fluid_synth_get_breath_mode</span><span class="p">(</span><span class="n">fluid_synth_t</span><span class="w"> </span><span class="o">*</span><span class="n">synth</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">chan</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">breathmode</span><span class="p">)</span>
 </span></code></pre></div>
@@ -5228,36 +5737,17 @@
     - <a href="../misc/#FLUID_FAILED"><code>FLUID_FAILED</code></a>
     - synth is NULL. 
     - chan is outside MIDI channel count. 
-    - breathmode is NULL.  </p>
+    - breathmode is NULL.    </p>
 <h2 id="portamento-time-mode">Portamento Time Mode</h2>
 <h3 id="fluid_portamento_time_mode"><code>fluid_portamento_time_mode</code></h3>
 <p>Indicates the portamento time mode the synthesizer is set to. </p>
-<table>
-<thead>
-<tr>
-<th>Value</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>FLUID_PORTAMENTO_TIME_MODE_AUTO</code></td>
-<td>Auto mode - Start with 7-bit MSB, switch to 14-bit when LSB seen.</td>
-</tr>
-<tr>
-<td><code>FLUID_PORTAMENTO_TIME_MODE_XG_GS</code></td>
-<td>XG/GS mode - Always use 7-bit MSB only.</td>
-</tr>
-<tr>
-<td><code>FLUID_PORTAMENTO_TIME_MODE_LINEAR</code></td>
-<td>Linear mode - Always use 14-bit MSB+LSB.</td>
-</tr>
-<tr>
-<td><code>FLUID_PORTAMENTO_TIME_MODE_LAST</code></td>
-<td></td>
-</tr>
-</tbody>
-</table>
+<h4 id="FLUID_PORTAMENTO_TIME_MODE_AUTO"><code>FLUID_PORTAMENTO_TIME_MODE_AUTO</code></h4>
+<p>Auto mode - Start with 7-bit MSB, switch to 14-bit when LSB seen. </p>
+<h4 id="FLUID_PORTAMENTO_TIME_MODE_XG_GS"><code>FLUID_PORTAMENTO_TIME_MODE_XG_GS</code></h4>
+<p>XG/GS mode - Always use 7-bit MSB only. </p>
+<h4 id="FLUID_PORTAMENTO_TIME_MODE_LINEAR"><code>FLUID_PORTAMENTO_TIME_MODE_LINEAR</code></h4>
+<p>Linear mode - Always use 14-bit MSB+LSB. </p>
+<h4 id="FLUID_PORTAMENTO_TIME_MODE_LAST"><code>FLUID_PORTAMENTO_TIME_MODE_LAST</code></h4>
 <h3 id="fluid_synth_set_portamento_time_mode"><code>fluid_synth_set_portamento_time_mode()</code></h3>
 <div class="language-c highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">fluid_synth_set_portamento_time_mode</span><span class="p">(</span><span class="n">fluid_synth_t</span><span class="w"> </span><span class="o">*</span><span class="n">synth</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">mode</span><span class="p">)</span>
 </span></code></pre></div>
@@ -5285,7 +5775,7 @@
     - <a href="../misc/#FLUID_OK"><code>FLUID_OK</code></a> on success. 
     - <a href="../misc/#FLUID_FAILED"><code>FLUID_FAILED</code></a>
     - synth is NULL. 
-    - mode is invalid.  </p>
+    - mode is invalid.    </p>
 <h3 id="fluid_synth_get_portamento_time_mode"><code>fluid_synth_get_portamento_time_mode()</code></h3>
 <div class="language-c highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">fluid_synth_get_portamento_time_mode</span><span class="p">(</span><span class="n">fluid_synth_t</span><span class="w"> </span><span class="o">*</span><span class="n">synth</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">mode</span><span class="p">)</span>
 </span></code></pre></div>
@@ -5313,7 +5803,7 @@
     - <a href="../misc/#FLUID_OK"><code>FLUID_OK</code></a> on success. 
     - <a href="../misc/#FLUID_FAILED"><code>FLUID_FAILED</code></a>
     - synth is NULL. 
-    - mode is NULL.  </p>
+    - mode is NULL.    </p>
 
 
 

@@ -3115,6 +3115,67 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="fluid_types_enum">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#FLUID_NO_TYPE" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>FLUID_NO_TYPE = -1</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#FLUID_NUM_TYPE" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>FLUID_NUM_TYPE</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#FLUID_INT_TYPE" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>FLUID_INT_TYPE</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#FLUID_STR_TYPE" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>FLUID_STR_TYPE</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#FLUID_SET_TYPE" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>FLUID_SET_TYPE</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -4287,6 +4348,67 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="fluid_types_enum">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#FLUID_NO_TYPE" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>FLUID_NO_TYPE = -1</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#FLUID_NUM_TYPE" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>FLUID_NUM_TYPE</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#FLUID_INT_TYPE" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>FLUID_INT_TYPE</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#FLUID_STR_TYPE" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>FLUID_STR_TYPE</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#FLUID_SET_TYPE" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>FLUID_SET_TYPE</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -4945,7 +5067,7 @@
 </span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>}
 </span></code></pre></div></p>
 <p>All string settings are encoded in UTF-8. This includes the names of the audio and MIDI devices, exposed as setting options.</p>
-<p><strong>See also:</strong> <a href="../../usage/creating-settings/">Creating and changing the settings</a>  </p>
+<p><strong>See also:</strong> <a href="../../usage/creating-settings/">Creating and changing the settings</a> </p>
 <h2 id="lifecycle-functions-for-settings">Lifecycle Functions for Settings</h2>
 <h3 id="new_fluid_settings"><code>new_fluid_settings()</code></h3>
 <div class="language-c highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">fluid_settings_t</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">new_fluid_settings</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
@@ -4974,36 +5096,16 @@
 <h2 id="enumerations">Enumerations</h2>
 <h3 id="fluid_types_enum"><code>fluid_types_enum</code></h3>
 <p>Settings type. </p>
-<table>
-<thead>
-<tr>
-<th>Value</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>FLUID_NO_TYPE</code></td>
-<td>Undefined type.</td>
-</tr>
-<tr>
-<td><code>FLUID_NUM_TYPE</code></td>
-<td>Numeric (double).</td>
-</tr>
-<tr>
-<td><code>FLUID_INT_TYPE</code></td>
-<td>Integer.</td>
-</tr>
-<tr>
-<td><code>FLUID_STR_TYPE</code></td>
-<td>String.</td>
-</tr>
-<tr>
-<td><code>FLUID_SET_TYPE</code></td>
-<td>Set of values.</td>
-</tr>
-</tbody>
-</table>
+<h4 id="FLUID_NO_TYPE"><code>FLUID_NO_TYPE = -1</code></h4>
+<p>Undefined type. </p>
+<h4 id="FLUID_NUM_TYPE"><code>FLUID_NUM_TYPE</code></h4>
+<p>Numeric (double). </p>
+<h4 id="FLUID_INT_TYPE"><code>FLUID_INT_TYPE</code></h4>
+<p>Integer. </p>
+<h4 id="FLUID_STR_TYPE"><code>FLUID_STR_TYPE</code></h4>
+<p>String. </p>
+<h4 id="FLUID_SET_TYPE"><code>FLUID_SET_TYPE</code></h4>
+<p>Set of values. </p>
 <p>Each setting has a defined type: numeric (double), integer, string or a set of values. The type of each setting can be retrieved using the function <a href="../settings/#fluid_settings_get_type"><code>fluid_settings_get_type()</code></a> </p>
 <h2 id="types">Types</h2>
 <h3 id="fluid_settings_foreach_option_t"><code>fluid_settings_foreach_option_t</code></h3>

@@ -4586,18 +4586,14 @@
 <li><a href=".././Types/#fluid_file_callbacks_t"><code>fluid_file_callbacks_t</code></a> now uses <code>long long</code> as file-offset type (see <a href=".././Types/#fluid_long_long_t"><code>fluid_long_long_t</code></a>).This is a breaking change, which allows to load SoundFonts bigger than 2GiB on Windows. This change required to bump fluidsynth's SOVERSION. </li>
 <li>various fluid_event_*() functions that received a "value" argument of type <code>short</code> now receive an <code>int</code> argument in preparation for MIDI 2.0 support </li>
 <li>fluid_event_any_control_change() has been removed </li>
-<li>
-<p>the sequencer has received a major revisal. For you that means:</p>
-<ul>
+<li>the sequencer has received a major revisal. For you that means:<ul>
 <li>the sequencer's queue no longer blocks the synthesizer thread, due to being busy arranging its events internally. </li>
 <li>events that share the same tick was given a new, documented order, see <a href=".././sequencer/#fluid_sequencer_send_at"><code>fluid_sequencer_send_at()</code></a>. </li>
 <li>the sequencer's scale can now be used for arbitrary tempo changes. Previously, the scale of the sequencer was limited to 1000. The only limitation now is &gt;0. </li>
-<li>there is now a dedicated event type for changing the sequencer's time scale, see <a href=".././sequencer-events/#fluid_event_scale"><code>fluid_event_scale()</code></a>. </li>
+<li>there is now a dedicated event type for changing the sequencer's time scale, see <a href=".././sequencer-events/#fluid_event_scale"><code>fluid_event_scale()</code></a>.  </li>
 </ul>
 </li>
-<li>
-<p>the dynamic-sample-loader has learned support to pin samples, see <a href=".././soundfonts/#fluid_synth_pin_preset"><code>fluid_synth_pin_preset()</code></a> and <a href=".././soundfonts/#fluid_synth_unpin_preset"><code>fluid_synth_unpin_preset()</code></a> </p>
-</li>
+<li>the dynamic-sample-loader has learned support to pin samples, see <a href=".././soundfonts/#fluid_synth_pin_preset"><code>fluid_synth_pin_preset()</code></a> and <a href=".././soundfonts/#fluid_synth_unpin_preset"><code>fluid_synth_unpin_preset()</code></a> </li>
 <li>added getter and setter functions for individual effect groups </li>
 <li>support for UTF-8 filenames under Windows, see <a href=".././soundfont-management/#fluid_synth_sfload"><code>fluid_synth_sfload()</code></a> </li>
 <li>MIDI Tempo of the fluid_player can now be overridden, see <a href=".././midi-player/#fluid_player_set_tempo"><code>fluid_player_set_tempo()</code></a> </li>
@@ -4606,7 +4602,7 @@
 <li>the following drivers have gained support for <a href=".././audio-driver/#new_fluid_audio_driver2"><code>new_fluid_audio_driver2()</code></a>:<ul>
 <li>DSound </li>
 <li>WaveOut </li>
-<li>WASAPI </li>
+<li>WASAPI  </li>
 </ul>
 </li>
 </ul>
@@ -4634,7 +4630,7 @@
 <li>opensles </li>
 <li>oboe </li>
 <li>sdl2 </li>
-<li>waveout </li>
+<li>waveout  </li>
 </ul>
 </li>
 </ul>
@@ -4660,7 +4656,7 @@
 <li>fix incorrect behaviour of <a href=".././soundfont-loader/#fluid_sample_set_sound_data"><code>fluid_sample_set_sound_data()</code></a> </li>
 <li>add missing getters for midi events:<ul>
 <li><a href=".././midi-events/#fluid_midi_event_get_text"><code>fluid_midi_event_get_text()</code></a> </li>
-<li><a href=".././midi-events/#fluid_midi_event_get_lyrics"><code>fluid_midi_event_get_lyrics()</code></a> </li>
+<li><a href=".././midi-events/#fluid_midi_event_get_lyrics"><code>fluid_midi_event_get_lyrics()</code></a>  </li>
 </ul>
 </li>
 </ul>
@@ -4673,8 +4669,7 @@
 <p><strong>Important changes that may not result in a compilation error but may cause your app to misbehave:</strong></p>
 <ul>
 <li>all public <code>fluid_settings_*</code> functions that return an integer which is not meant to be interpreted as bool consistently return either <a href=".././misc/#FLUID_OK"><code>FLUID_OK</code></a> or <a href=".././misc/#FLUID_FAILED"><code>FLUID_FAILED</code></a> </li>
-<li><a href=".././settings/#fluid_settings_setstr"><code>fluid_settings_setstr()</code></a> cannot be used to set integer (toggle) settings with "yes" or "no" values anymore. Use <a href=".././settings/#fluid_settings_setint"><code>fluid_settings_setint()</code></a> instead, for example: 
-<code>fluid_settings_setint(settings, "synth.reverb.active", 0)</code> instead of <code>fluid_settings_setstr(settings, "synth.reverb.active", "no")</code> </li>
+<li><a href=".././settings/#fluid_settings_setstr"><code>fluid_settings_setstr()</code></a> cannot be used to set integer (toggle) settings with "yes" or "no" values anymore. Use <a href=".././settings/#fluid_settings_setint"><code>fluid_settings_setint()</code></a> instead, for example: <code>fluid_settings_setint(settings, "synth.reverb.active", 0)</code> instead of <code>fluid_settings_setstr(settings, "synth.reverb.active", "no")</code> </li>
 <li>explicit client unregistering is required for <a href=".././sequencer/#fluid_sequencer_register_client"><code>fluid_sequencer_register_client()</code></a> and <a href=".././sequencer/#fluid_sequencer_register_fluidsynth"><code>fluid_sequencer_register_fluidsynth()</code></a> (since fluidsynth 2.1.1 not required anymore, but still recommend) </li>
 <li>all public functions consistently receive signed integers for soundfont ids, bank and program numbers </li>
 <li>use unique device names for the <a href="../../settings/audio/#settings_audio_portaudio_device"><code>audio.portaudio.device</code></a> setting </li>
@@ -4705,28 +4700,24 @@
 <li>add seek support to midi-player, see <a href=".././midi-player/#fluid_player_seek"><code>fluid_player_seek()</code></a> </li>
 <li>expose functions to manipulate the ladspa effects unit (see ladspa.h) </li>
 <li>add support for text and lyrics midi events, see <a href=".././midi-events/#fluid_midi_event_set_lyrics"><code>fluid_midi_event_set_lyrics()</code></a> and <a href=".././midi-events/#fluid_midi_event_set_text"><code>fluid_midi_event_set_text()</code></a> </li>
-<li>
-<p>complete rewrite of the soundfont loader API, settingsee sfont.h</p>
-<ul>
+<li>complete rewrite of the soundfont loader API, settingsee sfont.h<ul>
 <li>support for 24 bit audio samples, see <a href=".././soundfont-loader/#fluid_sample_set_sound_data"><code>fluid_sample_set_sound_data()</code></a> </li>
 <li>expose <a href=".././soundfont-loader/#new_fluid_defsfloader"><code>new_fluid_defsfloader()</code></a> to support loading soundfonts from memory, see <a href=".././soundfont-loader/#fluid_sfloader_set_callbacks"><code>fluid_sfloader_set_callbacks()</code></a> and <a href="../fluidsynth_sfload_mem_8c-example.html">fluidsynth_sfload_mem.c</a> </li>
 <li>remove these structs from the public API and provide proper getter and setter functions instead:</li>
 <li>struct _fluid_sfloader_t </li>
 <li>struct _fluid_sample_t </li>
 <li>struct _fluid_sfont_t </li>
-<li>struct _fluid_preset_t </li>
+<li>struct _fluid_preset_t   </li>
 </ul>
 </li>
-<li>
-<p>add an additional general-purpose IIR filter, see <a href=".././iir-filter/#fluid_synth_set_custom_filter"><code>fluid_synth_set_custom_filter()</code></a> </p>
-</li>
+<li>add an additional general-purpose IIR filter, see <a href=".././iir-filter/#fluid_synth_set_custom_filter"><code>fluid_synth_set_custom_filter()</code></a> </li>
 <li>add a custom sinusoidal modulator mapping function, see <a href=".././modulators/#fluid_mod_flags"><code>FLUID_MOD_SIN</code></a> </li>
 <li>implement polymono support according to MIDI specs:<ul>
 <li>add basic channel support, see <a href=".././channel-setup/#fluid_synth_reset_basic_channel"><code>fluid_synth_reset_basic_channel()</code></a>, <a href=".././channel-setup/#fluid_synth_set_basic_channel"><code>fluid_synth_set_basic_channel()</code></a>, <a href=".././channel-setup/#fluid_synth_get_basic_channel"><code>fluid_synth_get_basic_channel()</code></a> </li>
 <li>implement MIDI modes Omni On, Omni Off, Poly, Mono, see <a href=".././channel-setup/#fluid_basic_channel_modes"><code>fluid_basic_channel_modes</code></a> </li>
 <li>implement portamento control, see <a href=".././channel-setup/#fluid_synth_set_portamento_mode"><code>fluid_synth_set_portamento_mode()</code></a>, <a href=".././channel-setup/#fluid_synth_get_portamento_mode"><code>fluid_synth_get_portamento_mode()</code></a> </li>
 <li>implement legato control, see <a href=".././channel-setup/#fluid_synth_set_legato_mode"><code>fluid_synth_set_legato_mode()</code></a>, <a href=".././channel-setup/#fluid_synth_get_legato_mode"><code>fluid_synth_get_legato_mode()</code></a> </li>
-<li>implement breath control, see <a href=".././channel-setup/#fluid_synth_set_breath_mode"><code>fluid_synth_set_breath_mode()</code></a>, <a href=".././channel-setup/#fluid_synth_get_breath_mode"><code>fluid_synth_get_breath_mode()</code></a> </li>
+<li>implement breath control, see <a href=".././channel-setup/#fluid_synth_set_breath_mode"><code>fluid_synth_set_breath_mode()</code></a>, <a href=".././channel-setup/#fluid_synth_get_breath_mode"><code>fluid_synth_get_breath_mode()</code></a>  </li>
 </ul>
 </li>
 </ul>
@@ -4756,7 +4747,7 @@
 <li>GEN_LAST </li>
 <li>LAST_LOG_LEVEL </li>
 <li>FLUID_SEQ_LASTEVENT </li>
-<li>FLUID_MIDI_ROUTER_RULE_COUNT  </li>
+<li>FLUID_MIDI_ROUTER_RULE_COUNT   </li>
 </ul>
 </li>
 </ul>

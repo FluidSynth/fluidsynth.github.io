@@ -4403,7 +4403,7 @@
     - <code>fx == NULL</code> while <code>nfx &gt; 0</code>, or <code>out == NULL</code> while <code>nout &gt; 0</code>. 
     - <code>nfx</code> or <code>nout</code> not multiple of 2. 
     - <code>len &lt; 0</code>. 
-    - <code>nfx</code> or <code>nout</code> exceed the range explained above. </p>
+    - <code>nfx</code> or <code>nout</code> exceed the range explained above.  </p>
 <p>Synthesize and <strong>mix</strong> audio to a given number of planar audio buffers. Therefore pass <code>nout = N*2</code> float buffers to <code>out</code> in order to render the synthesized audio to <code>N</code> stereo channels. Each float buffer must be able to hold <code>len</code> elements.
 <code>out</code> contains an array of planar buffers for normal, dry, stereo audio (alternating left and right). Like: 
 <div class="language-c highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">out</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">left_buffer_audio_channel_0</span>
