@@ -4,6 +4,6 @@ author: Tom Moebert
 layout: post
 ---
 
-A maintenance release for fluidsynth has been released. Details can be found in the release notes:
+A new minor release for fluidsynth is available! Details can be found in the release notes:
 
 <https://github.com/FluidSynth/fluidsynth/releases/tag/v2.6.0>
