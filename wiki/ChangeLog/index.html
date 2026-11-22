@@ -715,6 +715,39 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#fluidsynth-263" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        FluidSynth 2.6.3
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fluidsynth-262" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        FluidSynth 2.6.2
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fluidsynth-261" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        FluidSynth 2.6.1
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#fluidsynth-260" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
@@ -5274,6 +5307,39 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#fluidsynth-263" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        FluidSynth 2.6.3
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fluidsynth-262" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        FluidSynth 2.6.2
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fluidsynth-261" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        FluidSynth 2.6.1
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#fluidsynth-260" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
@@ -6791,6 +6857,48 @@
 
 
 <h1 id="release-notes">📝 Release Notes</h1>
+<h2 id="fluidsynth-263">FluidSynth 2.6.3</h2>
+<ul>
+<li>Fix CVE-2026-111123 (#1900, #1901, GHSA-xx3f-mq9p-5prg)</li>
+<li>Fix a heap-based buffer overflow vulnerability when rendering crafted MIDI files (#1917, GHSA-g4r7-g73m-843m)</li>
+<li>Fix a regression introduced in 2.6.0 that might have cause a div-by-zero when rendering certain MIDI files at low sample rates (#1917)</li>
+<li>Fix a build issue with clang 23 when LADSPA support was enabled (#1898, thanks to @pedrolcl)</li>
+<li>Fix several quirks related to sostenuto (#1904, #1905, #1908 thanks to @Yikai-Liao)</li>
+<li>Fix <code>Failed to set thread to high priority</code> error (#1907, thanks to @shumvgolove)</li>
+<li>Fix handling of finished voices after reducing polyphony (#1909, thanks to @Yikai-Liao)</li>
+<li>Fix stack use-after-scope in <code>channelsmode</code> shell command (#1913⁠, thanks to @laramiel)</li>
+<li>Preserve LFO direction during frequency updates (#1310, thanks to @Yikai-Liao)</li>
+<li>Add Windows ARM64 binaries to fluidsynth releases (#1911)</li>
+<li>Fix several memory leaks (#1916)</li>
+<li>Minor performance improvements (#1902, #1910, thanks to @Yikai-Liao)</li>
+</ul>
+<h2 id="fluidsynth-262">FluidSynth 2.6.2</h2>
+<ul>
+<li>Fix inconsistent note-onset-ramps when fluidsynth reuses a voice (#1863, thanks to @Yikai-Liao)</li>
+<li>Preserve MIDI parser state except on System Reset (#1868, thanks to @Yikai-Liao)</li>
+<li>Performance optimization for the IIR-filter (#1867, thanks to @Yikai-Liao)</li>
+<li>Fix infinite loop in DSP when sample-loop-wrap leaves phase negative (#1871)</li>
+<li>Fix the 4 ms predelay in Dattorro reverb (#1872, thanks to @Yikai-Liao)</li>
+<li>Honor sustain when releasing sostenuto (#1880, thanks to @Yikai-Liao)</li>
+<li>The MIDI player now rejects zero tempo in MIDI files (#1881 thanks to @Yikai-Liao)</li>
+<li>Fix loud and distorted sound for some SF3 files (#1856, thanks to @Yikai-Liao)</li>
+<li>Fix <code>NoteOff</code> events  possibly reviving stale notes after receiving <code>AllNotesOff</code> and <code>AllSoundsOff</code> (#1879, thanks to @Yikai-Liao)</li>
+<li>When switching between MIDI modes, fluidsynth now force-releases playing notes, as per MIDI spec (#1859)</li>
+<li>Fluidsynth now enforces the data value of CC126 events only when being in OMNI OFF mode, and remembers it when in OMNI ON mode (#1859)</li>
+<li>Fix libfluidsynth's install name on MacOS to make it relocatable (<code>@rpath</code>) rather than tied to an absolute build/install path (#1891, thanks to @pedrolcl)</li>
+<li>Fix memory leaks in the SDL3 audio driver (#1893, thanks to @rsp4jack)</li>
+<li>Fix a race-condition during multi-threaded rendering (#1895, thanks to @Yikai-Liao)</li>
+</ul>
+<h2 id="fluidsynth-261">FluidSynth 2.6.1</h2>
+<ul>
+<li>It's now possible to set the node name of the pipewire driver, see <code>audio.pipewire.id</code> setting (#1842, thanks to @anupam-git)</li>
+<li>Fix a random race condition and possible deadlock in <code>delete_fluid_server()</code> on MacOS and possibly other POSIX-based OSs (#1837)</li>
+<li>Fix AWE32 NRPNs not working for DLS files (#1849)</li>
+<li>Fix a bug that might have caused samples from outside the sample loop to be considered for interpolation, when the interpolation order is larger than the sample loop length (#1826)</li>
+<li>Fix a build issue with old Pipewire versions (#1828)</li>
+<li>Fix a build issue when cross-compiling (#1835, thanks to @tpetazzoni)</li>
+<li>Fix a build issue on FreeBSD (#1836, thanks to @lhondareyte)</li>
+</ul>
 <h2 id="fluidsynth-260">FluidSynth 2.6.0</h2>
 <h3 id="new-features">New Features</h3>
 <ul>
